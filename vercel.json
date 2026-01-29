@@ -1,5 +1,6 @@
 {
-  "buildCommand": "pnpm --filter admin run build",
+  "framework": "nextjs",
+  "buildCommand": "cd apps/admin && next build",
   "outputDirectory": "apps/admin/.next",
   "installCommand": "pnpm install"
 }
