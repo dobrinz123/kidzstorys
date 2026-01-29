@@ -102,3 +102,4 @@ eas build --platform all
 
 ---
 *Built with ❤️ by Dobrin David Marius.*
+# Trigger Vercel build
