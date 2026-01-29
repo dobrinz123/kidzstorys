@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useQuery } from 'convex/react';
-import { api } from '../../../../../convex/_generated/api';
+import { api } from '@convex/_generated/api';
 import { useRole } from '../../../hooks/useAuth';
 import { Header, HeaderSearch } from '../../../components/layout/Header';
 import { AdminOnly } from '../../../components/layout/RoleGuard';

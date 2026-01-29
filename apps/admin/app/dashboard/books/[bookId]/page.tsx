@@ -2,12 +2,12 @@
 
 import { useParams } from 'next/navigation';
 import { useQuery } from 'convex/react';
-import { api } from '../../../../../../convex/_generated/api';
+import { api } from '@convex/_generated/api';
 import { BookEditor } from '../../../../components/books/BookEditor';
 import { PageLoading } from '../../../../components/ui/Loading';
 import { EmptyState } from '../../../../components/ui/EmptyState';
 import { AlertCircle } from 'lucide-react';
-import { Id } from '../../../../../../convex/_generated/dataModel';
+import { Id } from '@convex/_generated/dataModel';
 
 export default function EditBookPage() {
   const params = useParams();

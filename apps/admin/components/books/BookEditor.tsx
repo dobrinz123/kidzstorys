@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useMutation, useQuery } from 'convex/react';
-import { api } from '../../../../convex/_generated/api';
+import { api } from '@convex/_generated/api';
 import { useAuthStore } from '../../hooks/useAuth';
 import { useToast } from '../ui/Toast';
 import { Header } from '../layout/Header';
@@ -19,7 +19,7 @@ import { PublishValidator } from './PublishValidator';
 import { generateSlug, getBookCompletionPercentage, getMissingItems } from '../../lib/utils';
 import { CATEGORY_ICONS, AGE_RANGES, DURATION_OPTIONS } from '../../lib/constants';
 import { Book, BookCover, BookPage } from '../../types';
-import { Id } from '../../../../convex/_generated/dataModel';
+import { Id } from '@convex/_generated/dataModel';
 import {
   Save,
   Send,

@@ -8,7 +8,7 @@ import { Card, CardTitle } from '../ui/Card';
 import { cn } from '../../lib/utils';
 import { AlertCircle, CheckCircle, Image as ImageIcon } from 'lucide-react';
 import { BookCover, Language } from '../../types';
-import { Id } from '../../../../convex/_generated/dataModel';
+import { Id } from '@convex/_generated/dataModel';
 
 interface CoverEditorProps {
   cover: BookCover;

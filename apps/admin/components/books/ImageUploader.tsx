@@ -3,11 +3,11 @@
 import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useMutation } from 'convex/react';
-import { api } from '../../../../convex/_generated/api';
+import { api } from '@convex/_generated/api';
 import { cn, isValidImageFile, formatFileSize } from '../../lib/utils';
 import { Spinner } from '../ui/Loading';
 import { Upload, X, Image as ImageIcon, AlertCircle } from 'lucide-react';
-import { Id } from '../../../../convex/_generated/dataModel';
+import { Id } from '@convex/_generated/dataModel';
 
 interface ImageUploaderProps {
   currentImageId?: Id<"_storage">;

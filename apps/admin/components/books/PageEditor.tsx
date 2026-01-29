@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useQuery } from 'convex/react';
-import { api } from '../../../../convex/_generated/api';
+import { api } from '@convex/_generated/api';
 import { ImageUploader } from './ImageUploader';
 import { LanguageTabs } from '../ui/Tabs';
 import { Textarea } from '../ui/Input';
@@ -10,7 +10,7 @@ import { Button } from '../ui/Button';
 import { cn } from '../../lib/utils';
 import { Trash2, GripVertical, ChevronUp, ChevronDown, AlertCircle, CheckCircle } from 'lucide-react';
 import { BookPage, Language } from '../../types';
-import { Id } from '../../../../convex/_generated/dataModel';
+import { Id } from '@convex/_generated/dataModel';
 
 interface PageEditorProps {
   page: BookPage;

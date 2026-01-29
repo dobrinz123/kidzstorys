@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { useMutation, useQuery } from 'convex/react';
-import { api } from '../../../../../../convex/_generated/api';
-import { Id } from '../../../../../../convex/_generated/dataModel';
+import { api } from '@convex/_generated/api';
+import { Id } from '@convex/_generated/dataModel';
 import { useRole } from '../../../../hooks/useAuth';
 import { Header } from '../../../../components/layout/Header';
 import { Card } from '../../../../components/ui/Card';

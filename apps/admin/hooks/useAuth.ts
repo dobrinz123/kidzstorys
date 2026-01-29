@@ -3,7 +3,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { UserRole } from '../types';
-import { Id } from '../../../convex/_generated/dataModel';
+import { Id } from '@convex/_generated/dataModel';
 
 interface AdminAuthState {
   userId: Id<"users"> | null;

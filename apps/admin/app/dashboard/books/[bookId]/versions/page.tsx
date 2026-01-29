@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from 'next/navigation';
 import { useQuery, useMutation } from 'convex/react';
-import { api } from '../../../../../../../convex/_generated/api';
+import { api } from '@convex/_generated/api';
 import { useAuthStore } from '../../../../../hooks/useAuth';
 import { Header } from '../../../../../components/layout/Header';
 import { Button } from '../../../../../components/ui/Button';
@@ -13,7 +13,7 @@ import { EmptyState } from '../../../../../components/ui/EmptyState';
 import { PageLoading } from '../../../../../components/ui/Loading';
 import { useToast } from '../../../../../components/ui/Toast';
 import { formatDateTime } from '../../../../../lib/utils';
-import { Id } from '../../../../../../../convex/_generated/dataModel';
+import { Id } from '@convex/_generated/dataModel';
 import { useState } from 'react';
 import {
   ArrowLeft,
