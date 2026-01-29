@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd ../.. && npx convex codegen && cd apps/admin && next build",
+  "framework": "nextjs",
+  "installCommand": "cd ../.. && npm install"
+}
