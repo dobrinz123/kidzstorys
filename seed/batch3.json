@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "bedtime-007-snowflake-dreams",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "snow",
+            "winter",
+            "cozy",
+            "dreams"
+        ],
+        "tags_ro": [
+            "zăpadă",
+            "iarnă",
+            "confortabil",
+            "vise"
+        ],
+        "tags_it": [
+            "neve",
+            "inverno",
+            "accogliente",
+            "sogni"
+        ],
+        "locales": {
+            "en": {
+                "title": "Snowflake Dreams",
+                "text": "On a quiet winter night, tiny snowflakes danced down from the clouds. Each snowflake was different and special, just like every child in the world. In a warm little house, a girl named Lily pressed her nose against the cold window, watching the snow fall. Her grandmother sat beside her in a rocking chair, wrapped in a soft knitted blanket. 'Each snowflake carries a dream,' Grandmother said softly. 'When they land on your windowsill, they're leaving dreams for you.' Lily watched the snowflakes pile up on the windowsill, soft and white like cotton. She wondered what dreams they brought. Maybe dreams of building snowmen, or sledding down hills, or catching snowflakes on her tongue. The fire crackled gently in the fireplace, filling the room with cozy warmth. Grandmother began to hum an old lullaby. Lily felt her eyes grow heavy. She leaned against Grandmother, feeling warm and safe. Outside, the snowflakes continued their gentle dance. Inside, Lily drifted off to sleep, ready to catch all the wonderful dreams the snowflakes had brought just for her.",
+                "parentQuestions": [
+                    "What did Grandmother say about snowflakes?",
+                    "How did Lily feel watching the snow?",
+                    "What do you like to do on snowy days?"
+                ]
+            },
+            "ro": {
+                "title": "Vise de fulgi de zăpadă",
+                "text": "Într-o noapte liniștită de iarnă, fulgi mici de zăpadă dansau în jos din nori. Fiecare fulg era diferit și special, la fel ca fiecare copil din lume. Într-o căsuță caldă, o fetiță pe nume Crina își lipea nasul de geamul rece, privind zăpada căzând. Bunica ei stătea alături într-un scaun balansoar, înfășurată într-o pătură moale tricotată. 'Fiecare fulg de zăpadă poartă un vis,' spuse bunica blând. 'Când aterizează pe pervazul tău, îți lasă vise.' Crina privi fulgii de zăpadă cum se adunau pe pervaz, moi și albi ca bumbacul. Se întreba ce vise aduceau. Poate vise despre a construi oameni de zăpadă, sau a se da cu sania pe dealuri, sau a prinde fulgi de zăpadă pe limbă. Focul trosnea blând în șemineu, umplând camera cu căldură confortabilă. Bunica începu să fredoneze un cântec de leagăn vechi. Crina simți cum ochii îi deveneau grei. Se sprijini de bunica, simțindu-se caldă și în siguranță. Afară, fulgii de zăpadă își continuau dansul blând. Înăuntru, Crina adormi, gata să prindă toate visele minunate pe care fulgii de zăpadă le aduseseră doar pentru ea.",
+                "parentQuestions": [
+                    "Ce a spus bunica despre fulgii de zăpadă?",
+                    "Cum s-a simțit Crina privind zăpada?",
+                    "Ce îți place să faci în zilele cu zăpadă?"
+                ]
+            },
+            "it": {
+                "title": "Sogni di fiocchi di neve",
+                "text": "In una tranquilla notte d'inverno, piccoli fiocchi di neve danzavano giù dalle nuvole. Ogni fiocco era diverso e speciale, proprio come ogni bambino nel mondo. In una calda casetta, una bambina di nome Giglio premeva il naso contro il vetro freddo della finestra, guardando la neve cadere. Sua nonna sedeva accanto a lei su una sedia a dondolo, avvolta in una morbida coperta lavorata a maglia. 'Ogni fiocco di neve porta un sogno,' disse la nonna dolcemente. 'Quando atterrano sul tuo davanzale, ti lasciano dei sogni.' Giglio guardava i fiocchi di neve accumularsi sul davanzale, morbidi e bianchi come cotone. Si chiedeva quali sogni portassero. Forse sogni di costruire pupazzi di neve, o di scivolare giù dalle colline con lo slittino, o di catturare fiocchi di neve sulla lingua. Il fuoco scoppiettava dolcemente nel camino, riempiendo la stanza di calore accogliente. La nonna iniziò a canticchiare una vecchia ninna nanna. Giglio sentì i suoi occhi diventare pesanti. Si appoggiò alla nonna, sentendosi calda e al sicuro. Fuori, i fiocchi di neve continuavano la loro danza gentile. Dentro, Giglio scivolò nel sonno, pronta a cogliere tutti i meravigliosi sogni che i fiocchi di neve avevano portato solo per lei.",
+                "parentQuestions": [
+                    "Cosa ha detto la nonna sui fiocchi di neve?",
+                    "Come si sentiva Giglio guardando la neve?",
+                    "Cosa ti piace fare nelle giornate nevose?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-008-sunset-meadow",
+        "categorySlug": "bedtime",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 8,
+        "tags_en": [
+            "meadow",
+            "sunset",
+            "animals",
+            "peaceful"
+        ],
+        "tags_ro": [
+            "pajiște",
+            "apus",
+            "animale",
+            "pașnic"
+        ],
+        "tags_it": [
+            "prato",
+            "tramonto",
+            "animali",
+            "pacifico"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Sunset Meadow",
+                "text": "In a beautiful meadow surrounded by gentle hills, the sun was beginning to set. The sky turned from blue to soft orange, then to pink, then to a gentle purple. It was the most beautiful time of day. In this meadow lived many friends. There was Daisy the deer, Hazel the hedgehog, Robin the robin, and Bumble the bumblebee. Every evening they gathered together to watch the sunset and say goodnight. Daisy found a soft patch of clover and lay down, tucking her long legs beneath her. Her spots glowed golden in the sunset light. Hazel curled into a little ball near a warm stone that had soaked up the day's sunshine. Her prickles relaxed as she felt the warmth. Robin perched on a low branch of an apple tree, fluffing her feathers and settling in. She chirped a soft evening song. Bumble buzzed over to a closed daisy flower. The petals had folded up for the night, making a perfect little bed. He nestled inside, his buzzing growing softer and slower. The first stars appeared in the darkening sky. A gentle breeze carried the sweet smell of wildflowers across the meadow. One by one, the friends closed their eyes. Daisy dreamed of running through morning dew. Hazel dreamed of finding juicy berries. Robin dreamed of flying through fluffy clouds. Bumble dreamed of sunny gardens full of flowers. The moon rose slowly, casting a silver glow over the peaceful meadow. The night was quiet except for the soft cricket songs. And all the friends slept soundly, safe and warm in their favorite spots, ready for another beautiful day when the sun would rise again.",
+                "parentQuestions": [
+                    "What did each animal do to get ready for sleep?",
+                    "What colors did the sky turn at sunset?",
+                    "What do you dream about when you go to sleep?"
+                ]
+            },
+            "ro": {
+                "title": "Pajiștea la apus",
+                "text": "Într-o pajiște frumoasă înconjurată de dealuri blânde, soarele începea să apună. Cerul se schimbă din albastru în portocaliu deschis, apoi în roz, apoi într-un violet blând. Era cel mai frumos moment al zilei. În această pajiște locuiau mulți prieteni. Era Margareta căprioara, Aluna ariciul, Ciocârlia și Bondar albina. În fiecare seară se adunau împreună să privească apusul și să-și ureze noapte bună. Margareta găsi o porțiune moale de trifoi și se culcă, strângându-și picioarele lungi sub ea. Petele ei străluceau auriu în lumina apusului. Aluna se ghemui într-o minge mică lângă o piatră caldă care absorbise căldura zilei. Țepii ei se relaxară când simți căldura. Ciocârlia se cocoță pe o ramură joasă a unui măr, își pufni penele și se așeză. Ciripi un cântec de seară blând. Bondar zumzăi spre o floare de margaretă închisă. Petalele se pliaseră pentru noapte, făcând un pat mic perfect. Se cuibări înăuntru, zumzăitul lui devenind mai încet. Primele stele apărură pe cerul care se întuneca. O briză ușoară purta mirosul dulce de flori sălbatice peste pajiște. Unul câte unul, prietenii își închiseră ochii. Margareta visă să alerge prin roua dimineții. Aluna visă să găsească fructe de pădure suculente. Ciocârlia visă să zboare prin nori pufoși. Bondar visă la grădini însorite pline de flori. Luna se ridică încet, aruncând o strălucire argintie peste pajiștea pașnică. Noaptea era liniștită, cu excepția cântecelor blânde ale greierilor. Și toți prietenii dormeau adânc, în siguranță și la căldură în locurile lor preferate, gata pentru o altă zi frumoasă când soarele va răsări din nou.",
+                "parentQuestions": [
+                    "Ce a făcut fiecare animal pentru a se pregăti de somn?",
+                    "Ce culori a luat cerul la apus?",
+                    "Cu ce visezi când mergi la somn?"
+                ]
+            },
+            "it": {
+                "title": "Il prato al tramonto",
+                "text": "In un bellissimo prato circondato da dolci colline, il sole stava iniziando a tramontare. Il cielo passò dal blu all'arancione tenue, poi al rosa, poi a un viola delicato. Era il momento più bello della giornata. In questo prato vivevano molti amici. C'era Margherita la cerbiatta, Nocciola il riccio, Pettirosso e Bombo il bombo. Ogni sera si riunivano insieme per guardare il tramonto e darsi la buonanotte. Margherita trovò un morbido pezzetto di trifoglio e si sdraiò, piegando le sue lunghe zampe sotto di sé. Le sue macchie brillavano dorate nella luce del tramonto. Nocciola si arrotolò in una piccola palla vicino a una pietra calda che aveva assorbito il sole del giorno. I suoi aculei si rilassarono quando sentì il calore. Pettirosso si appollaiò su un ramo basso di un melo, arruffando le sue piume e sistemandosi. Cinguettò una dolce canzone serale. Bombo ronzò verso un fiore di margherita chiuso. I petali si erano ripiegati per la notte, formando un lettino perfetto. Si rannicchiò dentro, il suo ronzio diventando più morbido e lento. Le prime stelle apparvero nel cielo che si oscurava. Una brezza leggera portava il dolce profumo di fiori selvatici attraverso il prato. Uno per uno, gli amici chiusero gli occhi. Margherita sognò di correre attraverso la rugiada del mattino. Nocciola sognò di trovare bacche succose. Pettirosso sognò di volare attraverso nuvole soffici. Bombo sognò di giardini soleggiati pieni di fiori. La luna sorse lentamente, gettando un bagliore argentato sul prato pacifico. La notte era silenziosa tranne per i canti sommessi dei grilli. E tutti gli amici dormirono profondamente, al sicuro e al caldo nei loro posti preferiti, pronti per un altro bellissimo giorno quando il sole sarebbe sorto di nuovo.",
+                "parentQuestions": [
+                    "Cosa ha fatto ogni animale per prepararsi a dormire?",
+                    "Di che colori è diventato il cielo al tramonto?",
+                    "Cosa sogni quando vai a dormire?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

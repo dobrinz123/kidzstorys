@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-sky-train-003",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "thunder",
+            "drums",
+            "bravery"
+        ],
+        "tags_ro": [
+            "tren",
+            "tunet",
+            "tobe",
+            "curaj"
+        ],
+        "tags_it": [
+            "treno",
+            "tuono",
+            "tamburi",
+            "coraggio"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 3,
+        "locales": {
+            "en": {
+                "title": "Thunder Mountain",
+                "text": "Thunder Mountain lived up to its name. BOOM! CRASH! RUMBLE! The sounds echoed all around. Penny covered her ears, and Leo's fur stood on end. 'Don't be afraid,' Oliver said. 'The thunder is made by the Thunder Drummers. They're friendly, just very loud!' They found the Thunder Drummers, a group of big fluffy cloud bears, banging on enormous drums. One drummer looked very sad. 'We lost our silver drumstick when the Dream Catcher broke,' he explained. 'Without it, we can't make the special thunder that helps rain clouds form!' 'Where did it fall?' Leo asked bravely, trying not to jump at each BOOM. 'Into the Echo Caves below the mountain. But it's dark and scary down there!' Penny and Leo looked at each other. 'We'll go together,' Penny said. 'Nothing is too scary with a friend.' They ventured into the Echo Caves. Every sound they made bounced back: 'HELLO-hello-hello!' Following the echoes of a metallic ping, they found the drumstick wedged between two rocks. Working together, they freed it! 'THANK YOU-thank you-thank you!' the echoes cheered. Back on the mountain, the bears played a wonderful thunder song to celebrate. Oliver collected a tiny piece of the broken dreamer that had wrapped around the drumstick. 'Two pieces down! Onward to the Star Gardens!'",
+                "parentQuestions": [
+                    "What makes the thunder at Thunder Mountain?",
+                    "How did Penny and Leo show bravery?",
+                    "What sounds echo back when you shout?"
+                ]
+            },
+            "ro": {
+                "title": "Muntele Tunetelor",
+                "text": "Muntele Tunetelor își merita numele. BUM! TROSC! BUBUIT! Sunetele răsunau peste tot. Penny își acoperi urechile, și blana lui Leo stătea în sus. 'Nu vă fie frică,' spuse Oliver. 'Tunetul este făcut de Tobarii Tunetelor. Sunt prietenoși, doar foarte zgomotoși!' Îi găsiră pe Tobarii Tunetelor, un grup de urși mari și pufoși din nori, bătând pe tobe enorme. Un tobar arăta foarte trist. 'Am pierdut bățul nostru de argint când Prinzătorul de Vise s-a spart,' explică el. 'Fără el, nu putem face tunetul special care ajută norii de ploaie să se formeze!' 'Unde a căzut?' întrebă Leo curajos, încercând să nu sară la fiecare BUM. 'În Peșterile Ecoului de sub munte. Dar e întuneric și înfricoșător acolo jos!' Penny și Leo se priviră. 'Vom merge împreună,' spuse Penny. 'Nimic nu e prea înfricoșător cu un prieten.' Se aventurară în Peșterile Ecoului. Fiecare sunet pe care îl făceau se întoarcea: 'BUNĂ-bună-bună!' Urmând ecourile unui clinchet metalic, găsiră bățul înțepenit între două stânci. Lucrând împreună, îl eliberară! 'MULȚUMIM-mulțumim-mulțumim!' celebrară ecourile. Înapoi pe munte, urșii cântară un minunat cântec de tunet pentru a sărbători. Oliver colectă o bucățică din visătorul spart care se înfășurase în jurul bățului. 'Două bucăți găsite! Înainte spre Grădinile de Stele!'",
+                "parentQuestions": [
+                    "Ce face tunetul pe Muntele Tunetelor?",
+                    "Cum au arătat Penny și Leo curaj?",
+                    "Ce sunete se întorc când strigi?"
+                ]
+            },
+            "it": {
+                "title": "La Montagna dei Tuoni",
+                "text": "La Montagna dei Tuoni faceva onore al suo nome. BOOM! CRASH! ROMBO! I suoni echeggiavano tutt'intorno. Penny si coprì le orecchie, e il pelo di Leo si drizzò. 'Non abbiate paura,' disse Oliver. 'Il tuono è fatto dai Tamburini dei Tuoni. Sono amichevoli, solo molto rumorosi!' Trovarono i Tamburini dei Tuoni, un gruppo di grandi orsi di nuvola soffici, che battevano su enormi tamburi. Un tamburino sembrava molto triste. 'Abbiamo perso la nostra bacchetta d'argento quando l'Acchiappasogni si è rotto,' spiegò. 'Senza di essa, non possiamo fare il tuono speciale che aiuta le nuvole di pioggia a formarsi!' 'Dove è caduta?' chiese Leo coraggiosamente, cercando di non saltare ad ogni BOOM. 'Nelle Grotte dell'Eco sotto la montagna. Ma lì sotto è buio e spaventoso!' Penny e Leo si guardarono. 'Andremo insieme,' disse Penny. 'Niente è troppo spaventoso con un amico.' Si avventurarono nelle Grotte dell'Eco. Ogni suono che facevano rimbalzava: 'CIAO-ciao-ciao!' Seguendo gli echi di un tintinnio metallico, trovarono la bacchetta incastrata tra due rocce. Lavorando insieme, la liberarono! 'GRAZIE-grazie-grazie!' esultarono gli echi. Di nuovo sulla montagna, gli orsi suonarono una meravigliosa canzone di tuono per festeggiare. Oliver raccolse un pezzetto del sognatore rotto che si era avvolto intorno alla bacchetta. 'Due pezzi trovati! Avanti verso i Giardini delle Stelle!'",
+                "parentQuestions": [
+                    "Cosa fa il tuono sulla Montagna dei Tuoni?",
+                    "Come hanno mostrato coraggio Penny e Leo?",
+                    "Quali suoni tornano indietro quando gridi?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-sky-train-004",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "stars",
+            "garden",
+            "light"
+        ],
+        "tags_ro": [
+            "tren",
+            "stele",
+            "grădină",
+            "lumină"
+        ],
+        "tags_it": [
+            "treno",
+            "stelle",
+            "giardino",
+            "luce"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 4,
+        "locales": {
+            "en": {
+                "title": "The Star Gardens",
+                "text": "The Cloud Express floated into the most magical place yet: the Star Gardens. Baby stars grew here like flowers, twinkling softly in the dark sky soil. Tiny star sprites tended to them carefully. 'How beautiful!' Penny gasped. 'The stars look like little candles!' A star sprite flew up to them, looking worried. 'When the Dream Catcher broke, a piece fell into our Wishing Well. But if we don't get it out, the well will fill up and overflow, flooding the baby stars!' 'We need to help!' Leo said. The Wishing Well was deep and filled with shimmering water that granted wishes. 'How do we get the piece without using up someone's wish?' Penny wondered. 'What if we wish for the piece to come to us?' Leo suggested. 'That's still using a wish!' Then Penny had an idea. 'What if we work together to make a rope from starlight?' The sprites helped them weave beams of starlight into a glowing rope. Leo lowered it carefully while Penny steadied his paws. Slowly, they fished out the Dream Catcher piece! 'You saved our baby stars!' the sprites cheered. They gave Penny and Leo each a tiny star badge as thanks. 'Three pieces collected! Back on the Cloud Express!'",
+                "parentQuestions": [
+                    "What grew in the Star Gardens?",
+                    "How did Penny solve the problem of the Wishing Well?",
+                    "What would you wish for at a Wishing Well?"
+                ]
+            },
+            "ro": {
+                "title": "Grădinile de stele",
+                "text": "Cloud Express plutea în cel mai magic loc de până acum: Grădinile de Stele. Stele bebeluși creșteau aici ca niște flori, sclipind blând în solul cerului întunecat. Spiridușii micuți de stele aveau grijă de ele cu atenție. 'Ce frumos!' exclamă Penny. 'Stelele arată ca niște lumânărele mici!' Un spiriduș de stea zbură spre ei, arătând îngrijorat. 'Când Prinzătorul de Vise s-a spart, o bucată a căzut în Fântâna Dorințelor. Dar dacă nu o scoatem, fântâna se va umple și va inunda stelele bebeluși!' 'Trebuie să ajutăm!' spuse Leo. Fântâna Dorințelor era adâncă și plină cu apă scânteietoare care îndeplinea dorințe. 'Cum scoatem bucata fără să folosim dorința cuiva?' se întrebă Penny. 'Dacă ne dorim ca bucata să vină la noi?' sugeră Leo. 'Asta tot folosește o dorință!' Apoi Penny avu o idee. 'Dacă lucrăm împreună să facem o frânghie din lumină de stele?' Spiridușii îi ajutară să țeasă raze de lumină de stele într-o frânghie strălucitoare. Leo o coborî cu grijă în timp ce Penny îi ținea labele stabil. Încet, pescuiră bucata din Prinzătorul de Vise! 'Ne-ați salvat stelele bebeluși!' jubilară spiridușii. Îi dădură lui Penny și Leo câte o insignă de stea mică drept mulțumire. 'Trei bucăți colectate! Înapoi pe Cloud Express!'",
+                "parentQuestions": [
+                    "Ce creștea în Grădinile de Stele?",
+                    "Cum a rezolvat Penny problema Fântânii Dorințelor?",
+                    "Ce ți-ai dori la o Fântână a Dorințelor?"
+                ]
+            },
+            "it": {
+                "title": "I Giardini delle Stelle",
+                "text": "Il Cloud Express fluttuò nel posto più magico finora: i Giardini delle Stelle. Stelle bebè crescevano qui come fiori, scintillando dolcemente nel terreno del cielo scuro. Piccoli spiritelli stellari le curavano con attenzione. 'Che bello!' esclamò Penny. 'Le stelle sembrano piccole candele!' Uno spiritello stellare volò verso di loro, sembrando preoccupato. 'Quando l'Acchiappasogni si è rotto, un pezzo è caduto nel nostro Pozzo dei Desideri. Ma se non lo tiriamo fuori, il pozzo si riempirà e traboccherà, allagando le stelle bebè!' 'Dobbiamo aiutare!' disse Leo. Il Pozzo dei Desideri era profondo e pieno di acqua luccicante che esaudiva i desideri. 'Come prendiamo il pezzo senza usare il desiderio di qualcuno?' si chiese Penny. 'E se desiderassimo che il pezzo venga da noi?' suggerì Leo. 'Sarebbe comunque usare un desiderio!' Poi Penny ebbe un'idea. 'E se lavorassimo insieme per fare una corda di luce stellare?' Gli spiritelli li aiutarono a tessere raggi di luce stellare in una corda luminosa. Leo la abbassò con attenzione mentre Penny gli teneva ferme le zampe. Lentamente, pescarono fuori il pezzo dell'Acchiappasogni! 'Avete salvato le nostre stelle bebè!' esultarono gli spiritelli. Diedero a Penny e Leo ciascuno un piccolo distintivo stellare come ringraziamento. 'Tre pezzi raccolti! Di nuovo sul Cloud Express!'",
+                "parentQuestions": [
+                    "Cosa cresceva nei Giardini delle Stelle?",
+                    "Come ha risolto Penny il problema del Pozzo dei Desideri?",
+                    "Cosa desidereresti a un Pozzo dei Desideri?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

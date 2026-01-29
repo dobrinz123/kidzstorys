@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "emotions-001-scared-of-dark",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "fear",
+            "dark",
+            "bravery",
+            "comfort"
+        ],
+        "tags_ro": [
+            "frică",
+            "întuneric",
+            "curaj",
+            "confort"
+        ],
+        "tags_it": [
+            "paura",
+            "buio",
+            "coraggio",
+            "conforto"
+        ],
+        "locales": {
+            "en": {
+                "title": "When the Dark Feels Scary",
+                "text": "Milo didn't want to go to bed. The dark felt scary to him. Shadows on the wall looked like monsters. His heart beat fast when the light went off. Mom sat beside him. 'The dark can feel scary,' she said. 'That's okay. Lots of people feel that way.' Milo was surprised. 'They do?' 'Yes. Fear is a normal feeling. It's trying to protect you.' Mom pointed to a shadow. 'What does that shadow look like?' 'A monster,' Milo whispered. 'Let's look with our detective eyes. What could really make that shape?' Milo looked carefully. 'Maybe... my coat on the chair?' Mom nodded. 'The dark doesn't change things. Your coat is still just your coat.' Milo thought about it. 'But it still feels scary.' 'That's okay,' Mom said. 'Being brave doesn't mean not feeling scared. Being brave means feeling scared but knowing you're safe.' She gave him his nightlight. 'This can help while you practice being brave.' Milo held his teddy close. Maybe the dark wasn't so bad. His room was the same room, dark or light. And Mom was just outside. He was scared, but he was also brave. Both feelings could be true at the same time.",
+                "parentQuestions": [
+                    "Why was Milo scared of the dark?",
+                    "What did Mom say about being brave?",
+                    "What helps you feel brave when you're scared?"
+                ]
+            },
+            "ro": {
+                "title": "Când întunericul pare înfricoșător",
+                "text": "Milo nu voia să meargă la culcare. Întunericul i se părea înfricoșător. Umbrele de pe perete arătau ca niște monștri. Inima îi bătea repede când se stingea lumina. Mama stătu lângă el. 'Întunericul poate părea înfricoșător,' spuse ea. 'E în regulă. Mulți oameni simt la fel.' Milo fu surprins. 'Chiar?' 'Da. Frica e un sentiment normal. Încearcă să te protejeze.' Mama arătă spre o umbră. 'Cum arată umbra aia?' 'Un monstru,' șopti Milo. 'Să ne uităm cu ochii noștri de detectiv. Ce ar putea face cu adevărat acea formă?' Milo privi cu atenție. 'Poate... haina mea de pe scaun?' Mama dădu din cap. 'Întunericul nu schimbă lucrurile. Haina ta e tot haina ta.' Milo se gândi la asta. 'Dar tot pare înfricoșător.' 'E în regulă,' spuse Mama. 'A fi curajos nu înseamnă să nu simți frică. A fi curajos înseamnă să simți frică dar să știi că ești în siguranță.' Îi dădu veioza de noapte. 'Asta poate ajuta în timp ce exersezi să fii curajos.' Milo își strânse ursulețul aproape. Poate întunericul nu era atât de rău. Camera lui era aceeași cameră, întunecată sau luminoasă. Iar Mama era chiar afară. Era speriat, dar era și curajos. Ambele sentimente puteau fi adevărate în același timp.",
+                "parentQuestions": [
+                    "De ce îi era frică lui Milo de întuneric?",
+                    "Ce a spus Mama despre a fi curajos?",
+                    "Ce te ajută să te simți curajos când ești speriat?"
+                ]
+            },
+            "it": {
+                "title": "Quando il buio fa paura",
+                "text": "Milo non voleva andare a letto. Il buio gli sembrava spaventoso. Le ombre sul muro sembravano mostri. Il suo cuore batteva forte quando la luce si spegneva. La Mamma si sedette accanto a lui. 'Il buio può sembrare spaventoso,' disse. 'Va bene. Molte persone si sentono così.' Milo era sorpreso. 'Davvero?' 'Sì. La paura è un sentimento normale. Sta cercando di proteggerti.' La Mamma indicò un'ombra. 'Come sembra quell'ombra?' 'Un mostro,' sussurrò Milo. 'Guardiamo con i nostri occhi da detective. Cosa potrebbe davvero fare quella forma?' Milo guardò attentamente. 'Forse... il mio cappotto sulla sedia?' La Mamma annuì. 'Il buio non cambia le cose. Il tuo cappotto è ancora solo il tuo cappotto.' Milo ci pensò. 'Ma sembra ancora spaventoso.' 'Va bene,' disse la Mamma. 'Essere coraggioso non significa non avere paura. Essere coraggioso significa avere paura ma sapere che sei al sicuro.' Gli diede la sua lucina notturna. 'Questa può aiutare mentre ti eserciti a essere coraggioso.' Milo strinse il suo orsacchiotto. Forse il buio non era così brutto. La sua stanza era la stessa stanza, buia o illuminata. E la Mamma era appena fuori. Era spaventato, ma era anche coraggioso. Entrambi i sentimenti potevano essere veri allo stesso tempo.",
+                "parentQuestions": [
+                    "Perché Milo aveva paura del buio?",
+                    "Cosa ha detto la Mamma sull'essere coraggioso?",
+                    "Cosa ti aiuta a sentirti coraggioso quando hai paura?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "emotions-002-jealous-sibling",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "jealousy",
+            "sibling",
+            "feelings",
+            "love"
+        ],
+        "tags_ro": [
+            "gelozie",
+            "frate",
+            "sentimente",
+            "dragoste"
+        ],
+        "tags_it": [
+            "gelosia",
+            "fratello",
+            "sentimenti",
+            "amore"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Green-Eyed Feeling",
+                "text": "Ever since baby sister came home, Rosie felt strange inside. Everyone wanted to hold the baby. Everyone said how cute the baby was. Rosie felt hot and tight in her chest. She didn't like this feeling. Dad noticed Rosie sitting alone. He sat beside her. 'How are you doing, Rosie?' Rosie shrugged. She didn't know the words. 'Sometimes when a new baby comes, big kids can feel jealous,' Dad said. 'It's like a green-eyed monster inside, wanting what someone else has.' Rosie looked up. 'Is that bad?' 'No, sweetie. It's just a feeling. All feelings are okay to have. What matters is what we do with them.' 'But I don't like it,' Rosie said. 'I know. But here's a secret: Mom and Dad's love doesn't run out. Loving the baby doesn't mean loving you less. Love grows bigger.' Dad hugged Rosie tight. 'You were our first baby, and you changed our hearts forever. No one can take your special place.' Rosie leaned into the hug. The green feeling got a little smaller. 'Can I help feed the baby?' she asked. 'Of course. Big sisters are very important.' Rosie smiled. Maybe there was room in the family for both of them.",
+                "parentQuestions": [
+                    "Why did Rosie feel strange inside?",
+                    "What did Dad say about love?",
+                    "Have you ever felt jealous? What helped?"
+                ]
+            },
+            "ro": {
+                "title": "Sentimentul cu ochi verzi",
+                "text": "De când surioară a venit acasă, Roșioară se simțea ciudat înăuntru. Toată lumea voia să ț bine bebelușul. Toată lumea spunea cât de drăgu era bebelușul. Roșioară simțea ceva fierbinte și strâmt în piept. Nu-i plăcea acest sentiment. Tata observă pe Roșioară stând singură. Se așeză lângă ea. 'Cum te descurci, Roșioară?' Roșioară ridică din umeri. Nu știa cuvintele. 'Uneori când vine un bebeluș nou, copiii mari pot simți gelozie,' spuse Tata. 'E ca un monstru cu ochi verzi înăuntru, vrând ce are altcineva.' Roșioară privi în sus. 'E rău asta?' 'Nu, draga mea. E doar un sentiment. Toate sentimentele sunt în regulă să le ai. Ce contează e ce facem cu ele.' 'Dar nu-mi place,' spuse Roșioară. 'Știu. Dar iată un secret: dragostea Mamei și a Tatei nu se termină. A iubi bebelu nu înseamnă a te iubi mai puțin. Dragostea crește mai mare.' Tata o îmbrățișă pe Roșioară strâns. 'Tu ai fost primul nostru bebe, și ne-ai schimbat inimile pentru totdeauna. Nimeni nu poate lua locul tău special.' Roșioară se lipi de îmbrățișare. Sentimentul verde deveni puțin mai mic. 'Pot să ajut să hrănim bebelușul?' întrebă ea. 'Desigur. Surioarele mari sunt foarte importante.' Roșioară zâmbi. Poate era loc în familie pentru amândouă.",
+                "parentQuestions": [
+                    "De ce se simțea Roșioară ciudat înăuntru?",
+                    "Ce a spus Tata despre dragoste?",
+                    "Ai simțit vreodată gelozie? Ce te-a ajutat?"
+                ]
+            },
+            "it": {
+                "title": "Il sentimento dagli occhi verdi",
+                "text": "Da quando la sorellina era arrivata a casa, Rosa si sentiva strana dentro. Tutti volevano tenere in braccio la bambina. Tutti dicevano quanto era carina la bambina. Rosa sentiva qualcosa di caldo e stretto nel petto. Non le piaceva questo sentimento. Papà notò Rosa seduta da sola. Si sedette accanto a lei. 'Come stai, Rosa?' Rosa scrollò le spalle. Non conosceva le parole. 'A volte quando arriva un nuovo bambino, i bambini grandi possono sentirsi gelosi,' disse Papà. 'È come un mostro dagli occhi verdi dentro, che vuole quello che ha qualcun altro.' Rosa guardò su. 'È brutto?' 'No, tesoro. È solo un sentimento. Tutti i sentimenti vanno bene da avere. Quello che conta è cosa ne facciamo.' 'Ma non mi piace,' disse Rosa. 'Lo so. Ma ecco un segreto: l'amore di Mamma e Papà non finisce. Amare la bambina non significa amarti di meno. L'amore cresce più grande.' Papà abbracciò Rosa forte. 'Tu sei stata la nostra prima bambina, e hai cambiato i nostri cuori per sempre. Nessuno può prendere il tuo posto speciale.' Rosa si appoggiò all'abbraccio. Il sentimento verde divenne un po' più piccolo. 'Posso aiutare a dare da mangiare alla bambina?' chiese. 'Certo. Le sorelle maggiori sono molto importanti.' Rosa sorrise. Forse c'era posto nella famiglia per entrambe.",
+                "parentQuestions": [
+                    "Perché Rosa si sentiva strana dentro?",
+                    "Cosa ha detto Papà sull'amore?",
+                    "Ti sei mai sentito geloso? Cosa ti ha aiutato?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

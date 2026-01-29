@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "bedtime-003-moonlight-garden",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "garden",
+            "moonlight",
+            "flowers",
+            "peaceful"
+        ],
+        "tags_ro": [
+            "grădină",
+            "lună",
+            "flori",
+            "pașnic"
+        ],
+        "tags_it": [
+            "giardino",
+            "chiaro di luna",
+            "fiori",
+            "pacifico"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Moonlight Garden",
+                "text": "In a quiet garden behind a little cottage, the flowers were getting ready for sleep. The roses closed their petals softly, one by one. The tulips bowed their heads gently toward the earth. A tiny firefly named Glow flew between the flowers, spreading soft light. 'Time to rest,' Glow whispered to the daisies. The moon rose high in the velvet sky, casting silver light over everything. A gentle breeze swayed the tall grass, making a soft swishing sound like a lullaby. In the corner of the garden, a small rabbit named Clover hopped to her favorite spot under the old oak tree. She curled up in the soft grass, feeling the cool night air on her fur. Glow floated down and landed on a nearby leaf. 'Goodnight, Clover,' said Glow. 'Goodnight, Glow,' yawned Clover. The stars twinkled overhead like tiny diamonds. The garden grew still and peaceful. Every flower, every creature, every blade of grass settled into the quiet magic of the night. And in that gentle darkness, dreams began to bloom.",
+                "parentQuestions": [
+                    "What were the flowers doing when night came?",
+                    "Where did Clover like to sleep?",
+                    "What sounds help you feel sleepy at bedtime?"
+                ]
+            },
+            "ro": {
+                "title": "Grădina în lumina lunii",
+                "text": "Într-o grădină liniștită din spatele unei căsuțe, florile se pregăteau de somn. Trandafirii își închideau petalele încet, una câte una. Lalelele își plecau capetele blând spre pământ. Un licurici mic pe nume Licăr zbura printre flori, răspândind lumină blândă. 'E timpul să vă odihniți,' șopti Licăr margaretelor. Luna se ridică sus pe cerul de catifea, aruncând lumină argintie peste tot. O briză ușoară legăna iarba înaltă, făcând un sunet moale ca un cântec de leagăn. În colțul grădinii, un iepuraș mic pe nume Trifoiaș sări spre locul ei preferat sub bătrânul stejar. Se ghemui în iarba moale, simțind aerul rece al nopții pe blană. Licăr coborî plutind și se așeză pe o frunză apropiată. 'Noapte bună, Trifoiaș,' spuse Licăr. 'Noapte bună, Licăr,' căscă Trifoiaș. Stelele sclipeau deasupra ca niște diamante mici. Grădina deveni liniștită și pașnică. Fiecare floare, fiecare creatură, fiecare fir de iarbă se așeză în magia tăcută a nopții. Și în acea întunericime blândă, visele începură să înflorească.",
+                "parentQuestions": [
+                    "Ce făceau florile când venea noaptea?",
+                    "Unde îi plăcea lui Trifoiaș să doarmă?",
+                    "Ce sunete te ajută să te simți somnoros la culcare?"
+                ]
+            },
+            "it": {
+                "title": "Il giardino al chiaro di luna",
+                "text": "In un giardino tranquillo dietro un piccolo cottage, i fiori si preparavano per dormire. Le rose chiudevano i loro petali dolcemente, uno per uno. I tulipani chinavano le loro teste gentilmente verso la terra. Una piccola lucciola di nome Bagliore volava tra i fiori, spargendo luce soffusa. 'È ora di riposare,' sussurrò Bagliore alle margherite. La luna si alzò alta nel cielo di velluto, gettando luce argentata su tutto. Una brezza leggera faceva ondeggiare l'erba alta, creando un suono morbido come una ninna nanna. Nell'angolo del giardino, una piccola coniglietta di nome Trifoglio saltellò verso il suo posto preferito sotto la vecchia quercia. Si acciambellò nell'erba soffice, sentendo l'aria fresca della notte sulla sua pelliccia. Bagliore scese fluttuando e si posò su una foglia vicina. 'Buonanotte, Trifoglio,' disse Bagliore. 'Buonanotte, Bagliore,' sbadigliò Trifoglio. Le stelle brillavano sopra come piccoli diamanti. Il giardino divenne calmo e pacifico. Ogni fiore, ogni creatura, ogni filo d'erba si sistemò nella magia silenziosa della notte. E in quella dolce oscurità, i sogni cominciarono a fiorire.",
+                "parentQuestions": [
+                    "Cosa facevano i fiori quando arrivava la notte?",
+                    "Dove piaceva dormire a Trifoglio?",
+                    "Quali suoni ti aiutano a sentirti assonnato prima di dormire?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-004-starlight-blanket",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "stars",
+            "blanket",
+            "cozy",
+            "dreams"
+        ],
+        "tags_ro": [
+            "stele",
+            "pătură",
+            "confortabil",
+            "vise"
+        ],
+        "tags_it": [
+            "stelle",
+            "coperta",
+            "accogliente",
+            "sogni"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Starlight Blanket",
+                "text": "Every night, Grandmother Moon wove a special blanket made of starlight. She gathered the softest moonbeams and the gentlest star twinkles, weaving them together with love. Tonight, she was making a blanket for a little bear cub named Bramble. Bramble lived in a cozy den beneath an ancient pine tree. He had played all day, splashing in the stream and chasing butterflies. Now his little eyes were getting heavy. 'Time to rest, little one,' said his mother, tucking him into his bed of soft leaves. High above, Grandmother Moon finished her blanket and floated it down through the night sky. It drifted past clouds, past sleeping birds, past the tops of tall trees. Gently, so gently, the starlight blanket settled over Bramble's den. It filled the air with warmth and comfort. Bramble felt the magic surround him, soft as a whisper, warm as a hug. He snuggled deeper into his bed, feeling protected and loved. 'Sweet dreams, little bear,' Grandmother Moon whispered from the sky. And Bramble drifted into the most wonderful sleep.",
+                "parentQuestions": [
+                    "What did Grandmother Moon make for Bramble?",
+                    "What did Bramble do during the day?",
+                    "What makes you feel cozy and safe at bedtime?"
+                ]
+            },
+            "ro": {
+                "title": "Pătura de lumină stelară",
+                "text": "În fiecare noapte, Bunica Lună țesea o pătură specială făcută din lumină de stele. Aduna cele mai blânde raze de lună și cele mai delicate sclipiri de stele, țesându-le împreună cu dragoste. În noaptea asta, făcea o pătură pentru un pui de urs pe nume Mură. Mură locuia într-o vizuină confortabilă sub un pin străvechi. Se jucase toată ziua, stropindu-se în pârâu și alergând după fluturi. Acum ochișorii lui deveneau grei. 'E timpul să te odihnești, micuțule,' spuse mama lui, învelindu-l în patul lui de frunze moi. Sus de tot, Bunica Lună își termină pătura și o lăsă să plutească în jos prin cerul nopții. Trecu pe lângă nori, pe lângă păsări adormite, pe lângă vârfurile copacilor înalți. Blând, atât de blând, pătura de lumină stelară se așeză peste vizuina lui Mură. Umplu aerul cu căldură și confort. Mură simți magia înconjurându-l, moale ca o șoaptă, caldă ca o îmbrățișare. Se cuibări mai adânc în patul lui, simțindu-se protejat și iubit. 'Vise dulci, micuțule urs,' șopti Bunica Lună din cer. Și Mură alunecă în cel mai minunat somn.",
+                "parentQuestions": [
+                    "Ce a făcut Bunica Lună pentru Mură?",
+                    "Ce a făcut Mură în timpul zilei?",
+                    "Ce te face să te simți confortabil și în siguranță la culcare?"
+                ]
+            },
+            "it": {
+                "title": "La coperta di luce stellare",
+                "text": "Ogni notte, Nonna Luna tesseva una coperta speciale fatta di luce stellare. Raccoglieva i raggi di luna più morbidi e i brillii di stelle più delicati, tessendoli insieme con amore. Stanotte stava facendo una coperta per un piccolo orsacchiotto di nome Mora. Mora viveva in una tana accogliente sotto un antico pino. Aveva giocato tutto il giorno, schizzando nel ruscello e inseguendo farfalle. Ora i suoi piccoli occhi diventavano pesanti. 'È ora di riposare, piccolo,' disse sua madre, rimboccandolo nel suo letto di foglie morbide. In alto, Nonna Luna finì la sua coperta e la fece fluttuare giù attraverso il cielo notturno. Passò oltre le nuvole, oltre gli uccelli addormentati, oltre le cime degli alberi alti. Dolcemente, così dolcemente, la coperta di luce stellare si posò sulla tana di Mora. Riempì l'aria di calore e comfort. Mora sentì la magia circondarlo, morbida come un sussurro, calda come un abbraccio. Si rannicchiò più in profondità nel suo letto, sentendosi protetto e amato. 'Sogni d'oro, piccolo orso,' sussurrò Nonna Luna dal cielo. E Mora scivolò nel sonno più meraviglioso.",
+                "parentQuestions": [
+                    "Cosa ha fatto Nonna Luna per Mora?",
+                    "Cosa ha fatto Mora durante il giorno?",
+                    "Cosa ti fa sentire accogliente e al sicuro a letto?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

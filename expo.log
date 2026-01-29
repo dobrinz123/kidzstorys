@@ -1,0 +1,18 @@
+env: load .env
+env: export EXPO_PUBLIC_CONVEX_URL EXPO_PUBLIC_REVENUECAT_IOS_KEY EXPO_PUBLIC_REVENUECAT_ANDROID_KEY
+Starting project at C:\Users\david\Desktop\RANDOM\STORY_KIDS\apps\mobile
+PluginError: Unable to resolve a valid config plugin for react-native-purchases.
+• No "app.plugin.js" file found in react-native-purchases: config plugins are typically exported from an "app.plugin.js" file in the package root.
+• main export of react-native-purchases does not appear to be a config plugin: the following error was thrown when importing C:\Users\david\Desktop\RANDOM\STORY_KIDS\node_modules\.pnpm\react-native-purchases@7.28_cc20ff82f97481753f9f98be9948163c\node_modules\react-native-purchases\dist\index.js: Unexpected token 'typeof' 
+Verify that react-native-purchases includes a config plugin. If it does not, then remove the entry from plugins in your app config file. Learn more: https://docs.expo.dev/guides/config-plugins/
+SyntaxError: Unexpected token 'typeof'
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:426:18)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1537:24)
+    at Module._compile (node:internal/modules/cjs/loader:1688:5)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.require (node:internal/modules/cjs/loader:1463:12)

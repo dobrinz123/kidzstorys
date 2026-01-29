@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-maple-forest-005",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "garden",
+            "helping",
+            "creatures"
+        ],
+        "tags_ro": [
+            "pădure",
+            "grădină",
+            "ajutor",
+            "creaturi"
+        ],
+        "tags_it": [
+            "bosco",
+            "giardino",
+            "aiuto",
+            "creature"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 5,
+        "locales": {
+            "en": {
+                "title": "The Enchanted Garden",
+                "text": "After crossing the Bridge of Riddles, Milo, Ruby, and Finn found themselves in the most magical garden they had ever seen. Flowers of impossible colors grew everywhere. Butterflies with wings like stained glass fluttered about. But something was wrong. A tiny fairy sat crying on a mushroom. 'What's the matter?' Ruby asked gently. 'The fountain has stopped flowing,' the fairy sobbed. 'Without its magic water, the garden will wilt!' She pointed to a beautiful stone fountain in the center of the garden. It was completely dry. 'Maybe we can help,' Milo offered. The fairy's eyes brightened. 'There are three crystals that power the fountain. They've been scattered by a mischievous wind! If you find them and return them to the fountain, the water will flow again.' The friends spread out to search. Ruby found a blue crystal hiding under a giant lily pad. Finn discovered a green one tangled in rose vines. Milo spotted a golden crystal at the top of a tall sunflower. One by one, they placed the crystals in the fountain. WHOOSH! Rainbow water burst forth! The garden bloomed even more beautifully. 'You saved us!' the fairy cheered. 'As thanks, I'll show you where the treasure map leads next!' The adventure continued!",
+                "parentQuestions": [
+                    "What was wrong in the Enchanted Garden?",
+                    "How did each friend help solve the problem?",
+                    "Have you ever helped someone who was sad?"
+                ]
+            },
+            "ro": {
+                "title": "Grădina fermecată",
+                "text": "După ce traversară Podul Ghicitorilor, Milo, Rubina și Fini se treziră în cea mai magică grădină pe care o văzuseră vreodată. Flori de culori imposibile creșteau peste tot. Fluturi cu aripi ca vitralii fluturau. Dar ceva era greșit. O zână micuță ședea plângând pe o ciupercă. 'Ce s-a întâmplat?' întrebă Rubina blând. 'Fântâna a încetat să curgă,' suspină zâna. 'Fără apa ei magică, grădina se va ofili!' Arătă spre o frumoasă fântână de piatră din centrul grădinii. Era complet uscată. 'Poate putem ajuta,' oferi Milo. Ochii zânei se luminară. 'Sunt trei cristale care alimentează fântâna. Au fost împrăștiate de un vânt obraznic! Dacă le găsiți și le returnați fântânii, apa va curge din nou.' Prietenii se împrăștiară să caute. Rubina găsi un cristal albastru ascuns sub o frunză uriașă de nufăr. Fini descoperi unul verde încurcat în viță de trandafiri. Milo zări un cristal auriu în vârful unei floarea-soarelui înalte. Unul câte unul, puseră cristalele în fântână. VÂJÂIT! Apă de curcubeu țâșni! Grădina înflori și mai frumos. 'Ne-ați salvat!' jubilă zâna. 'Ca mulțumire, vă voi arăta unde duce harta comorii în continuare!' Aventura a continuat!",
+                "parentQuestions": [
+                    "Ce era greșit în Grădina Fermecată?",
+                    "Cum a ajutat fiecare prieten să rezolve problema?",
+                    "Ai ajutat vreodată pe cineva care era trist?"
+                ]
+            },
+            "it": {
+                "title": "Il giardino incantato",
+                "text": "Dopo aver attraversato il Ponte degli Indovinelli, Milo, Rubina e Finn si ritrovarono nel giardino più magico che avessero mai visto. Fiori di colori impossibili crescevano ovunque. Farfalle con ali come vetrate svolazzavano. Ma qualcosa non andava. Una piccola fata sedeva piangendo su un fungo. 'Cosa succede?' chiese Rubina dolcemente. 'La fontana ha smesso di scorrere,' singhiozzò la fata. 'Senza la sua acqua magica, il giardino appassirà!' Indicò una bella fontana di pietra al centro del giardino. Era completamente asciutta. 'Forse possiamo aiutare,' offrì Milo. Gli occhi della fata si illuminarono. 'Ci sono tre cristalli che alimentano la fontana. Sono stati sparsi da un vento dispettoso! Se li trovate e li riportate alla fontana, l'acqua scorrerà di nuovo.' Gli amici si sparsero per cercare. Rubina trovò un cristallo blu nascosto sotto una gigantesca foglia di ninfea. Finn scoprì uno verde intrecciato in rampicanti di rose. Milo avvistò un cristallo dorato in cima a un alto girasole. Uno per uno, misero i cristalli nella fontana. SCIUUSH! Acqua arcobaleno sgorgò! Il giardino fiorì ancora più bello. 'Ci avete salvato!' esultò la fata. 'Come ringraziamento, vi mostrerò dove porta la mappa del tesoro!' L'avventura continuava!",
+                "parentQuestions": [
+                    "Cosa c'era che non andava nel Giardino Incantato?",
+                    "Come ha aiutato ogni amico a risolvere il problema?",
+                    "Hai mai aiutato qualcuno che era triste?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-maple-forest-006",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "tree",
+            "ancient",
+            "wisdom"
+        ],
+        "tags_ro": [
+            "pădure",
+            "copac",
+            "străvechi",
+            "înțelepciune"
+        ],
+        "tags_it": [
+            "bosco",
+            "albero",
+            "antico",
+            "saggezza"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 6,
+        "locales": {
+            "en": {
+                "title": "The Wise Old Tree",
+                "text": "The fairy led Milo, Ruby, and Finn to the oldest tree in Maple Forest. It was enormous, with a trunk wider than ten foxes standing side by side! 'This is Elder Maple,' the fairy said. 'He knows everything about the forest. He can tell you about the treasure.' To the friends' amazement, the tree's bark formed into a kind, wise face. 'Welcome, young travelers,' Elder Maple said in a deep, creaky voice. 'I have watched you on your journey. You have shown cleverness, kindness, and courage.' 'Can you tell us what the treasure is?' Milo asked eagerly. 'That I cannot do. But I can give you this.' A small acorn dropped from above into Ruby's paws. 'Plant this when you reach the X on your map. The treasure will reveal itself.' 'But what is the treasure?' Finn pressed. Elder Maple smiled mysteriously. 'The best treasures are not always gold or jewels. Sometimes they are something far more precious.' The friends thanked Elder Maple and continued on their way, the special acorn safely tucked in Ruby's pouch. What could be more precious than gold? They would soon find out. The X on the map was getting closer!",
+                "parentQuestions": [
+                    "What did Elder Maple give the friends?",
+                    "What do you think the treasure might be?",
+                    "What treasures in life are more precious than gold?"
+                ]
+            },
+            "ro": {
+                "title": "Bătrânul copac înțelept",
+                "text": "Zâna îi conduse pe Milo, Rubina și Fini la cel mai bătrân copac din Pădurea de Arțar. Era enorm, cu un trunchi mai lat decât zece vulpi stând una lângă alta! 'Acesta este Arțarul Bătrân,' spuse zâna. 'El știe totul despre pădure. Poate să vă povestească despre comoară.' Spre uimirea prietenilor, scoarța copacului formă un chip blând și înțelept. 'Bine ați venit, tineri călători,' spuse Arțarul Bătrân cu o voce adâncă și scârțâitoare. 'V-am urmărit pe parcursul călătoriei. Ați arătat inteligență, bunătate și curaj.' 'Poți să ne spui ce este comoara?' întrebă Milo nerăbdător. 'Asta nu pot face. Dar pot să vă dau asta.' O ghindă mică căzu de sus în lăbuțele Rubinei. 'Plantați-o când ajungeți la X-ul de pe hartă. Comoara se va dezvălui.' 'Dar ce este comoara?' insistă Fini. Arțarul Bătrân zâmbi misterios. 'Cele mai bune comori nu sunt întotdeauna aur sau bijuterii. Uneori sunt ceva mult mai prețios.' Prietenii îi mulțumiră Arțarului Bătrân și continuară drumul, ghinda specială ascunsă în siguranță în punga Rubinei. Ce putea fi mai prețios decât aurul? Aveau să afle curând. X-ul de pe hartă era din ce în ce mai aproape!",
+                "parentQuestions": [
+                    "Ce le-a dat Arțarul Bătrân prietenilor?",
+                    "Ce crezi că ar putea fi comoara?",
+                    "Ce comori în viață sunt mai prețioase decât aurul?"
+                ]
+            },
+            "it": {
+                "title": "Il vecchio albero saggio",
+                "text": "La fata condusse Milo, Rubina e Finn all'albero più antico del Bosco degli Aceri. Era enorme, con un tronco più largo di dieci volpi affiancate! 'Questo è l'Anziano Acero,' disse la fata. 'Sa tutto del bosco. Può raccontarvi del tesoro.' Con stupore degli amici, la corteccia dell'albero formò un viso gentile e saggio. 'Benvenuti, giovani viaggiatori,' disse l'Anziano Acero con una voce profonda e cigolante. 'Vi ho osservato nel vostro viaggio. Avete mostrato intelligenza, gentilezza e coraggio.' 'Puoi dirci cos'è il tesoro?' chiese Milo con impazienza. 'Questo non posso farlo. Ma posso darvi questo.' Una piccola ghianda cadde dall'alto nelle zampe di Rubina. 'Piantatela quando raggiungerete la X sulla vostra mappa. Il tesoro si rivelerà.' 'Ma cos'è il tesoro?' insistette Finn. L'Anziano Acero sorrise misteriosamente. 'I migliori tesori non sono sempre oro o gioielli. A volte sono qualcosa di molto più prezioso.' Gli amici ringraziarono l'Anziano Acero e continuarono per la loro strada, la ghianda speciale al sicuro nella borsa di Rubina. Cosa poteva essere più prezioso dell'oro? Lo avrebbero scoperto presto. La X sulla mappa era sempre più vicina!",
+                "parentQuestions": [
+                    "Cosa ha dato l'Anziano Acero agli amici?",
+                    "Cosa pensi possa essere il tesoro?",
+                    "Quali tesori nella vita sono più preziosi dell'oro?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

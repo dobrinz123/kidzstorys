@@ -1,0 +1,167 @@
+[
+    {
+        "storyKey": "learn-to-read-001-cat-sat",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "cat",
+            "mat",
+            "sat",
+            "simple"
+        ],
+        "tags_ro": [
+            "pisică",
+            "covoraș",
+            "stă",
+            "simplu"
+        ],
+        "tags_it": [
+            "gatto",
+            "tappetino",
+            "seduto",
+            "semplice"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Cat on the Mat",
+                "text": "The cat sat on the mat. The mat was red. The cat was fat. The fat cat sat. It sat and sat. The cat saw a rat. The rat ran fast. The cat ran too. Zip, zap, zoom! The rat hid in a hat. The cat looked at the hat. The rat peeked out. The cat sat back down. The rat came out. Now they are friends. The cat and rat sit on the mat. The end.",
+                "parentQuestions": [
+                    "What color was the mat?",
+                    "Where did the rat hide?",
+                    "Can you find all the words that rhyme with cat?"
+                ]
+            },
+            "ro": {
+                "title": "Pisica pe covoraș",
+                "text": "Pisica stă pe covoraș. Covorașul e roșu. Pisica e grasă. Pisica grasă stă. Stă și stă. Pisica vede un șobolan. Șobolanul fuge repede. Și pisica fuge. Zip, zap, zum! Șobolanul se ascunde în pălărie. Pisica se uită la pălărie. Șobolanul se uită afară. Pisica se așază înapoi. Șobolanul iese. Acum sunt prieteni. Pisica și șobolanul stau pe covoraș. Sfârșit.",
+                "parentQuestions": [
+                    "Ce culoare avea covorașul?",
+                    "Unde s-a ascuns șobolanul?",
+                    "Poți găsi toate cuvintele care rimează cu pisică?"
+                ]
+            },
+            "it": {
+                "title": "Il gatto sul tappetino",
+                "text": "Il gatto sta sul tappetino. Il tappetino è rosso. Il gatto è grasso. Il gatto grasso sta. Sta e sta. Il gatto vede un topo. Il topo corre veloce. Anche il gatto corre. Zip, zap, zum! Il topo si nasconde in un cappello. Il gatto guarda il cappello. Il topo sbircia fuori. Il gatto si risiede. Il topo esce. Ora sono amici. Il gatto e il topo stanno sul tappetino. Fine.",
+                "parentQuestions": [
+                    "Di che colore era il tappetino?",
+                    "Dove si è nascosto il topo?",
+                    "Riesci a trovare tutte le parole che fanno rima con gatto?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-002-big-pig",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "pig",
+            "big",
+            "dig",
+            "rhyme"
+        ],
+        "tags_ro": [
+            "porc",
+            "mare",
+            "sapă",
+            "rimă"
+        ],
+        "tags_it": [
+            "maiale",
+            "grande",
+            "scava",
+            "rima"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Big Pig",
+                "text": "I see a pig. The pig is big. The big pig can dig. Dig, dig, dig. What did he find? A wig! A big wig for a big pig. The pig puts on the wig. The pig does a jig. A big pig in a big wig does a jig. How silly is that! The pig is happy. I am happy too. The end.",
+                "parentQuestions": [
+                    "What did the pig find?",
+                    "What did the pig do with the wig?",
+                    "Can you find all the words that rhyme with pig?"
+                ]
+            },
+            "ro": {
+                "title": "Porcul mare",
+                "text": "Văd un porc. Porcul e mare. Porcul mare poate săpa. Sapă, sapă, sapă. Ce a găsit? O perucă! O perucă mare pentru un porc mare. Porcul pune peruca. Porcul dansează. Un porc mare cu o perucă mare dansează. Ce amuzant! Porcul e fericit. Și eu sunt fericit. Sfârșit.",
+                "parentQuestions": [
+                    "Ce a găsit porcul?",
+                    "Ce a făcut porcul cu peruca?",
+                    "Poți găsi toate cuvintele care rimează cu porc?"
+                ]
+            },
+            "it": {
+                "title": "Il maiale grande",
+                "text": "Vedo un maiale. Il maiale è grande. Il maiale grande sa scavare. Scava, scava, scava. Cosa ha trovato? Una parrucca! Una grande parrucca per un grande maiale. Il maiale mette la parrucca. Il maiale balla. Un grande maiale con una grande parrucca balla. Che buffo! Il maiale è felice. Anche io sono felice. Fine.",
+                "parentQuestions": [
+                    "Cosa ha trovato il maiale?",
+                    "Cosa ha fatto il maiale con la parrucca?",
+                    "Riesci a trovare tutte le parole che fanno rima con maiale?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-003-dog-log",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "dog",
+            "log",
+            "frog",
+            "hop"
+        ],
+        "tags_ro": [
+            "câine",
+            "buștean",
+            "broască",
+            "sărit"
+        ],
+        "tags_it": [
+            "cane",
+            "tronco",
+            "rana",
+            "salta"
+        ],
+        "locales": {
+            "en": {
+                "title": "Dog on a Log",
+                "text": "A dog sat on a log. The log was by the bog. A frog hopped on the log. The dog saw the frog. The frog saw the dog. Hop, hop, hop went the frog. Wag, wag, wag went the dog. They sat on the log. They looked at the fog. The fog went away. It was a nice day. Dog and frog play all day. The end.",
+                "parentQuestions": [
+                    "Where was the log?",
+                    "What did the frog do?",
+                    "Can you hop like a frog?"
+                ]
+            },
+            "ro": {
+                "title": "Câinele pe buștean",
+                "text": "Un câine stă pe un buștean. Bușteanul e lângă mlaștină. O broască sare pe buștean. Câinele vede broasca. Broasca vede câinele. Hop, hop, hop face broasca. Vâj, vâj, vâj face câinele. Stau pe buștean. Se uită la ceață. Ceața pleacă. E o zi frumoasă. Câinele și broasca se joacă toată ziua. Sfârșit.",
+                "parentQuestions": [
+                    "Unde era bușteanul?",
+                    "Ce a făcut broasca?",
+                    "Poți să sari ca o broască?"
+                ]
+            },
+            "it": {
+                "title": "Il cane sul tronco",
+                "text": "Un cane sta su un tronco. Il tronco è vicino alla palude. Una rana salta sul tronco. Il cane vede la rana. La rana vede il cane. Hop, hop, hop fa la rana. Scodinzola, scodinzola fa il cane. Stanno sul tronco. Guardano la nebbia. La nebbia va via. È una bella giornata. Il cane e la rana giocano tutto il giorno. Fine.",
+                "parentQuestions": [
+                    "Dov'era il tronco?",
+                    "Cosa ha fatto la rana?",
+                    "Sai saltare come una rana?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

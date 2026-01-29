@@ -1,0 +1,10 @@
+Slug: leo-penny
+RO: Leo și Penny
+EN: Leo & Penny
+Icon: compass
+
+Slug: milo-rubina-fini
+RO: Milo, Rubina și Fini
+EN: Milo, Rubina & Fini
+Icon: compass
+

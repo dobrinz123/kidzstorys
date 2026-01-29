@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Kids Stories",
+    "slug": "kids-stories",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kidsstories.app",
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "This app uses your data to provide personalized story recommendations."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.kidsstories.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": "kidsstories",
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      "expo-font"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "your-project-id"
+      },
+      "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "test_HlVTAKhLwKNVwWqguygDdjGWEaY",
+      "EXPO_PUBLIC_REVENUECAT_ANDROID_KEY": "test_HlVTAKhLwKNVwWqguygDdjGWEaY",
+      "EXPO_PUBLIC_REVENUECAT_WEB_KEY": "test_HlVTAKhLwKNVwWqguygDdjGWEaY",
+      "EXPO_PUBLIC_REVENUECAT_ENTITLEMENT_ID": "PREMIUM"
+    }
+  }
+}

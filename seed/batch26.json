@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-maple-forest-001",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "friends",
+            "mystery",
+            "teamwork"
+        ],
+        "tags_ro": [
+            "pădure",
+            "prieteni",
+            "mister",
+            "lucru în echipă"
+        ],
+        "tags_it": [
+            "bosco",
+            "amici",
+            "mistero",
+            "lavoro di squadra"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 1,
+        "locales": {
+            "en": {
+                "title": "The Mysterious Map",
+                "text": "In the heart of Maple Forest lived three best friends: Milo the mouse, Ruby the rabbit, and Finn the fox. They spent their days exploring the beautiful woods together. One sunny morning, Milo found something unusual near the old oak tree. 'Look at this!' he squeaked excitedly. It was a piece of old paper, rolled up and tied with a vine. Ruby hopped over quickly. 'What is it?' They unrolled the paper carefully. It was a map! But not a map of anywhere they recognized. There were strange symbols and dotted lines leading to a big red X. 'This looks like a treasure map!' Finn said, his tail swishing with excitement. 'But where does it lead?' Milo studied the map closely. 'Look, this symbol looks like the Twin Rocks near the waterfall. Maybe that's where we start!' 'Should we follow it?' Ruby asked, her ears perked up. The three friends looked at each other. They had never been on a real treasure hunt before! 'Together?' Milo asked. 'Together!' Ruby and Finn agreed. And so the three friends set off on their first big adventure, not knowing the wonderful discoveries that awaited them. The Maple Forest mystery had begun!",
+                "parentQuestions": [
+                    "What did Milo find under the old oak tree?",
+                    "How do you think the friends felt about starting an adventure?",
+                    "If you found a treasure map, would you follow it?"
+                ]
+            },
+            "ro": {
+                "title": "Harta misterioasă",
+                "text": "În inima Pădurii de Arțar trăiau trei prieteni foarte buni: Milo șoricelul, Rubina iepurașul și Fini vulpoiul. Își petreceau zilele explorând împreună frumoasa pădure. Într-o dimineață însorită, Milo găsi ceva neobișnuit lângă bătrânul stejar. 'Uitați la asta!' chițăi el entuziasmat. Era o bucată de hârtie veche, rulată și legată cu o viță. Rubina sări repede. 'Ce este?' Derulară hârtia cu grijă. Era o hartă! Dar nu o hartă a vreunui loc pe care îl recunoșteau. Erau simboluri ciudate și linii punctate ducând la un X mare roșu. 'Arată ca o hartă a comorii!' spuse Fini, coada lui mișcându-se de entuziasm. 'Dar unde duce?' Milo studie harta cu atenție. 'Uite, simbolul ăsta arată ca Pietrele Gemene de lângă cascadă. Poate acolo începem!' 'Ar trebui să o urmăm?' întrebă Rubina, cu urechile ciulite. Cei trei prieteni se priviră unul pe altul. Nu mai fuseseră niciodată într-o adevărată vânătoare de comori! 'Împreună?' întrebă Milo. 'Împreună!' fură de acord Rubina și Fini. Și astfel cei trei prieteni porniră în prima lor mare aventură, neștiind descoperirile minunate care îi așteptau. Misterul Pădurii de Arțar începuse!",
+                "parentQuestions": [
+                    "Ce a găsit Milo sub bătrânul stejar?",
+                    "Cum crezi că s-au simțit prietenii să înceapă o aventură?",
+                    "Dacă ai găsi o hartă a comorii, ai urma-o?"
+                ]
+            },
+            "it": {
+                "title": "La mappa misteriosa",
+                "text": "Nel cuore del Bosco degli Aceri vivevano tre migliori amici: Milo il topolino, Rubina la coniglietta e Finn la volpe. Passavano le loro giornate esplorando insieme il bellissimo bosco. Una mattina soleggiata, Milo trovò qualcosa di insolito vicino alla vecchia quercia. 'Guardate questo!' squittì eccitato. Era un pezzo di carta vecchia, arrotolato e legato con un viticcio. Rubina saltellò velocemente. 'Cos'è?' Srotolarono la carta con attenzione. Era una mappa! Ma non una mappa di nessun posto che riconoscevano. C'erano simboli strani e linee tratteggiate che portavano a una grande X rossa. 'Sembra una mappa del tesoro!' disse Finn, con la coda che si agitava dall'eccitazione. 'Ma dove porta?' Milo studiò la mappa attentamente. 'Guarda, questo simbolo sembra le Rocce Gemelle vicino alla cascata. Forse è da lì che iniziamo!' 'Dovremmo seguirla?' chiese Rubina, con le orecchie dritte. I tre amici si guardarono. Non erano mai stati in una vera caccia al tesoro prima! 'Insieme?' chiese Milo. 'Insieme!' concordarono Rubina e Finn. E così i tre amici partirono per la loro prima grande avventura, senza sapere le meravigliose scoperte che li aspettavano. Il mistero del Bosco degli Aceri era iniziato!",
+                "parentQuestions": [
+                    "Cosa ha trovato Milo sotto la vecchia quercia?",
+                    "Come pensi che si sentissero gli amici nell'iniziare un'avventura?",
+                    "Se trovassi una mappa del tesoro, la seguiresti?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-maple-forest-002",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "puzzle",
+            "clues",
+            "waterfall"
+        ],
+        "tags_ro": [
+            "pădure",
+            "puzzle",
+            "indicii",
+            "cascadă"
+        ],
+        "tags_it": [
+            "bosco",
+            "puzzle",
+            "indizi",
+            "cascata"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 2,
+        "locales": {
+            "en": {
+                "title": "The Twin Rocks Puzzle",
+                "text": "Following the mysterious map, Milo, Ruby, and Finn reached the Twin Rocks near the waterfall. The rocks were huge and shaped like two giant acorns! 'Now what?' Ruby asked, looking at the map. 'The dotted line goes through the rocks,' Milo noticed. 'Maybe there's something between them?' They squeezed between the massive stones and found a hidden cave! Inside was dark, but small beams of sunlight came through cracks above. On the cave wall, there were carved pictures: a sun, a moon, and three stars. 'Look, more symbols!' Finn pointed with his paw. Below the carvings was a stone shelf with three round stones that could rotate. Each stone had different pictures on it. 'It's a puzzle!' Milo realized. 'We need to match something.' Ruby studied the map again. 'The map has the same three symbols! Sun, moon, stars. Maybe we turn the stones to show those?' Working together, they rotated each stone. Milo turned the first to show a sun. Ruby turned the second to show a moon. Finn turned the third to show three stars. CLICK! A secret door in the wall slowly opened! 'We did it!' the friends cheered. What wonders awaited them beyond the door? They would find out in their next adventure!",
+                "parentQuestions": [
+                    "What did the friends find between the Twin Rocks?",
+                    "How did they solve the puzzle?",
+                    "Have you ever solved a puzzle with friends?"
+                ]
+            },
+            "ro": {
+                "title": "Puzzle-ul Pietrelor Gemene",
+                "text": "Urmând harta misterioasă, Milo, Rubina și Fini ajunseră la Pietrele Gemene de lângă cascadă. Pietrele erau uriașe și în formă de două ghinde gigantice! 'Acum ce facem?' întrebă Rubina, privind harta. 'Linia punctată trece prin pietre,' observă Milo. 'Poate e ceva între ele?' Se strecurară între pietrele masive și găsiră o peșteră ascunsă! Înăuntru era întuneric, dar mici raze de soare veneau prin crăpăturile de sus. Pe peretele peșterii erau sculptate imagini: un soare, o lună și trei stele. 'Uite, mai multe simboluri!' arătă Fini cu laba. Sub sculpturi era o poliță de piatră cu trei pietre rotunde care se puteau roti. Fiecare piatră avea imagini diferite. 'E un puzzle!' realiză Milo. 'Trebuie să potrivim ceva.' Rubina studie harta din nou. 'Harta are aceleași trei simboluri! Soare, lună, stele. Poate rotim pietrele să le arate pe acelea?' Lucrând împreună, rotiră fiecare piatră. Milo întoarse prima să arate un soare. Rubina întoarse a doua să arate o lună. Fini întoarse a treia să arate trei stele. CLIC! O ușă secretă în perete se deschise încet! 'Am reușit!' sărbătoriră prietenii. Ce minuni îi așteptau dincolo de ușă? Aveau să afle în următoarea lor aventură!",
+                "parentQuestions": [
+                    "Ce au găsit prietenii între Pietrele Gemene?",
+                    "Cum au rezolvat puzzle-ul?",
+                    "Ai rezolvat vreodată un puzzle cu prietenii?"
+                ]
+            },
+            "it": {
+                "title": "Il puzzle delle Rocce Gemelle",
+                "text": "Seguendo la mappa misteriosa, Milo, Rubina e Finn raggiunsero le Rocce Gemelle vicino alla cascata. Le rocce erano enormi e a forma di due ghiande giganti! 'E adesso?' chiese Rubina, guardando la mappa. 'La linea tratteggiata passa attraverso le rocce,' notò Milo. 'Forse c'è qualcosa tra loro?' Si infilarono tra le enormi pietre e trovarono una grotta nascosta! Dentro era buio, ma piccoli raggi di sole entravano dalle crepe sopra. Sulla parete della grotta c'erano immagini scolpite: un sole, una luna e tre stelle. 'Guarda, altri simboli!' indicò Finn con la zampa. Sotto le incisioni c'era una mensola di pietra con tre pietre rotonde che potevano ruotare. Ogni pietra aveva immagini diverse. 'È un puzzle!' realizzò Milo. 'Dobbiamo abbinare qualcosa.' Rubina studiò di nuovo la mappa. 'La mappa ha gli stessi tre simboli! Sole, luna, stelle. Forse giriamo le pietre per mostrare quelli?' Lavorando insieme, ruotarono ogni pietra. Milo girò la prima per mostrare un sole. Rubina girò la seconda per mostrare una luna. Finn girò la terza per mostrare tre stelle. CLIC! Una porta segreta nel muro si aprì lentamente! 'Ce l'abbiamo fatta!' esultarono gli amici. Quali meraviglie li aspettavano oltre la porta? L'avrebbero scoperto nella loro prossima avventura!",
+                "parentQuestions": [
+                    "Cosa hanno trovato gli amici tra le Rocce Gemelle?",
+                    "Come hanno risolto il puzzle?",
+                    "Hai mai risolto un puzzle con gli amici?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

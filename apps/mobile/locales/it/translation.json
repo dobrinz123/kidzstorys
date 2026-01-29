@@ -1,0 +1,116 @@
+{
+  "common": {
+    "close": "Chiudi",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "continue": "Continua",
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "retry": "Riprova"
+  },
+  "auth": {
+    "signIn": "Accedi",
+    "signUp": "Registrati",
+    "email": "Email",
+    "password": "Password",
+    "name": "Nome",
+    "createAccount": "Crea account",
+    "alreadyHaveAccount": "Hai già un account?",
+    "dontHaveAccount": "Non hai un account?"
+  },
+  "home": {
+    "title": "Storie",
+    "seeAll": "Vedi tutto",
+    "pickOneNow": "Scegli ora",
+    "recommended": "Consigliato per te",
+    "filters": {
+      "age": "Età",
+      "duration": "Durata",
+      "state": "Stato del bambino"
+    },
+    "ageBrackets": {
+      "3-4": "Età 3-4",
+      "5-6": "Età 5-6",
+      "7-8": "Età 7-8",
+      "9-10": "Età 9-10"
+    },
+    "durations": {
+      "3": "3 minuti",
+      "5": "5 minuti",
+      "8": "8 minuti",
+      "12": "12 minuti"
+    },
+    "states": {
+      "calm": "Calmo",
+      "normal": "Normale",
+      "agitated": "Agitato"
+    }
+  },
+  "categories": {
+    "bedtime": "Buonanotte",
+    "calmDown": "Calmati",
+    "emotions": "Emozioni",
+    "adventure": "Avventura",
+    "learnToRead": "Imparo a leggere",
+    "curiosities": "Curiosità"
+  },
+  "paywall": {
+    "title": "Sblocca tutte le storie",
+    "subtitle": "Accesso illimitato a oltre 100 storie multilingue",
+    "feature1": "100+ storie originali in EN, RO, IT",
+    "feature2": "Nuove storie ogni settimana",
+    "feature3": "Domande di discussione per genitori",
+    "feature4": "Esperienza senza pubblicità",
+    "restore": "Ripristina acquisti",
+    "subscribe": "Abbonati ora"
+  },
+  "story": {
+    "readingTime": "{{minutes}} min lettura",
+    "ageRange": "Età {{min}}-{{max}}",
+    "parentQuestions": "Domande per tuo figlio",
+    "markComplete": "Segna come completato",
+    "addToFavorites": "Aggiungi ai preferiti",
+    "removeFromFavorites": "Rimuovi dai preferiti",
+    "locked": "Abbonati per sbloccare questa storia",
+    "nextSimilar": "Prossima storia simile"
+  },
+  "favorites": {
+    "title": "Preferiti",
+    "empty": "Nessun preferito ancora",
+    "emptyDescription": "Le tue storie preferite appariranno qui",
+    "requiresSubscription": "I preferiti richiedono un abbonamento attivo"
+  },
+  "profiles": {
+    "title": "Profili bambini",
+    "create": "Crea profilo",
+    "edit": "Modifica profilo",
+    "delete": "Elimina profilo",
+    "nickname": "Soprannome",
+    "age": "Età",
+    "maxReached": "Massimo 3 profili consentiti"
+  },
+  "routines": {
+    "title": "Routine della buonanotte",
+    "create": "Crea routine",
+    "time": "Ora",
+    "category": "Categoria",
+    "duration": "Durata",
+    "enabled": "Abilitato"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "language": "Lingua",
+    "languages": {
+      "en": "English",
+      "ro": "Română",
+      "it": "Italiano"
+    },
+    "subscription": "Stato abbonamento",
+    "manageSubscription": "Gestisci abbonamento",
+    "restorePurchases": "Ripristina acquisti",
+    "logout": "Disconnetti",
+    "active": "Attivo",
+    "inactive": "Inattivo",
+    "expiresOn": "Scade il {{date}}"
+  }
+}

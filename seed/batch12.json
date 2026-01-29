@@ -1,0 +1,167 @@
+[
+    {
+        "storyKey": "bedtime-023-treehouse-night",
+        "categorySlug": "bedtime",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "treehouse",
+            "siblings",
+            "adventure",
+            "cozy"
+        ],
+        "tags_ro": [
+            "căsuță în copac",
+            "frați",
+            "aventură",
+            "confortabil"
+        ],
+        "tags_it": [
+            "casa sull'albero",
+            "fratelli",
+            "avventura",
+            "accogliente"
+        ],
+        "locales": {
+            "en": {
+                "title": "Treehouse Sleepover",
+                "text": "High in the branches of an old oak tree, two siblings named Lily and Max had the most wonderful treehouse. Tonight was special because they were having a sleepover there. Dad had helped them carry up sleeping bags, pillows, and their favorite stuffed animals. The treehouse had a round window that looked out at the stars. As the sky grew dark, the stars appeared one by one. 'There's the Big Dipper,' Max pointed. 'And there's the Little Bear,' Lily added. The gentle breeze made the treehouse sway ever so slightly, like being in a boat. An owl hooted nearby, a friendly sound in the night. Max and Lily snuggled into their sleeping bags. Through the wooden walls, they could hear the leaves rustling. It was the most magical sound. 'This is the best adventure ever,' whispered Lily. 'Even better because we're together,' Max agreed. They could see their house below, Mom and Dad's bedroom light glowing warmly. They felt safe and happy, high in their special place but never too far from home. The stars twinkled their ancient lullaby as the siblings drifted off to sleep, dreaming of more adventures to come.",
+                "parentQuestions": [
+                    "What did Lily and Max see from their treehouse?",
+                    "What made the treehouse sway?",
+                    "Would you like to sleep in a treehouse?"
+                ]
+            },
+            "ro": {
+                "title": "Noapte în căsuța din copac",
+                "text": "Sus în ramurile unui stejar bătrân, doi frați pe nume Crina și Max aveau cea mai minunată căsuță în copac. În noaptea asta era special pentru că petreceau noaptea acolo. Tata îi ajutase să urce saci de dormit, perne și animalele lor de pluș preferate. Căsuța avea o fereastră rotundă care privea spre stele. Pe măsură ce cerul deveni întunecat, stelele apărură una câte una. 'Uite Carul Mare,' arătă Max. 'Și uite Ursa Mică,' adăugă Crina. Briza blândă făcea căsuța să se legene ușor, ca și cum ar fi într-o barcă. O bufniță huhui în apropiere, un sunet prietenos în noapte. Max și Crina se cuibăriră în sacii lor de dormit. Prin pereții de lemn, puteau auzi frunzele foșnind. Era cel mai magic sunet. 'Aceasta este cea mai bună aventură,' șopti Crina. 'Chiar mai bună pentru că suntem împreună,' fu de acord Max. Puteau vedea casa lor dedesubt, lumina din dormitorul Mamei și Tatei strălucind cald. Se simțeau în siguranță și fericiți, sus în locul lor special dar niciodată prea departe de casă. Stelele sclipeau cântecul lor de leagăn străvechi în timp ce frații plutiră spre somn, visând la mai multe aventuri care vor urma.",
+                "parentQuestions": [
+                    "Ce au văzut Crina și Max din căsuța lor?",
+                    "Ce făcea căsuța să se legene?",
+                    "Ți-ar plăcea să dormi într-o căsuță în copac?"
+                ]
+            },
+            "it": {
+                "title": "Pigiama party nella casa sull'albero",
+                "text": "In alto tra i rami di una vecchia quercia, due fratelli di nome Giglio e Max avevano la casa sull'albero più meravigliosa. Stanotte era speciale perché dormivano lì. Papà li aveva aiutati a portare su sacchi a pelo, cuscini e i loro peluche preferiti. La casa sull'albero aveva una finestra rotonda che guardava le stelle. Mentre il cielo si oscurava, le stelle apparvero una per una. 'Ecco il Grande Carro,' indicò Max. 'E lì c'è l'Orsa Minore,' aggiunse Giglio. La brezza gentile faceva oscillare leggermente la casa sull'albero, come stare su una barca. Un gufo fece il suo verso lì vicino, un suono amichevole nella notte. Max e Giglio si rannicchiarono nei loro sacchi a pelo. Attraverso le pareti di legno, potevano sentire le foglie frusciare. Era il suono più magico. 'Questa è la migliore avventura di sempre,' sussurrò Giglio. 'Ancora meglio perché siamo insieme,' concordò Max. Potevano vedere la loro casa sotto, la luce della camera di Mamma e Papà che brillava calda. Si sentivano al sicuro e felici, in alto nel loro posto speciale ma mai troppo lontani da casa. Le stelle scintillavano la loro antica ninna nanna mentre i fratelli scivolavano nel sonno, sognando altre avventure a venire.",
+                "parentQuestions": [
+                    "Cosa vedevano Giglio e Max dalla loro casa sull'albero?",
+                    "Cosa faceva oscillare la casa sull'albero?",
+                    "Ti piacerebbe dormire in una casa sull'albero?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-024-music-box",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "music box",
+            "melody",
+            "grandmother",
+            "memories"
+        ],
+        "tags_ro": [
+            "cutie muzicală",
+            "melodie",
+            "bunica",
+            "amintiri"
+        ],
+        "tags_it": [
+            "carillon",
+            "melodia",
+            "nonna",
+            "ricordi"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Magic Music Box",
+                "text": "On Anna's nightstand sat a beautiful music box. It had been her grandmother's, and now it was hers. The box was painted with tiny flowers and had a little dancer inside. Every night before bed, Anna would wind it up and listen. Ting, ting, ting. The gentle melody filled her room. It was the most beautiful song, soft and slow like falling leaves. As the music played, Anna imagined the little dancer twirling in the moonlight. She thought of her grandmother and all the bedtime stories she used to tell. The music seemed to carry love with every note. Anna snuggled into her covers, watching the dancer spin. Round and round and round. The notes drifted through the air like tiny stars. Anna's room felt magical and safe. The music grew slower as the spring wound down. Ting... ting... ting... Anna's eyes were almost closed now. She dreamed of dancing with her grandmother in a garden full of stars. And even after the music box stopped, its melody seemed to linger in the quiet of the room, keeping Anna company through the peaceful night.",
+                "parentQuestions": [
+                    "Where did the music box come from?",
+                    "What did Anna imagine when she heard the music?",
+                    "Does anything special help you feel sleepy?"
+                ]
+            },
+            "ro": {
+                "title": "Cutia muzicală magică",
+                "text": "Pe noptiera Anei stătea o cutie muzicală frumoasă. Fusese a bunicii ei, și acum era a ei. Cutia era pictată cu flori mici și avea o dansatoare mică înăuntru. În fiecare seară înainte de culcare, Ana o învârtea și asculta. Ting, ting, ting. Melodia blândă umplea camera. Era cel mai frumos cântec, moale și încet ca frunzele care cad. Pe măsură ce muzica cânta, Ana își imagina dansatoarea mică învârtindu-se în lumina lunii. Se gândea la bunica ei și la toate poveștile de noapte bună pe care le spunea. Muzica părea să poarte dragoste cu fiecare notă. Ana se cuibări în pături, privind dansatoarea învârtindu-se. În cerc și în cerc. Notele pluteau prin aer ca niște stele mici. Camera Anei se simțea magică și în siguranță. Muzica deveni mai lentă pe măsură ce arcul se desfăcu. Ting... ting... ting... Ochii Anei erau aproape închiși acum. Visă că dansa cu bunica într-o grădină plină de stele. Și chiar și după ce cutia muzicală se opri, melodia ei părea să rămână în liniștea camerei, ținându-i companie Anei toată noaptea pașnică.",
+                "parentQuestions": [
+                    "De unde venea cutia muzicală?",
+                    "Ce și-a imaginat Ana când a auzit muzica?",
+                    "Există ceva special care te ajută să te simți somnoros?"
+                ]
+            },
+            "it": {
+                "title": "Il carillon magico",
+                "text": "Sul comodino di Anna c'era un bellissimo carillon. Era stato della sua nonna, e ora era suo. La scatola era dipinta con piccoli fiori e aveva una piccola ballerina dentro. Ogni sera prima di dormire, Anna lo caricava e ascoltava. Ding, ding, ding. La melodia gentile riempiva la sua stanza. Era la canzone più bella, morbida e lenta come foglie che cadono. Mentre la musica suonava, Anna immaginava la piccola ballerina che girava nel chiaro di luna. Pensava a sua nonna e a tutte le storie della buonanotte che raccontava. La musica sembrava portare amore con ogni nota. Anna si rannicchiò sotto le coperte, guardando la ballerina girare. In tondo e in tondo. Le note fluttuavano nell'aria come piccole stelle. La stanza di Anna sembrava magica e sicura. La musica divenne più lenta mentre la molla si scaricava. Ding... ding... ding... Gli occhi di Anna erano quasi chiusi ora. Sognò di ballare con sua nonna in un giardino pieno di stelle. E anche dopo che il carillon si fermò, la sua melodia sembrava indugiare nella quiete della stanza, facendo compagnia ad Anna per tutta la notte pacifica.",
+                "parentQuestions": [
+                    "Da dove veniva il carillon?",
+                    "Cosa immaginava Anna quando sentiva la musica?",
+                    "C'è qualcosa di speciale che ti aiuta a sentirti assonnato?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-025-whale-song",
+        "categorySlug": "bedtime",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "whale",
+            "ocean",
+            "deep",
+            "peaceful"
+        ],
+        "tags_ro": [
+            "balenă",
+            "ocean",
+            "adânc",
+            "pașnic"
+        ],
+        "tags_it": [
+            "balena",
+            "oceano",
+            "profondo",
+            "pacifico"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Whale's Evening Song",
+                "text": "Deep beneath the ocean waves, where the water was dark and peaceful, a young whale named Blue swam beside his mother. It was the quiet time, when even the ocean seemed to sleep. Blue's mother began to sing. Her voice was deep and gentle, echoing through the dark water. It was the most beautiful song, ancient and full of love. The song traveled far, reaching other whales in distant waters. Blue listened to his mother's melody. It told stories of sunny surfaces and playful waves, of starfish and coral gardens, of family and home. As she sang, they swam slowly, barely moving, just drifting. The water held them softly, like being wrapped in the gentlest hug. Blue felt safe and warm despite the cold ocean around them. Other sea creatures paused to listen: dolphins, fish, even the tiny plankton seemed to glow brighter. Blue's eyes grew heavy. He swam closer to his mother, feeling her steady heartbeat through the water. Her song grew softer, slower, more like a whisper. And together, mother and calf floated in the peaceful darkness, wrapped in song and love, until they both drifted into deep, restful sleep.",
+                "parentQuestions": [
+                    "What did Blue's mother sing about?",
+                    "How did the song make Blue feel?",
+                    "What song makes you feel calm and safe?"
+                ]
+            },
+            "ro": {
+                "title": "Cântecul de seară al balenei",
+                "text": "Adânc sub valurile oceanului, unde apa era întunecată și pașnică, o balenă tânără pe nume Albastru înota lângă mama lui. Era timpul liniștit, când chiar și oceanul părea să doarmă. Mama lui Albastru începu să cânte. Vocea ei era adâncă și blândă, răsunând prin apa întunecată. Era cel mai frumos cântec, străvechi și plin de dragoste. Cântecul călători departe, ajungând la alte balene în ape îndepărtate. Albastru ascultă melodia mamei sale. Povestea despre suprafețe însorite și valuri jucăușe, despre stele de mare și grădini de corali, despre familie și casă. Pe măsură ce cânta, înotau încet, aproape fără să se miște, doar plutind. Apa îi ținea blând, ca și cum ar fi înfășurați în cea mai blândă îmbrățișare. Albastru se simțea în siguranță și la căldură în ciuda oceanului rece din jur. Alte creaturi marine se opreau să asculte: delfini, pești, chiar și planctonul minuscul părea să strălucească mai puternic. Ochii lui Albastru deveniră grei. Înotă mai aproape de mama lui, simțindu-i bătăile constante ale inimii prin apă. Cântecul ei deveni mai blând, mai încet, mai mult ca o șoaptă. Și împreună, mama și puiul plutiră în întunericul pașnic, înfășurați în cântec și dragoste, până când amândoi plutiră într-un somn adânc și odihnitor.",
+                "parentQuestions": [
+                    "Despre ce cânta mama lui Albastru?",
+                    "Cum l-a făcut cântecul pe Albastru să se simtă?",
+                    "Ce cântec te face să te simți calm și în siguranță?"
+                ]
+            },
+            "it": {
+                "title": "La canzone serale della balena",
+                "text": "Nel profondo sotto le onde dell'oceano, dove l'acqua era scura e pacifica, una giovane balena di nome Blu nuotava accanto a sua madre. Era il momento tranquillo, quando anche l'oceano sembrava dormire. La mamma di Blu iniziò a cantare. La sua voce era profonda e gentile, echeggiando nell'acqua scura. Era la canzone più bella, antica e piena d'amore. La canzone viaggiò lontano, raggiungendo altre balene in acque distanti. Blu ascoltava la melodia di sua madre. Raccontava storie di superfici soleggiate e onde giocose, di stelle marine e giardini di corallo, di famiglia e casa. Mentre cantava, nuotavano lentamente, quasi senza muoversi, solo fluttuando. L'acqua li teneva dolcemente, come essere avvolti nell'abbraccio più gentile. Blu si sentiva al sicuro e al caldo nonostante l'oceano freddo intorno a loro. Altre creature marine si fermavano ad ascoltare: delfini, pesci, persino il piccolo plancton sembrava brillare più forte. Gli occhi di Blu divennero pesanti. Nuotò più vicino a sua madre, sentendo il suo battito cardiaco costante attraverso l'acqua. La sua canzone divenne più morbida, più lenta, più simile a un sussurro. E insieme, madre e piccolo fluttuarono nell'oscurità pacifica, avvolti nella canzone e nell'amore, fino a quando entrambi scivolarono in un sonno profondo e riposante.",
+                "parentQuestions": [
+                    "Di cosa cantava la mamma di Blu?",
+                    "Come faceva sentire la canzone a Blu?",
+                    "Quale canzone ti fa sentire calmo e al sicuro?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

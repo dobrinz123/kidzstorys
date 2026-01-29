@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "bedtime-017-train-dreams",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "train",
+            "journey",
+            "cozy",
+            "rhythmic"
+        ],
+        "tags_ro": [
+            "tren",
+            "călătorie",
+            "confortabil",
+            "ritmic"
+        ],
+        "tags_it": [
+            "treno",
+            "viaggio",
+            "accogliente",
+            "ritmico"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Sleepy Night Train",
+                "text": "Clickety-clack, clickety-clack. The little night train rolled along the tracks. Inside, all the passengers were getting sleepy. A young boy named Ben sat by the window with his teddy bear. Outside, the world was painted in soft shades of blue and silver. Trees and houses passed by like gentle shadows. The train rocked gently from side to side, like a big cradle on wheels. Clickety-clack, clickety-clack. The rhythm was so soothing. Ben's mother covered him with a soft blanket. The train's gentle motion made Ben feel so cozy. Through the window, he could see the moon following along, keeping pace with the train. 'Where are we going?' Ben asked sleepily. 'To dreamland,' his mother whispered, kissing his forehead. The clickety-clack grew softer in Ben's ears. The lights in the train grew dim and warm. Other children were already asleep, curled up in their seats. Ben hugged his teddy closer, feeling perfectly safe and warm. The train rolled on through the peaceful night, carrying its sleepy passengers toward morning. And Ben drifted off to dream of magical train rides through starlit lands.",
+                "parentQuestions": [
+                    "What sound did the train make?",
+                    "How did the train help Ben feel sleepy?",
+                    "Have you ever been on a train ride?"
+                ]
+            },
+            "ro": {
+                "title": "Trenul de noapte somnoros",
+                "text": "Tic-tac, tic-tac. Micul tren de noapte se rostogoli de-a lungul șinelor. Înăuntru, toți pasagerii deveneau somnoroși. Un băiețel pe nume Ben stătea la fereastră cu ursulețul lui de pluș. Afară, lumea era pictată în nuanțe blânde de albastru și argintiu. Copaci și case treceau pe lângă ei ca niște umbre blânde. Trenul se legăna ușor dintr-o parte în alta, ca un leagăn mare pe roți. Tic-tac, tic-tac. Ritmul era atât de liniștitor. Mama lui Ben îl acoperi cu o pătură moale. Mișcarea blândă a trenului îl făcea pe Ben să se simtă atât de confortabil. Prin fereastră, putea vedea luna urmându-i, ținând pasul cu trenul. 'Unde mergem?' întrebă Ben somnoros. 'În țara viselor,' șopti mama lui, sărutându-i fruntea. Tic-tac-ul deveni mai încet în urechile lui Ben. Luminile din tren deveniră slabe și calde. Alți copii dormeau deja, ghemui în scaunele lor. Ben își strânse ursulețul mai aproape, simțindu-se perfect în siguranță și la căldură. Trenul se rostogoli mai departe prin noaptea pașnică, ducându-și pasagerii somnoroși spre dimineață. Iar Ben adormi visând la călătorii magice cu trenul prin ținuturi luminate de stele.",
+                "parentQuestions": [
+                    "Ce sunet făcea trenul?",
+                    "Cum l-a ajutat trenul pe Ben să devină somnoros?",
+                    "Ai fost vreodată într-o călătorie cu trenul?"
+                ]
+            },
+            "it": {
+                "title": "Il treno notturno assonnato",
+                "text": "Tic-tac, tic-tac. Il piccolo treno notturno rotolava lungo i binari. Dentro, tutti i passeggeri stavano diventando assonnati. Un ragazzino di nome Ben sedeva vicino alla finestra con il suo orsacchiotto. Fuori, il mondo era dipinto in tenui sfumature di blu e argento. Alberi e case passavano come ombre gentili. Il treno oscillava dolcemente da un lato all'altro, come una grande culla su ruote. Tic-tac, tic-tac. Il ritmo era così rilassante. La mamma di Ben lo coprì con una coperta morbida. Il movimento gentile del treno faceva sentire Ben così accogliente. Attraverso la finestra, poteva vedere la luna che lo seguiva, tenendo il passo con il treno. 'Dove stiamo andando?' chiese Ben assonnato. 'Nel paese dei sogni,' sussurrò sua madre, baciandogli la fronte. Il tic-tac divenne più morbido nelle orecchie di Ben. Le luci nel treno divennero fioche e calde. Altri bambini dormivano già, raggomitolati nei loro sedili. Ben strinse più forte il suo orsacchiotto, sentendosi perfettamente al sicuro e al caldo. Il treno continuò attraverso la notte pacifica, portando i suoi passeggeri assonnati verso il mattino. E Ben scivolò nel sonno sognando viaggi in treno magici attraverso terre illuminate dalle stelle.",
+                "parentQuestions": [
+                    "Che suono faceva il treno?",
+                    "Come ha aiutato Ben a diventare assonnato il treno?",
+                    "Sei mai stato su un treno?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-018-starfish-bay",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "ocean",
+            "starfish",
+            "beach",
+            "peaceful"
+        ],
+        "tags_ro": [
+            "ocean",
+            "stea de mare",
+            "plajă",
+            "pașnic"
+        ],
+        "tags_it": [
+            "oceano",
+            "stella marina",
+            "spiaggia",
+            "pacifico"
+        ],
+        "locales": {
+            "en": {
+                "title": "Starfish Sleepytime",
+                "text": "In a peaceful bay where the water was crystal clear, a little starfish named Stella lived on the sandy ocean floor. All day she had explored the colorful coral reef, meeting friendly fish and dancing with the seaweed. Now the underwater world was growing dark and quiet. The sun had set above the waves, and it was time to rest. Stella found her favorite sleeping spot between two smooth stones. She spread out her five arms and settled into the soft sand. It felt like the coziest bed. Nearby, an octopus name Otto snuggled into his cave home. A family of clownfish wiggled into their anemone, safe and snug. Even the waves above grew gentler, rocking the whole ocean softly. Stella watched the last rays of sunlight fade into a deep blue twilight. Tiny glowing jellyfish floated by like underwater stars. The ocean hummed a low, soothing song. It was the sound of whales far away, singing their evening lullabies. Stella felt so peaceful. Her little starfish eyes grew heavy. She thought about all the wonderful things she would explore tomorrow. And with the ocean singing softly all around her, Stella drifted into the sweetest sea dreams.",
+                "parentQuestions": [
+                    "Where did Stella like to sleep?",
+                    "What other sea creatures went to sleep?",
+                    "What sea animal would you like to be friends with?"
+                ]
+            },
+            "ro": {
+                "title": "Somnul stelei de mare",
+                "text": "Într-un golf pașnic unde apa era cristalină, o stea de mare micuță pe nume Steluța trăia pe fundul nisipos al oceanului. Toată ziua explorase reciful colorat de corali, întâlnind pești prietenoși și dansând cu algele. Acum lumea subacvatică devenea întunecată și liniștită. Soarele apusese deasupra valurilor și era timpul să se odihnească. Steluța găsi locul ei preferat de dormit între două pietre netede. Își întinse cele cinci brațe și se așeză în nisipul moale. Se simțea ca cel mai confortabil pat. În apropiere, o caracatiță pe nume Otto se cuibări în casa lui peșteră. O familie de pești clovn se strecură în anemonă, în siguranță și la căldură. Chiar și valurile de deasupra deveniră mai blânde, legănând întregul ocean ușor. Steluța privi ultimele raze de soare decolorându-se într-un amurg albastru închis. Meduze mici strălucitoare pluteau pe lângă ea ca niște stele subacvatice. Oceanul fredona un cântec jos și liniștitor. Era sunetul balenelor de departe, cântându-și cântecele de leagăn de seară. Steluța se simțea atât de pașnică. Ochișorii ei de stea de mare deveniră grei. Se gândi la toate lucrurile minunate pe care le va explora mâine. Și cu oceanul cântând blând în jurul ei, Steluța plutea în cele mai dulci vise marine.",
+                "parentQuestions": [
+                    "Unde îi plăcea să doarmă Steluța?",
+                    "Ce alte creaturi marine au mers la somn?",
+                    "Cu ce animal marin ți-ar plăcea să fii prieten?"
+                ]
+            },
+            "it": {
+                "title": "La nanna della stella marina",
+                "text": "In una baia tranquilla dove l'acqua era cristallina, una piccola stella marina di nome Stellina viveva sul fondale sabbioso dell'oceano. Tutto il giorno aveva esplorato la colorata barriera corallina, incontrando pesci amichevoli e danzando con le alghe. Ora il mondo sottomarino stava diventando scuro e silenzioso. Il sole era tramontato sopra le onde, ed era ora di riposare. Stellina trovò il suo posto preferito per dormire tra due pietre lisce. Allargò le sue cinque braccia e si sistemò nella sabbia morbida. Sembrava il letto più accogliente. Lì vicino, un polpo di nome Otto si rannicchiò nella sua casa-grotta. Una famiglia di pesci pagliaccio si infilò nel loro anemone, al sicuro e comoda. Anche le onde sopra divennero più gentili, cullando dolcemente tutto l'oceano. Stellina guardò gli ultimi raggi di sole sfumare in un crepuscolo blu profondo. Piccole meduse luminose passavano galleggiando come stelle sottomarine. L'oceano canticchiava una canzone bassa e rilassante. Era il suono delle balene lontane, che cantavano le loro ninne nanne serali. Stellina si sentiva così in pace. I suoi piccoli occhi da stella marina divennero pesanti. Pensò a tutte le cose meravigliose che avrebbe esplorato domani. E con l'oceano che cantava dolcemente tutto intorno a lei, Stellina scivolò nei più dolci sogni marini.",
+                "parentQuestions": [
+                    "Dove piaceva dormire a Stellina?",
+                    "Quali altre creature marine sono andate a dormire?",
+                    "Con quale animale marino ti piacerebbe fare amicizia?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

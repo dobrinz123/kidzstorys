@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "emotions-003-angry-volcano",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "anger",
+            "control",
+            "feelings",
+            "volcano"
+        ],
+        "tags_ro": [
+            "furie",
+            "control",
+            "sentimente",
+            "vulcan"
+        ],
+        "tags_it": [
+            "rabbia",
+            "controllo",
+            "sentimenti",
+            "vulcano"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Volcano Inside",
+                "text": "Tyler felt something hot and bubbly inside him. His face got red. His hands made fists. He wanted to yell and throw things! His teacher Ms. Ray noticed. 'Tyler, you look like you have a volcano inside,' she said calmly. Tyler nodded. The hot feeling was rising. 'Let's take care of that volcano before it erupts,' Ms. Ray said. She took him to a quiet corner. 'First, press your feet hard into the floor. Push that hot lava energy down into the ground.' Tyler pressed his feet down. 'Now take volcano breaths. Breathe in slowly... then breathe out like you're blowing the smoke out of the volcano top. Long and slow.' Tyler breathed out slowly, imagining smoke leaving his volcano. 'Good. Again.' Tyler did it three more times. The hot feeling started to cool. 'Anger is just a feeling,' Ms. Ray said. 'It's okay to feel it. But we choose what to do with it.' 'I wanted to throw blocks,' Tyler admitted. 'That was the volcano wanting to erupt. But you cooled it down instead. That's very grown-up of you.' Tyler felt proud. The volcano was quiet now. He had controlled the lava.",
+                "parentQuestions": [
+                    "What did Tyler's anger feel like?",
+                    "How did Tyler cool down his volcano?",
+                    "What do you do when you feel angry?"
+                ]
+            },
+            "ro": {
+                "title": "Vulcanul din interior",
+                "text": "Tyler simțea ceva fierbinte și care clocotea înăuntrul lui. Fața i se înroși. Mâinile i se strânseră în pumni. Voia să țipe și să arunce cu lucruri! Învățătoarea lui, doamna Ray, observă. 'Tyler, arăți de parcă ai un vulcan înăuntru,' spuse ea calm. Tyler dădu din cap. Sentimentul fierbinte se ridica. 'Hai să avem grijă de acel vulcan înainte să erupă,' spuse doamna Ray. Îl duse într-un colț liniștit. 'Întâi, apasă tare picioarele pe podea. Împinge acea energie de lavă fierbinte în pământ.' Tyler apăsă picioarele în jos. 'Acum fă respirații de vulcan. Inspiră încet... apoi expiră ca și cum ai sufla fumul afară din vârful vulcanului. Lung și încet.' Tyler expiră încet, imaginându-și fumul ieșind din vulcan. 'Bine. Din nou.' Tyler făcu asta de încă trei ori. Sentimentul fierbinte începu să se răcească. 'Furia e doar un sentiment,' spuse doamna Ray. 'E în regulă să o simți. Dar noi alegem ce facem cu ea.' 'Am vrut să arunc cu cuburi,' recunoscu Tyler. 'Asta era vulcanul vrând să erupă. Dar în schimb l-ai răcit. E foarte matur din partea ta.' Tyler se simți mândru. Vulcanul era liniștit acum. Controlase lava.",
+                "parentQuestions": [
+                    "Cum se simțea furia lui Tyler?",
+                    "Cum și-a răcit Tyler vulcanul?",
+                    "Ce faci când te simți furios?"
+                ]
+            },
+            "it": {
+                "title": "Il vulcano dentro",
+                "text": "Tyler sentiva qualcosa di caldo e bollente dentro di lui. La sua faccia diventò rossa. Le sue mani divennero pugni. Voleva urlare e lanciare cose! La sua maestra Signora Ray lo notò. 'Tyler, sembra che tu abbia un vulcano dentro,' disse con calma. Tyler annuì. La sensazione calda stava salendo. 'Prendiamoci cura di quel vulcano prima che erutti,' disse la Signora Ray. Lo portò in un angolo tranquillo. 'Prima, premi forte i piedi sul pavimento. Spingi quell'energia di lava calda giù nel terreno.' Tyler premette i piedi giù. 'Ora fai respiri da vulcano. Inspira lentamente... poi espira come se stessi soffiando fuori il fumo dalla cima del vulcano. Lungo e lento.' Tyler espirò lentamente, immaginando il fumo che lasciava il suo vulcano. 'Bene. Di nuovo.' Tyler lo fece altre tre volte. La sensazione calda iniziò a raffreddarsi. 'La rabbia è solo un sentimento,' disse la Signora Ray. 'Va bene sentirla. Ma noi scegliamo cosa farne.' 'Volevo lanciare i blocchi,' ammise Tyler. 'Quello era il vulcano che voleva eruttare. Ma invece lo hai raffreddato. È molto maturo da parte tua.' Tyler si sentì orgoglioso. Il vulcano era tranquillo ora. Aveva controllato la lava.",
+                "parentQuestions": [
+                    "Come si sentiva la rabbia di Tyler?",
+                    "Come ha raffreddato Tyler il suo vulcano?",
+                    "Cosa fai quando ti senti arrabbiato?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "emotions-004-feeling-embarrassed",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "embarrassment",
+            "mistake",
+            "kindness",
+            "self-compassion"
+        ],
+        "tags_ro": [
+            "jenă",
+            "greșeală",
+            "bunătate",
+            "auto-compasiune"
+        ],
+        "tags_it": [
+            "imbarazzo",
+            "errore",
+            "gentilezza",
+            "auto-compassione"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Blushing Moment",
+                "text": "During show and tell, Nina tripped and fell in front of everyone. Her face got very hot and red. She heard some kids giggle. She wanted to disappear. At home, she told Grandma what happened. 'I was so embarrassed,' Nina said, tears in her eyes. 'Everyone laughed.' Grandma nodded kindly. 'Embarrassment is a hard feeling. It makes us feel like a spotlight is on us.' 'I never want to go back,' Nina said. 'That feeling is telling you something,' Grandma said. 'It's saying you care what others think. That's normal.' 'But it felt so bad.' 'I know, sweetheart. But here's something important: everyone has embarrassing moments. Everyone. Even me.' 'You?' Nina asked. 'Oh yes. Once I called my teacher Mom in front of the whole class!' Nina giggled. 'Also, the kids who laughed? They've tripped too. They'll forget about it quickly.' 'Really?' 'Really. And being kind to yourself matters most. Would you laugh at your friend if she fell?' 'No, I'd help her up.' 'So be that kind friend to yourself.' Nina thought about it. Maybe one fall wasn't the end of the world. Everyone stumbles sometimes.",
+                "parentQuestions": [
+                    "Why did Nina feel embarrassed?",
+                    "What did Grandma share about herself?",
+                    "How can you be kind to yourself after a mistake?"
+                ]
+            },
+            "ro": {
+                "title": "Momentul cu obrajii roșii",
+                "text": "În timpul prezentării la clasă, Nina s-a împiedicat și a căzut în fața tuturor. Fața i se făcu foarte fierbinte și roșie. Auzi pe unii copii chicotind. Voia să dispară. Acasă, îi povesti Bunicii ce s-a întâmplat. 'Mi-a fost atât de rușine,' spuse Nina, cu lacrimi în ochi. 'Toată lumea a râs.' Bunica dădu din cap cu bunătate. 'Jena e un sentiment greu. Ne face să simțim ca și cum ar fi un reflector pe noi.' 'Nu vreau să mă mai întorc niciodată,' spuse Nina. 'Acel sentiment îți spune ceva,' spuse Bunica. 'Spune că îți pasă ce cred alții. E normal.' 'Dar s-a simțit atât de rău.' 'Știu, draga mea. Dar iată ceva important: toată lumea are momente jenante. Toată lumea. Chiar și eu.' 'Tu?' întrebă Nina. 'O, da. Odată i-am spus învățătoarei Mamă în fața întregii clase!' Nina chicoti. 'De asemenea, copiii care au râs? Și ei au căzut. Vor uita repede.' 'Serios?' 'Serios. Și a fi bună cu tine înseși contează cel mai mult. Ai râde de prietena ta dacă ar cădea?' 'Nu, am ajuta-o să se ridice.' 'Deci fii acea prietenă bună pentru tine însăți.' Nina se gândi la asta. Poate o cădere nu era sfârșitul lumii. Toată lumea se împiedică uneori.",
+                "parentQuestions": [
+                    "De ce i-a fost rușine Ninei?",
+                    "Ce a împărtășit Bunica despre ea însăși?",
+                    "Cum poți fi bun cu tine după o greșeală?"
+                ]
+            },
+            "it": {
+                "title": "Il momento dell'imbarazzo",
+                "text": "Durante la presentazione, Nina inciampò e cadde davanti a tutti. La sua faccia divenne molto calda e rossa. Sentì alcuni bambini ridere. Voleva scomparire. A casa, raccontò alla Nonna cosa era successo. 'Ero così imbarazzata,' disse Nina, con le lacrime agli occhi. 'Tutti hanno riso.' La Nonna annuì gentilmente. 'L'imbarazzo è un sentimento difficile. Ci fa sentire come se un riflettore fosse su di noi.' 'Non voglio mai più tornare,' disse Nina. 'Quel sentimento ti sta dicendo qualcosa,' disse la Nonna. 'Sta dicendo che ti importa cosa pensano gli altri. È normale.' 'Ma si sentiva così male.' 'Lo so, tesoro. Ma ecco qualcosa di importante: tutti hanno momenti imbarazzanti. Tutti. Anche io.' 'Tu?' chiese Nina. 'Oh sì. Una volta ho chiamato la mia maestra Mamma davanti a tutta la classe!' Nina ridacchiò. 'Inoltre, i bambini che hanno riso? Anche loro sono inciampati. Dimenticheranno presto.' 'Davvero?' 'Davvero. E essere gentile con te stessa conta di più. Rideresti della tua amica se fosse caduta?' 'No, la aiuterei ad alzarsi.' 'Quindi sii quella amica gentile per te stessa.' Nina ci pensò. Forse una caduta non era la fine del mondo. Tutti inciampano a volte.",
+                "parentQuestions": [
+                    "Perché Nina si sentiva imbarazzata?",
+                    "Cosa ha condiviso la Nonna su se stessa?",
+                    "Come puoi essere gentile con te stesso dopo un errore?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

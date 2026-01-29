@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "bedtime-021-polar-bear-night",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "polar bear",
+            "snow",
+            "arctic",
+            "cozy"
+        ],
+        "tags_ro": [
+            "urs polar",
+            "zăpadă",
+            "arctic",
+            "confortabil"
+        ],
+        "tags_it": [
+            "orso polare",
+            "neve",
+            "artico",
+            "accogliente"
+        ],
+        "locales": {
+            "en": {
+                "title": "Polar Bear's Snowy Bed",
+                "text": "In the frozen north, where the snow sparkled like diamonds, a little polar bear named Frost was getting ready for bed. All day he had played in the snow, sliding down icy hills and splashing in cold pools. Now the northern lights danced across the sky in ribbons of green and purple. 'Time for sleep,' said Mama Bear. She had dug a cozy den in the snow, deep and protected from the wind. Inside, it was surprisingly warm. Frost shuffled to his sleeping spot and flopped down with a happy sigh. Mama curled around him, her thick fur like the coziest blanket in the world. Outside, the wind whispered across the ice. But inside the den, everything was quiet and safe. The northern lights flickered through a small opening, like the most magical nightlight ever. Frost watched the dancing colors, feeling his eyes grow heavy. He thought about tomorrow's adventures, about catching fish and playing with his seal friend. Mama's heartbeat was steady and calming. The snow den felt as warm as a hug. And with the aurora painting the sky above, little Frost drifted into peaceful, snowy dreams.",
+                "parentQuestions": [
+                    "What did Frost see in the sky?",
+                    "What made the snow den feel warm?",
+                    "What would you do if you could play in the snow all day?"
+                ]
+            },
+            "ro": {
+                "title": "Patul înzăpezit al ursului polar",
+                "text": "În nordul înghețat, unde zăpada sclipea ca diamantele, un urs polar mic pe nume Ger se pregătea de somn. Toată ziua se jucase în zăpadă, alunecând pe dealuri de gheață și stropindu-se în lacuri reci. Acum aurora boreală dansa pe cer în panglici de verde și purpuriu. 'E timpul pentru somn,' spuse Mama Ursoaică. Săpase o vizuină confortabilă în zăpadă, adâncă și protejată de vânt. Înăuntru, era surprinzător de cald. Ger merse la locul lui de dormit și se trânti jos cu un oftat fericit. Mama se ghemui în jurul lui, blana ei groasă ca cea mai confortabilă pătură din lume. Afară, vântul șoptea peste gheață. Dar în vizuină, totul era liniștit și în siguranță. Aurora boreală pâlpâia printr-o mică deschidere, ca cea mai magică veioză de noapte. Ger privea culorile dansând, simțindu-și ochii devenind grei. Se gândi la aventurile de mâine, la prinsul peștilor și jocul cu prietenul lui focă. Bătăile inimii Mamei erau constante și calmante. Vizuina de zăpadă se simțea la fel de caldă ca o îmbrățișare. Și cu aurora pictând cerul de sus, micuțul Ger plutea în vise pașnice și înzăpezite.",
+                "parentQuestions": [
+                    "Ce a văzut Ger pe cer?",
+                    "Ce făcea vizuina de zăpadă să se simtă caldă?",
+                    "Ce ai face dacă te-ai putea juca în zăpadă toată ziua?"
+                ]
+            },
+            "it": {
+                "title": "Il letto innevato dell'orso polare",
+                "text": "Nel nord ghiacciato, dove la neve brillava come diamanti, un piccolo orso polare di nome Gelo si preparava per dormire. Tutto il giorno aveva giocato nella neve, scivolando giù per colline ghiacciate e schizzando in pozze fredde. Ora l'aurora boreale danzava nel cielo in nastri di verde e viola. 'È ora di dormire,' disse Mamma Orsa. Aveva scavato una tana accogliente nella neve, profonda e protetta dal vento. Dentro, era sorprendentemente caldo. Gelo si trascinò al suo posto per dormire e si sdraiò con un sospiro felice. Mamma si arrotolò intorno a lui, la sua pelliccia spessa come la coperta più accogliente del mondo. Fuori, il vento sussurrava sul ghiaccio. Ma dentro la tana, tutto era silenzioso e sicuro. L'aurora boreale tremolava attraverso una piccola apertura, come la lucina notturna più magica di sempre. Gelo guardava i colori danzare, sentendo i suoi occhi diventare pesanti. Pensò alle avventure di domani, a catturare pesci e giocare con il suo amico foca. Il battito del cuore di Mamma era costante e calmante. La tana di neve sembrava calda come un abbraccio. E con l'aurora che dipingeva il cielo sopra, il piccolo Gelo scivolò in sogni pacifici e innevati.",
+                "parentQuestions": [
+                    "Cosa vedeva Gelo nel cielo?",
+                    "Cosa rendeva calda la tana di neve?",
+                    "Cosa faresti se potessi giocare nella neve tutto il giorno?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-022-farm-lullaby",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "farm",
+            "animals",
+            "barn",
+            "evening"
+        ],
+        "tags_ro": [
+            "fermă",
+            "animale",
+            "hambar",
+            "seară"
+        ],
+        "tags_it": [
+            "fattoria",
+            "animali",
+            "fienile",
+            "sera"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Farm's Lullaby",
+                "text": "On a gentle hillside farm, the sun was setting behind the red barn. All the animals were getting ready for bed. The chickens fluffed their feathers and nestled into their cozy coop. 'Cluck, cluck, goodnight,' they murmured. The cows lay down in the soft hay, chewing slowly and peacefully. 'Moo, moo, sweet dreams,' they hummed. The sheep gathered together in a fluffy cloud of wool. 'Baa, baa, sleep tight,' they bleated softly. In the stable, a gentle horse named Star settled onto her bed of fresh straw. The barn cat curled up on a warm hay bale, purring contentedly. The farmer walked through, checking on everyone one last time. 'Goodnight, everyone,' he said softly. He turned off the barn light, leaving only the warm glow of the setting sun through the windows. Outside, the crickets began their evening song. The fireflies danced in the meadow. One by one, every animal on the farm closed their eyes. The old rooster tucked his head under his wing, ready to wake everyone when morning came. And the whole farm slept peacefully under the blanket of stars.",
+                "parentQuestions": [
+                    "What sounds did the animals make?",
+                    "Where did each animal sleep?",
+                    "Have you ever visited a farm?"
+                ]
+            },
+            "ro": {
+                "title": "Cântecul de leagăn al fermei",
+                "text": "Pe o fermă pe un deal blând, soarele apunea în spatele hambarului roșu. Toate animalele se pregăteau de somn. Găinile își pufniră penele și se cuibăriră în coteț. 'Cot-codac, noapte bună,' murmurară ele. Vacile se culcară în fânul moale, mestecând încet și pașnic. 'Mu, mu, vise dulci,' fredonară ele. Oile se adunară împreună într-un nor pufos de lână. 'Be, be, somn ușor,' behăiră blând. În grajd, un cal blând pe nume Stea se așeză pe patul ei de paie proaspete. Pisica hambarului se ghemui pe un balot de fân cald, torcând mulțumită. Fermierul trecu, verificând pe toată lumea o ultimă dată. 'Noapte bună, tuturor,' spuse el blând. Stinse lumina din hambar, lăsând doar strălucirea caldă a apusului prin ferestre. Afară, greierașii începură cântecul lor de seară. Licurici dansau pe pajiște. Unul câte unul, fiecare animal de pe fermă își închise ochii. Bătrânul cocoș își ascunse capul sub aripă, gata să trezească pe toți când va veni dimineața. Iar întreaga fermă dormi pașnic sub pătura de stele.",
+                "parentQuestions": [
+                    "Ce sunete făceau animalele?",
+                    "Unde dormea fiecare animal?",
+                    "Ai vizitat vreodată o fermă?"
+                ]
+            },
+            "it": {
+                "title": "La ninna nanna della fattoria",
+                "text": "Su una dolce collina di una fattoria, il sole stava tramontando dietro il fienile rosso. Tutti gli animali si preparavano per dormire. Le galline arruffarono le loro piume e si sistemarono nel loro accogliente pollaio. 'Coccodè, buonanotte,' mormorarono. Le mucche si sdraiarono nel fieno morbido, masticando lentamente e pacificamente. 'Muu, muu, sogni d'oro,' canticchiarono. Le pecore si radunarono insieme in una nuvola soffice di lana. 'Bee, bee, dormi bene,' belarono dolcemente. Nella stalla, una gentile cavalla di nome Stella si sistemò sul suo letto di paglia fresca. Il gatto del fienile si raggomitolò su una balla di fieno caldo, facendo le fusa contento. Il contadino passò, controllando tutti un'ultima volta. 'Buonanotte a tutti,' disse dolcemente. Spense la luce del fienile, lasciando solo il calore del tramonto attraverso le finestre. Fuori, i grilli iniziarono la loro canzone serale. Le lucciole danzavano nel prato. Uno per uno, ogni animale della fattoria chiuse gli occhi. Il vecchio gallo nascose la testa sotto l'ala, pronto a svegliare tutti quando sarebbe arrivato il mattino. E tutta la fattoria dormì pacificamente sotto la coperta di stelle.",
+                "parentQuestions": [
+                    "Che suoni facevano gli animali?",
+                    "Dove dormiva ogni animale?",
+                    "Hai mai visitato una fattoria?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

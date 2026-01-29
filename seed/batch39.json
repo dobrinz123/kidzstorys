@@ -1,0 +1,167 @@
+[
+    {
+        "storyKey": "learn-to-read-010-duck-truck",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "duck",
+            "truck",
+            "luck",
+            "drive"
+        ],
+        "tags_ro": [
+            "rață",
+            "camion",
+            "noroc",
+            "șofat"
+        ],
+        "tags_it": [
+            "anatra",
+            "camion",
+            "fortuna",
+            "guidare"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Duck and the Truck",
+                "text": "A duck found a truck. What luck! Can a duck drive a truck? The duck tries. Beep, beep! The truck goes fast. The truck goes slow. The duck likes the truck. The duck drives to the pond. Quack, quack! The duck's friends come out. They all want a ride. In the truck they go. What fun! A duck and friends in a truck. The end.",
+                "parentQuestions": [
+                    "What did the duck find?",
+                    "Where did the duck drive?",
+                    "Can you make a duck sound?"
+                ]
+            },
+            "ro": {
+                "title": "Rața și camionul",
+                "text": "O rață a găsit un camion. Ce noroc! Poate o rață să conducă un camion? Rața încearcă. Bip, bip! Camionul merge repede. Camionul merge încet. Raței îi place camionul. Rața conduce la iaz. Mac, mac! Prietenii raței ies. Toți vor o plimbare. În camion merg. Ce distracție! O rață și prieteni într-un camion. Sfârșit.",
+                "parentQuestions": [
+                    "Ce a găsit rața?",
+                    "Unde a condus rața?",
+                    "Poți face sunetul unei rațe?"
+                ]
+            },
+            "it": {
+                "title": "L'anatra e il camion",
+                "text": "Un'anatra ha trovato un camion. Che fortuna! Può un'anatra guidare un camion? L'anatra prova. Bip, bip! Il camion va veloce. Il camion va piano. All'anatra piace il camion. L'anatra guida allo stagno. Qua, qua! Gli amici dell'anatra escono. Tutti vogliono un passaggio. Nel camion vanno. Che divertimento! Un'anatra e amici in un camion. Fine.",
+                "parentQuestions": [
+                    "Cosa ha trovato l'anatra?",
+                    "Dove ha guidato l'anatra?",
+                    "Sai fare il verso dell'anatra?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-011-bee-tree",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "bee",
+            "tree",
+            "see",
+            "honey"
+        ],
+        "tags_ro": [
+            "albină",
+            "copac",
+            "vedere",
+            "miere"
+        ],
+        "tags_it": [
+            "ape",
+            "albero",
+            "vedere",
+            "miele"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Bee in the Tree",
+                "text": "I see a bee. The bee is in a tree. Buzz, buzz, buzz! The bee is busy. The bee makes honey. So yummy! The bee sees me. I see the bee. Hello, bee! Hello, says the bee. I like your tree. Thank you! says the bee. The bee shares some honey. So sweet! Thank you, bee! You are welcome! The bee buzzes back to the tree. The end.",
+                "parentQuestions": [
+                    "What does the bee make?",
+                    "Where does the bee live?",
+                    "Have you ever seen a bee?"
+                ]
+            },
+            "ro": {
+                "title": "Albina din copac",
+                "text": "Văd o albină. Albina e într-un copac. Bâz, bâz, bâz! Albina e ocupată. Albina face miere. Atât de gustoasă! Albina mă vede. Eu văd albina. Bună, albină! Bună, spune albina. Îmi place copacul tău. Mulțumesc! spune albina. Albina îmi dă niște miere. Atât de dulce! Mulțumesc, albină! Cu plăcere! Albina zboară înapoi la copac. Sfârșit.",
+                "parentQuestions": [
+                    "Ce face albina?",
+                    "Unde locuiește albina?",
+                    "Ai văzut vreodată o albină?"
+                ]
+            },
+            "it": {
+                "title": "L'ape nell'albero",
+                "text": "Vedo un'ape. L'ape è in un albero. Bzz, bzz, bzz! L'ape è indaffarata. L'ape fa il miele. Così buono! L'ape mi vede. Io vedo l'ape. Ciao, ape! Ciao, dice l'ape. Mi piace il tuo albero. Grazie! dice l'ape. L'ape mi dà del miele. Così dolce! Grazie, ape! Prego! L'ape ronza di nuovo verso l'albero. Fine.",
+                "parentQuestions": [
+                    "Cosa fa l'ape?",
+                    "Dove vive l'ape?",
+                    "Hai mai visto un'ape?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-012-ball-tall",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "ball",
+            "tall",
+            "wall",
+            "play"
+        ],
+        "tags_ro": [
+            "minge",
+            "înalt",
+            "zid",
+            "joc"
+        ],
+        "tags_it": [
+            "palla",
+            "alto",
+            "muro",
+            "giocare"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Ball by the Wall",
+                "text": "I have a ball. A red ball! I throw the ball. The ball hits the wall. The ball comes back to me. What fun! I throw it tall. So tall! The ball goes over the wall. Oh no! A tall man finds my ball. He throws it back. Thank you, tall man! I play with my ball. Bounce, bounce, bounce! I love my red ball. The end.",
+                "parentQuestions": [
+                    "What color was the ball?",
+                    "What did the tall man do?",
+                    "Do you have a favorite ball?"
+                ]
+            },
+            "ro": {
+                "title": "Mingea lângă zid",
+                "text": "Am o minge. O minge roșie! Arunc mingea. Mingea lovește zidul. Mingea se întoarce la mine. Ce distracție! O arunc sus. Atât de sus! Mingea trece peste zid. O, nu! Un om înalt găsește mingea mea. O aruncă înapoi. Mulțumesc, om înalt! Mă joc cu mingea mea. Boing, boing, boing! Îmi iubesc mingea roșie. Sfârșit.",
+                "parentQuestions": [
+                    "Ce culoare avea mingea?",
+                    "Ce a făcut omul înalt?",
+                    "Tu ai o minge preferată?"
+                ]
+            },
+            "it": {
+                "title": "La palla vicino al muro",
+                "text": "Ho una palla. Una palla rossa! Lancio la palla. La palla colpisce il muro. La palla torna da me. Che divertimento! La lancio alta. Così alta! La palla va oltre il muro. Oh no! Un uomo alto trova la mia palla. La lancia indietro. Grazie, uomo alto! Gioco con la mia palla. Boing, boing, boing! Amo la mia palla rossa. Fine.",
+                "parentQuestions": [
+                    "Di che colore era la palla?",
+                    "Cosa ha fatto l'uomo alto?",
+                    "Hai una palla preferita?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

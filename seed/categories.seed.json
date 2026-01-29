@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "bedtime",
+    "order": 1,
+    "name_en": "Bedtime",
+    "name_ro": "Somn",
+    "name_it": "Nanna",
+    "description_en": "Calm endings, no scary elements. Perfect for winding down.",
+    "description_ro": "Finaluri liniștite, fără elemente înspăimântătoare. Perfecte pentru relaxare.",
+    "description_it": "Finali calmi, niente spaventoso. Perfette per rilassarsi.",
+    "iconKey": "moon",
+    "isActive": true
+  },
+  {
+    "slug": "calm-down",
+    "order": 2,
+    "name_en": "Calm Down",
+    "name_ro": "Calmare",
+    "name_it": "Calmati",
+    "description_en": "Gentle de-escalation with soft breathing cues.",
+    "description_ro": "Descreștere lină cu indicii de respirație blândă.",
+    "description_it": "Riduzione gentile con segnali di respirazione morbida.",
+    "iconKey": "cloud",
+    "isActive": true
+  },
+  {
+    "slug": "emotions",
+    "order": 3,
+    "name_en": "Emotions",
+    "name_ro": "Emoții",
+    "name_it": "Emozioni",
+    "description_en": "Fear, anger, jealousy, shame handled softly.",
+    "description_ro": "Frică, furie, gelozie, rușine abordate cu blândețe.",
+    "description_it": "Paura, rabbia, gelosia, vergogna trattate con dolcezza.",
+    "iconKey": "heart",
+    "isActive": true
+  },
+  {
+    "slug": "leo-penny",
+    "order": 4,
+    "name_en": "Leo & Penny",
+    "name_ro": "Leo și Penny",
+    "name_it": "Leo e Penny",
+    "description_en": "Cloud Express adventures with Leo and Penny.",
+    "description_ro": "Aventuri Cloud Express cu Leo și Penny.",
+    "description_it": "Avventure sul Cloud Express con Leo e Penny.",
+    "iconKey": "compass",
+    "isActive": true
+  },
+  {
+    "slug": "milo-rubina-fini",
+    "order": 5,
+    "name_en": "Milo, Rubina & Fini",
+    "name_ro": "Milo, Rubina și Fini",
+    "name_it": "Milo, Rubina e Fini",
+    "description_en": "Maple Forest treasure adventures with Milo, Rubina, and Fini.",
+    "description_ro": "Aventuri cu comoara în Pădurea de Arțar cu Milo, Rubina și Fini.",
+    "description_it": "Avventure nel Bosco degli Aceri con Milo, Rubina e Fini.",
+    "iconKey": "compass",
+    "isActive": true
+  },
+  {
+    "slug": "learn-to-read",
+    "order": 6,
+    "name_en": "Learn to Read",
+    "name_ro": "Învăț să citesc",
+    "name_it": "Imparo a leggere",
+    "description_en": "Graded short texts with repetition.",
+    "description_ro": "Texte scurte gradate cu repetiție.",
+    "description_it": "Testi brevi graduati con ripetizione.",
+    "iconKey": "book",
+    "isActive": true
+  },
+  {
+    "slug": "curiosities",
+    "order": 7,
+    "name_en": "Curiosities",
+    "name_ro": "Curiozități",
+    "name_it": "Curiosità",
+    "description_en": "STEM, animals, space facts in story form.",
+    "description_ro": "STEM, animale, fapte despre spațiu în formă de poveste.",
+    "description_it": "STEM, animali, fatti spaziali in forma di storia.",
+    "iconKey": "star",
+    "isActive": true
+  }
+]

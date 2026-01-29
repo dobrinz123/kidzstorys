@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "curiosities-005-how-fish-breathe",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "fish",
+            "gills",
+            "water",
+            "breathing"
+        ],
+        "tags_ro": [
+            "pești",
+            "branhii",
+            "apă",
+            "respirație"
+        ],
+        "tags_it": [
+            "pesci",
+            "branchie",
+            "acqua",
+            "respirazione"
+        ],
+        "locales": {
+            "en": {
+                "title": "How Do Fish Breathe Underwater?",
+                "text": "You take a big breath of air right now. Your lungs fill with oxygen, which your body needs to live. But fish live underwater, where there's no air! So how do they breathe? The secret is gills! You have lungs, but fish have gills instead. If you look at a fish, you'll see slits on the sides of their head, just behind their eyes. Those are where the gills are. Here's how it works. Water has tiny bits of oxygen dissolved in it, just like sugar dissolves in lemonade. Fish take water into their mouths and push it out through their gills. The gills are like super special filters. They have lots of thin, feathery parts with tiny blood vessels. As water flows over the gills, the oxygen passes from the water into the fish's blood. Then the blood carries the oxygen all through the fish's body. Amazing! But here's something important: fish can only breathe water that has enough oxygen. That's why fish in a bowl need their water changed, so it stays fresh and full of oxygen. And that's also why fish can't survive out of water. Their gills need to be wet to work! Next time you see a fish, look for those gill slits. You're watching a fish breathe!",
+                "parentQuestions": [
+                    "What do fish have instead of lungs?",
+                    "Where do fish get oxygen from?",
+                    "Why do fish need to stay in water?"
+                ]
+            },
+            "ro": {
+                "title": "Cum respiră peștii sub apă?",
+                "text": "Inspiră adânc aer chiar acum. Plămânii tăi se umplu cu oxigen, de care corpul tău are nevoie să trăiască. Dar peștii trăiesc sub apă, unde nu e aer! Deci cum respiră ei? Secretul sunt branhiile! Tu ai plămâni, dar peștii au branhii în schimb. Dacă te uiți la un pește, vei vedea crăpături pe laturile capului lor, chiar în spatele ochilor. Acolo sunt branhiile. Iată cum funcționează. Apa are bucățele mici de oxigen dizolvat în ea, la fel cum zahărul se dizolvă în limonadă. Peștii iau apă în gură și o împing afară prin branhii. Branhiile sunt ca niște filtre super speciale. Au multe părți subțiri, ca niște pene, cu vase de sânge minuscule. Când apa curge peste branhii, oxigenul trece din apă în sângele peștelui. Apoi sângele duce oxigenul prin tot corpul peștelui. Uimitor! Dar iată ceva important: peștii pot respira doar apă care are suficient oxigen. De aceea peștii într-un bol au nevoie să li se schimbe apa, ca să rămână proaspătă și plină de oxigen. Și de aceea peștii nu pot supraviețui în afara apei. Branhiile lor trebuie să fie ude să funcționeze! Data viitoare când vezi un pește, caută acele crăpături ale branhiilor. Privești un pește respirând!",
+                "parentQuestions": [
+                    "Ce au peștii în loc de plămâni?",
+                    "De unde primesc peștii oxigen?",
+                    "De ce trebuie peștii să stea în apă?"
+                ]
+            },
+            "it": {
+                "title": "Come respirano i pesci sott'acqua?",
+                "text": "Fai un grande respiro d'aria adesso. I tuoi polmoni si riempiono di ossigeno, di cui il tuo corpo ha bisogno per vivere. Ma i pesci vivono sott'acqua, dove non c'è aria! Quindi come respirano? Il segreto sono le branchie! Tu hai i polmoni, ma i pesci hanno le branchie invece. Se guardi un pesce, vedrai delle fessure sui lati della loro testa, appena dietro gli occhi. Lì ci sono le branchie. Ecco come funziona. L'acqua ha piccole quantità di ossigeno disciolto in essa, proprio come lo zucchero si dissolve nella limonata. I pesci prendono l'acqua nelle loro bocche e la spingono fuori attraverso le branchie. Le branchie sono come filtri super speciali. Hanno molte parti sottili, come piume, con minuscoli vasi sanguigni. Mentre l'acqua scorre sulle branchie, l'ossigeno passa dall'acqua nel sangue del pesce. Poi il sangue porta l'ossigeno attraverso tutto il corpo del pesce. Incredibile! Ma ecco qualcosa di importante: i pesci possono respirare solo acqua che ha abbastanza ossigeno. Ecco perché i pesci in una boccia hanno bisogno che la loro acqua venga cambiata, così rimane fresca e piena di ossigeno. E anche perché i pesci non possono sopravvivere fuori dall'acqua. Le loro branchie devono essere bagnate per funzionare! La prossima volta che vedi un pesce, cerca quelle fessure branchiali. Stai guardando un pesce respirare!",
+                "parentQuestions": [
+                    "Cosa hanno i pesci invece dei polmoni?",
+                    "Da dove prendono ossigeno i pesci?",
+                    "Perché i pesci devono stare in acqua?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "curiosities-006-why-stars-twinkle",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "stars",
+            "twinkle",
+            "light",
+            "atmosphere"
+        ],
+        "tags_ro": [
+            "stele",
+            "sclipire",
+            "lumină",
+            "atmosferă"
+        ],
+        "tags_it": [
+            "stelle",
+            "scintillano",
+            "luce",
+            "atmosfera"
+        ],
+        "locales": {
+            "en": {
+                "title": "Why Do Stars Twinkle?",
+                "text": "Look up at the night sky, and you'll see stars twinkling like little lights switching on and off. But stars don't actually blink! So why do they seem to twinkle? The answer is in the air around Earth, our atmosphere! Stars are actually much bigger than Earth. Some are even bigger than our sun! They shine with a steady, bright light. But they're very, very far away, so they look like tiny points of light to us. When starlight travels to Earth, it has to pass through our atmosphere. The atmosphere is made of air, and that air is always moving. Hot air rises, cold air sinks, wind blows around. All this moving air is like looking at something through rippling water. The air bends the starlight this way and that, just a little bit. One moment the light bends toward your eye, and the star looks brighter. The next moment it bends away, and the star looks dimmer. This happens so fast that it looks like twinkling! Planets like Mars or Venus don't twinkle as much. That's because they're closer to us, so their light appears as a bigger dot instead of a tiny point. Bigger dots are less affected by the dancing air. So when you see twinkling stars, you're actually watching Earth's atmosphere dance!",
+                "parentQuestions": [
+                    "Do stars really turn on and off?",
+                    "What makes starlight twinkle?",
+                    "Why don't planets twinkle as much?"
+                ]
+            },
+            "ro": {
+                "title": "De ce sclipesc stelele?",
+                "text": "Uită-te în sus la cerul nopții și vei vedea stele sclipind ca niște luminițe care se aprind și se sting. Dar stelele nu clipesc cu adevărat! Deci de ce par să sclipească? Răspunsul e în aerul din jurul Pământului, atmosfera noastră! Stelele sunt de fapt mult mai mari decât Pământul. Unele sunt chiar mai mari decât soarele nostru! Strălucesc cu o lumină constantă și puternică. Dar sunt foarte, foarte departe, așa că arată ca niște puncte mici de lumină pentru noi. Când lumina stelelor călătorește spre Pământ, trebuie să treacă prin atmosfera noastră. Atmosfera e făcută din aer și aerul acela e mereu în mișcare. Aerul cald urcă, aerul rece coboară, vântul suflă. Tot acest aer în mișcare e ca și cum ai privi ceva prin apă ondulată. Aerul îndoaie lumina stelelor într-o parte și alta, doar puțin. Într-un moment lumina se îndoaie spre ochiul tău și steaua pare mai strălucitoare. În momentul următor se îndoaie în altă parte și steaua pare mai slabă. Asta se întâmplă atât de repede încât arată ca o sclipire! Planetele precum Marte sau Venus nu sclipesc la fel de mult. Asta pentru că sunt mai aproape de noi, așa că lumina lor apare ca un punct mai mare în loc de unul mic. Punctele mai mari sunt mai puțin afectate de aerul dansând. Deci când vezi stele sclipind, de fapt privești atmosfera Pământului dansând!",
+                "parentQuestions": [
+                    "Chiar se aprind și se sting stelele?",
+                    "Ce face lumina stelelor să sclipească?",
+                    "De ce nu sclipesc planetele la fel de mult?"
+                ]
+            },
+            "it": {
+                "title": "Perché le stelle scintillano?",
+                "text": "Guarda il cielo notturno e vedrai le stelle scintillare come piccole luci che si accendono e si spengono. Ma le stelle in realtà non lampeggiano! Quindi perché sembrano scintillare? La risposta è nell'aria intorno alla Terra, la nostra atmosfera! Le stelle sono in realtà molto più grandi della Terra. Alcune sono persino più grandi del nostro sole! Brillano con una luce costante e intensa. Ma sono molto, molto lontane, quindi sembrano piccoli punti di luce per noi. Quando la luce delle stelle viaggia verso la Terra, deve passare attraverso la nostra atmosfera. L'atmosfera è fatta di aria, e quell'aria è sempre in movimento. L'aria calda sale, l'aria fredda scende, il vento soffia intorno. Tutta quest'aria in movimento è come guardare qualcosa attraverso acqua increspata. L'aria piega la luce delle stelle in qua e in là, solo un po'. In un momento la luce si piega verso il tuo occhio, e la stella sembra più luminosa. Nel momento successivo si piega via, e la stella sembra più debole. Questo succede così velocemente che sembra uno scintillio! Pianeti come Marte o Venere non scintillano così tanto. Questo perché sono più vicini a noi, quindi la loro luce appare come un punto più grande invece di un piccolo punto. I punti più grandi sono meno influenzati dall'aria danzante. Quindi quando vedi stelle che scintillano, stai guardando l'atmosfera della Terra danzare!",
+                "parentQuestions": [
+                    "Le stelle si accendono e si spengono davvero?",
+                    "Cosa fa scintillare la luce delle stelle?",
+                    "Perché i pianeti non scintillano così tanto?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "bedtime-015-butterfly-dreams",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "butterfly",
+            "garden",
+            "colors",
+            "gentle"
+        ],
+        "tags_ro": [
+            "fluture",
+            "grădină",
+            "culori",
+            "blând"
+        ],
+        "tags_it": [
+            "farfalla",
+            "giardino",
+            "colori",
+            "gentile"
+        ],
+        "locales": {
+            "en": {
+                "title": "Butterfly's Sleepy Garden",
+                "text": "In a garden full of flowers, a beautiful butterfly named Bella was getting ready for bed. Her wings were painted with the most beautiful colors: soft blue, gentle pink, and warm yellow. All day she had fluttered from flower to flower, sipping sweet nectar. Now the sun was setting and the flowers were closing their petals for the night. Bella found her favorite sleeping spot on a big soft rose. The petals curved around her like a cozy bedroom. 'Goodnight, daisies,' Bella called softly. The daisies nodded their white heads. 'Goodnight, tulips,' she whispered. The tulips swayed gently in response. The evening air grew cool and sweet. Fireflies began to blink their little lights like twinkling stars close to the ground. Bella folded her beautiful wings together and closed her tiny eyes. She dreamed of tomorrow's garden, full of sunshine and sweet flowers. The rose petals kept her safe and warm all through the night. And in the peaceful garden, every flower and every creature slept soundly under the watchful moon.",
+                "parentQuestions": [
+                    "What colors were on Bella's wings?",
+                    "Where did Bella sleep?",
+                    "What flowers do you think are the prettiest?"
+                ]
+            },
+            "ro": {
+                "title": "Grădina somnoroasă a fluturelui",
+                "text": "Într-o grădină plină de flori, un fluture frumos pe nume Bela se pregătea de somn. Aripile ei erau pictate cu cele mai frumoase culori: albastru deschis, roz blând și galben cald. Toată ziua fluturase din floare în floare, sorbind nectar dulce. Acum soarele apunea și florile își închideau petalele pentru noapte. Bela găsi locul ei preferat de dormit pe un trandafir mare și moale. Petalele se curbau în jurul ei ca o cameră confortabilă. 'Noapte bună, margarete,' strigă Bela blând. Margaretele își înclinară capetele albe. 'Noapte bună, lalele,' șopti ea. Lalelele se legănară ușor ca răspuns. Aerul de seară deveni răcoros și dulce. Licuricii începură să clipească luminițele lor ca niște stele sclipitoare aproape de pământ. Bela își plie frumoasele aripi la un loc și își închise ochișorii. Visă la grădina de mâine, plină de soare și flori dulci. Petalele de trandafir o ținură în siguranță și la căldură toată noaptea. Și în grădina pașnică, fiecare floare și fiecare creatură dormi adânc sub luna care veghea.",
+                "parentQuestions": [
+                    "Ce culori avea Bela pe aripi?",
+                    "Unde dormea Bela?",
+                    "Ce flori crezi că sunt cele mai frumoase?"
+                ]
+            },
+            "it": {
+                "title": "Il giardino assonnato della farfalla",
+                "text": "In un giardino pieno di fiori, una bellissima farfalla di nome Bella si preparava per dormire. Le sue ali erano dipinte con i colori più belli: azzurro tenue, rosa gentile e giallo caldo. Tutto il giorno aveva svolazzato di fiore in fiore, sorseggiando dolce nettare. Ora il sole stava tramontando e i fiori stavano chiudendo i loro petali per la notte. Bella trovò il suo posto preferito per dormire su una grande rosa morbida. I petali si curvavano intorno a lei come una camera accogliente. 'Buonanotte, margherite,' chiamò dolcemente Bella. Le margherite annuirono con le loro teste bianche. 'Buonanotte, tulipani,' sussurrò. I tulipani ondeggiarono dolcemente in risposta. L'aria serale divenne fresca e dolce. Le lucciole iniziarono a lampeggiare le loro piccole luci come stelle scintillanti vicino al suolo. Bella piegò insieme le sue bellissime ali e chiuse i suoi piccoli occhi. Sognò il giardino di domani, pieno di sole e dolci fiori. I petali di rosa la tennero al sicuro e al caldo per tutta la notte. E nel giardino pacifico, ogni fiore e ogni creatura dormì profondamente sotto la luna che vegliava.",
+                "parentQuestions": [
+                    "Di che colore erano le ali di Bella?",
+                    "Dove dormiva Bella?",
+                    "Quali fiori pensi siano i più belli?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-016-moon-rabbit",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "rabbit",
+            "moon",
+            "magic",
+            "bedtime"
+        ],
+        "tags_ro": [
+            "iepuraș",
+            "lună",
+            "magie",
+            "somn"
+        ],
+        "tags_it": [
+            "coniglietto",
+            "luna",
+            "magia",
+            "nanna"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Moon Rabbit",
+                "text": "Have you ever looked at the moon and seen the shape of a rabbit? That's Moonbeam, the kindest rabbit in the universe. Every night, Moonbeam looks down at all the children getting ready for bed. When a child is having a hard time sleeping, Moonbeam sends down a special gift. It looks like a soft silver beam of moonlight. Tonight, a little girl named Sophie was wide awake. She couldn't stop thinking about tomorrow. Moonbeam noticed and sent down a gentle beam that slipped through her curtains. The moonlight felt warm and cozy, like a hug from far away. Sophie watched the silver light dance on her ceiling. It made pretty patterns that swirled and twirled, slowly, slowly, slower. Sophie's eyes began to feel heavy. The moonbeam seemed to whisper a lullaby without words. It was the song of stars and comets and far-off galaxies, all gentle and peaceful. Sophie smiled and closed her eyes. She dreamed of hopping on the moon with Moonbeam, looking down at the beautiful blue Earth. And Moonbeam kept watch all night, making sure Sophie had only the sweetest dreams.",
+                "parentQuestions": [
+                    "What gift does Moonbeam send to children?",
+                    "Have you ever seen shapes in the moon?",
+                    "What would you do if you could visit the moon?"
+                ]
+            },
+            "ro": {
+                "title": "Iepurașul de pe lună",
+                "text": "Te-ai uitat vreodată la lună și ai văzut forma unui iepuraș? Aceea este Razălună, cel mai bun iepuraș din univers. În fiecare noapte, Razălună se uită în jos la toți copiii care se pregătesc de somn. Când un copil întâmpină dificultăți cu somnul, Razălună trimite în jos un dar special. Arată ca o rază moale și argintie de lumină de lună. În noaptea asta, o fetiță pe nume Sofia era trează complet. Nu se putea opri din gândit la mâine. Razălună observă și trimise în jos o rază blândă care se strecură prin perdelele ei. Lumina lunii se simțea caldă și confortabilă, ca o îmbrățișare de departe. Sofia privea lumina argintie dansând pe tavanul ei. Făcea modele frumoase care se învârteau, încet, încet, mai încet. Ochii Sofiei începură să se simtă grei. Raza de lună părea să șoptească un cântec de leagăn fără cuvinte. Era cântecul stelelor și cometelor și galaxiilor îndepărtate, toate blânde și pașnice. Sofia zâmbi și își închise ochii. Visă că sare pe lună cu Razălună, privind în jos la frumoasa Pământ albastru. Iar Razălună veghea toată noaptea, asigurându-se că Sofia are doar cele mai dulci vise.",
+                "parentQuestions": [
+                    "Ce dar trimite Razălună copiilor?",
+                    "Ai văzut vreodată forme pe lună?",
+                    "Ce ai face dacă ai putea vizita luna?"
+                ]
+            },
+            "it": {
+                "title": "Il coniglietto della luna",
+                "text": "Hai mai guardato la luna e visto la forma di un coniglietto? Quella è Raggio di Luna, il coniglietto più gentile dell'universo. Ogni notte, Raggio di Luna guarda giù tutti i bambini che si preparano per dormire. Quando un bambino ha difficoltà a dormire, Raggio di Luna manda giù un regalo speciale. Sembra un morbido raggio argentato di luce lunare. Stanotte, una bambina di nome Sofia era completamente sveglia. Non riusciva a smettere di pensare a domani. Raggio di Luna lo notò e mandò giù un raggio gentile che scivolò attraverso le sue tende. La luce della luna si sentiva calda e accogliente, come un abbraccio da lontano. Sofia guardava la luce argentata danzare sul suo soffitto. Creava bei disegni che vorticavano e giravano, lentamente, lentamente, sempre più lentamente. Gli occhi di Sofia iniziarono a diventare pesanti. Il raggio di luna sembrava sussurrare una ninna nanna senza parole. Era la canzone delle stelle e delle comete e delle galassie lontane, tutte gentili e pacifiche. Sofia sorrise e chiuse gli occhi. Sognò di saltare sulla luna con Raggio di Luna, guardando giù la bellissima Terra blu. E Raggio di Luna vegliò tutta la notte, assicurandosi che Sofia avesse solo i sogni più dolci.",
+                "parentQuestions": [
+                    "Che regalo manda Raggio di Luna ai bambini?",
+                    "Hai mai visto delle forme sulla luna?",
+                    "Cosa faresti se potessi visitare la luna?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

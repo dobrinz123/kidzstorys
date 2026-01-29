@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-maple-forest-009",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "planting",
+            "waiting",
+            "magic"
+        ],
+        "tags_ro": [
+            "pădure",
+            "plantare",
+            "așteptare",
+            "magie"
+        ],
+        "tags_it": [
+            "bosco",
+            "piantare",
+            "attesa",
+            "magia"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 9,
+        "locales": {
+            "en": {
+                "title": "Planting the Magic Acorn",
+                "text": "In the center of the clearing, exactly where the X marked the spot, was a small mound of soft earth. 'This must be where we plant the acorn!' Ruby said excitedly. She carefully took out the special acorn Elder Maple had given them. Milo dug a small hole in the soft earth. Ruby gently placed the acorn inside. Finn covered it with soil. 'Now what?' they wondered. For a moment, nothing happened. Then the ground began to glow with a soft golden light! The earth trembled slightly. Before their eyes, a tiny sprout emerged from the soil. It grew quickly, becoming a sapling, then a young tree! Golden leaves burst from its branches. The tree grew until it was as tall as their shoulders. Then it stopped. Carved into its trunk was a small door! 'A door in a tree?' Finn whispered in awe. 'Should we open it?' Milo asked. Ruby nodded. 'We've come this far. Let's see what's inside.' With trembling paws, Milo reached for the tiny door handle. What magical secret waited behind this door? The treasure of Maple Forest was about to be revealed!",
+                "parentQuestions": [
+                    "What happened when they planted the acorn?",
+                    "How do you think the friends felt watching the tree grow?",
+                    "What do you think is behind the door?"
+                ]
+            },
+            "ro": {
+                "title": "Plantând ghinda magică",
+                "text": "În centrul poienei, exact unde X-ul marca locul, era un mic movil de pământ moale. 'Aici trebuie să plantăm ghinda!' spuse Rubina entuziasmată. Scoase cu grijă ghinda specială pe care le-o dăduse Arțarul Bătrân. Milo săpă o mică gaură în pământul moale. Rubina așeză ghinda blând înăuntru. Fini o acoperi cu sol. 'Acum ce facem?' se întrebară. Pentru un moment, nimic nu se întâmplă. Apoi pământul începu să strălucească cu o lumină aurie blândă! Pământul tremură ușor. În fața ochilor lor, o mică tulpină răsări din sol. Crescu repede, devenind un puiet, apoi un copac tânăr! Frunze aurii ţâșniră din ramurile sale. Copacul crescu până când era la fel de înalt ca umerii lor. Apoi se opri. Sculptată în trunchiul său era o ușă mică! 'O ușă într-un copac?' șopti Fini uimit. 'Ar trebui să o deschidem?' întrebă Milo. Rubina dădu din cap. 'Am ajuns până aici. Să vedem ce e înăuntru.' Cu lăbuțe tremurânde, Milo se întinse spre mânerul micii uși. Ce secret magic aștepta în spatele acestei uși? Comoara Pădurii de Arțar era pe cale să fie dezvăluită!",
+                "parentQuestions": [
+                    "Ce s-a întâmplat când au plantat ghinda?",
+                    "Cum crezi că s-au simțit prietenii privind copacul crescând?",
+                    "Ce crezi că e în spatele ușii?"
+                ]
+            },
+            "it": {
+                "title": "Piantando la ghianda magica",
+                "text": "Al centro della radura, esattamente dove la X segnava il punto, c'era un piccolo cumulo di terra morbida. 'Questo deve essere dove piantiamo la ghianda!' disse Rubina eccitata. Tirò fuori con cura la ghianda speciale che l'Anziano Acero aveva dato loro. Milo scavò un piccolo buco nella terra morbida. Rubina mise delicatamente la ghianda dentro. Finn la coprì con il terreno. 'E adesso?' si chiesero. Per un momento, non successe nulla. Poi il terreno iniziò a brillare con una luce dorata morbida! La terra tremò leggermente. Davanti ai loro occhi, un piccolo germoglio emerse dal suolo. Crebbe rapidamente, diventando un alberello, poi un giovane albero! Foglie dorate sbocciarono dai suoi rami. L'albero crebbe fino ad essere alto quanto le loro spalle. Poi si fermò. Intagliata nel suo tronco c'era una piccola porta! 'Una porta in un albero?' sussurrò Finn con meraviglia. 'Dovremmo aprirla?' chiese Milo. Rubina annuì. 'Siamo arrivati fin qui. Vediamo cosa c'è dentro.' Con zampe tremanti, Milo raggiunse la piccola maniglia della porta. Quale segreto magico aspettava dietro questa porta? Il tesoro del Bosco degli Aceri stava per essere rivelato!",
+                "parentQuestions": [
+                    "Cosa è successo quando hanno piantato la ghianda?",
+                    "Come pensi che si sentissero gli amici guardando l'albero crescere?",
+                    "Cosa pensi ci sia dietro la porta?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-maple-forest-010",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "treasure",
+            "friendship",
+            "celebration"
+        ],
+        "tags_ro": [
+            "pădure",
+            "comoară",
+            "prietenie",
+            "celebrare"
+        ],
+        "tags_it": [
+            "bosco",
+            "tesoro",
+            "amicizia",
+            "celebrazione"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 10,
+        "locales": {
+            "en": {
+                "title": "The True Treasure",
+                "text": "Milo opened the tiny door in the magical tree. Inside was a small hollow space, and in it lay three beautiful acorn pendants on silver chains! Each pendant glowed with a soft light. 'There are three,' Ruby breathed, 'one for each of us!' They each put on a pendant. Warmth spread through them. Suddenly, they could sense each other's feelings! They knew when each friend was happy, scared, or needed help. 'Now I understand,' Finn said softly. 'The treasure isn't gold or jewels.' 'It's our friendship,' Ruby added. 'And these pendants help us stay connected forever.' Elder Maple's voice echoed in the clearing: 'The greatest treasure is friendship, loyalty, and love. You have proven worthy.' The fairy from the garden appeared with a smile. 'Well done, brave explorers! Whenever you wear your pendants, you'll remember this adventure and how strong you are together.' The three friends headed home through Maple Forest, their hearts full. They had found the real treasure: a bond that would never break. And they knew more adventures awaited them. After all, the best journeys are the ones you take with friends!",
+                "parentQuestions": [
+                    "What was the real treasure they found?",
+                    "Why is friendship more precious than gold?",
+                    "Who are your best friends and why are they important to you?"
+                ]
+            },
+            "ro": {
+                "title": "Adevărata comoară",
+                "text": "Milo deschise ușița din copacul magic. Înăuntru era o mică cavitate și în ea stăteau trei pandantive frumoase din ghindă pe lănțișoare de argint! Fiecare pandantiv strălucea cu o lumină blândă. 'Sunt trei,' respiră Rubina, 'unul pentru fiecare dintre noi!' Fiecare își puse un pandantiv. Căldura se răspândi prin ei. Brusc, puteau simți emoțiile celuilalt! Știau când fiecare prieten era fericit, speriat sau avea nevoie de ajutor. 'Acum înțeleg,' spuse Fini încet. 'Comoara nu e aur sau bijuterii.' 'E prietenia noastră,' adăugă Rubina. 'Și aceste pandantive ne ajută să rămânem conectați pentru totdeauna.' Vocea Arțarului Bătrân răsună în poiană: 'Cea mai mare comoară e prietenia, loialitatea și dragostea. V-ați dovedit demni.' Zâna din grădină apăru cu un zâmbet. 'Bravo, exploratori curajoși! Oricând purtați pandantivele, vă veți aminti această aventură și cât de puternici sunteți împreună.' Cei trei prieteni porniră spre casă prin Pădurea de Arțar, cu inimile pline. Găsiseră adevărata comoară: o legătură care nu se va rupe niciodată. Și știau că mai multe aventuri îi așteptau. La urma urmei, cele mai bune călătorii sunt cele pe care le faci cu prietenii!",
+                "parentQuestions": [
+                    "Care era adevărata comoară pe care au găsit-o?",
+                    "De ce e prietenia mai prețioasă decât aurul?",
+                    "Cine sunt cei mai buni prieteni ai tăi și de ce sunt importanți pentru tine?"
+                ]
+            },
+            "it": {
+                "title": "Il vero tesoro",
+                "text": "Milo aprì la piccola porta nell'albero magico. Dentro c'era un piccolo spazio cavo, e in esso giacevano tre bellissimi ciondoli a ghianda su catene d'argento! Ogni ciondolo brillava con una luce morbida. 'Ce ne sono tre,' respirò Rubina, 'uno per ognuno di noi!' Ognuno si mise un ciondolo. Il calore si diffuse attraverso di loro. All'improvviso, potevano percepire i sentimenti degli altri! Sapevano quando ogni amico era felice, spaventato o aveva bisogno di aiuto. 'Ora capisco,' disse Finn dolcemente. 'Il tesoro non è oro o gioielli.' 'È la nostra amicizia,' aggiunse Rubina. 'E questi ciondoli ci aiutano a restare connessi per sempre.' La voce dell'Anziano Acero echeggiò nella radura: 'Il tesoro più grande è l'amicizia, la lealtà e l'amore. Vi siete dimostrati degni.' La fata del giardino apparve con un sorriso. 'Ben fatto, coraggiosi esploratori! Ogni volta che indosserete i vostri ciondoli, ricorderete questa avventura e quanto siete forti insieme.' I tre amici si diressero verso casa attraverso il Bosco degli Aceri, con i cuori pieni. Avevano trovato il vero tesoro: un legame che non si sarebbe mai spezzato. E sapevano che altre avventure li aspettavano. Dopotutto, i viaggi migliori sono quelli che fai con gli amici!",
+                "parentQuestions": [
+                    "Qual era il vero tesoro che hanno trovato?",
+                    "Perché l'amicizia è più preziosa dell'oro?",
+                    "Chi sono i tuoi migliori amici e perché sono importanti per te?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

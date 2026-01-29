@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-sky-train-007",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "aurora",
+            "colors",
+            "dance"
+        ],
+        "tags_ro": [
+            "tren",
+            "aurora",
+            "culori",
+            "dans"
+        ],
+        "tags_it": [
+            "treno",
+            "aurora",
+            "colori",
+            "danza"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 7,
+        "locales": {
+            "en": {
+                "title": "The Aurora Dance Floor",
+                "text": "The Cloud Express glided into the Northern Sky, where the famous Aurora Dancers performed every night. Ribbons of green, purple, and pink light swirled and danced across the darkness. 'It's the most beautiful thing I've ever seen!' Penny whispered. But the dancers looked worried. 'The Dream Catcher piece got tangled in our light ribbons,' the lead dancer explained. 'We can't untangle it without stopping our dance. And if we stop dancing, the aurora goes dark!' Leo had an idea. 'What if we join your dance and work our way to the tangle?' 'Neither of you can dance with light,' the dancer said sadly. 'But we can try!' Penny said. 'Will you teach us?' One dancer guided Penny's flippers, another guided Leo's paws. Step by step, they learned to wave the light ribbons. They weren't perfect, but they moved toward the tangle while the aurora kept glowing! When they reached the knot, they worked together. Leo held one ribbon while Penny carefully pulled the Dream Catcher piece free. 'You did it without stopping the show!' the dancers cheered. As a thank you, they taught them a special friendship dance. Oliver collected the sixth piece. 'Six pieces! Just a few more to go!'",
+                "parentQuestions": [
+                    "What did the Aurora Dancers create in the sky?",
+                    "How did Penny and Leo help without stopping the dance?",
+                    "Have you ever learned a new dance?"
+                ]
+            },
+            "ro": {
+                "title": "Pista de dans a aurorei",
+                "text": "Cloud Express glisă în Cerul Nordic, unde faimoșii Dansatori Aurorei performau în fiecare noapte. Panglici de lumină verde, violet și roz se învolburau și dansau în întuneric. 'Este cel mai frumos lucru pe care l-am văzut vreodată!' șopti Penny. Dar dansatorii arătau îngrijorați. 'Bucata Prinzătorului de Vise s-a încurcat în panglicile noastre de lumină,' explică dansatorul principal. 'Nu o putem descurca fără să oprim dansul. Și dacă oprim dansul, aurora se stinge!' Leo avu o idee. 'Dacă ne-am alătura dansului și am lucra spre încurcătură?' 'Niciunul dintre voi nu poate dansa cu lumina,' spuse dansatorul trist. 'Dar putem încerca!' spuse Penny. 'Ne veți învăța?' Un dansator ghidă aripile lui Penny, altul ghidă labele lui Leo. Pas cu pas, învățară să fluture panglicile de lumină. Nu erau perfecți, dar se mișcară spre încurcătură în timp ce aurora continua să strălucească! Când ajunseră la nod, lucrară împreună. Leo ținu o panglică în timp ce Penny trase cu grijă bucata Prinzătorului de Vise. 'Ați reușit fără să opriți spectacolul!' sărbătoriră dansatorii. Drept mulțumire, îi învățară un dans special al prieteniei. Oliver colectă a șasea bucată. 'Șase bucăți! Mai sunt doar câteva!'",
+                "parentQuestions": [
+                    "Ce creau Dansatorii Aurorei pe cer?",
+                    "Cum au ajutat Penny și Leo fără să oprească dansul?",
+                    "Ai învățat vreodată un dans nou?"
+                ]
+            },
+            "it": {
+                "title": "La pista da ballo dell'aurora",
+                "text": "Il Cloud Express scivolò nel Cielo Nordico, dove i famosi Ballerini dell'Aurora si esibivano ogni notte. Nastri di luce verde, viola e rosa vorticavano e danzavano nell'oscurità. 'È la cosa più bella che abbia mai visto!' sussurrò Penny. Ma i ballerini sembravano preoccupati. 'Il pezzo dell'Acchiappasogni si è aggrovigliato nei nostri nastri di luce,' spiegò il primo ballerino. 'Non possiamo districarlo senza fermare la nostra danza. E se smettiamo di ballare, l'aurora si spegne!' Leo ebbe un'idea. 'E se ci unissimo alla vostra danza e ci facessimo strada verso il groviglio?' 'Nessuno di voi può ballare con la luce,' disse il ballerino tristemente. 'Ma possiamo provare!' disse Penny. 'Ci insegnerete?' Un ballerino guidò le pinne di Penny, un altro guidò le zampe di Leo. Passo dopo passo, impararono a sventolare i nastri di luce. Non erano perfetti, ma si mossero verso il groviglio mentre l'aurora continuava a brillare! Quando raggiunsero il nodo, lavorarono insieme. Leo tenne un nastro mentre Penny tirò con cura il pezzo dell'Acchiappasogni. 'Ce l'avete fatta senza fermare lo spettacolo!' esultarono i ballerini. Come ringraziamento, insegnarono loro una danza speciale dell'amicizia. Oliver raccolse il sesto pezzo. 'Sei pezzi! Solo pochi altri da trovare!'",
+                "parentQuestions": [
+                    "Cosa creavano nel cielo i Ballerini dell'Aurora?",
+                    "Come hanno aiutato Penny e Leo senza fermare la danza?",
+                    "Hai mai imparato un nuovo ballo?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-sky-train-008",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "cotton candy",
+            "clouds",
+            "sweetness"
+        ],
+        "tags_ro": [
+            "tren",
+            "vată de zahăr",
+            "nori",
+            "dulceață"
+        ],
+        "tags_it": [
+            "treno",
+            "zucchero filato",
+            "nuvole",
+            "dolcezza"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 8,
+        "locales": {
+            "en": {
+                "title": "Cotton Candy Cloud Kingdom",
+                "text": "The next stop was the most delicious place in the sky: the Cotton Candy Cloud Kingdom! Everything was made of fluffy, colorful clouds that tasted like cotton candy. Pink, blue, and yellow puffs filled the air with sweetness. 'Try not to eat the buildings,' Oliver cautioned with a smile. The kingdom's King Fluff looked upset. 'The Dream Catcher piece fell into our Sugar Spinner. Now all our clouds taste like vegetables!' 'Vegetables?' Penny giggled. 'That's terrible for a candy kingdom!' The Sugar Spinner was a huge machine that spun clouds into cotton candy. The piece was stuck deep inside the spinning gears. 'We can't stop the spinner,' King Fluff explained. 'The whole kingdom would melt!' 'I'm small enough to fit between the gears!' Penny realized. 'And I can hold the spinner just long enough for you to grab it!' Leo added. It was a perfect plan. Leo used all his strength to slow the spinner for just a moment. Penny darted between the gears and pulled out the shimmering piece! 'The clouds taste right again!' the fluffy citizens cheered. They gave Penny and Leo crowns made of pink cotton candy. 'Seven pieces found!' Oliver announced. 'Two more to go!'",
+                "parentQuestions": [
+                    "What tasted wrong in the Cotton Candy Kingdom?",
+                    "How did Penny and Leo work together to fix the spinner?",
+                    "What's your favorite flavor of cotton candy?"
+                ]
+            },
+            "ro": {
+                "title": "Regatul norilor de vată de zahăr",
+                "text": "Următoarea oprire era cel mai delicios loc din cer: Regatul Norilor de Vată de Zahăr! Totul era făcut din nori pufoși și colorați care aveau gust de vată de zahăr. Pufuri roz, albastru și galben umpleau aerul cu dulceață. 'Încercați să nu mâncați clădirile,' preveni Oliver cu un zâmbet. Regele Puf al regatului arăta supărat. 'Bucata Prinzătorului de Vise a căzut în Rotitorul nostru de Zahăr. Acum toți norii noștri au gust de legume!' 'Legume?' chicoti Penny. 'E groaznic pentru un regat de dulciuri!' Rotitorul de Zahăr era o mașină uriașă care transforma norii în vată de zahăr. Bucata era blocată adânc în rotițele care se învârteau. 'Nu putem opri rotitorul,' explică Regele Puf. 'Întreg regatul s-ar topi!' 'Eu sunt suficient de mică să încap între roți!' realiză Penny. 'Și eu pot ține rotitorul doar suficient pentru tine să apuci!' adăugă Leo. Era un plan perfect. Leo folosit toată forța să încetinească rotitorul pentru doar un moment. Penny se strecură între roți și trase bucata scânteietoare! 'Norii au din nou gust bun!' sărbătoriră cetățenii pufoși. Le dădură lui Penny și Leo coroane făcute din vată de zahăr roz. 'Șapte bucăți găsite!' anunță Oliver. 'Mai sunt două!'",
+                "parentQuestions": [
+                    "Ce avea gust greșit în Regatul de Vată de Zahăr?",
+                    "Cum au lucrat Penny și Leo împreună să repare rotitorul?",
+                    "Care e gustul tău preferat de vată de zahăr?"
+                ]
+            },
+            "it": {
+                "title": "Il Regno delle Nuvole di Zucchero Filato",
+                "text": "La fermata successiva era il posto più delizioso del cielo: il Regno delle Nuvole di Zucchero Filato! Tutto era fatto di nuvole soffici e colorate che sapevano di zucchero filato. Sbuffi rosa, blu e gialli riempivano l'aria di dolcezza. 'Cercate di non mangiare gli edifici,' avvertì Oliver con un sorriso. Re Soffice del regno sembrava turbato. 'Il pezzo dell'Acchiappasogni è caduto nel nostro Filatrice di Zucchero. Ora tutte le nostre nuvole sanno di verdure!' 'Verdure?' ridacchiò Penny. 'È terribile per un regno di dolciumi!' La Filatrice di Zucchero era un'enorme macchina che filava le nuvole in zucchero filato. Il pezzo era bloccato in profondità negli ingranaggi rotanti. 'Non possiamo fermare la filatrice,' spiegò Re Soffice. 'Tutto il regno si scioglierebbe!' 'Sono abbastanza piccola da passare tra gli ingranaggi!' realizzò Penny. 'E io posso tenere la filatrice abbastanza a lungo per afferrarlo!' aggiunse Leo. Era un piano perfetto. Leo usò tutta la sua forza per rallentare la filatrice per un momento. Penny si infilò tra gli ingranaggi e tirò fuori il pezzo luccicante! 'Le nuvole hanno di nuovo un buon sapore!' esultarono i cittadini soffici. Diedero a Penny e Leo corone fatte di zucchero filato rosa. 'Sette pezzi trovati!' annunciò Oliver. 'Altri due da trovare!'",
+                "parentQuestions": [
+                    "Cosa sapeva di sbagliato nel Regno dello Zucchero Filato?",
+                    "Come hanno lavorato insieme Penny e Leo per aggiustare la filatrice?",
+                    "Qual è il tuo gusto preferito di zucchero filato?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

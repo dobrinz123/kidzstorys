@@ -1,0 +1,13 @@
+The following packages should be updated for best compatibility with the installed expo version:
+  @react-native-async-storage/async-storage@1.21.0 - expected version: 2.2.0
+  expo-constants@15.4.6 - expected version: ~18.0.13
+  expo-localization@14.8.4 - expected version: ~17.0.8
+  expo-router@3.5.24 - expected version: ~6.0.22
+  react@18.2.0 - expected version: 19.1.0
+  react-dom@18.2.0 - expected version: 19.1.0
+  react-native@0.73.11 - expected version: 0.81.5
+  react-native-safe-area-context@4.8.2 - expected version: ~5.6.0
+  react-native-screens@3.29.0 - expected version: ~4.16.0
+  react-native-web@0.19.13 - expected version: ^0.21.0
+  @types/react@18.2.79 - expected version: ~19.1.10
+Your project may not work correctly until you install the expected versions of the packages.

@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "curiosities-003-where-rain-comes",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "rain",
+            "water",
+            "clouds",
+            "cycle"
+        ],
+        "tags_ro": [
+            "ploaie",
+            "apă",
+            "nori",
+            "ciclu"
+        ],
+        "tags_it": [
+            "pioggia",
+            "acqua",
+            "nuvole",
+            "ciclo"
+        ],
+        "locales": {
+            "en": {
+                "title": "Where Does Rain Come From?",
+                "text": "When it rains, have you ever wondered where all that water comes from? It's a magical journey called the water cycle! Let's follow a drop of water on its adventure. First, the sun shines on oceans, lakes, and rivers. The warm sun heats the water and turns it into water vapor, an invisible gas that floats up into the sky. This is called evaporation. It's like when a wet towel dries in the sun! Up, up, up the water vapor goes, high into the sky where it's cold. When the vapor gets cold enough, it turns back into tiny water droplets. Millions and millions of these droplets stick together and form clouds. This is called condensation. Inside clouds, the tiny droplets bump into each other and join together, getting bigger and bigger. When they get too heavy to float, they fall down as rain! If it's really cold, they become snow instead. The rain falls to the ground, filling rivers and lakes, and soaking into the soil. Plants drink it up, animals drink it, and it flows back to the ocean. Then the cycle starts all over again! The amazing thing is that the water you drink today might have been dinosaur rain millions of years ago. Water just keeps going around and around, forever!",
+                "parentQuestions": [
+                    "What turns water into invisible vapor?",
+                    "What are clouds made of?",
+                    "Where does rain go after it falls?"
+                ]
+            },
+            "ro": {
+                "title": "De unde vine ploaia?",
+                "text": "Când plouă, te-ai întrebat vreodată de unde vine toată apa aceea? E o călătorie magică numită ciclul apei! Să urmărim o picătură de apă în aventura ei. Întâi, soarele strălucește pe oceane, lacuri și râuri. Soarele cald încălzește apa și o transformă în vapori de apă, un gaz invizibil care plutește în sus în cer. Aceasta se numește evaporare. E ca atunci când un prosop ud se usucă la soare! Sus, sus, sus merg vaporii de apă, sus în cer unde e frig. Când vaporii devin suficient de reci, se transformă înapoi în picături mici de apă. Milioane și milioane din aceste picături se lipesc împreună și formează nori. Aceasta se numește condensare. În interiorul norilor, picăturile mici se lovesc una de alta și se unesc, devenind mai mari și mai mari. Când devin prea grele să plutească, cad ca ploaie! Dacă e foarte frig, devin zăpadă în schimb. Ploaia cade pe pământ, umplând râurile și lacurile și pătrunzând în sol. Plantele o beau, animalele o beau și curge înapoi în ocean. Apoi ciclul începe din nou! Lucrul uimitor e că apa pe care o bei azi ar fi putut fi ploaie de dinozaur acum milioane de ani. Apa continuă să meargă în cerc, pentru totdeauna!",
+                "parentQuestions": [
+                    "Ce transformă apa în vapori invizibili?",
+                    "Din ce sunt făcuți norii?",
+                    "Unde merge ploaia după ce cade?"
+                ]
+            },
+            "it": {
+                "title": "Da dove viene la pioggia?",
+                "text": "Quando piove, ti sei mai chiesto da dove viene tutta quell'acqua? È un viaggio magico chiamato ciclo dell'acqua! Seguiamo una goccia d'acqua nella sua avventura. Prima, il sole splende su oceani, laghi e fiumi. Il sole caldo riscalda l'acqua e la trasforma in vapore acqueo, un gas invisibile che sale nel cielo. Questo si chiama evaporazione. È come quando un asciugamano bagnato si asciuga al sole! Su, su, su va il vapore acqueo, in alto nel cielo dove fa freddo. Quando il vapore diventa abbastanza freddo, si ritrasforma in minuscole goccioline d'acqua. Milioni e milioni di queste goccioline si attaccano insieme e formano le nuvole. Questo si chiama condensazione. Dentro le nuvole, le goccioline minuscole si scontrano e si uniscono, diventando sempre più grandi. Quando diventano troppo pesanti per galleggiare, cadono come pioggia! Se fa molto freddo, diventano neve invece. La pioggia cade a terra, riempiendo fiumi e laghi e penetrando nel terreno. Le piante la bevono, gli animali la bevono e scorre di nuovo nell'oceano. Poi il ciclo ricomincia! La cosa incredibile è che l'acqua che bevi oggi potrebbe essere stata pioggia di dinosauro milioni di anni fa. L'acqua continua a girare in tondo, per sempre!",
+                "parentQuestions": [
+                    "Cosa trasforma l'acqua in vapore invisibile?",
+                    "Di cosa sono fatte le nuvole?",
+                    "Dove va la pioggia dopo che cade?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "curiosities-004-why-leaves-change",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "leaves",
+            "autumn",
+            "colors",
+            "trees"
+        ],
+        "tags_ro": [
+            "frunze",
+            "toamnă",
+            "culori",
+            "copaci"
+        ],
+        "tags_it": [
+            "foglie",
+            "autunno",
+            "colori",
+            "alberi"
+        ],
+        "locales": {
+            "en": {
+                "title": "Why Do Leaves Change Color?",
+                "text": "In autumn, something magical happens to trees. Green leaves become red, orange, yellow, and even purple! But why? Let's uncover this colorful mystery! All spring and summer, leaves are green because of something called chlorophyll. Chlorophyll is what helps leaves make food for the tree using sunlight. It's like a tiny kitchen in every leaf! And chlorophyll is green, which is why leaves look green. But here's the secret: leaves actually have other colors hiding in them all along! Yellow and orange colors are there too, but the strong green chlorophyll covers them up. When autumn comes, something changes. The days get shorter and colder. Trees know winter is coming, and they start getting ready to rest. They stop making chlorophyll. As the green fades away, guess what happens? The hidden yellow and orange colors can finally show! That's why you see golden leaves. Some leaves also make red and purple colors in autumn. They do this when sugars get trapped in the leaves. The sugars turn into these beautiful new colors! So autumn leaves aren't really changing color. They're revealing colors that were hidden all along, and making some new ones too. Next time you see colorful leaves, you'll know their secret!",
+                "parentQuestions": [
+                    "What makes leaves green?",
+                    "Why do leaves change color in autumn?",
+                    "What is your favorite autumn color?"
+                ]
+            },
+            "ro": {
+                "title": "De ce își schimbă frunzele culoarea?",
+                "text": "Toamna, ceva magic se întâmplă cu copacii. Frunzele verzi devin roșii, portocalii, galbene și chiar mov! Dar de ce? Să descoperim acest mister colorat! Toată primăvara și vara, frunzele sunt verzi din cauza a ceva numit clorofilă. Clorofila ajută frunzele să facă mâncare pentru copac folosind lumina soarelui. E ca o bucătărie mică în fiecare frunză! Și clorofila e verde, de aceea frunzele arată verde. Dar iată secretul: frunzele au de fapt alte culori ascunse în ele tot timpul! Culorile galbene și portocalii sunt acolo și ele, dar clorofila verde puternică le acoperă. Când vine toamna, ceva se schimbă. Zilele devin mai scurte și mai reci. Copacii știu că vine iarna și încep să se pregătească să se odihnească. Opresc producția de clorofilă. Pe măsură ce verdele se estompează, ghicește ce se întâmplă? Culorile ascunse galbene și portocalii se pot arăta în sfârșit! De aceea vezi frunze aurii. Unele frunze fac și culori roșii și mov toamna. Fac asta când zaharurile rămân blocate în frunze. Zaharurile se transformă în aceste culori frumoase noi! Deci frunzele de toamnă nu își schimbă cu adevărat culoarea. Dezvăluie culori care au fost ascunse tot timpul și fac și unele noi. Data viitoare când vezi frunze colorate, vei ști secretul lor!",
+                "parentQuestions": [
+                    "Ce face frunzele verzi?",
+                    "De ce își schimbă frunzele culoarea toamna?",
+                    "Care e culoarea ta preferată de toamnă?"
+                ]
+            },
+            "it": {
+                "title": "Perché le foglie cambiano colore?",
+                "text": "In autunno, succede qualcosa di magico agli alberi. Le foglie verdi diventano rosse, arancioni, gialle e persino viola! Ma perché? Scopriamo questo mistero colorato! Per tutta la primavera e l'estate, le foglie sono verdi a causa di qualcosa chiamato clorofilla. La clorofilla aiuta le foglie a produrre cibo per l'albero usando la luce solare. È come una piccola cucina in ogni foglia! E la clorofilla è verde, ecco perché le foglie sembrano verdi. Ma ecco il segreto: le foglie hanno in realtà altri colori nascosti in loro tutto il tempo! I colori gialli e arancioni sono lì anche loro, ma la forte clorofilla verde li copre. Quando arriva l'autunno, qualcosa cambia. Le giornate diventano più corte e più fredde. Gli alberi sanno che l'inverno sta arrivando e iniziano a prepararsi per riposare. Smettono di produrre clorofilla. Mentre il verde svanisce, indovina cosa succede? I colori nascosti gialli e arancioni possono finalmente mostrarsi! Ecco perché vedi foglie dorate. Alcune foglie fanno anche colori rossi e viola in autunno. Lo fanno quando gli zuccheri rimangono intrappolati nelle foglie. Gli zuccheri si trasformano in questi bei nuovi colori! Quindi le foglie autunnali non cambiano davvero colore. Stanno rivelando colori che erano nascosti tutto il tempo e ne stanno facendo anche di nuovi. La prossima volta che vedi foglie colorate, saprai il loro segreto!",
+                "parentQuestions": [
+                    "Cosa rende verdi le foglie?",
+                    "Perché le foglie cambiano colore in autunno?",
+                    "Qual è il tuo colore autunnale preferito?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

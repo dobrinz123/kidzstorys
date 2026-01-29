@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-sky-train-009",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "sunrise",
+            "colors",
+            "hope"
+        ],
+        "tags_ro": [
+            "tren",
+            "răsărit",
+            "culori",
+            "speranță"
+        ],
+        "tags_it": [
+            "treno",
+            "alba",
+            "colori",
+            "speranza"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 9,
+        "locales": {
+            "en": {
+                "title": "The Sunrise Painters",
+                "text": "The Cloud Express reached a very special place: the workshop of the Sunrise Painters. Here, artists painted every sunrise, using brushes dipped in pure light. Orange, pink, and gold colors filled giant palettes. 'We make the sunrise beautiful for everyone below,' the head painter explained. 'But without the Dream Catcher piece that fell into our gold paint, our sunrises have had no gold. They look grey and sad.' Penny looked at the enormous pot of gold paint. The piece was at the very bottom! 'We can't tip it over,' said Leo. 'That would waste all the gold paint!' 'What if I dive in?' Penny suggested. 'I'm great at swimming and diving!' 'It might be thick and sticky,' the painter warned. 'I can do it!' Penny said bravely. She took a deep breath and dove into the golden paint. It was thick and gooey, but she pushed through. At the bottom, her flippers touched the piece! She grabbed it and kicked hard. The painters pulled her out, covered head to toe in shimmering gold! 'You found it!' they cheered. They gently cleaned Penny, though she stayed a little sparkly. Oliver collected the eighth piece. 'Just one more piece needed!'",
+                "parentQuestions": [
+                    "What do the Sunrise Painters create?",
+                    "Why was Penny the best helper for this problem?",
+                    "What's your favorite color in the sunrise?"
+                ]
+            },
+            "ro": {
+                "title": "Pictorii răsăritului",
+                "text": "Cloud Express ajunse într-un loc foarte special: atelierul Pictorilor Răsăritului. Aici, artiștii pictau fiecare răsărit, folosind pensule înmuiate în lumină pură. Culori portocalii, roz și aurii umpleau palete gigantice. 'Facem răsăritul frumos pentru toți de jos,' explică pictorul șef. 'Dar fără bucata Prinzătorului de Vise care a căzut în vopseaua noastră aurie, răsăriturile noastre nu au avut auriu. Arată gri și triste.' Penny privi imensul vas de vopsea aurie. Bucata era chiar la fund! 'Nu îl putem răsturna,' spuse Leo. 'Asta ar irosi toată vopseaua aurie!' 'Dacă mă scufund?' sugeră Penny. 'Sunt grozavă la înot și scufundat!' 'Ar putea fi gros și lipicios,' avertiza pictorul. 'Pot să o fac!' spuse Penny curajos. Respiră adânc și se scufundă în vopseaua aurie. Era groasă și lipicioasă, dar împinse prin ea. La fund, aripile sale atinseră bucata! O apucă și lovi tare cu piciorul. Pictorii o scoaseră, acoperită din cap până în picioare în auriu scânteietor! 'Ai găsit-o!' sărbătoriră ei. O curățară blând pe Penny, deși rămase puțin sclipitoare. Oliver colectă a opta bucată. 'Mai e nevoie doar de una!'",
+                "parentQuestions": [
+                    "Ce creează Pictorii Răsăritului?",
+                    "De ce era Penny cel mai bun ajutor pentru această problemă?",
+                    "Care e culoarea ta preferată în răsărit?"
+                ]
+            },
+            "it": {
+                "title": "I Pittori dell'Alba",
+                "text": "Il Cloud Express raggiunse un posto molto speciale: il laboratorio dei Pittori dell'Alba. Qui, gli artisti dipingevano ogni alba, usando pennelli immersi in pura luce. Colori arancioni, rosa e oro riempivano tavolozze giganti. 'Rendiamo l'alba bella per tutti sotto,' spiegò il pittore capo. 'Ma senza il pezzo dell'Acchiappasogni che è caduto nella nostra vernice dorata, le nostre albe non hanno avuto oro. Sembrano grigie e tristi.' Penny guardò l'enorme vaso di vernice dorata. Il pezzo era proprio sul fondo! 'Non possiamo rovesciarlo,' disse Leo. 'Sprecheremmo tutta la vernice dorata!' 'E se mi tuffassi?' suggerì Penny. 'Sono bravissima a nuotare e tuffarmi!' 'Potrebbe essere denso e appiccicoso,' avvertì il pittore. 'Ce la posso fare!' disse Penny coraggiosamente. Fece un respiro profondo e si tuffò nella vernice dorata. Era densa e appiccicosa, ma spinse attraverso. Sul fondo, le sue pinne toccarono il pezzo! Lo afferrò e scalciò forte. I pittori la tirarono fuori, coperta dalla testa ai piedi di oro scintillante! 'L'hai trovato!' esultarono. La pulirono delicatamente, anche se rimase un po' luccicante. Oliver raccolse l'ottavo pezzo. 'Solo un pezzo ancora da trovare!'",
+                "parentQuestions": [
+                    "Cosa creano i Pittori dell'Alba?",
+                    "Perché Penny era la miglior aiutante per questo problema?",
+                    "Qual è il tuo colore preferito nell'alba?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-sky-train-010",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "dreams",
+            "fixing",
+            "home"
+        ],
+        "tags_ro": [
+            "tren",
+            "vise",
+            "reparare",
+            "casă"
+        ],
+        "tags_it": [
+            "treno",
+            "sogni",
+            "riparazione",
+            "casa"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 10,
+        "locales": {
+            "en": {
+                "title": "Fixing the Dream Catcher",
+                "text": "The Cloud Express finally arrived at the End of the Sky, where the great Dream Catcher floated. It was enormous and beautiful, made of silver threads and sparkling gems. But there was a hole in its center where the pieces belonged. 'The last piece is right here,' Oliver said, 'but we need all of you to put the Dream Catcher back together.' Penny, Leo, and Oliver worked carefully. They fitted each piece into place. The prism, the crystals, the gems, and all the shimmering bits they had collected. With each piece, the Dream Catcher glowed brighter! Finally, Penny placed the last piece in the very center. FLASH! The Dream Catcher burst into brilliant light. It began to spin gently, catching dreams and sending them safely to sleeping children everywhere. 'You saved the dreams!' Oliver cheered. 'Because of you, children all over the world will have sweet dreams tonight.' The ride home on the Cloud Express felt magical. Penny and Leo waved goodbye to all their new friends. When they arrived back at the old station, the train faded like morning mist. But around each of their necks hung a tiny Dream Catcher pendant. 'To remember our adventure,' Penny said, hugging Leo. 'Best adventure ever!' Leo agreed.",
+                "parentQuestions": [
+                    "What did the Dream Catcher do?",
+                    "How did Penny and Leo feel at the end of their adventure?",
+                    "What adventure would you like to go on?"
+                ]
+            },
+            "ro": {
+                "title": "Reparând Prinzătorul de vise",
+                "text": "Cloud Express în sfârșit ajunse la Capătul Cerului, unde marele Prinzător de Vise plutea. Era enorm și frumos, făcut din fire de argint și pietre prețioase sclipitoare. Dar era o gaură în centru unde aparțineau bucățile. 'Ultima bucată e chiar aici,' spuse Oliver, 'dar avem nevoie de voi toți să puneți Prinzătorul de Vise la loc.' Penny, Leo și Oliver lucrară cu grijă. Potriviră fiecare bucată la locul ei. Prisma, cristalele, pietrele prețioase și toate bucățile sclipitoare pe care le colectaseră. Cu fiecare bucată, Prinzătorul de Vise strălucea mai puternic! În cele din urmă, Penny puse ultima bucată chiar în centru. FLASH! Prinzătorul de Vise explodă în lumină strălucitoare. Începu să se rotească blând, prinzând vise și trimițându-le în siguranță la copiii adormiți de pretutindeni. 'Ați salvat visele!' jubilă Oliver. 'Datorită vouă, copiii din toată lumea vor avea vise dulci în noaptea asta.' Drumul spre casă pe Cloud Express se simți magic. Penny și Leo făcură cu mâna la revedere tuturor prietenilor lor noi. Când ajunseră înapoi la vechea gară, trenul se stinse ca ceața de dimineață. Dar în jurul gâtului fiecăruia atârna un mic pandantiv Prinzător de Vise. 'Ca să ne amintim de aventură,' spuse Penny, îmbrățișându-l pe Leo. 'Cea mai tare aventură!' fu de acord Leo.",
+                "parentQuestions": [
+                    "Ce făcea Prinzătorul de Vise?",
+                    "Cum s-au simțit Penny și Leo la sfârșitul aventurii?",
+                    "În ce aventură ai vrea să mergi?"
+                ]
+            },
+            "it": {
+                "title": "Aggiustare l'Acchiappasogni",
+                "text": "Il Cloud Express arrivò finalmente alla Fine del Cielo, dove il grande Acchiappasogni fluttuava. Era enorme e bellissimo, fatto di fili d'argento e gemme scintillanti. Ma c'era un buco al centro dove i pezzi dovevano stare. 'L'ultimo pezzo è proprio qui,' disse Oliver, 'ma abbiamo bisogno di tutti voi per rimettere insieme l'Acchiappasogni.' Penny, Leo e Oliver lavorarono con attenzione. Inserirono ogni pezzo al suo posto. Il prisma, i cristalli, le gemme e tutti i pezzi luccicanti che avevano raccolto. Con ogni pezzo, l'Acchiappasogni brillava di più! Finalmente, Penny mise l'ultimo pezzo proprio al centro. FLASH! L'Acchiappasogni esplose in una luce brillante. Iniziò a girare dolcemente, catturando sogni e mandandoli al sicuro ai bambini addormentati ovunque. 'Avete salvato i sogni!' esultò Oliver. 'Grazie a voi, i bambini di tutto il mondo avranno bei sogni stanotte.' Il viaggio di ritorno sul Cloud Express sembrò magico. Penny e Leo salutarono tutti i loro nuovi amici. Quando arrivarono alla vecchia stazione, il treno svanì come la nebbia mattutina. Ma intorno al collo di ognuno pendeva un piccolo ciondolo Acchiappasogni. 'Per ricordare la nostra avventura,' disse Penny, abbracciando Leo. 'La migliore avventura di sempre!' concordò Leo.",
+                "parentQuestions": [
+                    "Cosa faceva l'Acchiappasogni?",
+                    "Come si sentivano Penny e Leo alla fine della loro avventura?",
+                    "In che avventura vorresti andare?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

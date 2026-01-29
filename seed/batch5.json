@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "calm-down-001-breathing-balloon",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "breathing",
+            "balloon",
+            "calm",
+            "relax"
+        ],
+        "tags_ro": [
+            "respirație",
+            "balon",
+            "calm",
+            "relaxare"
+        ],
+        "tags_it": [
+            "respirazione",
+            "palloncino",
+            "calma",
+            "rilassamento"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Magic Breathing Balloon",
+                "text": "Leo was feeling very upset. His blocks had fallen down and nothing was going right. His face felt hot and his hands were tight fists. Then his grandmother came and sat beside him. 'Let me show you something special,' she said softly. 'Imagine you have a beautiful balloon in your hands. What color is it?' Leo thought. 'Blue,' he whispered. 'Perfect. Now, let's blow up your blue balloon together. Breathe in slowly through your nose, one, two, three.' Leo breathed in slowly. He could feel the cool air filling his chest. 'Now breathe out through your mouth, slowly, like you're blowing up the balloon. One, two, three, four, five.' Leo breathed out slowly. He imagined his blue balloon getting bigger and bigger. 'Let's do it again,' Grandmother said. Breathe in, one, two, three. Breathe out, one, two, three, four, five. Leo did it again and again. Each time, he felt a little calmer. His hands weren't fists anymore. His face didn't feel so hot. The blue balloon in his mind floated peacefully. 'Do you feel better?' Grandmother asked. Leo nodded and smiled a little. He could try building his blocks again. And if they fell, he knew just what to do.",
+                "parentQuestions": [
+                    "What color balloon did Leo imagine?",
+                    "How did Leo feel after the breathing exercise?",
+                    "Can you try the balloon breathing with me right now?"
+                ]
+            },
+            "ro": {
+                "title": "Balonul magic al respirației",
+                "text": "Leo era foarte supărat. Cuburile lui căzuseră și nimic nu mergea bine. Fața lui era fierbinte și mâinile lui erau pumnii strânși. Apoi bunica lui veni și se așeză lângă el. 'Lasă-mă să-ți arăt ceva special,' spuse ea blând. 'Imaginează-ți că ai un balon frumos în mâini. Ce culoare are?' Leo se gândi. 'Albastru,' șopti el. 'Perfect. Acum, hai să umflăm balonul tău albastru împreună. Inspiră încet pe nas, unu, doi, trei.' Leo inspiră încet. Putea simți aerul rece umplându-i pieptul. 'Acum expiră pe gură, încet, ca și cum ai umfla balonul. Unu, doi, trei, patru, cinci.' Leo expiră încet. Își imaginea balonul lui albastru devenind din ce în ce mai mare. 'Hai să o facem din nou,' spuse bunica. Inspiră, unu, doi, trei. Expiră, unu, doi, trei, patru, cinci. Leo o făcu iar și iar. De fiecare dată, se simțea puțin mai calm. Mâinile lui nu mai erau pumni. Fața lui nu mai era atât de fierbinte. Balonul albastru din mintea lui plutea pașnic. 'Te simți mai bine?' întrebă bunica. Leo dădu din cap și zâmbi puțin. Putea încerca să construiască cuburile din nou. Și dacă cădeau, știa exact ce să facă.",
+                "parentQuestions": [
+                    "Ce culoare și-a imaginat Leo balonul?",
+                    "Cum s-a simțit Leo după exercițiul de respirație?",
+                    "Poți încerca respirația cu balon cu mine chiar acum?"
+                ]
+            },
+            "it": {
+                "title": "Il palloncino magico della respirazione",
+                "text": "Leo era molto arrabbiato. I suoi blocchi erano caduti e niente andava bene. La sua faccia era calda e le sue mani erano pugni stretti. Poi sua nonna venne e si sedette accanto a lui. 'Lascia che ti mostri qualcosa di speciale,' disse dolcemente. 'Immagina di avere un bellissimo palloncino nelle mani. Di che colore è?' Leo pensò. 'Blu,' sussurrò. 'Perfetto. Ora, gonfiamo insieme il tuo palloncino blu. Inspira lentamente dal naso, uno, due, tre.' Leo inspirò lentamente. Poteva sentire l'aria fresca riempire il suo petto. 'Ora espira dalla bocca, lentamente, come se stessi gonfiando il palloncino. Uno, due, tre, quattro, cinque.' Leo espirò lentamente. Immaginava il suo palloncino blu diventare sempre più grande. 'Facciamolo di nuovo,' disse la nonna. Inspira, uno, due, tre. Espira, uno, due, tre, quattro, cinque. Leo lo fece ancora e ancora. Ogni volta, si sentiva un po' più calmo. Le sue mani non erano più pugni. La sua faccia non era più così calda. Il palloncino blu nella sua mente fluttuava pacificamente. 'Ti senti meglio?' chiese la nonna. Leo annuì e sorrise un po'. Poteva provare a costruire di nuovo i suoi blocchi. E se fossero caduti, sapeva esattamente cosa fare.",
+                "parentQuestions": [
+                    "Di che colore ha immaginato Leo il palloncino?",
+                    "Come si sentiva Leo dopo l'esercizio di respirazione?",
+                    "Puoi provare la respirazione del palloncino con me adesso?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "calm-down-002-gentle-waves",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "ocean",
+            "waves",
+            "calm",
+            "imagine"
+        ],
+        "tags_ro": [
+            "ocean",
+            "valuri",
+            "calm",
+            "imaginație"
+        ],
+        "tags_it": [
+            "oceano",
+            "onde",
+            "calma",
+            "immaginazione"
+        ],
+        "locales": {
+            "en": {
+                "title": "Gentle Ocean Waves",
+                "text": "Mia's heart was beating fast. She had gotten scared and now she couldn't calm down. Her dad sat with her on the soft rug. 'Close your eyes,' he said gently. 'We're going to visit the ocean.' Mia closed her eyes, even though her heart was still racing. 'Imagine you're sitting on warm, soft sand. The sun feels nice on your skin. Can you feel it?' Mia tried to imagine it. She nodded a little. 'Now listen to the waves. They come in slowly, whoooosh. Then they go back out, shhhhhhh. Let's breathe with the waves.' Dad's voice was calm and slow. 'When the wave comes in, breathe in. Whoooosh.' Mia breathed in. 'When the wave goes out, breathe out. Shhhhhhh.' Mia breathed out slowly. The wave came in, whoooosh. Mia breathed in. The wave went out, shhhhhhh. Mia breathed out. Again and again, the waves rolled in and out. Mia's heart started to slow down. She could really see the ocean in her mind now, big and blue and peaceful. The waves kept their steady rhythm. In and out. In and out. When Mia opened her eyes, she felt much better. The scary feeling had washed away, just like footprints in the sand. 'Thank you, Daddy,' she said softly. Dad hugged her close. 'The ocean is always there when you need it.'",
+                "parentQuestions": [
+                    "What did Mia imagine to help her calm down?",
+                    "How did breathing with the waves help Mia?",
+                    "What sounds help you feel calm when you're scared?"
+                ]
+            },
+            "ro": {
+                "title": "Valurile blânde ale oceanului",
+                "text": "Inima Miei bătea repede. Se speriase și acum nu se putea calma. Tatăl ei stătu cu ea pe covorul moale. 'Închide ochii,' spuse el blând. 'O să vizităm oceanul.' Mia închise ochii, chiar dacă inima ei încă bătea repede. 'Imaginează-ți că stai pe nisip cald și moale. Soarele se simte bine pe pielea ta. Îl poți simți?' Mia încercă să și-l imagineze. Dădu din cap puțin. 'Acum ascultă valurile. Vin încet, șuuuuuș. Apoi se retrag, șhhhhhhh. Hai să respirăm cu valurile.' Vocea tatei era calmă și lentă. 'Când valul vine, inspiră. Șuuuuuș.' Mia inspiră. 'Când valul se retrage, expiră. Șhhhhhhh.' Mia expiră încet. Valul veni, șuuuuuș. Mia inspiră. Valul se retrase, șhhhhhhh. Mia expiră. Iar și iar, valurile se rostogoliră înăuntru și în afară. Inima Miei începu să încetinească. Chiar putea vedea oceanul în mintea ei acum, mare și albastru și pașnic. Valurile își păstrau ritmul constant. Înăuntru și în afară. Înăuntru și în afară. Când Mia deschise ochii, se simți mult mai bine. Sentimentul de frică fusese spălat, la fel ca urmele de pași în nisip. 'Mulțumesc, tati,' spuse ea încet. Tata o îmbrățișă strâns. 'Oceanul e întotdeauna acolo când ai nevoie de el.'",
+                "parentQuestions": [
+                    "Ce și-a imaginat Mia ca să se calmeze?",
+                    "Cum a ajutat-o pe Mia respirația cu valurile?",
+                    "Ce sunete te ajută să te simți calm când ești speriat?"
+                ]
+            },
+            "it": {
+                "title": "Le dolci onde dell'oceano",
+                "text": "Il cuore di Mia batteva veloce. Si era spaventata e ora non riusciva a calmarsi. Suo papà si sedette con lei sul tappeto morbido. 'Chiudi gli occhi,' disse dolcemente. 'Andremo a visitare l'oceano.' Mia chiuse gli occhi, anche se il suo cuore batteva ancora forte. 'Immagina di essere seduta su sabbia calda e morbida. Il sole è piacevole sulla tua pelle. Lo senti?' Mia provò a immaginarlo. Annuì un po'. 'Ora ascolta le onde. Arrivano lentamente, sciuuuush. Poi si ritirano, shhhhhhh. Respiriamo insieme alle onde.' La voce di papà era calma e lenta. 'Quando l'onda arriva, inspira. Sciuuuush.' Mia inspirò. 'Quando l'onda si ritira, espira. Shhhhhhh.' Mia espirò lentamente. L'onda arrivò, sciuuuush. Mia inspirò. L'onda si ritirò, shhhhhhh. Mia espirò. Ancora e ancora, le onde entravano e uscivano. Il cuore di Mia iniziò a rallentare. Ora poteva davvero vedere l'oceano nella sua mente, grande e blu e pacifico. Le onde mantenevano il loro ritmo costante. Dentro e fuori. Dentro e fuori. Quando Mia aprì gli occhi, si sentiva molto meglio. La paura era stata lavata via, proprio come le impronte nella sabbia. 'Grazie, papà,' disse piano. Papà la abbracciò forte. 'L'oceano è sempre lì quando ne hai bisogno.'",
+                "parentQuestions": [
+                    "Cosa ha immaginato Mia per aiutarsi a calmarsi?",
+                    "Come ha aiutato Mia respirare con le onde?",
+                    "Quali suoni ti aiutano a sentirti calmo quando hai paura?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

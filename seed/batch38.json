@@ -1,0 +1,167 @@
+[
+    {
+        "storyKey": "learn-to-read-007-hop-top",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "hop",
+            "top",
+            "pop",
+            "jump"
+        ],
+        "tags_ro": [
+            "hop",
+            "sus",
+            "poc",
+            "salt"
+        ],
+        "tags_it": [
+            "saltella",
+            "cima",
+            "pop",
+            "salta"
+        ],
+        "locales": {
+            "en": {
+                "title": "Hop to the Top",
+                "text": "I can hop. Hop, hop, hop! I hop up high. I hop to the top. The top of the hill. I see Pop. Pop is my dog. Pop goes pop, pop, pop! Pop likes to hop too. We hop together. Hop, hop, hop! Up we go. To the top. We stop at the top. We look around. Trees and flowers! So pretty! Then we hop back down. The end.",
+                "parentQuestions": [
+                    "Who is Pop?",
+                    "Where did they hop to?",
+                    "Can you hop up and down?"
+                ]
+            },
+            "ro": {
+                "title": "Hop până sus",
+                "text": "Pot să sar. Hop, hop, hop! Sar sus. Sar până sus. Sus pe deal. Îl văd pe Pop. Pop e câinele meu. Pop face poc, poc, poc! Și lui Pop îi place să sară. Sărim împreună. Hop, hop, hop! Sus mergem. Până sus. Ne oprim sus. Ne uităm în jur. Copaci și flori! Ce frumos! Apoi sărim înapoi jos. Sfârșit.",
+                "parentQuestions": [
+                    "Cine e Pop?",
+                    "Unde au sărit?",
+                    "Poți să sari sus și jos?"
+                ]
+            },
+            "it": {
+                "title": "Salta in cima",
+                "text": "So saltellare. Hop, hop, hop! Salto in alto. Salto in cima. In cima alla collina. Vedo Pop. Pop è il mio cane. Pop fa pop, pop, pop! Anche a Pop piace saltellare. Saltelliamo insieme. Hop, hop, hop! Su andiamo. In cima. Ci fermiamo in cima. Guardiamo intorno. Alberi e fiori! Così belli! Poi saltelliamo giù. Fine.",
+                "parentQuestions": [
+                    "Chi è Pop?",
+                    "Dove sono saltati?",
+                    "Sai saltellare su e giù?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-008-bug-hug",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "bug",
+            "hug",
+            "rug",
+            "love"
+        ],
+        "tags_ro": [
+            "gândac",
+            "îmbrățișare",
+            "covor",
+            "dragoste"
+        ],
+        "tags_it": [
+            "insetto",
+            "abbraccio",
+            "tappeto",
+            "amore"
+        ],
+        "locales": {
+            "en": {
+                "title": "A Bug Gets a Hug",
+                "text": "A little bug sat on a rug. The bug was blue. The bug was new. The bug looked sad. No friends to hug! Then a red bug came to the rug. Hello, said the red bug. Hello, said the blue bug. Want to play? Yes! They played on the rug. Then the red bug gave the blue bug a hug. A bug hug! Now the blue bug is not sad. The blue bug has a friend. The end.",
+                "parentQuestions": [
+                    "What color was the first bug?",
+                    "Why was the blue bug sad?",
+                    "Do you like hugs?"
+                ]
+            },
+            "ro": {
+                "title": "Un gândac primește o îmbrățișare",
+                "text": "Un gândac mic stătea pe un covor. Gândacul era albastru. Gândacul era nou. Gândacul arăta trist. Niciun prieten de îmbrățișat! Apoi un gândac roșu veni pe covor. Bună, spuse gândacul roșu. Bună, spuse gândacul albastru. Vrei să te joci? Da! S-au jucat pe covor. Apoi gândacul roșu i-a dat gândacului albastru o îmbrățișare. O îmbrățișare de gândac! Acum gândacul albastru nu mai e trist. Gândacul albastru are un prieten. Sfârșit.",
+                "parentQuestions": [
+                    "Ce culoare avea primul gândac?",
+                    "De ce era trist gândacul albastru?",
+                    "Îți plac îmbrățișările?"
+                ]
+            },
+            "it": {
+                "title": "Un insetto riceve un abbraccio",
+                "text": "Un piccolo insetto stava su un tappeto. L'insetto era blu. L'insetto era nuovo. L'insetto sembrava triste. Nessun amico da abbracciare! Poi un insetto rosso venne sul tappeto. Ciao, disse l'insetto rosso. Ciao, disse l'insetto blu. Vuoi giocare? Sì! Giocarono sul tappeto. Poi l'insetto rosso diede all'insetto blu un abbraccio. Un abbraccio da insetto! Ora l'insetto blu non è triste. L'insetto blu ha un amico. Fine.",
+                "parentQuestions": [
+                    "Di che colore era il primo insetto?",
+                    "Perché l'insetto blu era triste?",
+                    "Ti piacciono gli abbracci?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-009-fish-wish",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "fish",
+            "wish",
+            "dish",
+            "swim"
+        ],
+        "tags_ro": [
+            "pește",
+            "dorință",
+            "farfurie",
+            "înot"
+        ],
+        "tags_it": [
+            "pesce",
+            "desiderio",
+            "piatto",
+            "nuotare"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Fish Makes a Wish",
+                "text": "A fish swims in a dish. Swish, swish, swish! The fish makes a wish. I wish, I wish for a bigger dish! Poof! A big tank appears. The fish is so happy! Now the fish has room to swim. Swish, swish, swish! The fish swims left. The fish swims right. The fish swims up. The fish swims down. What a happy fish! Dreams come true! The end.",
+                "parentQuestions": [
+                    "What did the fish wish for?",
+                    "Did the wish come true?",
+                    "What would you wish for?"
+                ]
+            },
+            "ro": {
+                "title": "Peștele face o dorință",
+                "text": "Un pește înoată într-o farfurie. Șuș, șuș, șuș! Peștele face o dorință. Îmi doresc, îmi doresc o farfurie mai mare! Puf! Apare un acvariu mare. Peștele e atât de fericit! Acum peștele are loc să înoate. Șuș, șuș, șuș! Peștele înoată la stânga. Peștele înoată la dreapta. Peștele înoată în sus. Peștele înoată în jos. Ce pește fericit! Visele devin realitate! Sfârșit.",
+                "parentQuestions": [
+                    "Ce și-a dorit peștele?",
+                    "S-a îndeplinit dorința?",
+                    "Ce ți-ai dori tu?"
+                ]
+            },
+            "it": {
+                "title": "Il pesce esprime un desiderio",
+                "text": "Un pesce nuota in un piatto. Sguish, sguish, sguish! Il pesce esprime un desiderio. Desidero, desidero un piatto più grande! Puf! Appare un grande acquario. Il pesce è così felice! Ora il pesce ha spazio per nuotare. Sguish, sguish, sguish! Il pesce nuota a sinistra. Il pesce nuota a destra. Il pesce nuota su. Il pesce nuota giù. Che pesce felice! I sogni si avverano! Fine.",
+                "parentQuestions": [
+                    "Cosa ha desiderato il pesce?",
+                    "Il desiderio si è avverato?",
+                    "Cosa desidereresti tu?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

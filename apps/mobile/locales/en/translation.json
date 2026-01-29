@@ -1,0 +1,116 @@
+{
+  "common": {
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?"
+  },
+  "home": {
+    "title": "Stories",
+    "seeAll": "See All",
+    "pickOneNow": "Pick One Now",
+    "recommended": "Recommended for You",
+    "filters": {
+      "age": "Age",
+      "duration": "Duration",
+      "state": "Child's State"
+    },
+    "ageBrackets": {
+      "3-4": "Ages 3-4",
+      "5-6": "Ages 5-6",
+      "7-8": "Ages 7-8",
+      "9-10": "Ages 9-10"
+    },
+    "durations": {
+      "3": "3 minutes",
+      "5": "5 minutes",
+      "8": "8 minutes",
+      "12": "12 minutes"
+    },
+    "states": {
+      "calm": "Calm",
+      "normal": "Normal",
+      "agitated": "Agitated"
+    }
+  },
+  "categories": {
+    "bedtime": "Bedtime",
+    "calmDown": "Calm Down",
+    "emotions": "Emotions",
+    "adventure": "Adventure",
+    "learnToRead": "Learn to Read",
+    "curiosities": "Curiosities"
+  },
+  "paywall": {
+    "title": "Unlock All Stories",
+    "subtitle": "Get unlimited access to 100+ multilingual stories",
+    "feature1": "100+ original stories in EN, RO, IT",
+    "feature2": "New stories added weekly",
+    "feature3": "Parent discussion questions included",
+    "feature4": "Ad-free experience",
+    "restore": "Restore Purchases",
+    "subscribe": "Subscribe Now"
+  },
+  "story": {
+    "readingTime": "{{minutes}} min read",
+    "ageRange": "Ages {{min}}-{{max}}",
+    "parentQuestions": "Questions to Ask Your Child",
+    "markComplete": "Mark as Complete",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "locked": "Subscribe to unlock this story",
+    "nextSimilar": "Next Similar Story"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "No favorites yet",
+    "emptyDescription": "Stories you favorite will appear here",
+    "requiresSubscription": "Favorites require an active subscription"
+  },
+  "profiles": {
+    "title": "Child Profiles",
+    "create": "Create Profile",
+    "edit": "Edit Profile",
+    "delete": "Delete Profile",
+    "nickname": "Nickname",
+    "age": "Age",
+    "maxReached": "Maximum 3 profiles allowed"
+  },
+  "routines": {
+    "title": "Bedtime Routines",
+    "create": "Create Routine",
+    "time": "Time",
+    "category": "Category",
+    "duration": "Duration",
+    "enabled": "Enabled"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "languages": {
+      "en": "English",
+      "ro": "Română",
+      "it": "Italiano"
+    },
+    "subscription": "Subscription Status",
+    "manageSubscription": "Manage Subscription",
+    "restorePurchases": "Restore Purchases",
+    "logout": "Logout",
+    "active": "Active",
+    "inactive": "Inactive",
+    "expiresOn": "Expires on {{date}}"
+  }
+}

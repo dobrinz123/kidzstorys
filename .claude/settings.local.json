@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx expo config:*)",
+      "Bash(ls:*)",
+      "Bash(move \"_ layout.tsx\" \"_layout.tsx\")",
+      "Bash(npx convex env set:*)",
+      "Bash(npx convex dev --once)",
+      "Bash(npx tsc:*)",
+      "Bash(npx expo start)",
+      "Bash(findstr:*)",
+      "Bash(npm search:*)",
+      "Bash(dir \"C:\\\\Users\\\\david\\\\Desktop\\\\RANDOM\\\\STORY_KIDS\" /B)",
+      "Bash(npx expo install expo-font @expo-google-fonts/patrick-hand @expo-google-fonts/comic-neue react-native-reanimated)",
+      "Bash(npx expo start --clear --web)",
+      "Bash(npx kill-port:*)",
+      "Bash(taskkill:*)",
+      "Bash(npx expo export:*)",
+      "Bash(npx expo install:*)",
+      "Bash(node -e \"\nconst fs = require\\(''fs''\\);\n\n// Generate a short page-flip sound \\(white noise burst with envelope\\)\nconst sampleRate = 22050;\nconst duration = 0.15; // 150ms\nconst numSamples = Math.floor\\(sampleRate * duration\\);\nconst numChannels = 1;\nconst bitsPerSample = 16;\nconst byteRate = sampleRate * numChannels * \\(bitsPerSample / 8\\);\nconst blockAlign = numChannels * \\(bitsPerSample / 8\\);\nconst dataSize = numSamples * blockAlign;\n\n// WAV header\nconst header = Buffer.alloc\\(44\\);\nheader.write\\(''RIFF'', 0\\);\nheader.writeUInt32LE\\(36 + dataSize, 4\\);\nheader.write\\(''WAVE'', 8\\);\nheader.write\\(''fmt '', 12\\);\nheader.writeUInt32LE\\(16, 16\\);\nheader.writeUInt16LE\\(1, 20\\); // PCM\nheader.writeUInt16LE\\(numChannels, 22\\);\nheader.writeUInt32LE\\(sampleRate, 24\\);\nheader.writeUInt32LE\\(byteRate, 28\\);\nheader.writeUInt16LE\\(blockAlign, 32\\);\nheader.writeUInt16LE\\(bitsPerSample, 34\\);\nheader.write\\(''data'', 36\\);\nheader.writeUInt32LE\\(dataSize, 40\\);\n\n// Audio data: filtered noise with fast attack, quick decay \\(paper swoosh\\)\nconst data = Buffer.alloc\\(dataSize\\);\nfor \\(let i = 0; i < numSamples; i++\\) {\n    const t = i / numSamples;\n    // Envelope: quick attack, smooth decay\n    const envelope = Math.pow\\(1 - t, 2.5\\) * \\(t < 0.05 ? t / 0.05 : 1\\);\n    // Mix of noise + low sine for body\n    const noise = \\(Math.random\\(\\) * 2 - 1\\) * 0.3;\n    const swoosh = Math.sin\\(2 * Math.PI * \\(200 + t * 800\\) * \\(i / sampleRate\\)\\) * 0.15;\n    const sample = Math.max\\(-1, Math.min\\(1, \\(noise + swoosh\\) * envelope * 0.7\\)\\);\n    const intSample = Math.floor\\(sample * 32767\\);\n    data.writeInt16LE\\(intSample, i * 2\\);\n}\n\nconst wav = Buffer.concat\\([header, data]\\);\nfs.writeFileSync\\(''C:/Users/david/Desktop/RANDOM/STORY_KIDS/apps/mobile/assets/sounds/page_flip.wav'', wav\\);\nconsole.log\\(''Created page_flip.wav \\('' + wav.length + '' bytes\\)''\\);\n\")",
+      "Bash(curl:*)",
+      "Bash(dir /s /b \"C:\\\\Users\\\\david\\\\Desktop\\\\RANDOM\\\\STORY_KIDS\")"
+    ]
+  }
+}

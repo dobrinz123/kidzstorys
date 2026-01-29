@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "bedtime-011-dancing-leaves",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "autumn",
+            "leaves",
+            "wind",
+            "gentle"
+        ],
+        "tags_ro": [
+            "toamnă",
+            "frunze",
+            "vânt",
+            "blând"
+        ],
+        "tags_it": [
+            "autunno",
+            "foglie",
+            "vento",
+            "gentile"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Dancing Leaves",
+                "text": "On a cool autumn evening, the leaves in the old maple tree were getting sleepy. All day they had danced in the wind, twirling and spinning in shades of red, orange, and gold. Now the wind was growing soft and gentle. 'Time to rest,' whispered the wind. One by one, the leaves began to float down from the tree. They drifted slowly, like little boats on a calm river. A tiny leaf named Rusty was the last to let go. He spiraled down gently, watching the stars appear above. The ground was soft with fallen leaves, making the coziest bed. Rusty landed softly among his friends. They nestled together, whispering goodnight to each other. Above them, the moon shone bright and round. A family of mice scurried past, heading home to their warm burrow. An owl hooted softly in the distance. The forest was settling down for the night. Rusty felt warm and comfortable, surrounded by his leaf friends. The gentle breeze rocked them like a lullaby. Soon, all the leaves were fast asleep, dreaming of sunny days and playful winds.",
+                "parentQuestions": [
+                    "What colors were the leaves?",
+                    "Where did Rusty land?",
+                    "What do you like about autumn?"
+                ]
+            },
+            "ro": {
+                "title": "Frunzele dansatoare",
+                "text": "Într-o seară răcoroasă de toamnă, frunzele din bătrânul arțar deveneau somnoroase. Toată ziua dansaseră în vânt, învârtindu-se în nuanțe de roșu, portocaliu și auriu. Acum vântul devenea blând și ușor. 'E timpul să vă odihniți,' șopti vântul. Una câte una, frunzele începură să plutească în jos din copac. Pluteau încet, ca niște bărci mici pe un râu calm. O frunză micuță pe nume Ruginiu a fost ultima care s-a desprins. S-a învârtit în jos blând, privind stelele apărând deasupra. Pământul era moale cu frunze căzute, făcând cel mai confortabil pat. Ruginiu ateriza ușor printre prietenii săi. Se cuibăriră împreună, șoptindu-și noapte bună unul altuia. Deasupra lor, luna strălucea puternică și rotundă. O familie de șoricei trecu în grabă, mergând acasă la vizuina lor caldă. O bufniță huhui blând în depărtare. Pădurea se liniștea pentru noapte. Ruginiu se simțea cald și confortabil, înconjurat de prietenii săi frunze. Briza blândă îi legăna ca un cântec de leagăn. În curând, toate frunzele dormeau adânc, visând la zile însorite și vânturi jucăușe.",
+                "parentQuestions": [
+                    "Ce culori aveau frunzele?",
+                    "Unde a aterizat Ruginiu?",
+                    "Ce îți place la toamnă?"
+                ]
+            },
+            "it": {
+                "title": "Le foglie danzanti",
+                "text": "In una fresca sera d'autunno, le foglie del vecchio acero stavano diventando assonnate. Tutto il giorno avevano danzato nel vento, volteggiando in sfumature di rosso, arancione e oro. Ora il vento stava diventando morbido e gentile. 'È ora di riposare,' sussurrò il vento. Una per una, le foglie iniziarono a fluttuare giù dall'albero. Scendevano lentamente, come piccole barche su un fiume calmo. Una piccola foglia di nome Ruggine fu l'ultima a lasciarsi andare. Scese a spirale dolcemente, guardando le stelle apparire sopra. Il terreno era morbido di foglie cadute, formando il letto più accogliente. Ruggine atterrò dolcemente tra i suoi amici. Si rannicchiarono insieme, sussurrandosi la buonanotte. Sopra di loro, la luna brillava luminosa e rotonda. Una famiglia di topolini passò in fretta, diretta verso la loro tana calda. Un gufo fece un verso morbido in lontananza. Il bosco si stava preparando per la notte. Ruggine si sentiva caldo e comodo, circondato dai suoi amici foglie. La brezza gentile li cullava come una ninna nanna. Presto, tutte le foglie dormivano profondamente, sognando giornate soleggiate e venti giocosi.",
+                "parentQuestions": [
+                    "Di che colore erano le foglie?",
+                    "Dove è atterrata Ruggine?",
+                    "Cosa ti piace dell'autunno?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-012-lighthouse-keeper",
+        "categorySlug": "bedtime",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "lighthouse",
+            "sea",
+            "night",
+            "safe"
+        ],
+        "tags_ro": [
+            "far",
+            "mare",
+            "noapte",
+            "siguranță"
+        ],
+        "tags_it": [
+            "faro",
+            "mare",
+            "notte",
+            "sicuro"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Lighthouse Keeper's Goodnight",
+                "text": "On a rocky cliff by the sea stood an old lighthouse. Inside lived a kind old man named Captain Ned and his cat, Whiskers. Every evening, Captain Ned climbed the spiral stairs to light the great lamp at the top. Tonight, the sea was calm and gentle. The waves lapped softly against the rocks below. Captain Ned watched the light sweep across the dark water, guiding ships safely home. 'Time for bed, Whiskers,' he said softly. They climbed back down to their cozy room. A warm fire crackled in the fireplace. Captain Ned made himself a cup of warm milk and gave Whiskers a small bowl too. They sat together in the soft armchair by the window. Outside, the lighthouse beam continued its steady sweep across the sea. The rhythm was comforting, like a giant nightlight watching over the ocean. Whiskers purred contentedly on Captain Ned's lap. The old man's eyes grew heavy. He thought of all the sailors finding their way home, safe and sound. The waves sang their gentle song against the rocks. The fire glowed warmly. And soon, both Captain Ned and Whiskers were fast asleep, the lighthouse keeping watch while they dreamed.",
+                "parentQuestions": [
+                    "What did Captain Ned do every evening?",
+                    "Why was the lighthouse important?",
+                    "What helps you feel safe at night?"
+                ]
+            },
+            "ro": {
+                "title": "Noapte bună de la paznicul farului",
+                "text": "Pe o stâncă la malul mării se înălța un far vechi. Înăuntru locuia un bătrân bun pe nume Căpitanul Ned și pisica lui, Mustăcioară. În fiecare seară, Căpitanul Ned urca scările în spirală pentru a aprinde marea lampă din vârf. În noaptea asta, marea era calmă și blândă. Valurile se loveau ușor de stâncile de jos. Căpitanul Ned privi lumina mătură peste apa întunecată, ghidând corăbiile în siguranță acasă. 'E timpul de somn, Mustăcioară,' spuse el blând. Coborâră înapoi în camera lor confortabilă. Un foc cald trosnea în șemineu. Căpitanul Ned își făcu o cană de lapte cald și îi dădu și lui Mustăcioară un bol mic. Stătură împreună în fotoliul moale de lângă fereastră. Afară, fasciculul farului își continua măturarea constantă peste mare. Ritmul era liniștitor, ca o lumină de noapte uriașă care veghea oceanul. Mustăcioară toarcea mulțumit pe genunchiul Căpitanului Ned. Ochii bătrânului deveniră grei. Se gândi la toți marinarii care își găseau drumul acasă, în siguranță. Valurile cântau cântecul lor blând pe stânci. Focul strălucea cald. Și în curând, atât Căpitanul Ned cât și Mustăcioară dormeau adânc, farul veghind în timp ce ei visau.",
+                "parentQuestions": [
+                    "Ce făcea Căpitanul Ned în fiecare seară?",
+                    "De ce era important farul?",
+                    "Ce te ajută să te simți în siguranță noaptea?"
+                ]
+            },
+            "it": {
+                "title": "La buonanotte del guardiano del faro",
+                "text": "Su una scogliera rocciosa vicino al mare sorgeva un vecchio faro. Dentro viveva un gentile vecchio chiamato Capitano Ned e il suo gatto, Baffino. Ogni sera, il Capitano Ned saliva le scale a spirale per accendere la grande lampada in cima. Stanotte, il mare era calmo e gentile. Le onde lambivano dolcemente le rocce sottostanti. Il Capitano Ned guardava la luce spazzare l'acqua scura, guidando le navi a casa in sicurezza. 'È ora di dormire, Baffino,' disse dolcemente. Scesero di nuovo nella loro stanza accogliente. Un fuoco caldo scoppiettava nel camino. Il Capitano Ned si preparò una tazza di latte caldo e diede anche a Baffino una piccola ciotola. Si sedettero insieme nella morbida poltrona vicino alla finestra. Fuori, il fascio del faro continuava la sua spazzata costante sul mare. Il ritmo era confortante, come una gigantesca luce notturna che vegliava sull'oceano. Baffino faceva le fusa contento sulle ginocchia del Capitano Ned. Gli occhi del vecchio divennero pesanti. Pensò a tutti i marinai che trovavano la via di casa, sani e salvi. Le onde cantavano la loro dolce canzone contro le rocce. Il fuoco brillava caldo. E presto, sia il Capitano Ned che Baffino dormivano profondamente, il faro che vegliava mentre loro sognavano.",
+                "parentQuestions": [
+                    "Cosa faceva il Capitano Ned ogni sera?",
+                    "Perché era importante il faro?",
+                    "Cosa ti aiuta a sentirti al sicuro la notte?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

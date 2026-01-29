@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "bedtime-013-cloud-pillow",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "clouds",
+            "sky",
+            "soft",
+            "dreamy"
+        ],
+        "tags_ro": [
+            "nori",
+            "cer",
+            "moale",
+            "visător"
+        ],
+        "tags_it": [
+            "nuvole",
+            "cielo",
+            "soffice",
+            "sognante"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Cloud Pillow",
+                "text": "High above the world, where the sky turns pink at sunset, there lived a little cloud named Puff. Puff was the softest, fluffiest cloud in all the sky. Every night, Puff had a special job. When children were getting ready for bed, Puff would float down close to their windows and wait. If a child looked up at the sky, Puff would blow them a gentle kiss of sleepy dreams. Tonight, Puff floated over a small town. In one window, a little boy named Theo was having trouble sleeping. He looked out at the darkening sky. Puff saw him and drifted closer. The little cloud puffed out the softest, most comfortable feeling, like an invisible pillow made of dreams. Theo yawned. His bed suddenly felt extra soft and cozy. His pillow felt like it was made of clouds. Puff smiled and floated up higher, continuing on to find other children who needed help falling asleep. Theo's eyes closed. He dreamed of floating through a cotton candy sky, resting on the softest cloud pillow ever. And Puff continued its nightly journey, spreading sleepy dreams wherever it went.",
+                "parentQuestions": [
+                    "What was Puff's special job?",
+                    "How did Theo feel after Puff helped him?",
+                    "What would you dream about if you slept on a cloud?"
+                ]
+            },
+            "ro": {
+                "title": "Perna de nor",
+                "text": "Sus deasupra lumii, unde cerul devine roz la apus, trăia un nor mic pe nume Pufuleț. Pufuleț era cel mai moale, cel mai pufos nor din tot cerul. În fiecare noapte, Pufuleț avea o treabă specială. Când copiii se pregăteau de somn, Pufuleț plutea în jos aproape de ferestrele lor și aștepta. Dacă un copil se uita în sus la cer, Pufuleț îi trimitea un sărut blând de vise somnoroase. În noaptea asta, Pufuleț plutea peste un orășel mic. Într-o fereastră, un băiețel pe nume Teo întâmpina probleme cu somnul. Se uită afară la cerul care se întuneca. Pufuleț îl văzu și se apropie plutind. Micul nor suflă cel mai moale, cel mai confortabil sentiment, ca o pernă invizibilă făcută din vise. Teo căscă. Patul lui se simți brusc extra moale și confortabil. Perna lui părea să fie făcută din nori. Pufuleț zâmbi și plutea mai sus, continuându-și drumul să găsească alți copii care aveau nevoie de ajutor să adoarmă. Ochii lui Teo se închiseră. Visă că plutește printr-un cer de vată de zahăr, odihnindu-se pe cea mai moale pernă de nor. Iar Pufuleț își continuă călătoria nocturnă, răspândind vise somnoroase oriunde mergea.",
+                "parentQuestions": [
+                    "Care era treaba specială a lui Pufuleț?",
+                    "Cum s-a simțit Teo după ce l-a ajutat Pufuleț?",
+                    "Cu ce ai visa dacă ai dormi pe un nor?"
+                ]
+            },
+            "it": {
+                "title": "Il cuscino di nuvola",
+                "text": "In alto sopra il mondo, dove il cielo diventa rosa al tramonto, viveva una piccola nuvola di nome Soffio. Soffio era la nuvola più morbida e soffice di tutto il cielo. Ogni notte, Soffio aveva un compito speciale. Quando i bambini si preparavano per dormire, Soffio fluttuava giù vicino alle loro finestre e aspettava. Se un bambino guardava su verso il cielo, Soffio gli soffiava un bacio gentile di sogni addormentati. Stanotte, Soffio fluttuava sopra una piccola città. In una finestra, un bambino di nome Teo aveva problemi a dormire. Guardò fuori verso il cielo che si oscurava. Soffio lo vide e si avvicinò fluttuando. La piccola nuvola soffiò la sensazione più morbida e confortevole, come un cuscino invisibile fatto di sogni. Teo sbadigliò. Il suo letto improvvisamente si sentì extra morbido e accogliente. Il suo cuscino sembrava fatto di nuvole. Soffio sorrise e fluttuò più in alto, continuando a trovare altri bambini che avevano bisogno di aiuto per addormentarsi. Gli occhi di Teo si chiusero. Sognò di fluttuare attraverso un cielo di zucchero filato, riposando sul cuscino di nuvola più soffice di sempre. E Soffio continuò il suo viaggio notturno, diffondendo sogni assonnati ovunque andasse.",
+                "parentQuestions": [
+                    "Qual era il compito speciale di Soffio?",
+                    "Come si sentiva Teo dopo che Soffio l'ha aiutato?",
+                    "Cosa sogneresti se dormissi su una nuvola?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-014-sleeping-forest",
+        "categorySlug": "bedtime",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "animals",
+            "quiet",
+            "nature"
+        ],
+        "tags_ro": [
+            "pădure",
+            "animale",
+            "liniște",
+            "natură"
+        ],
+        "tags_it": [
+            "bosco",
+            "animali",
+            "silenzio",
+            "natura"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Sleeping Forest",
+                "text": "Deep in the heart of the ancient forest, the sun was setting behind the tall pines. The trees stretched their branches like sleepy arms reaching for a good night stretch. It was time for the forest to go to sleep. The busy squirrels stopped gathering acorns and curled up in their cozy tree holes. Their fluffy tails wrapped around them like warm blankets. The birds finished their evening songs and tucked their heads under their wings. The stream grew quieter, its bubbling turning to a soft murmur. A family of foxes padded softly to their den beneath the old oak tree. The mother fox nuzzled each of her kits goodnight. The fireflies began their gentle dance, creating tiny floating lanterns among the ferns. High above, an owl opened its eyes, ready to watch over the sleeping forest. The wind whispered through the leaves, singing a lullaby to every creature below. A young deer named Fern found her favorite spot by the mossy log. She folded her long legs beneath her and rested her head on the soft ground. The forest floor was carpeted with pine needles, soft and fragrant. The moon rose slowly, its silver light filtering through the branches like a gentle nightlight. One by one, every creature in the forest closed their eyes. The trees seemed to sigh with contentment. The whole forest slept peacefully, protected by the watching stars above. Tomorrow would bring new adventures, but for now, everything was quiet, still, and full of sweet dreams.",
+                "parentQuestions": [
+                    "What did the different animals do to get ready for sleep?",
+                    "What sounds would you hear in a sleeping forest?",
+                    "Where would you like to sleep if you lived in a forest?"
+                ]
+            },
+            "ro": {
+                "title": "Pădurea adormită",
+                "text": "Adânc în inima pădurii străvechi, soarele apunea în spatele pinilor înalți. Copacii își întindeau ramurile ca niște brațe somnoroase care vor să se întindă înainte de noapte bună. Era timpul ca pădurea să meargă la somn. Veverițele ocupate se opriră din adunat ghinde și se ghemură în găurile lor confortabile din copaci. Cozile lor pufoase se înfășurară în jurul lor ca niște pături calde. Păsările își terminară cântecele de seară și își ascunseră capetele sub aripi. Pârâul deveni mai liniștit, bolborositul lui transformându-se într-un murmur blând. O familie de vulpi pășea ușor spre vizuina lor de sub bătrânul stejar. Mama vulpe mângâie fiecare pui cu noapte bună. Licuricii începură dansul lor blând, creând mici felinare plutitoare printre ferigi. Sus de tot, o bufniță își deschise ochii, gata să vegheze pădurea adormită. Vântul șoptea prin frunze, cântând un cântec de leagăn fiecărei creaturi de jos. O căprioară tânără pe nume Feriguță găsi locul ei preferat lângă buturuga acoperită de mușchi. Își plie picioarele lungi sub ea și își odihni capul pe pământul moale. Podeaua pădurii era acoperită cu ace de pin, moale și parfumată. Luna se ridică încet, lumina ei argintie filtrând prin ramuri ca o veioză blândă. Unul câte unul, fiecare creatură din pădure își închise ochii. Copacii păreau să suspine mulțumiți. Întreaga pădure dormea pașnic, protejată de stelele care vegheau de sus. Mâine va aduce noi aventuri, dar pentru moment, totul era liniștit, calm și plin de vise dulci.",
+                "parentQuestions": [
+                    "Ce au făcut diferitele animale pentru a se pregăti de somn?",
+                    "Ce sunete ai auzi într-o pădure adormită?",
+                    "Unde ți-ar plăcea să dormi dacă ai trăi într-o pădure?"
+                ]
+            },
+            "it": {
+                "title": "Il bosco addormentato",
+                "text": "Nel cuore dell'antica foresta, il sole stava tramontando dietro gli alti pini. Gli alberi allungavano i loro rami come braccia assonnate che si stiracchiavano per la buonanotte. Era ora che il bosco andasse a dormire. Gli scoiattoli indaffarati smisero di raccogliere ghiande e si acciambellarono nei loro accoglienti buchi negli alberi. Le loro code soffici si avvolsero intorno a loro come coperte calde. Gli uccelli finirono le loro canzoni serali e infilarono le teste sotto le ali. Il ruscello divenne più silenzioso, il suo gorgoglio si trasformò in un mormorio morbido. Una famiglia di volpi camminò dolcemente verso la loro tana sotto la vecchia quercia. La mamma volpe coccolò ognuno dei suoi cuccioli dandogli la buonanotte. Le lucciole iniziarono la loro danza gentile, creando piccole lanterne galleggianti tra le felci. In alto, un gufo aprì gli occhi, pronto a vegliare sul bosco addormentato. Il vento sussurrò tra le foglie, cantando una ninna nanna a ogni creatura sotto. Una giovane cerbiatta di nome Felce trovò il suo posto preferito vicino al tronco coperto di muschio. Piegò le sue lunghe zampe sotto di sé e appoggiò la testa sul soffice terreno. Il suolo del bosco era ricoperto di aghi di pino, morbido e profumato. La luna sorse lentamente, la sua luce argentata filtrava tra i rami come una dolce lucina notturna. Uno per uno, ogni creatura del bosco chiuse gli occhi. Gli alberi sembravano sospirare di contentezza. Tutto il bosco dormiva pacificamente, protetto dalle stelle che vegliavano in alto. Domani avrebbe portato nuove avventure, ma per ora, tutto era silenzioso, calmo e pieno di dolci sogni.",
+                "parentQuestions": [
+                    "Cosa facevano i diversi animali per prepararsi a dormire?",
+                    "Quali suoni sentiresti in un bosco addormentato?",
+                    "Dove ti piacerebbe dormire se vivessi in un bosco?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

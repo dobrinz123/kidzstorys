@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "bedtime-005-sleepy-owl",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "owl",
+            "forest",
+            "night",
+            "gentle"
+        ],
+        "tags_ro": [
+            "bufniță",
+            "pădure",
+            "noapte",
+            "blând"
+        ],
+        "tags_it": [
+            "gufo",
+            "bosco",
+            "notte",
+            "gentile"
+        ],
+        "locales": {
+            "en": {
+                "title": "Oliver the Sleepy Owl",
+                "text": "In a tall oak tree at the edge of the forest, a young owl named Oliver was feeling very sleepy. Unlike other owls who loved the night, Oliver always got drowsy when the stars came out. His mother, Olivia, understood. 'Not every owl has to be the same,' she said softly. She wrapped her warm wing around Oliver. The forest was peaceful tonight. Crickets sang their gentle songs below. A soft wind rustled the leaves like a whispered secret. Oliver yawned a big owl yawn, his round eyes blinking slowly. 'Tell me about the clouds,' he asked his mother. Olivia spoke in a soft, slow voice about fluffy white clouds drifting across blue skies, about rain clouds that watered the flowers, about sunset clouds painted pink and gold. Her voice was like music, gentle and soothing. Oliver's eyes grew heavier with each word. He nestled closer to his mother, feeling her heartbeat steady and calm. The moon shone through the branches, casting a gentle glow on the little owl. 'Sleep well, my little one,' Olivia whispered. And Oliver closed his eyes, dreaming of floating on the softest cloud.",
+                "parentQuestions": [
+                    "Why was Oliver different from other owls?",
+                    "What did Oliver's mother tell him about?",
+                    "What does someone special do to help you feel sleepy?"
+                ]
+            },
+            "ro": {
+                "title": "Oliver, bufnița somnoroasă",
+                "text": "Într-un stejar înalt la marginea pădurii, o bufniță tânără pe nume Oliver se simțea foarte somnoroasă. Spre deosebire de alte bufnițe care iubeau noaptea, Oliver devenea întotdeauna somnoros când apăreau stelele. Mama lui, Olivia, înțelegea. 'Nu trebuie ca toate bufnițele să fie la fel,' spuse ea blând. Își înfășură aripa caldă în jurul lui Oliver. Pădurea era liniștită în noaptea asta. Greierașii cântau cântecele lor blânde dedesubt. Un vânt ușor foșnea frunzele ca un secret șoptit. Oliver căscă o căscătură mare de bufniță, ochii lui rotunzi clipind încet. 'Povestește-mi despre nori,' o rugă pe mama lui. Olivia vorbi cu o voce încetă și lentă despre nori albi și pufoși plutind pe ceruri albastre, despre nori de ploaie care udau florile, despre nori de apus pictați în roz și auriu. Vocea ei era ca o muzică, blândă și liniștitoare. Ochii lui Oliver deveneau mai grei cu fiecare cuvânt. Se cuibări mai aproape de mama lui, simțindu-i bătăile inimii stabile și calme. Luna strălucea prin ramuri, aruncând o lumină blândă peste micuța bufniță. 'Somn ușor, micuțul meu,' șopti Olivia. Și Oliver își închise ochii, visând că plutește pe cel mai moale nor.",
+                "parentQuestions": [
+                    "De ce era Oliver diferit de alte bufnițe?",
+                    "Despre ce i-a povestit mama lui Oliver?",
+                    "Ce face cineva special pentru a te ajuta să te simți somnoros?"
+                ]
+            },
+            "it": {
+                "title": "Oliver, il gufo assonnato",
+                "text": "In una alta quercia al limitare del bosco, un giovane gufo di nome Oliver si sentiva molto assonnato. A differenza degli altri gufi che amavano la notte, Oliver diventava sempre sonnolento quando uscivano le stelle. Sua madre, Olivia, capiva. 'Non tutti i gufi devono essere uguali,' disse dolcemente. Avvolse la sua ala calda intorno a Oliver. Il bosco era pacifico stanotte. I grilli cantavano le loro dolci canzoni sotto. Un vento leggero frusciava le foglie come un segreto sussurrato. Oliver sbadigliò un grande sbadiglio da gufo, i suoi occhi rotondi che battevano lentamente. 'Raccontami delle nuvole,' chiese a sua madre. Olivia parlò con una voce morbida e lenta di soffici nuvole bianche che fluttuavano nei cieli azzurri, di nuvole di pioggia che annaffiavano i fiori, di nuvole al tramonto dipinte di rosa e oro. La sua voce era come musica, gentile e rassicurante. Gli occhi di Oliver diventavano più pesanti ad ogni parola. Si rannicchiò più vicino a sua madre, sentendo il suo battito cardiaco stabile e calmo. La luna brillava tra i rami, gettando una luce gentile sul piccolo gufo. 'Dormi bene, piccolo mio,' sussurrò Olivia. E Oliver chiuse gli occhi, sognando di fluttuare sulla nuvola più soffice.",
+                "parentQuestions": [
+                    "Perché Oliver era diverso dagli altri gufi?",
+                    "Di cosa gli ha parlato la mamma di Oliver?",
+                    "Cosa fa qualcuno di speciale per aiutarti a sentirti assonnato?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-006-river-lullaby",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "river",
+            "fish",
+            "lullaby",
+            "water"
+        ],
+        "tags_ro": [
+            "râu",
+            "pește",
+            "cântec",
+            "apă"
+        ],
+        "tags_it": [
+            "fiume",
+            "pesce",
+            "ninna nanna",
+            "acqua"
+        ],
+        "locales": {
+            "en": {
+                "title": "The River's Lullaby",
+                "text": "In a crystal-clear river that flowed through a quiet valley, a little fish named Pearl was getting ready for bed. The river sang a gentle song as it flowed over smooth stones. Gurgle, gurgle, splash. Pearl loved this sound. It was her favorite lullaby. She swam to her sleeping spot beneath a large lily pad where the water moved slowly and peacefully. The sunset painted the water in shades of gold and purple. Other fish were finding their resting places too. 'Goodnight, Pearl,' called her friend Finn from behind a mossy rock. 'Goodnight, Finn,' Pearl called back. The water plants swayed gently, like dancers moving to slow music. Pearl settled into the soft sand at the bottom, feeling the cool water brush against her scales. Above her, the lily pad blocked the fading light, creating a cozy shade. The river continued its song, steady and soothing. Pearl closed her eyes and let the water rock her gently, back and forth, back and forth. The moon rose and cast silver ripples on the water's surface. In her peaceful spot, Pearl drifted into sweet dreams of sunny mornings and playful splashes.",
+                "parentQuestions": [
+                    "Where did Pearl like to sleep?",
+                    "What sound helped Pearl fall asleep?",
+                    "What sounds from nature help you relax?"
+                ]
+            },
+            "ro": {
+                "title": "Cântecul de leagăn al râului",
+                "text": "Într-un râu cristalin care curgea printr-o vale liniștită, un pește mic pe nume Perlă se pregătea de somn. Râul cânta un cântec blând în timp ce curgea peste pietre netede. Clocot, clocot, pleosc. Perlei îi plăcea acest sunet. Era cântecul ei de leagăn preferat. Înotă spre locul ei de dormit sub o frunză mare de nufăr unde apa se mișca încet și pașnic. Apusul pictă apa în nuanțe de auriu și purpuriu. Și alți pești își găseau locurile de odihnă. 'Noapte bună, Perlă,' strigă prietenul ei Aripiș de după o piatră acoperită de mușchi. 'Noapte bună, Aripiș,' răspunse Perlă. Plantele de apă se legănau blând, ca niște dansatori mișcându-se pe muzică lentă. Perlă se așeză în nisipul moale de pe fund, simțind apa rece atingându-i solzii. Deasupra ei, frunza de nufăr bloca lumina care se stingea, creând o umbră confortabilă. Râul își continua cântecul, constant și liniștitor. Perlă își închise ochii și lăsă apa să o legene blând, înainte și înapoi, înainte și înapoi. Luna se ridică și aruncă valuri argintii pe suprafața apei. În locul ei pașnic, Perlă alunecă în vise dulci despre dimineți însorite și stropiri jucăușe.",
+                "parentQuestions": [
+                    "Unde îi plăcea lui Perlă să doarmă?",
+                    "Ce sunet o ajuta pe Perlă să adoarmă?",
+                    "Ce sunete din natură te ajută să te relaxezi?"
+                ]
+            },
+            "it": {
+                "title": "La ninna nanna del fiume",
+                "text": "In un fiume cristallino che scorreva attraverso una valle tranquilla, un piccolo pesce di nome Perla si preparava per andare a dormire. Il fiume cantava una dolce canzone mentre scorreva sopra pietre lisce. Gorgoglio, gorgoglio, splash. Perla amava questo suono. Era la sua ninna nanna preferita. Nuotò verso il suo posto per dormire sotto una grande foglia di ninfea dove l'acqua si muoveva lentamente e pacificamente. Il tramonto dipingeva l'acqua di sfumature d'oro e viola. Anche altri pesci stavano trovando i loro posti di riposo. 'Buonanotte, Perla,' chiamò il suo amico Finn da dietro un sasso coperto di muschio. 'Buonanotte, Finn,' rispose Perla. Le piante acquatiche ondeggiavano dolcemente, come ballerini che si muovono su musica lenta. Perla si sistemò nella sabbia morbida sul fondo, sentendo l'acqua fresca accarezzare le sue squame. Sopra di lei, la foglia di ninfea bloccava la luce che svaniva, creando un'ombra accogliente. Il fiume continuava la sua canzone, costante e rassicurante. Perla chiuse gli occhi e lasciò che l'acqua la cullasse dolcemente, avanti e indietro, avanti e indietro. La luna sorse e gettò increspature argentate sulla superficie dell'acqua. Nel suo posto pacifico, Perla scivolò in dolci sogni di mattine soleggiate e spruzzi giocosi.",
+                "parentQuestions": [
+                    "Dove piaceva dormire a Perla?",
+                    "Quale suono aiutava Perla ad addormentarsi?",
+                    "Quali suoni della natura ti aiutano a rilassarti?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

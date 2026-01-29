@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-sky-train-005",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "moon",
+            "cheese",
+            "kindness"
+        ],
+        "tags_ro": [
+            "tren",
+            "lună",
+            "brânză",
+            "bunătate"
+        ],
+        "tags_it": [
+            "treno",
+            "luna",
+            "formaggio",
+            "gentilezza"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 5,
+        "locales": {
+            "en": {
+                "title": "The Moon Cheese Bakery",
+                "text": "The Cloud Express landed on the moon, which was exactly as round and yellow as Penny had imagined. To her amazement, it really did smell like cheese! 'Welcome to the Moon Cheese Bakery!' said a cheerful moon mouse. 'We bake treats for all the sky creatures!' But the bakery was in trouble. 'When the Dream Catcher broke, a piece crashed into our oven and now nothing bakes properly! Our moon cakes come out all wrong!' 'Can we look at the oven?' Leo offered. Inside the oven, they found a glowing piece of the Dream Catcher. But it was wedged tight, and they couldn't pull it out. 'We need something to loosen it,' Penny said. The moon mice offered butter, but that was too slippery. Flour made a mess. Then Leo noticed the hot steam from the oven. 'What if we use the steam to slowly push it out?' Working with the mice, they carefully directed jets of steam at the piece. Slowly, gradually, it wiggled free! 'Hooray!' the mice cheered. To thank them, the Moon Cheese Bakery made special cloud cakes for the journey. Oliver carefully stored the fourth piece. 'Four down! Onward we go! Next stop: the Wind Stables!'",
+                "parentQuestions": [
+                    "What was special about the moon?",
+                    "How did they get the piece out of the oven?",
+                    "What treat would you want from a moon bakery?"
+                ]
+            },
+            "ro": {
+                "title": "Brutăria de brânză de lună",
+                "text": "Cloud Express ateriza pe lună, care era exact la fel de rotundă și galbenă cum își imaginase Penny. Spre uimirea ei, chiar mirosea a brânză! 'Bun venit la Brutăria de Brânză de Lună!' spuse un șoricei vesel de lună. 'Pregătim dulciuri pentru toate creaturile cerului!' Dar brutăria era în necaz. 'Când Prinzătorul de Vise s-a spart, o bucată s-a prăbușit în cuptorul nostru și acum nimic nu se coace cum trebuie! Prăjiturile noastre de lună ies toate greșit!' 'Putem să ne uităm la cuptor?' oferi Leo. În cuptor, găsiră o bucată strălucitoare din Prinzătorul de Vise. Dar era înțepenită strâns și nu puteau să o scoată. 'Avem nevoie de ceva să o desfacem,' spuse Penny. Șoarecii de lună oferiră unt, dar era prea alunecos. Făina făcu dezordine. Apoi Leo observă aburul fierbinte din cuptor. 'Dacă folosim aburul să o împingem afară încet?' Lucrând cu șoarecii, dirijară cu grijă jeturi de abur spre bucată. Încet, treptat, se clinti liberă! 'Ura!' sărbătoriră șoarecii. Pentru a le mulțumi, Brutăria de Brânză de Lună pregăti prăjituri speciale de nori pentru călătorie. Oliver depozită cu grijă a patra bucată. 'Patru gata! Mergem mai departe! Următoarea oprire: Grajdurile Vântului!'",
+                "parentQuestions": [
+                    "Ce era special la lună?",
+                    "Cum au scos bucata din cuptor?",
+                    "Ce dulciuri ai vrea de la o brutărie de lună?"
+                ]
+            },
+            "it": {
+                "title": "La Panetteria di Formaggio Lunare",
+                "text": "Il Cloud Express atterrò sulla luna, che era esattamente rotonda e gialla come Penny aveva immaginato. Con suo stupore, sapeva davvero di formaggio! 'Benvenuti alla Panetteria di Formaggio Lunare!' disse un allegro topolino lunare. 'Prepariamo dolci per tutte le creature del cielo!' Ma la panetteria era nei guai. 'Quando l'Acchiappasogni si è rotto, un pezzo si è schiantato nel nostro forno e ora niente cuoce bene! Le nostre torte lunari escono tutte sbagliate!' 'Possiamo guardare il forno?' offrì Leo. Dentro il forno, trovarono un pezzo luminoso dell'Acchiappasogni. Ma era incastrato stretto e non riuscivano a tirarlo fuori. 'Abbiamo bisogno di qualcosa per allentarlo,' disse Penny. I topolini lunari offrirono burro, ma era troppo scivoloso. La farina fece un pasticcio. Poi Leo notò il vapore caldo dal forno. 'E se usassimo il vapore per spingerlo fuori lentamente?' Lavorando con i topolini, diressero con attenzione getti di vapore verso il pezzo. Lentamente, gradualmente, si liberò! 'Evviva!' esultarono i topolini. Per ringraziarli, la Panetteria di Formaggio Lunare fece speciali torte di nuvola per il viaggio. Oliver conservò con cura il quarto pezzo. 'Quattro trovati! Andiamo avanti! Prossima fermata: le Stalle del Vento!'",
+                "parentQuestions": [
+                    "Cosa c'era di speciale nella luna?",
+                    "Come hanno tirato fuori il pezzo dal forno?",
+                    "Che dolce vorresti da una panetteria lunare?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-sky-train-006",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "wind",
+            "horses",
+            "speed"
+        ],
+        "tags_ro": [
+            "tren",
+            "vânt",
+            "cai",
+            "viteză"
+        ],
+        "tags_it": [
+            "treno",
+            "vento",
+            "cavalli",
+            "velocità"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 6,
+        "locales": {
+            "en": {
+                "title": "The Wind Stables",
+                "text": "At the Wind Stables, beautiful horses made of swirling breezes galloped across the clouds. They were the Wind Horses, and they created gentle breezes that cooled the world below. 'The Dream Catcher piece landed in the Valley of Gusty Winds,' the stable master explained. 'No creature can walk there. The winds are too strong!' 'What about riding a Wind Horse?' Penny asked. 'Only the fastest horse could make it there and back. But our fastest horse, Zephyr, is afraid to run at full speed since the Dream Catcher broke.' They found Zephyr, a silvery horse who looked nervous. 'I'm scared,' Zephyr admitted. 'What if I can't do it?' 'Being scared is okay,' Leo said gently. 'We were scared in the Echo Caves. But we did it anyway.' 'We'll ride with you,' Penny offered. 'You won't be alone.' Zephyr thought, then nodded bravely. With Penny and Leo on her back, she ran! Faster and faster, through the gusty valley, the wind roaring around them. But Zephyr's courage held. She grabbed the Dream Catcher piece in her teeth and raced back! 'I did it!' Zephyr whinnied proudly. 'You were so brave!' they cheered. Five pieces now! Almost there!",
+                "parentQuestions": [
+                    "What were the Wind Horses made of?",
+                    "What was Zephyr afraid of?",
+                    "Have you ever done something you were scared to try?"
+                ]
+            },
+            "ro": {
+                "title": "Grajdurile vântului",
+                "text": "La Grajdurile Vântului, cai frumoși făcuți din brize învolburate galopau peste nori. Erau Caii Vântului și creau brize blânde care răcoreau lumea de jos. 'Bucata din Prinzătorul de Vise a aterizat în Valea Vânturilor Puternice,' explică stăpânul grajdului. 'Nicio creatură nu poate merge acolo. Vânturile sunt prea puternice!' 'Ce-ar fi să călărim un Cal al Vântului?' întrebă Penny. 'Doar cel mai rapid cal ar putea ajunge acolo și înapoi. Dar cel mai rapid cal al nostru, Zefir, se teme să alerge la viteză maximă de când s-a spart Prinzătorul de Vise.' Îl găsiră pe Zefir, un cal argintiu care arăta nervos. 'Mi-e frică,' recunoscu Zefir. 'Dacă nu reușesc?' 'E în regulă să ți fie frică,' spuse Leo blând. 'Și nouă ne-a fost frică în Peșterile Ecoului. Dar am făcut-o oricum.' 'Vom călări cu tine,' oferi Penny. 'Nu vei fi singură.' Zefir se gândi, apoi dădu din cap curajos. Cu Penny și Leo pe spatele ei, alergă! Mai repede și mai repede, prin valea vânturilor, vântul urlând în jurul lor. Dar curajul lui Zefir ținu. Apucă bucata Prinzătorului de Vise în dinți și alergă înapoi! 'Am reușit!' nechezó Zefir mândră. 'Ai fost atât de curajoasă!' sărbătoriră ei. Cinci bucăți acum! Aproape gata!",
+                "parentQuestions": [
+                    "Din ce erau făcuți Caii Vântului?",
+                    "De ce se temea Zefir?",
+                    "Ai făcut vreodată ceva de care ți-a fost frică să încerci?"
+                ]
+            },
+            "it": {
+                "title": "Le Stalle del Vento",
+                "text": "Alle Stalle del Vento, bellissimi cavalli fatti di brezze vorticose galoppavano attraverso le nuvole. Erano i Cavalli del Vento e creavano brezze gentili che rinfrescavano il mondo sotto. 'Il pezzo dell'Acchiappasogni è atterrato nella Valle dei Venti Tempestosi,' spiegò il capostalla. 'Nessuna creatura può camminare lì. I venti sono troppo forti!' 'E se cavalcassimo un Cavallo del Vento?' chiese Penny. 'Solo il cavallo più veloce potrebbe arrivare là e tornare. Ma il nostro cavallo più veloce, Zefiro, ha paura di correre a tutta velocità da quando l'Acchiappasogni si è rotto.' Trovarono Zefiro, un cavallo argenteo che sembrava nervoso. 'Ho paura,' ammise Zefiro. 'E se non ce la faccio?' 'Avere paura va bene,' disse Leo dolcemente. 'Anche noi avevamo paura nelle Grotte dell'Eco. Ma l'abbiamo fatto lo stesso.' 'Cavalcheremo con te,' offrì Penny. 'Non sarai sola.' Zefiro pensò, poi annuì coraggiosamente. Con Penny e Leo sulla schiena, corse! Sempre più veloce, attraverso la valle ventosa, il vento che ruggiva intorno a loro. Ma il coraggio di Zefiro tenne. Afferrò il pezzo dell'Acchiappasogni tra i denti e tornò di corsa! 'Ce l'ho fatta!' nitrì Zefiro con orgoglio. 'Sei stata così coraggiosa!' esultarono. Cinque pezzi ora! Quasi arrivati!",
+                "parentQuestions": [
+                    "Di cosa erano fatti i Cavalli del Vento?",
+                    "Di cosa aveva paura Zefiro?",
+                    "Hai mai fatto qualcosa che avevi paura di provare?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-maple-forest-007",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "river",
+            "obstacle",
+            "teamwork"
+        ],
+        "tags_ro": [
+            "pădure",
+            "râu",
+            "obstacol",
+            "lucru în echipă"
+        ],
+        "tags_it": [
+            "bosco",
+            "fiume",
+            "ostacolo",
+            "lavoro di squadra"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 7,
+        "locales": {
+            "en": {
+                "title": "Crossing the Rushing River",
+                "text": "The path to the X led Milo, Ruby, and Finn to a rushing river. The water flowed fast and deep! 'How will we get across?' Ruby worried. 'I can't swim very well in fast water.' Finn looked along the riverbank. 'There are stepping stones, but they're really far apart. Too far for me to jump!' Milo studied the situation. 'We need to work together. I have an idea!' He pointed to a long vine hanging from a tree. 'Ruby, you can jump the farthest. If you make it to that middle rock and hold the vine, Finn and I can swing across!' It was risky, but they trusted each other. Ruby took a deep breath and made an enormous leap. She landed perfectly on the middle rock! She grabbed the vine and held it tight. Finn went next, swinging across the churning water. Then it was Milo's turn. He was scared, but his friends cheered him on. He gripped the vine, closed his eyes, and swung! He made it! The three friends hugged on the other side, wet but safe. 'We did it together!' they cheered. The X was so close now. Just a little farther through the Whispering Woods!",
+                "parentQuestions": [
+                    "What problem did the friends face at the river?",
+                    "How did they solve it together?",
+                    "Can you think of a time you worked as a team?"
+                ]
+            },
+            "ro": {
+                "title": "Traversând râul repede",
+                "text": "Poteca spre X îi conduse pe Milo, Rubina și Fini la un râu repede. Apa curgea iute și adâncă! 'Cum vom traversa?' se îngrijoră Rubina. 'Nu știu să înot foarte bine în apă iute.' Fini privi de-a lungul malului. 'Sunt pietre de pășit, dar sunt foarte departe una de alta. Prea departe ca să sar!' Milo studie situația. 'Trebuie să lucrăm împreună. Am o idee!' Arătă spre o viță lungă atârnând dintr-un copac. 'Rubina, tu poți sări cel mai departe. Dacă ajungi pe piatra din mijloc și ții vița, Fini și eu putem să ne legănăm!' Era riscant, dar aveau încredere unul în altul. Rubina respiră adânc și făcu un salt enorm. Ateriza perfect pe piatra din mijloc! Apucă vița și o ținu strâns. Fini merse următorul, legănându-se peste apa clocotitoare. Apoi fu rândul lui Milo. Era speriat, dar prietenii lui îl încurajară. Apucă vița, închise ochii și se legănă! A reușit! Cei trei prieteni se îmbrățișară pe cealaltă parte, uzi dar în siguranță. 'Am reușit împreună!' sărbătoriră ei. X-ul era atât de aproape acum. Doar puțin mai departe prin Pădurea Șoaptelor!",
+                "parentQuestions": [
+                    "Ce problemă au întâmpinat prietenii la râu?",
+                    "Cum au rezolvat-o împreună?",
+                    "Îți poți aminti o dată când ai lucrat în echipă?"
+                ]
+            },
+            "it": {
+                "title": "Attraversare il fiume impetuoso",
+                "text": "Il sentiero verso la X portò Milo, Rubina e Finn a un fiume impetuoso. L'acqua scorreva veloce e profonda! 'Come attraverseremo?' si preoccupò Rubina. 'Non so nuotare molto bene in acqua veloce.' Finn guardò lungo la riva. 'Ci sono pietre per camminare, ma sono molto distanti. Troppo lontane per saltare!' Milo studiò la situazione. 'Dobbiamo lavorare insieme. Ho un'idea!' Indicò una lunga liana appesa a un albero. 'Rubina, tu puoi saltare più lontano. Se arrivi su quella roccia centrale e tieni la liana, Finn e io possiamo oscillare!' Era rischioso, ma si fidavano l'uno dell'altro. Rubina fece un respiro profondo e fece un salto enorme. Atterrò perfettamente sulla roccia centrale! Afferrò la liana e la tenne stretta. Finn andò dopo, oscillando sopra l'acqua turbolenta. Poi fu il turno di Milo. Era spaventato, ma i suoi amici lo incoraggiarono. Afferrò la liana, chiuse gli occhi e oscillò! Ce l'aveva fatta! I tre amici si abbracciarono dall'altra parte, bagnati ma al sicuro. 'Ce l'abbiamo fatta insieme!' esultarono. La X era così vicina ora. Solo un po' più avanti attraverso il Bosco dei Sussurri!",
+                "parentQuestions": [
+                    "Quale problema hanno affrontato gli amici al fiume?",
+                    "Come l'hanno risolto insieme?",
+                    "Riesci a pensare a una volta in cui hai lavorato in squadra?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-maple-forest-008",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "whispers",
+            "brave",
+            "truth"
+        ],
+        "tags_ro": [
+            "pădure",
+            "șoapte",
+            "curajos",
+            "adevăr"
+        ],
+        "tags_it": [
+            "bosco",
+            "sussurri",
+            "coraggioso",
+            "verità"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 8,
+        "locales": {
+            "en": {
+                "title": "The Whispering Woods",
+                "text": "The Whispering Woods lived up to its name. Strange whispers filled the air, seeming to come from everywhere and nowhere. 'Turn back,' the whispers said. 'You're not good enough. You'll fail.' Ruby's ears drooped. 'Maybe they're right. Maybe we shouldn't have come.' 'Wait,' Finn said. 'These whispers are saying things that aren't true. Ruby, you jumped across that river like a champion!' 'And Finn, you figured out that riddle about fire!' Milo added. 'And Milo, you found the map and had all the best ideas!' Ruby said. As they spoke kind truths to each other, something amazing happened. The whispers grew quieter! 'The whispers only have power if we believe them,' Milo realized. 'They're lies!' The friends walked on, ignoring the mean whispers and reminding each other of the truth. 'You're brave!' 'You're smart!' 'You're kind!' With every true word, the whispers faded more. Soon, they emerged from the Whispering Woods into a beautiful clearing. And there, in the center, was the X from their map! They had made it! But where was the treasure?",
+                "parentQuestions": [
+                    "What did the whispers try to make the friends believe?",
+                    "How did they defeat the mean whispers?",
+                    "Why is it important to remember true things about ourselves?"
+                ]
+            },
+            "ro": {
+                "title": "Pădurea șoaptelor",
+                "text": "Pădurea Șoaptelor își merita numele. Șoapte ciudate umpleau aerul, părând să vină de pretutindeni și de nicăieri. 'Întoarce-te,' spuneau șoaptele. 'Nu ești suficient de bun. Vei eșua.' Urechile Rubinei căzură. 'Poate au dreptate. Poate n-ar fi trebuit să venim.' 'Stați,' spuse Fini. 'Aceste șoapte spun lucruri care nu sunt adevărate. Rubina, ai sărit peste râu ca un campion!' 'Și Fini, tu ai descifrat acea ghicitoare despre foc!' adăugă Milo. 'Și Milo, tu ai găsit harta și ai avut toate ideile cele mai bune!' spuse Rubina. Pe măsură ce își spuneau adevăruri frumoase unul altuia, ceva incredibil se întâmplă. Șoaptele deveniră mai slabe! 'Șoaptele au putere doar dacă le credem,' realiză Milo. 'Sunt minciuni!' Prietenii merseră mai departe, ignorând șoaptele răutăcioase și amințindu-și reciproc adevărul. 'Ești curajos!' 'Ești inteligent!' 'Ești bun!' Cu fiecare cuvânt adevărat, șoaptele se stinseră tot mai mult. În curând, ieșiră din Pădurea Șoaptelor într-o poiană frumoasă. Și acolo, în centru, era X-ul de pe hartă! Reușiseră! Dar unde era comoara?",
+                "parentQuestions": [
+                    "Ce au încercat șoaptele să-i facă pe prieteni să creadă?",
+                    "Cum au învins șoaptele răutăcioase?",
+                    "De ce e important să ne amintim lucruri adevărate despre noi?"
+                ]
+            },
+            "it": {
+                "title": "Il bosco dei sussurri",
+                "text": "Il Bosco dei Sussurri faceva onore al suo nome. Strani sussurri riempivano l'aria, sembrando venire da ovunque e da nessun posto. 'Torna indietro,' dicevano i sussurri. 'Non sei abbastanza bravo. Fallirai.' Le orecchie di Rubina si abbassarono. 'Forse hanno ragione. Forse non avremmo dovuto venire.' 'Aspetta,' disse Finn. 'Questi sussurri dicono cose che non sono vere. Rubina, hai saltato quel fiume come una campionessa!' 'E Finn, tu hai risolto quell'indovinello sul fuoco!' aggiunse Milo. 'E Milo, tu hai trovato la mappa e hai avuto tutte le idee migliori!' disse Rubina. Mentre si dicevano verità gentili, successe qualcosa di incredibile. I sussurri divennero più deboli! 'I sussurri hanno potere solo se ci crediamo,' realizzò Milo. 'Sono bugie!' Gli amici continuarono a camminare, ignorando i sussurri cattivi e ricordandosi a vicenda la verità. 'Sei coraggioso!' 'Sei intelligente!' 'Sei gentile!' Con ogni parola vera, i sussurri svanivano di più. Presto, emersero dal Bosco dei Sussurri in una bella radura. E lì, al centro, c'era la X della loro mappa! Ce l'avevano fatta! Ma dov'era il tesoro?",
+                "parentQuestions": [
+                    "Cosa cercavano di far credere i sussurri agli amici?",
+                    "Come hanno sconfitto i sussurri cattivi?",
+                    "Perché è importante ricordare cose vere su noi stessi?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

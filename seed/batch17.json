@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "calm-down-011-snow-globe",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "snow globe",
+            "settling",
+            "patience",
+            "calm"
+        ],
+        "tags_ro": [
+            "glob de zăpadă",
+            "așternere",
+            "răbdare",
+            "calm"
+        ],
+        "tags_it": [
+            "palla di neve",
+            "assestamento",
+            "pazienza",
+            "calma"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Snow Globe Mind",
+                "text": "Oliver's thoughts were spinning fast like a whirlwind. He couldn't think clearly. His grandmother showed him a snow globe with a tiny village inside. 'Shake it,' she said. Oliver shook the snow globe hard. The snowflakes swirled everywhere, hiding the little houses and trees. 'This is how your mind feels right now,' Grandmother said. 'All stirred up. Now set it down and watch.' Oliver placed the snow globe on the table and watched. At first the snow was everywhere, chaotic and wild. But slowly, slowly, the flakes began to sink. 'Breathe slowly while you watch,' Grandmother said. 'In and out.' Oliver breathed and watched. The snowflakes kept falling, gentle and slow. Little by little, the village became clearer. He could see the tiny church, the little houses, the small trees. 'See how the snow settles when you just wait and breathe?' Grandmother asked. Oliver nodded. His mind was feeling clearer too. 'Your busy thoughts will settle just like the snow,' she said. 'You just need to wait and breathe.' The last snowflakes drifted down. The village was perfectly clear now. And Oliver felt peaceful and calm, just like the settled snow globe.",
+                "parentQuestions": [
+                    "What happened when Oliver shook the snow globe?",
+                    "What happened when he waited and breathed?",
+                    "Does your mind ever feel like a shaken snow globe?"
+                ]
+            },
+            "ro": {
+                "title": "Mintea glob de zăpadă",
+                "text": "Gândurile lui Oliver se învârteau repede ca un vârtej. Nu putea gândi clar. Bunica lui îi arătă un glob de zăpadă cu un mic sat înăuntru. 'Scutură-l,' spuse ea. Oliver scutură globul de zăpadă tare. Fulgii de zăpadă se învolburau peste tot, ascunzând căsuțele și copacii. 'Așa se simte mintea ta acum,' spuse Bunica. 'Toată amestecată. Acum pune-l jos și privește.' Oliver puse globul de zăpadă pe masă și privi. La început zăpada era peste tot, haotică și sălbatică. Dar încet, încet, fulgii începură să se așeze. 'Respiră încet în timp ce privești,' spuse Bunica. 'Inspiră și expiră.' Oliver respiră și privi. Fulgii continuară să cadă, blânzi și încet. Puțin câte puțin, satul deveni mai clar. Putu vedea biserica micuță, căsuțele, copăceii. 'Vezi cum se așterne zăpada când doar aștepți și respiri?' întrebă Bunica. Oliver dădu din cap. Mintea lui se simțea mai clară și ea. 'Gândurile tale agitate se vor așterne la fel ca zăpada,' spuse ea. 'Trebuie doar să aștepți și să respiri.' Ultimii fulgi de zăpadă plutiră în jos. Satul era perfect clar acum. Iar Oliver se simțea pașnic și calm, la fel ca globul de zăpadă așezat.",
+                "parentQuestions": [
+                    "Ce s-a întâmplat când Oliver a scuturat globul de zăpadă?",
+                    "Ce s-a întâmplat când a așteptat și a respirat?",
+                    "Se simte mintea ta vreodată ca un glob de zăpadă scuturat?"
+                ]
+            },
+            "it": {
+                "title": "La mente palla di neve",
+                "text": "I pensieri di Oliver giravano veloci come un vortice. Non riusciva a pensare chiaramente. Sua nonna gli mostrò una palla di neve con un piccolo villaggio dentro. 'Scuotila,' disse. Oliver scosse forte la palla di neve. I fiocchi di neve vorticavano ovunque, nascondendo le casette e gli alberi. 'Così si sente la tua mente adesso,' disse la Nonna. 'Tutta agitata. Ora mettila giù e guarda.' Oliver mise la palla di neve sul tavolo e guardò. All'inizio la neve era ovunque, caotica e selvaggia. Ma lentamente, lentamente, i fiocchi iniziarono a scendere. 'Respira lentamente mentre guardi,' disse la Nonna. 'Inspira ed espira.' Oliver respirò e guardò. I fiocchi continuavano a cadere, delicati e lenti. Poco a poco, il villaggio divenne più chiaro. Poteva vedere la piccola chiesa, le casette, i piccoli alberi. 'Vedi come la neve si assesta quando aspetti e respiri?' chiese la Nonna. Oliver annuì. Anche la sua mente si sentiva più chiara. 'I tuoi pensieri agitati si assesteranno proprio come la neve,' disse lei. 'Devi solo aspettare e respirare.' Gli ultimi fiocchi di neve scesero. Il villaggio era perfettamente chiaro ora. E Oliver si sentiva pacifico e calmo, proprio come la palla di neve assestata.",
+                "parentQuestions": [
+                    "Cosa è successo quando Oliver ha scosso la palla di neve?",
+                    "Cosa è successo quando ha aspettato e respirato?",
+                    "La tua mente sembra mai una palla di neve scossa?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "calm-down-012-grounding-game",
+        "categorySlug": "calm-down",
+        "ageMin": 5,
+        "ageMax": 7,
+        "durationMin": 5,
+        "tags_en": [
+            "senses",
+            "grounding",
+            "present",
+            "awareness"
+        ],
+        "tags_ro": [
+            "simțuri",
+            "ancorare",
+            "prezent",
+            "conștientizare"
+        ],
+        "tags_it": [
+            "sensi",
+            "radicamento",
+            "presente",
+            "consapevolezza"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Five Senses Game",
+                "text": "Zara was feeling dizzy with worry. Her uncle sat with her and said, 'Let's play the five senses game. It helps you come back to right now.' Zara listened. 'First, look around and tell me five things you can see.' Zara looked. 'I see a blue pillow, a lamp, my shoes, a book, and a plant.' 'Good. Now four things you can touch right now.' Zara felt around. 'The soft carpet, the smooth table, my sweater, and my hair.' 'Great. Now three things you can hear.' Zara listened carefully. 'The clock ticking, birds outside, and the refrigerator humming.' 'Two things you can smell.' Zara sniffed. 'I smell dinner cooking and... something like flowers.' 'Perfect. One thing you can taste.' Zara thought. 'The toothpaste from brushing my teeth.' Uncle smiled. 'How do you feel now?' Zara noticed something amazing. The dizzy worry feeling was gone. She felt here, right here, grounded in the present moment. 'That's the magic of your senses,' Uncle said. 'They bring you back to now, where you're safe.' Zara smiled. She would remember this game for whenever worries tried to take her away.",
+                "parentQuestions": [
+                    "How many things did Zara find with each sense?",
+                    "How did the game make Zara feel?",
+                    "Can you try the five senses game right now?"
+                ]
+            },
+            "ro": {
+                "title": "Jocul celor cinci simțuri",
+                "text": "Zara se simțea amețită de griji. Unchiul ei stătu cu ea și spuse, 'Hai să jucăm jocul celor cinci simțuri. Te ajută să te întorci la momentul prezent.' Zara ascultă. 'Întâi, uită-te în jur și spune-mi cinci lucruri pe care le poți vedea.' Zara se uită. 'Văd o pernă albastră, o lampă, pantofii mei, o carte și o plantă.' 'Bun. Acum patru lucruri pe care le poți atinge chiar acum.' Zara pipăi în jur. 'Covorul moale, masa netedă, pulovărul meu și părul meu.' 'Grozav. Acum trei lucruri pe care le poți auzi.' Zara ascultă cu atenție. 'Ceasul ticăind, păsările afară și frigiderul zumzăind.' 'Două lucruri pe care le poți mirosi.' Zara trase aer pe nas. 'Simt mirosul cinei gătindu-se și... ceva ca florile.' 'Perfect. Un lucru pe care îl poți gusta.' Zara se gândi. 'Pasta de dinți de când mi-am spălat dinții.' Unchiul zâmbi. 'Cum te simți acum?' Zara observă ceva uimitor. Senzația de amețeală de la griji dispăruse. Se simțea aici, chiar aici, ancorată în momentul prezent. 'Aceasta e magia simțurilor tale,' spuse Unchiul. 'Te aduc înapoi la acum, unde ești în siguranță.' Zara zâmbi. Își va aminti acest joc pentru oricând grijile vor încerca să o ia.",
+                "parentQuestions": [
+                    "Câte lucruri a găsit Zara pentru fiecare simț?",
+                    "Cum a făcut-o pe Zara să se simtă jocul?",
+                    "Poți încerca jocul celor cinci simțuri chiar acum?"
+                ]
+            },
+            "it": {
+                "title": "Il gioco dei cinque sensi",
+                "text": "Zara si sentiva stordita dalla preoccupazione. Suo zio si sedette con lei e disse, 'Giochiamo al gioco dei cinque sensi. Ti aiuta a tornare all'adesso.' Zara ascoltò. 'Prima, guardati intorno e dimmi cinque cose che puoi vedere.' Zara guardò. 'Vedo un cuscino blu, una lampada, le mie scarpe, un libro e una pianta.' 'Bene. Ora quattro cose che puoi toccare adesso.' Zara toccò intorno. 'Il tappeto morbido, il tavolo liscio, il mio maglione e i miei capelli.' 'Ottimo. Ora tre cose che puoi sentire.' Zara ascoltò attentamente. 'L'orologio che ticchetta, gli uccelli fuori e il frigorifero che ronza.' 'Due cose che puoi annusare.' Zara annusò. 'Sento la cena che cuoce e... qualcosa come fiori.' 'Perfetto. Una cosa che puoi gustare.' Zara pensò. 'Il dentifricio da quando mi sono lavata i denti.' Lo zio sorrise. 'Come ti senti adesso?' Zara notò qualcosa di incredibile. La sensazione di stordimento dalla preoccupazione era sparita. Si sentiva qui, proprio qui, radicata nel momento presente. 'Questa è la magia dei tuoi sensi,' disse lo Zio. 'Ti riportano all'adesso, dove sei al sicuro.' Zara sorrise. Avrebbe ricordato questo gioco per ogni volta che le preoccupazioni avessero provato a portarla via.",
+                "parentQuestions": [
+                    "Quante cose ha trovato Zara con ogni senso?",
+                    "Come ha fatto sentire Zara il gioco?",
+                    "Puoi provare il gioco dei cinque sensi adesso?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

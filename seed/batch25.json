@@ -1,0 +1,167 @@
+[
+    {
+        "storyKey": "emotions-013-feeling-guilty",
+        "categorySlug": "emotions",
+        "ageMin": 5,
+        "ageMax": 7,
+        "durationMin": 5,
+        "tags_en": [
+            "guilt",
+            "mistakes",
+            "apology",
+            "making amends"
+        ],
+        "tags_ro": [
+            "vinovăție",
+            "greșeli",
+            "scuze",
+            "reparare"
+        ],
+        "tags_it": [
+            "colpa",
+            "errori",
+            "scuse",
+            "rimediare"
+        ],
+        "locales": {
+            "en": {
+                "title": "When You Hurt Someone",
+                "text": "Ella had said something mean to her little brother. She saw his face crumble and his eyes fill with tears. Now she couldn't stop thinking about it. Her chest felt heavy with yucky feelings. 'I think you're feeling guilty,' Mom said gently. Ella nodded. 'I was mean and now I feel awful.' 'Guilt is actually a helpful feeling. It's your heart telling you that something wasn't right, and you want to fix it.' 'But I can't un-say what I said,' Ella said. 'No, you can't. But you can do three things: accept that you made a mistake, say you're sorry and mean it, and try to do better next time.' 'Will the yucky feeling go away?' 'Bit by bit, yes. Especially after you apologize. A real apology helps heal both of you.' Ella went to find her brother. 'I'm really sorry I said that mean thing. It wasn't true and it wasn't fair. I hurt you and I wish I hadn't. Can you forgive me?' Her brother looked at her. 'It really hurt.' 'I know. I'm sorry.' After a moment, he hugged her. The guilty feeling didn't disappear completely, but it felt lighter. She would try harder to be kind.",
+                "parentQuestions": [
+                    "Why did Ella feel guilty?",
+                    "What three things can you do when you make a mistake?",
+                    "How do you feel when you need to say sorry?"
+                ]
+            },
+            "ro": {
+                "title": "Când rănești pe cineva",
+                "text": "Ella spusese ceva urât fratelui ei mai mic. Văzu fața lui prăbușindu-se și ochii umplându-i-se cu lacrimi. Acum nu se putea opri din gândit la asta. Pieptul i se simțea greu cu sentimente urâte. 'Cred că te simți vinovată,' spuse Mama blând. Ella dădu din cap. 'Am fost rea și acum mă simt groaznic.' 'Vinovăția e de fapt un sentiment util. E inima ta spunându-ți că ceva n-a fost corect, și vrei să repari.' 'Dar nu pot să des-spun ce am spus,' spuse Ella. 'Nu, nu poți. Dar poți face trei lucruri: acceptă că ai făcut o greșeală, cere-ți scuze și să le simți, și încearcă să faci mai bine data viitoare.' 'Se va duce sentimentul urât?' 'Puțin câte puțin, da. Mai ales după ce îți ceri scuze. O scuză adevărată ajută la vindecarea amândurora.' Ella se duse să-l găsească pe fratele ei. 'Îmi pare foarte rău că am spus acel lucru urât. Nu era adevărat și nu era corect. Te-am rănit și îmi doresc să nu fi făcut-o. Mă poți ierta?' Fratele ei o privi. 'M-a durut cu adevărat.' 'Știu. Îmi pare rău.' După un moment, o îmbrățișă. Sentimentul de vinovăție nu dispăru complet, dar se simțea mai ușor. Va încerca mai tare să fie bună.",
+                "parentQuestions": [
+                    "De ce se simțea Ella vinovată?",
+                    "Ce trei lucruri poți face când faci o greșeală?",
+                    "Cum te simți când trebuie să-ți ceri scuze?"
+                ]
+            },
+            "it": {
+                "title": "Quando ferisci qualcuno",
+                "text": "Ella aveva detto qualcosa di cattivo al suo fratellino. Vide la sua faccia crollare e i suoi occhi riempirsi di lacrime. Ora non riusciva a smettere di pensarci. Il suo petto si sentiva pesante con brutti sentimenti. 'Penso che ti senta in colpa,' disse la Mamma dolcemente. Ella annuì. 'Sono stata cattiva e ora mi sento malissimo.' 'La colpa è in realtà un sentimento utile. È il tuo cuore che ti dice che qualcosa non andava bene, e vuoi aggiustarlo.' 'Ma non posso dis-dire quello che ho detto,' disse Ella. 'No, non puoi. Ma puoi fare tre cose: accettare che hai fatto un errore, chiedere scusa e sentirlo davvero, e provare a fare meglio la prossima volta.' 'Il brutto sentimento andrà via?' 'Poco a poco, sì. Specialmente dopo che ti scusi. Una vera scusa aiuta a guarire entrambi.' Ella andò a cercare suo fratello. 'Mi dispiace davvero tanto di aver detto quella cosa cattiva. Non era vera e non era giusta. Ti ho ferito e vorrei non averlo fatto. Puoi perdonarmi?' Suo fratello la guardò. 'Mi ha fatto davvero male.' 'Lo so. Mi dispiace.' Dopo un momento, la abbracciò. Il sentimento di colpa non scomparve completamente, ma sembrava più leggero. Avrebbe provato di più a essere gentile.",
+                "parentQuestions": [
+                    "Perché Ella si sentiva in colpa?",
+                    "Quali tre cose puoi fare quando commetti un errore?",
+                    "Come ti senti quando devi chiedere scusa?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "emotions-014-feeling-grateful",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "gratitude",
+            "thankful",
+            "appreciation",
+            "happiness"
+        ],
+        "tags_ro": [
+            "recunoștință",
+            "mulțumitor",
+            "apreciere",
+            "fericire"
+        ],
+        "tags_it": [
+            "gratitudine",
+            "riconoscente",
+            "apprezzamento",
+            "felicità"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Thankful Heart",
+                "text": "Before bed each night, Grandma asked David the same question: 'What are you thankful for today?' At first, David thought it was boring. But Grandma explained why it mattered. 'When we look for good things, we find more of them. It's like a treasure hunt for happiness.' Tonight, David thought carefully. 'I'm thankful for my dog Biscuit, because she always wags her tail when she sees me.' Grandma smiled. 'What else?' 'I'm thankful for pizza for dinner. And that my friend shared his crayons when I forgot mine. And that the sun was warm at recess.' 'Your heart is full of treasures,' Grandma said. 'Do you feel anything when you think about them?' David noticed something. 'I feel... warm? Happy?' 'That's gratitude. It's a happy feeling that comes from noticing good things. And the more you practice, the more you'll find.' David hugged Grandma. 'I'm thankful for you,' he said. 'I'm thankful for you too, my dear,' she replied. That night, David fell asleep thinking of all his treasures. His heart felt full and warm.",
+                "parentQuestions": [
+                    "What things was David thankful for?",
+                    "How did thinking about good things make David feel?",
+                    "What are YOU thankful for today?"
+                ]
+            },
+            "ro": {
+                "title": "Inima mulțumitoare",
+                "text": "Înainte de culcare în fiecare noapte, Bunica îl întreba pe David aceeași întrebare: 'Pentru ce ești recunoscător azi?' La început, David credea că e plictisitor. Dar Bunica explică de ce contează. 'Când căutăm lucruri bune, găsim mai multe din ele. E ca o vânătoare de comori pentru fericire.' În seara asta, David se gândi cu atenție. 'Sunt recunoscător pentru câinele meu Biscuit, pentru că dă mereu din coadă când mă vede.' Bunica zâmbi. 'Ce altceva?' 'Sunt recunoscător pentru pizza la cină. Și că prietenul meu și-a împărțit creioanele când le-am uitat pe ale mele. Și că soarele era cald la recreație.' 'Inima ta e plină de comori,' spuse Bunica. 'Simți ceva când te gândești la ele?' David observă ceva. 'Mă simt... cald? Fericit?' 'Aceasta e recunoștința. E un sentiment fericit care vine din observarea lucrurilor bune. Și cu cât exersezi mai mult, cu atât vei găsi mai multe.' David o îmbrățișă pe Bunica. 'Îți sunt recunoscător pentru tine,' spuse el. 'Și eu îți sunt recunoscătoare pentru tine, dragul meu,' răspunse ea. În acea noapte, David adormi gândindu-se la toate comorile lui. Inima lui se simțea plină și caldă.",
+                "parentQuestions": [
+                    "Pentru ce lucruri era David recunoscător?",
+                    "Cum l-a făcut să se simtă pe David gândirea la lucruri bune?",
+                    "Pentru ce ești TU recunoscător azi?"
+                ]
+            },
+            "it": {
+                "title": "Il cuore grato",
+                "text": "Prima di dormire ogni sera, la Nonna chiedeva a David la stessa domanda: 'Per cosa sei grato oggi?' All'inizio, David pensava fosse noioso. Ma la Nonna spiegò perché era importante. 'Quando cerchiamo cose belle, ne troviamo di più. È come una caccia al tesoro per la felicità.' Stasera, David pensò attentamente. 'Sono grato per il mio cane Biscotto, perché scodinzola sempre quando mi vede.' La Nonna sorrise. 'Cos'altro?' 'Sono grato per la pizza a cena. E che il mio amico ha condiviso i suoi pastelli quando ho dimenticato i miei. E che il sole era caldo alla ricreazione.' 'Il tuo cuore è pieno di tesori,' disse la Nonna. 'Senti qualcosa quando pensi a loro?' David notò qualcosa. 'Mi sento... caldo? Felice?' 'Quella è gratitudine. È un sentimento felice che viene dal notare le cose belle. E più pratichi, più ne troverai.' David abbracciò la Nonna. 'Sono grato per te,' disse. 'Anch'io sono grata per te, caro mio,' rispose lei. Quella notte, David si addormentò pensando a tutti i suoi tesori. Il suo cuore si sentiva pieno e caldo.",
+                "parentQuestions": [
+                    "Per cosa era grato David?",
+                    "Come ha fatto sentire David pensare alle cose belle?",
+                    "Per cosa sei TU grato oggi?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "emotions-015-feeling-proud",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "pride",
+            "achievement",
+            "effort",
+            "celebration"
+        ],
+        "tags_ro": [
+            "mândrie",
+            "realizare",
+            "efort",
+            "celebrare"
+        ],
+        "tags_it": [
+            "orgoglio",
+            "realizzazione",
+            "sforzo",
+            "celebrazione"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Proud Feeling",
+                "text": "Mia had worked so hard on her art project. She had used every color carefully. She had tried new things even when they were tricky. Now it was finished and it looked beautiful! A warm, bright feeling filled her chest. She wanted to jump up and down! 'You look happy,' Mom said, looking at the art. 'I am! I made this and I really like it.' Mom smiled. 'That feeling is called pride. It's the happy feeling we get when we do something we worked hard on.' 'It feels like sunshine inside,' Mia said. 'That's a perfect way to describe it. Pride isn't about being better than others. It's about recognizing your own effort and success.' 'I want to feel this way all the time!' 'You can feel it whenever you work hard at something. It doesn't have to be perfect. What matters is the effort and caring about what you do.' Mia hung her artwork on the wall. Every time she looked at it, she remembered the proud sunshine feeling. She couldn't wait to work hard on something else and feel it again.",
+                "parentQuestions": [
+                    "What made Mia feel proud?",
+                    "How did pride feel to Mia?",
+                    "What have you done that made you feel proud?"
+                ]
+            },
+            "ro": {
+                "title": "Sentimentul de mândrie",
+                "text": "Mia muncise din greu la proiectul ei de artă. Folosi fiecare culoare cu grijă. Încercase lucruri noi chiar și când erau dificile. Acum era terminat și arăta frumos! Un sentiment cald și strălucitor îi umplu pieptul. Voia să sară în sus și în jos! 'Arăți fericită,' spuse Mama, privind arta. 'Sunt! Am făcut asta și chiar îmi place.' Mama zâmbi. 'Acel sentiment se numește mândrie. E sentimentul fericit pe care îl avem când facem ceva la care am muncit din greu.' 'Se simte ca soare înăuntru,' spuse Mia. 'E un mod perfect să-l descrii. Mândria nu e despre a fi mai bun decât alții. E despre a-ți recunoaște propriul efort și succes.' 'Vreau să mă simt așa tot timpul!' 'Poți să o simți oricând muncești din greu la ceva. Nu trebuie să fie perfect. Ce contează e efortul și grija pentru ceea ce faci.' Mia agăță opera de artă pe perete. De fiecare dată când o privea, își amintea sentimentul mândru ca soarele. Abia aștepta să muncească din greu la altceva și să-l simtă din nou.",
+                "parentQuestions": [
+                    "Ce a făcut-o pe Mia să se simtă mândră?",
+                    "Cum s-a simțit mândria pentru Mia?",
+                    "Ce ai făcut care te-a făcut să te simți mândru?"
+                ]
+            },
+            "it": {
+                "title": "Il sentimento dell'orgoglio",
+                "text": "Mia aveva lavorato così duramente sul suo progetto artistico. Aveva usato ogni colore con cura. Aveva provato cose nuove anche quando erano difficili. Ora era finito e sembrava bellissimo! Una sensazione calda e luminosa riempì il suo petto. Voleva saltare su e giù! 'Sembri felice,' disse la Mamma, guardando l'opera. 'Lo sono! L'ho fatta io e mi piace davvero.' La Mamma sorrise. 'Quella sensazione si chiama orgoglio. È la sensazione felice che proviamo quando facciamo qualcosa a cui abbiamo lavorato duramente.' 'Sembra sole dentro,' disse Mia. 'È un modo perfetto per descriverlo. L'orgoglio non riguarda essere migliori degli altri. Riguarda riconoscere il proprio sforzo e successo.' 'Voglio sentirmi così sempre!' 'Puoi sentirlo ogni volta che lavori duramente su qualcosa. Non deve essere perfetto. Quello che conta è lo sforzo e tenere a quello che fai.' Mia appese la sua opera d'arte al muro. Ogni volta che la guardava, ricordava la sensazione orgogliosa come il sole. Non vedeva l'ora di lavorare duramente su qualcos'altro e sentirla di nuovo.",
+                "parentQuestions": [
+                    "Cosa ha fatto sentire orgogliosa Mia?",
+                    "Come si sentiva l'orgoglio per Mia?",
+                    "Cosa hai fatto che ti ha fatto sentire orgoglioso?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

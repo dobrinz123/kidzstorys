@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-sky-train-001",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "sky",
+            "clouds",
+            "wonder"
+        ],
+        "tags_ro": [
+            "tren",
+            "cer",
+            "nori",
+            "uimire"
+        ],
+        "tags_it": [
+            "treno",
+            "cielo",
+            "nuvole",
+            "meraviglia"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 1,
+        "locales": {
+            "en": {
+                "title": "All Aboard the Cloud Express",
+                "text": "Penny the penguin and her best friend Leo the lion cub were playing near the old train station. Nobody used it anymore, or so they thought. Suddenly, a whistle pierced the air! TOOT TOOT! The rusty tracks began to glow silver. And appearing from thin air came the most magnificent train they had ever seen! It was made of fluffy clouds and had windows that sparkled like stars. A friendly conductor, a white owl named Oliver, poked his head out. 'All aboard the Cloud Express! We're on a very important mission!' 'What mission?' Penny asked, eyes wide. 'The Dream Catcher at the end of the sky has broken,' Oliver explained. 'Without it, children's dreams get lost. We need brave adventurers to help us collect the missing pieces and fix it!' Leo's tail swished with excitement. 'We can help!' 'Then climb aboard, young travelers! Our journey will take us through the clouds and beyond!' Penny and Leo scampered onto the magical train. The seats were made of soft clouds. The view from the windows showed the whole world getting smaller below. They were flying! The Cloud Express chugged upward into the sky. Their sky adventure had begun!",
+                "parentQuestions": [
+                    "What kind of train did Penny and Leo find?",
+                    "What mission did the owl need help with?",
+                    "Would you like to ride on a cloud train?"
+                ]
+            },
+            "ro": {
+                "title": "Toți la bord pe Cloud Express",
+                "text": "Penny pinguinul și cel mai bun prieten al ei, Leo puiul de leu, se jucau lângă vechea gară. Nimeni nu o mai folosea, sau așa credeau. Brusc, un fluierat străpunse aerul! TU-TU! Șinele ruginite începură să strălucească argintiu. Și apărând din neant veni cel mai magnific tren pe care îl văzuseră vreodată! Era făcut din nori pufoși și avea ferestre care sclipeau ca stelele. Un conductor prietenos, o bufniță albă pe nume Oliver, scoase capul afară. 'Toți la bord pe Cloud Express! Suntem într-o misiune foarte importantă!' 'Ce misiune?' întrebă Penny, cu ochii mari. 'Prinzătorul de Vise de la capătul cerului s-a stricat,' explică Oliver. 'Fără el, visele copiilor se pierd. Avem nevoie de aventurieri curajoși să ne ajute să colectăm piesele lipsă și să-l reparăm!' Coada lui Leo se mișcă de entuziasm. 'Putem ajuta!' 'Atunci urcați la bord, tineri călători! Călătoria noastră ne va duce prin nori și dincolo!' Penny și Leo s-au urcat în grabă pe trenul magic. Scaunele erau făcute din nori moi. Vederea de la ferestre arăta întreaga lume devenind mai mică dedesubt. Zburau! Cloud Express huruia în sus spre cer. Aventura lor în cer începuse!",
+                "parentQuestions": [
+                    "Ce fel de tren au găsit Penny și Leo?",
+                    "La ce misiune avea nevoie bufnița de ajutor?",
+                    "Ți-ar plăcea să călătorești cu un tren din nori?"
+                ]
+            },
+            "it": {
+                "title": "Tutti a bordo del Cloud Express",
+                "text": "Penny la pinguina e il suo migliore amico Leo il cucciolo di leone stavano giocando vicino alla vecchia stazione ferroviaria. Nessuno la usava più, o così pensavano. All'improvviso, un fischio squarciò l'aria! TU-TU! I binari arrugginiti iniziarono a brillare d'argento. E apparendo dal nulla arrivò il treno più magnifico che avessero mai visto! Era fatto di nuvole soffici e aveva finestre che brillavano come stelle. Un simpatico controllore, un gufo bianco di nome Oliver, sporse la testa fuori. 'Tutti a bordo del Cloud Express! Siamo in una missione molto importante!' 'Quale missione?' chiese Penny, con gli occhi spalancati. 'L'Acchiappasogni alla fine del cielo si è rotto,' spiegò Oliver. 'Senza di esso, i sogni dei bambini si perdono. Abbiamo bisogno di coraggiosi avventurieri per aiutarci a raccogliere i pezzi mancanti e aggiustarlo!' La coda di Leo si agitò dall'eccitazione. 'Possiamo aiutare!' 'Allora salite a bordo, giovani viaggiatori! Il nostro viaggio ci porterà attraverso le nuvole e oltre!' Penny e Leo saltarono sul treno magico. I sedili erano fatti di nuvole morbide. La vista dalle finestre mostrava tutto il mondo che diventava più piccolo sotto. Stavano volando! Il Cloud Express salì sbuffando nel cielo. La loro avventura nel cielo era iniziata!",
+                "parentQuestions": [
+                    "Che tipo di treno hanno trovato Penny e Leo?",
+                    "Per quale missione il gufo aveva bisogno di aiuto?",
+                    "Ti piacerebbe viaggiare su un treno di nuvole?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-sky-train-002",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "train",
+            "rainbow",
+            "colors",
+            "station"
+        ],
+        "tags_ro": [
+            "tren",
+            "curcubeu",
+            "culori",
+            "gară"
+        ],
+        "tags_it": [
+            "treno",
+            "arcobaleno",
+            "colori",
+            "stazione"
+        ],
+        "seriesId": "sky-train",
+        "episodeNo": 2,
+        "locales": {
+            "en": {
+                "title": "Rainbow Station",
+                "text": "The Cloud Express made its first stop at Rainbow Station. The platform was made entirely of colors! Red, orange, yellow, green, blue, and purple stretched in beautiful arches. 'The first piece of the Dream Catcher is here somewhere,' Oliver the owl announced. 'It's a crystal prism that catches the light.' Penny and Leo stepped onto the rainbow platform. Everything shimmered! 'How will we find a prism in all this color?' Leo wondered. A small rainbow sprite appeared, looking upset. 'The prism rolled away when the Dream Catcher broke! It's stuck at the very end of the rainbow, but we're too small to reach it.' 'I'm good at sliding!' Penny said. 'Penguins love to slide!' 'And I can catch things with my paws!' Leo added. Together they had a plan. Penny slid down the curved rainbow while Leo waited at the end. She whooshed along, faster and faster, and gently nudged the prism with her flipper. It rolled right into Leo's waiting paws! 'You did it!' the sprite cheered. The prism sparkled with all seven colors. Oliver safely stored it in a special box on the train. 'One piece found! Back on the Cloud Express! Next stop: Thunder Mountain!'",
+                "parentQuestions": [
+                    "What were they looking for at Rainbow Station?",
+                    "How did Penny and Leo work together?",
+                    "What colors are in a rainbow?"
+                ]
+            },
+            "ro": {
+                "title": "Stația Curcubeu",
+                "text": "Cloud Express a făcut prima oprire la Stația Curcubeu. Peronul era făcut în întregime din culori! Roșu, portocaliu, galben, verde, albastru și violet se întindeau în arcuri frumoase. 'Prima bucată din Prinzătorul de Vise este undeva pe aici,' anunță Oliver bufnița. 'Este o prismă de cristal care prinde lumina.' Penny și Leo pășiră pe peronul curcubeu. Totul sclipi! 'Cum vom găsi o prismă în toate aceste culori?' se întrebă Leo. Un mic spiriduș curcubeu apăru, arătând supărat. 'Prisma s-a rostogolit când Prinzătorul de Vise s-a spart! Este blocată la capătul curcubeului, dar suntem prea mici să ajungem.' 'Eu sunt bună la alunecat!' spuse Penny. 'Pinguinii adoră să alunece!' 'Și eu pot prinde lucruri cu labele mele!' adăugă Leo. Împreună aveau un plan. Penny alunecă pe curcubeul curbat în timp ce Leo aștepta la capăt. Glisă, mai repede și mai repede, și împinse ușor prisma cu aripa. Se rostogoli direct în labele lui Leo care așteptau! 'Ați reușit!' jubilă spiridușul. Prisma sclipea cu toate cele șapte culori. Oliver o depozită în siguranță într-o cutie specială din tren. 'O bucată găsită! Înapoi pe Cloud Express! Următoarea oprire: Muntele Tunetelor!'",
+                "parentQuestions": [
+                    "Ce căutau la Stația Curcubeu?",
+                    "Cum au lucrat Penny și Leo împreună?",
+                    "Ce culori sunt într-un curcubeu?"
+                ]
+            },
+            "it": {
+                "title": "La Stazione Arcobaleno",
+                "text": "Il Cloud Express fece la sua prima fermata alla Stazione Arcobaleno. La piattaforma era fatta interamente di colori! Rosso, arancione, giallo, verde, blu e viola si estendevano in bellissimi archi. 'Il primo pezzo dell'Acchiappasogni è da qualche parte qui,' annunciò Oliver il gufo. 'È un prisma di cristallo che cattura la luce.' Penny e Leo scesero sulla piattaforma arcobaleno. Tutto brillava! 'Come troveremo un prisma in tutto questo colore?' si chiese Leo. Un piccolo spiritello arcobaleno apparve, sembrando turbato. 'Il prisma è rotolato via quando l'Acchiappasogni si è rotto! È bloccato alla fine dell'arcobaleno, ma siamo troppo piccoli per raggiungerlo.' 'Sono brava a scivolare!' disse Penny. 'I pinguini adorano scivolare!' 'E io posso prendere cose con le mie zampe!' aggiunse Leo. Insieme avevano un piano. Penny scivolò giù per l'arcobaleno curvo mentre Leo aspettava alla fine. Scivolò, sempre più veloce, e spinse delicatamente il prisma con la sua pinna. Rotolò dritto nelle zampe di Leo che aspettavano! 'Ce l'avete fatta!' esultò lo spiritello. Il prisma brillava con tutti e sette i colori. Oliver lo conservò al sicuro in una scatola speciale sul treno. 'Un pezzo trovato! Di nuovo sul Cloud Express! Prossima fermata: la Montagna dei Tuoni!'",
+                "parentQuestions": [
+                    "Cosa cercavano alla Stazione Arcobaleno?",
+                    "Come hanno lavorato insieme Penny e Leo?",
+                    "Quali colori ci sono in un arcobaleno?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

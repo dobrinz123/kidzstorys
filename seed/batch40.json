@@ -1,0 +1,167 @@
+[
+    {
+        "storyKey": "learn-to-read-013-snail-trail",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "snail",
+            "trail",
+            "rain",
+            "slow"
+        ],
+        "tags_ro": [
+            "melc",
+            "urmă",
+            "ploaie",
+            "încet"
+        ],
+        "tags_it": [
+            "lumaca",
+            "sentiero",
+            "pioggia",
+            "lento"
+        ],
+        "locales": {
+            "en": {
+                "title": "Snail on a Trail",
+                "text": "A snail goes on a trail. Slow, slow, slow. The snail leaves a shiny trail. After the rain. The snail is happy. Rain makes grass grow. Rain makes flowers bloom. The snail eats a leaf. Yum! The snail sees a pail. What is in the pail? Water! The snail takes a sip. Nice and cool! The snail goes on. Slow and happy. On the shiny trail. The end.",
+                "parentQuestions": [
+                    "How does the snail move?",
+                    "What does the snail leave behind?",
+                    "Have you ever seen a snail?"
+                ]
+            },
+            "ro": {
+                "title": "Melcul pe cărare",
+                "text": "Un melc merge pe o cărare. Încet, încet, încet. Melcul lasă o urmă strălucitoare. După ploaie. Melcul e fericit. Ploaia face iarba să crească. Ploaia face florile să înflorească. Melcul mănâncă o frunză. Miam! Melcul vede o găleată. Ce e în găleată? Apă! Melcul ia o înghițitură. Frumoasă și răcoroasă! Melcul merge mai departe. Încet și fericit. Pe cărarea strălucitoare. Sfârșit.",
+                "parentQuestions": [
+                    "Cum se mișcă melcul?",
+                    "Ce lasă melcul în urmă?",
+                    "Ai văzut vreodată un melc?"
+                ]
+            },
+            "it": {
+                "title": "La lumaca sul sentiero",
+                "text": "Una lumaca va su un sentiero. Piano, piano, piano. La lumaca lascia un sentiero lucido. Dopo la pioggia. La lumaca è felice. La pioggia fa crescere l'erba. La pioggia fa fiorire i fiori. La lumaca mangia una foglia. Gnam! La lumaca vede un secchio. Cosa c'è nel secchio? Acqua! La lumaca beve un sorso. Bella e fresca! La lumaca va avanti. Piano e felice. Sul sentiero lucido. Fine.",
+                "parentQuestions": [
+                    "Come si muove la lumaca?",
+                    "Cosa lascia dietro la lumaca?",
+                    "Hai mai visto una lumaca?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-014-moon-spoon",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "moon",
+            "spoon",
+            "soon",
+            "night"
+        ],
+        "tags_ro": [
+            "lună",
+            "lingură",
+            "curând",
+            "noapte"
+        ],
+        "tags_it": [
+            "luna",
+            "cucchiaio",
+            "presto",
+            "notte"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Moon and the Spoon",
+                "text": "Look at the moon! So big and round. Like a balloon! I eat my food with a spoon. I look at the moon soon. The moon is bright. A friend at night. I blow the moon a kiss. Mwah! Sleep will come soon. Under the moon. Goodnight, moon! Goodnight, spoon! Goodnight, room! I close my eyes. And dream of the moon. The end.",
+                "parentQuestions": [
+                    "What shape is the moon?",
+                    "When do we see the moon?",
+                    "What do you say goodnight to?"
+                ]
+            },
+            "ro": {
+                "title": "Luna și lingura",
+                "text": "Uită-te la lună! Atât de mare și rotundă. Ca un balon! Mănânc mâncarea cu o lingură. Mă uit la lună curând. Luna e strălucitoare. O prietenă noaptea. Îi trimit lunii un sărut. Muah! Somnul va veni curând. Sub lună. Noapte bună, lună! Noapte bună, lingură! Noapte bună, cameră! Închid ochii. Și visez luna. Sfârșit.",
+                "parentQuestions": [
+                    "Ce formă are luna?",
+                    "Când vedem luna?",
+                    "La ce spui noapte bună?"
+                ]
+            },
+            "it": {
+                "title": "La luna e il cucchiaio",
+                "text": "Guarda la luna! Così grande e tonda. Come un palloncino! Mangio il mio cibo con un cucchiaio. Guardo la luna presto. La luna è luminosa. Un'amica di notte. Mando un bacio alla luna. Mwah! Il sonno arriverà presto. Sotto la luna. Buonanotte, luna! Buonanotte, cucchiaio! Buonanotte, stanza! Chiudo gli occhi. E sogno la luna. Fine.",
+                "parentQuestions": [
+                    "Che forma ha la luna?",
+                    "Quando vediamo la luna?",
+                    "A cosa dici buonanotte?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-015-star-car",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "star",
+            "car",
+            "far",
+            "dream"
+        ],
+        "tags_ro": [
+            "stea",
+            "mașină",
+            "departe",
+            "vis"
+        ],
+        "tags_it": [
+            "stella",
+            "macchina",
+            "lontano",
+            "sogno"
+        ],
+        "locales": {
+            "en": {
+                "title": "A Star Ride Far",
+                "text": "I see a star. It shines so far. I have a little car. A toy car! I zoom my car. Vroom, vroom! Can my car reach the star? So far! I close my eyes. I dream big. In my dream, my car can fly! Up, up, up! Past the clouds. To the star! The star says hi. Hi, star! I ride around the star. What fun! I wake up. Still in my bed. But the star winks in my window. The end.",
+                "parentQuestions": [
+                    "What toy did the child have?",
+                    "What happened in the dream?",
+                    "What do you dream about at night?"
+                ]
+            },
+            "ro": {
+                "title": "O călătorie cu steaua departe",
+                "text": "Văd o stea. Strălucește atât de departe. Am o mașinuță. O mașinuță de jucărie! Îmi duc mașina. Vrum, vrum! Poate mașina mea ajunge la stea? Atât de departe! Închid ochii. Visez mare. În visul meu, mașina mea poate zbura! Sus, sus, sus! Pe lângă nori. La stea! Steaua spune bună. Bună, stea! Merg în jurul stelei. Ce distracție! Mă trezesc. Tot în patul meu. Dar steaua îmi face cu ochiul din fereastră. Sfârșit.",
+                "parentQuestions": [
+                    "Ce jucărie avea copilul?",
+                    "Ce s-a întâmplat în vis?",
+                    "Ce visezi tu noaptea?"
+                ]
+            },
+            "it": {
+                "title": "Un viaggio lontano con la stella",
+                "text": "Vedo una stella. Brilla così lontano. Ho una macchinina. Una macchinina giocattolo! Faccio andare la mia macchina. Vroom, vroom! Può la mia macchina raggiungere la stella? Così lontano! Chiudo gli occhi. Sogno in grande. Nel mio sogno, la mia macchina può volare! Su, su, su! Oltre le nuvole. Alla stella! La stella dice ciao. Ciao, stella! Giro intorno alla stella. Che divertimento! Mi sveglio. Ancora nel mio letto. Ma la stella mi fa l'occhiolino dalla finestra. Fine.",
+                "parentQuestions": [
+                    "Che giocattolo aveva il bambino?",
+                    "Cosa è successo nel sogno?",
+                    "Cosa sogni di notte?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

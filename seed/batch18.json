@@ -1,0 +1,167 @@
+[
+    {
+        "storyKey": "calm-down-013-lazy-cat",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "cat",
+            "stretch",
+            "relax",
+            "body"
+        ],
+        "tags_ro": [
+            "pisică",
+            "întindere",
+            "relaxare",
+            "corp"
+        ],
+        "tags_it": [
+            "gatto",
+            "stiramento",
+            "rilassamento",
+            "corpo"
+        ],
+        "locales": {
+            "en": {
+                "title": "Stretch Like a Lazy Cat",
+                "text": "Sam was feeling stressed and tight. His body felt all bunched up. His mom said, 'Let's stretch like lazy cats.' Sam loved cats. 'First, get on your hands and knees like a cat. Now arch your back up high, like a scared cat. Hold it for three breaths.' Sam curved his back up and breathed. One, two, three. 'Now slowly drop your tummy down and look up. This is happy cat. Three more breaths.' Sam let his belly sink and looked at the ceiling. He breathed slowly. 'Now sit back on your heels and stretch your arms way out in front. This is sleepy cat taking a big stretch.' Sam reached forward and felt his back stretching. It felt so good. 'Stay here and take five slow breaths. Feel yourself getting longer and more relaxed with each breath.' Sam breathed and stretched. His tight muscles were softening. 'Last one: curl up like a sleeping cat. Make yourself small and cozy.' Sam curled into a ball, feeling warm and relaxed. All the stress had melted away. 'Cats know how to relax,' Mom said. 'Now you do too.' Sam felt as peaceful as a purring kitten.",
+                "parentQuestions": [
+                    "What different cat positions did Sam try?",
+                    "How did stretching make Sam's body feel?",
+                    "Can you try the cat stretches right now?"
+                ]
+            },
+            "ro": {
+                "title": "Întinde-te ca o pisică leneșă",
+                "text": "Sam se simțea stresat și încordat. Corpul lui se simțea tot ghemuit. Mama lui spuse, 'Hai să ne întindem ca pisicile leneșe.' Sam iubea pisicile. 'Întâi, stai pe mâini și genunchi ca o pisică. Acum arcuiește-ți spatele în sus, ca o pisică speriată. Ține așa pentru trei respirații.' Sam își curba spatele în sus și respiră. Unu, doi, trei. 'Acum lasă-ți încet burta în jos și uită-te în sus. Aceasta este pisica fericită. Încă trei respirații.' Sam lăsă burta să se scufunde și privi tavanul. Respiră încet. 'Acum stai pe călcâie și întinde brațele înainte. Aceasta este pisica somnoroasă făcând o mare întindere.' Sam se întinse înainte și simți spatele întinzându-se. Se simțea atât de bine. 'Stai aici și fă cinci respirații lente. Simte cum devii mai lung și mai relaxat cu fiecare respirație.' Sam respiră și se întinse. Mușchii lui încordați se înmuiau. 'Ultima: ghemuiește-te ca o pisică adormită. Fă-te mic și confortabil.' Sam se ghemui într-o minge, simțindu-se cald și relaxat. Tot stresul se topise. 'Pisicile știu cum să se relaxeze,' spuse Mama. 'Acum știi și tu.' Sam se simțea la fel de pașnic ca un pisoi toarcând.",
+                "parentQuestions": [
+                    "Ce poziții diferite de pisică a încercat Sam?",
+                    "Cum a făcut întinderea să se simtă corpul lui Sam?",
+                    "Poți încerca întinderile de pisică chiar acum?"
+                ]
+            },
+            "it": {
+                "title": "Stiracchiati come un gatto pigro",
+                "text": "Sam si sentiva stressato e teso. Il suo corpo si sentiva tutto raggomitolato. Sua mamma disse, 'Stiracchiamoci come gatti pigri.' Sam amava i gatti. 'Prima, mettiti a quattro zampe come un gatto. Ora inarca la schiena in alto, come un gatto spaventato. Mantieni per tre respiri.' Sam curvò la schiena in su e respirò. Uno, due, tre. 'Ora abbassa lentamente la pancia e guarda in su. Questo è il gatto felice. Altri tre respiri.' Sam lasciò cadere la pancia e guardò il soffitto. Respirò lentamente. 'Ora siediti sui talloni e allunga le braccia in avanti. Questo è il gatto assonnato che fa un grande stiramento.' Sam si allungò in avanti e sentì la schiena stirarsi. Era così bello. 'Rimani qui e fai cinque respiri lenti. Senti come diventi più lungo e più rilassato ad ogni respiro.' Sam respirò e si stirò. I suoi muscoli tesi si stavano ammorbidendo. 'L'ultimo: raggomitolati come un gatto che dorme. Fatti piccolo e accogliente.' Sam si raggomitolò in una palla, sentendosi caldo e rilassato. Tutto lo stress si era sciolto. 'I gatti sanno come rilassarsi,' disse la Mamma. 'Ora lo sai anche tu.' Sam si sentiva pacifico come un gattino che fa le fusa.",
+                "parentQuestions": [
+                    "Quali diverse posizioni del gatto ha provato Sam?",
+                    "Come ha fatto sentire lo stiramento il corpo di Sam?",
+                    "Puoi provare gli stiramenti del gatto adesso?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "calm-down-014-worry-tree",
+        "categorySlug": "calm-down",
+        "ageMin": 5,
+        "ageMax": 7,
+        "durationMin": 5,
+        "tags_en": [
+            "tree",
+            "worries",
+            "letting go",
+            "imagination"
+        ],
+        "tags_ro": [
+            "copac",
+            "griji",
+            "eliberare",
+            "imaginație"
+        ],
+        "tags_it": [
+            "albero",
+            "preoccupazioni",
+            "lasciar andare",
+            "immaginazione"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Worry Tree",
+                "text": "Lucy had too many worries in her head. They felt heavy and crowded. Her grandfather took her outside to a big oak tree. 'This is the worry tree,' he said. 'It helps hold our worries so we don't have to carry them.' Lucy looked at the sturdy tree. 'Close your eyes and think of one worry. Picture it in your mind. What color is it?' Lucy thought of her biggest worry. 'It's gray and cloudy.' 'Now imagine picking it up like a leaf. Breathe in deep.' Lucy imagined holding the gray worry. 'Now breathe out slowly and imagine hanging it on the tree's branch. The tree is strong. It can hold it for you.' Lucy breathed out and imagined her worry hanging on a branch. 'Let's do another one,' Grandpa said. Lucy thought of another worry, breathed in, then breathed out as she hung it on the tree. They continued until Lucy's head felt lighter. 'See all your worries hanging there?' Grandpa asked. 'The tree will hold them. Maybe some will blow away. Maybe you'll take some back later. But right now, you don't need to carry them.' Lucy felt so much lighter. The worry tree was holding everything for her.",
+                "parentQuestions": [
+                    "What did Lucy imagine doing with her worries?",
+                    "How did Lucy feel after using the worry tree?",
+                    "What worries would you hang on a tree?"
+                ]
+            },
+            "ro": {
+                "title": "Copacul grijilor",
+                "text": "Lucia avea prea multe griji în cap. Se simțeau grele și aglomerate. Bunicul ei o duse afară la un stejar mare. 'Acesta este copacul grijilor,' spuse el. 'Ne ajută să ținem grijile ca să nu le mai căram noi.' Lucia privi copacul solid. 'Închide ochii și gândește-te la o grijă. Imagineaz-o în mintea ta. Ce culoare are?' Lucia se gândi la cea mai mare grijă. 'E gri și noroasă.' 'Acum imaginează-ți că o ridici ca pe o frunză. Inspiră adânc.' Lucia imaginea că ține grija cenușie. 'Acum expiră încet și imaginează-ți că o atârni pe ramura copacului. Copacul e puternic. Poate să o țină pentru tine.' Lucia expiră și își imaginea grija atârnând pe o ramură. 'Hai să mai facem una,' spuse Bunicul. Lucia se gândi la altă grijă, inspiră, apoi expiră în timp ce o atârna pe copac. Au continuat până când capul Luciei se simți mai ușor. 'Vezi toate grijile tale atârnând acolo?' întrebă Bunicul. 'Copacul le va ține. Poate unele vor fi suflate de vânt. Poate vei lua unele înapoi mai târziu. Dar acum, nu trebuie să le cari.' Lucia se simți mult mai ușoară. Copacul grijilor ținea totul pentru ea.",
+                "parentQuestions": [
+                    "Ce și-a imaginat Lucia că face cu grijile?",
+                    "Cum s-a simțit Lucia după ce a folosit copacul grijilor?",
+                    "Ce griji ai atârna într-un copac?"
+                ]
+            },
+            "it": {
+                "title": "L'albero delle preoccupazioni",
+                "text": "Lucia aveva troppe preoccupazioni nella testa. Si sentivano pesanti e affollate. Suo nonno la portò fuori da una grande quercia. 'Questo è l'albero delle preoccupazioni,' disse. 'Aiuta a tenere le nostre preoccupazioni così non dobbiamo portarle noi.' Lucia guardò l'albero robusto. 'Chiudi gli occhi e pensa a una preoccupazione. Immaginala nella tua mente. Di che colore è?' Lucia pensò alla sua preoccupazione più grande. 'È grigia e nuvolosa.' 'Ora immagina di prenderla come una foglia. Inspira profondamente.' Lucia immaginò di tenere la preoccupazione grigia. 'Ora espira lentamente e immagina di appenderla sul ramo dell'albero. L'albero è forte. Può tenerla per te.' Lucia espirò e immaginò la sua preoccupazione appesa a un ramo. 'Facciamone un'altra,' disse il Nonno. Lucia pensò a un'altra preoccupazione, inspirò, poi espirò mentre la appendeva all'albero. Continuarono finché la testa di Lucia si sentì più leggera. 'Vedi tutte le tue preoccupazioni appese lì?' chiese il Nonno. 'L'albero le terrà. Forse alcune voleranno via. Forse ne riprenderai alcune più tardi. Ma adesso, non devi portarle.' Lucia si sentì molto più leggera. L'albero delle preoccupazioni teneva tutto per lei.",
+                "parentQuestions": [
+                    "Cosa immaginava di fare Lucia con le sue preoccupazioni?",
+                    "Come si sentiva Lucia dopo aver usato l'albero delle preoccupazioni?",
+                    "Quali preoccupazioni appenderesti a un albero?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "calm-down-015-mountain-strong",
+        "categorySlug": "calm-down",
+        "ageMin": 5,
+        "ageMax": 7,
+        "durationMin": 5,
+        "tags_en": [
+            "mountain",
+            "strength",
+            "stillness",
+            "grounded"
+        ],
+        "tags_ro": [
+            "munte",
+            "putere",
+            "liniște",
+            "ancorat"
+        ],
+        "tags_it": [
+            "montagna",
+            "forza",
+            "quiete",
+            "radicato"
+        ],
+        "locales": {
+            "en": {
+                "title": "Strong Like a Mountain",
+                "text": "Ethan felt shaky and unstable, like everything was moving too fast. His dad sat with him. 'Let's be mountains,' Dad said. 'Mountains are strong and steady. Nothing shakes them.' Ethan listened. 'Sit up tall like a mountain. Feel your bottom on the ground. That's your mountain base, solid and strong.' Ethan sat up straight. 'Now your legs are the mountain slopes, heavy and still.' Ethan's legs felt heavy against the ground. 'Your body is the mountain rising up, tall and proud.' Ethan felt his back straighten. 'Your head is the mountain peak, reaching toward the sky.' Ethan lifted his chin slightly. 'Now imagine clouds passing by your mountain. They touch you but they pass. That's like your thoughts. Let them drift by.' Ethan imagined clouds floating past. 'Winds might blow, but the mountain doesn't move.' Ethan stayed still. 'Rain might fall, but the mountain stays strong.' Ethan felt powerful and steady. 'You are the mountain. Breathe deeply into your mountain belly.' Ethan breathed, feeling solid and unshakeable. No matter what came his way, he could be strong. He was a mountain, calm and steady through any storm.",
+                "parentQuestions": [
+                    "What parts of Ethan's body became parts of the mountain?",
+                    "What passed by the mountain like clouds?",
+                    "Can you sit like a mountain right now?"
+                ]
+            },
+            "ro": {
+                "title": "Puternic ca un munte",
+                "text": "Ethan se simțea tremurând și instabil, ca și cum totul se mișca prea repede. Tatăl lui stătu cu el. 'Hai să fim munți,' spuse Tata. 'Munții sunt puternici și stabili. Nimic nu-i clatină.' Ethan ascultă. 'Stai drept ca un munte. Simte fundul pe pământ. Aceea este baza muntelui tău, solidă și puternică.' Ethan se așeză drept. 'Acum picioarele tale sunt versanții muntelui, grele și nemișcate.' Picioarele lui Ethan se simțiră grele pe pământ. 'Corpul tău este muntele ridicându-se, înalt și mândru.' Ethan simți spatele îndreptându-se. 'Capul tău este vârful muntelui, întinzându-se spre cer.' Ethan ridică ușor bărbia. 'Acum imaginează-ți nori trecând pe lângă munte. Te ating dar trec. Acestea sunt ca gândurile tale. Lasă-le să plutească pe lângă tine.' Ethan își imaginea nori plutind. 'Vânturile pot sufla, dar muntele nu se mișcă.' Ethan rămase nemișcat. 'Ploaia poate cădea, dar muntele rămâne puternic.' Ethan se simți puternic și stabil. 'Tu ești muntele. Respiră adânc în burta ta de munte.' Ethan respiră, simțindu-se solid și de neclintit. Orice ar veni în calea lui, putea fi puternic. Era un munte, calm și stabil prin orice furtună.",
+                "parentQuestions": [
+                    "Ce părți ale corpului lui Ethan au devenit părți ale muntelui?",
+                    "Ce trecea pe lângă munte ca norii?",
+                    "Poți sta ca un munte chiar acum?"
+                ]
+            },
+            "it": {
+                "title": "Forte come una montagna",
+                "text": "Ethan si sentiva tremante e instabile, come se tutto si muovesse troppo velocemente. Suo papà si sedette con lui. 'Facciamo le montagne,' disse Papà. 'Le montagne sono forti e stabili. Niente le scuote.' Ethan ascoltò. 'Siediti dritto come una montagna. Senti il tuo sedere sul pavimento. Quella è la base della tua montagna, solida e forte.' Ethan si sedette dritto. 'Ora le tue gambe sono i pendii della montagna, pesanti e ferme.' Le gambe di Ethan si sentirono pesanti contro il pavimento. 'Il tuo corpo è la montagna che si alza, alta e fiera.' Ethan sentì la schiena raddrizzarsi. 'La tua testa è la cima della montagna, che raggiunge verso il cielo.' Ethan alzò leggermente il mento. 'Ora immagina nuvole che passano vicino alla tua montagna. Ti toccano ma passano. Questi sono come i tuoi pensieri. Lasciali passare.' Ethan immaginò nuvole che fluttuavano. 'I venti possono soffiare, ma la montagna non si muove.' Ethan rimase fermo. 'La pioggia può cadere, ma la montagna resta forte.' Ethan si sentì potente e stabile. 'Tu sei la montagna. Respira profondamente nella tua pancia da montagna.' Ethan respirò, sentendosi solido e incrollabile. Non importava cosa arrivasse, poteva essere forte. Era una montagna, calma e stabile attraverso qualsiasi tempesta.",
+                "parentQuestions": [
+                    "Quali parti del corpo di Ethan sono diventate parti della montagna?",
+                    "Cosa passava vicino alla montagna come le nuvole?",
+                    "Puoi sederti come una montagna adesso?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

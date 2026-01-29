@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "bedtime-009-raindrop-song",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "rain",
+            "cozy",
+            "inside",
+            "sounds"
+        ],
+        "tags_ro": [
+            "ploaie",
+            "confortabil",
+            "înăuntru",
+            "sunete"
+        ],
+        "tags_it": [
+            "pioggia",
+            "accogliente",
+            "dentro",
+            "suoni"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Raindrop Song",
+                "text": "Pitter-patter, pitter-patter. The rain sang a soft song on the roof. Inside a cozy treehouse, a young squirrel named Nutkin was snuggled in his bed of soft leaves and moss. He loved rainy nights. The sound of raindrops was like nature's lullaby. Through his round window, Nutkin could see the raindrops sliding down the glass, each one catching the light from his small acorn lamp. His mother had given him a cup of warm hazelnut milk before bed. He could still taste its sweetness. The wind rustled through the tree's branches, making the treehouse sway ever so gently, like being rocked in a cradle. Nutkin pulled his fluffy tail close and wrapped it around himself like a blanket. It was the coziest feeling in the world. Outside, the forest was quiet. All the other animals were snug in their homes too, listening to the same peaceful rain. Tomorrow the sun would come out and everything would sparkle with fresh raindrops. But for now, Nutkin closed his eyes and let the rain sing him to sleep. Pitter-patter, pitter-patter. Sweet dreams, little squirrel.",
+                "parentQuestions": [
+                    "What sound did the rain make?",
+                    "What did Nutkin drink before bed?",
+                    "Do you like listening to rain when you go to sleep?"
+                ]
+            },
+            "ro": {
+                "title": "Cântecul picăturii de ploaie",
+                "text": "Pic-pic, pic-pic. Ploaia cânta un cântec blând pe acoperiș. Înăuntrul unei căsuțe confortabile în copac, o veveriță tânără pe nume Ghindă era cuibărită în patul său de frunze moi și mușchi. Îi plăceau nopțile ploioase. Sunetul picăturilor de ploaie era ca un cântec de leagăn al naturii. Prin fereastra lui rotundă, Ghindă putea vedea picăturile de ploaie alunecând pe sticlă, fiecare prindând lumina de la mica lui lampă în formă de ghindă. Mama lui îi dăduse o cană de lapte cald cu alune înainte de culcare. Încă îi simțea dulceața. Vântul foșnea prin ramurile copacului, făcând căsuța să se legene atât de blând, ca și cum ar fi fost legănat într-un leagăn. Ghindă își trase coada pufoasă aproape și se înfășură în ea ca într-o pătură. Era cel mai confortabil sentiment din lume. Afară, pădurea era liniștită. Toate celelalte animale erau și ele cuibărite în casele lor, ascultând aceeași ploaie pașnică. Mâine soarele va ieși și totul va străluci cu picături proaspete de ploaie. Dar deocamdată, Ghindă își închise ochii și lăsă ploaia să-l adoarmă. Pic-pic, pic-pic. Vise dulci, micuță veveriță.",
+                "parentQuestions": [
+                    "Ce sunet făcea ploaia?",
+                    "Ce a băut Ghindă înainte de culcare?",
+                    "Îți place să asculți ploaia când mergi la somn?"
+                ]
+            },
+            "it": {
+                "title": "La canzone delle gocce di pioggia",
+                "text": "Pic-pic, pic-pic. La pioggia cantava una dolce canzone sul tetto. All'interno di un'accogliente casetta sull'albero, un giovane scoiattolo di nome Nocino era rannicchiato nel suo letto di foglie morbide e muschio. Amava le notti di pioggia. Il suono delle gocce di pioggia era come una ninna nanna della natura. Attraverso la sua finestra rotonda, Nocino poteva vedere le gocce di pioggia scivolare sul vetro, ognuna che catturava la luce della sua piccola lampada a forma di ghianda. Sua madre gli aveva dato una tazza di latte caldo alle nocciole prima di dormire. Ne sentiva ancora la dolcezza. Il vento frusciava tra i rami dell'albero, facendo oscillare la casetta così dolcemente, come essere cullato in una culla. Nocino tirò vicino la sua coda soffice e se la avvolse intorno come una coperta. Era la sensazione più accogliente del mondo. Fuori, il bosco era silenzioso. Anche tutti gli altri animali erano comodi nelle loro case, ascoltando la stessa pioggia pacifica. Domani il sole sarebbe uscito e tutto avrebbe brillato con fresche gocce di pioggia. Ma per ora, Nocino chiuse gli occhi e lasciò che la pioggia lo cullasse nel sonno. Pic-pic, pic-pic. Sogni d'oro, piccolo scoiattolo.",
+                "parentQuestions": [
+                    "Che suono faceva la pioggia?",
+                    "Cosa ha bevuto Nocino prima di dormire?",
+                    "Ti piace ascoltare la pioggia quando vai a dormire?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "bedtime-010-feather-bed",
+        "categorySlug": "bedtime",
+        "ageMin": 3,
+        "ageMax": 5,
+        "durationMin": 5,
+        "tags_en": [
+            "birds",
+            "nest",
+            "mother",
+            "warmth"
+        ],
+        "tags_ro": [
+            "păsări",
+            "cuib",
+            "mamă",
+            "căldură"
+        ],
+        "tags_it": [
+            "uccelli",
+            "nido",
+            "mamma",
+            "calore"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Feather Bed",
+                "text": "High in a cherry blossom tree, a mother bird named Melody had made the softest nest. She lined it with downy feathers, soft moss, and tiny flower petals. It was the coziest bed in the whole forest. Her three little chicks, Peep, Chirp, and Tweet, snuggled together in the nest. The evening breeze made the cherry blossoms dance, and a few pink petals floated down like gentle snowflakes. Melody tucked her wings around her babies, keeping them warm and safe. 'Tell us about the sunrise, Mama,' yawned Peep. Melody spoke in her soft, musical voice. She told them about how the sky turns from dark to gray, then to soft pink, then to bright gold. She told them about the morning dew that sparkles like tiny diamonds on the leaves. She told them about the first songs of the morning birds. One by one, the chicks' eyes grew heavy. Chirp was the first to fall asleep, followed by Tweet. Little Peep fought to stay awake but couldn't. Soon all three were dreaming peaceful dreams. Melody looked at her sleeping babies and felt her heart full of love. She closed her own eyes and let the gentle swaying of the tree rock them all to sleep.",
+                "parentQuestions": [
+                    "What did Melody use to make her nest soft?",
+                    "What did the chicks ask Mama to tell them about?",
+                    "What stories does someone tell you at bedtime?"
+                ]
+            },
+            "ro": {
+                "title": "Patul de pene",
+                "text": "Sus într-un cireș înflorit, o pasăre mamă pe nume Melodia făcuse cel mai moale cuib. Îl căptușise cu pene pufoase, mușchi moale și petale mici de flori. Era cel mai confortabil pat din toată pădurea. Cele trei puișoare ale ei, Piu, Ciripici și Țiuit, se cuibăriseră împreună în cuib. Briza de seară făcea florile de cireș să danseze, și câteva petale roz pluteau în jos ca fulgi de zăpadă blânzi. Melodia își înfășură aripile în jurul puișorilor, ținându-i calzi și în siguranță. 'Povestește-ne despre răsărit, Mami,' căscă Piu. Melodia vorbi cu vocea ei blândă și muzicală. Le povesti cum cerul se schimbă de la întuneric la gri, apoi la roz deschis, apoi la auriu strălucitor. Le povesti despre roua dimineții care sclipește ca niște diamante mici pe frunze. Le povesti despre primele cântece ale păsărilor de dimineață. Unul câte unul, ochii puișorilor deveniră grei. Ciripici a fost primul care a adormit, urmat de Țiuit. Micuțul Piu s-a luptat să stea treaz dar nu a putut. În curând toți trei visau vise pașnice. Melodia privi la puișorii ei adormiți și simți inima plină de dragoste. Își închise propriii ochi și lăsă legănatul blând al copacului să-i adoarmă pe toți.",
+                "parentQuestions": [
+                    "Ce a folosit Melodia ca să facă cuibul moale?",
+                    "Ce au cerut puișorii să le povestească Mami?",
+                    "Ce povești îți spune cineva la culcare?"
+                ]
+            },
+            "it": {
+                "title": "Il letto di piume",
+                "text": "In alto su un ciliegio in fiore, una mamma uccello di nome Melodia aveva fatto il nido più morbido. Lo aveva foderato con piume soffici, muschio morbido e piccoli petali di fiori. Era il letto più accogliente di tutto il bosco. I suoi tre piccoli pulcini, Pio, Cip e Cinguettio, si rannicchiavano insieme nel nido. La brezza serale faceva danzare i fiori di ciliegio, e alcuni petali rosa fluttuavano giù come delicati fiocchi di neve. Melodia avvolse le sue ali intorno ai suoi piccoli, tenendoli caldi e al sicuro. 'Raccontaci dell'alba, Mamma,' sbadigliò Pio. Melodia parlò con la sua voce morbida e melodiosa. Raccontò loro di come il cielo passa dall'oscurità al grigio, poi al rosa tenue, poi all'oro brillante. Raccontò loro della rugiada del mattino che brilla come piccoli diamanti sulle foglie. Raccontò loro dei primi canti degli uccelli del mattino. Uno per uno, gli occhi dei pulcini divennero pesanti. Cip fu il primo ad addormentarsi, seguito da Cinguettio. Il piccolo Pio lottò per restare sveglio ma non ci riuscì. Presto tutti e tre stavano sognando sogni pacifici. Melodia guardò i suoi piccoli addormentati e sentì il cuore pieno d'amore. Chiuse i propri occhi e lasciò che il dolce dondolio dell'albero li cullasse tutti nel sonno.",
+                "parentQuestions": [
+                    "Cosa ha usato Melodia per rendere morbido il suo nido?",
+                    "Di cosa hanno chiesto i pulcini alla Mamma di raccontare?",
+                    "Quali storie ti racconta qualcuno prima di dormire?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

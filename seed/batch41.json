@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "curiosities-001-why-sky-blue",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "sky",
+            "blue",
+            "light",
+            "science"
+        ],
+        "tags_ro": [
+            "cer",
+            "albastru",
+            "lumină",
+            "știință"
+        ],
+        "tags_it": [
+            "cielo",
+            "blu",
+            "luce",
+            "scienza"
+        ],
+        "locales": {
+            "en": {
+                "title": "Why Is the Sky Blue?",
+                "text": "Have you ever looked up and wondered why the sky is blue? It's a great question! Let me tell you a cool secret about sunlight. Sunlight looks white, but it's actually made of many colors mixed together. Red, orange, yellow, green, blue, and purple! It's like a hidden rainbow. When sunlight travels from the sun to Earth, it has to pass through our atmosphere. That's the air all around us. The atmosphere is full of tiny, tiny particles, much smaller than you can see. Here's where the magic happens. When light hits these tiny particles, it bounces around like a ball bouncing off walls. But here's the trick: blue light bounces more than other colors! Red light goes mostly straight through. But blue light scatters everywhere, in all directions. So no matter where you look in the sky, some of that bouncing blue light reaches your eyes. That's why the whole sky looks blue! At sunset, the sunlight has to travel through more atmosphere. By the time it reaches us, most of the blue light has scattered away, and we see the reds and oranges that made it through. Isn't that amazing? The sky is like a big colorful painting made by light and air working together!",
+                "parentQuestions": [
+                    "What colors are hidden in sunlight?",
+                    "Why does blue light make the sky blue?",
+                    "What colors do we see at sunset and why?"
+                ]
+            },
+            "ro": {
+                "title": "De ce e cerul albastru?",
+                "text": "Te-ai uitat vreodată în sus și te-ai întrebat de ce e cerul albastru? E o întrebare grozavă! Să-ți spun un secret tare despre lumina soarelui. Lumina soarelui pare albă, dar de fapt e făcută din multe culori amestecate. Roșu, portocaliu, galben, verde, albastru și violet! E ca un curcubeu ascuns. Când lumina soarelui călătorește de la soare la Pământ, trebuie să treacă prin atmosfera noastră. Asta e aerul din jur. Atmosfera e plină de particule mici, mici, mult mai mici decât poți vedea. Aici se întâmplă magia. Când lumina lovește aceste particule mici, sare ca o minge care sare de pereți. Dar iată trucul: lumina albastră sare mai mult decât alte culori! Lumina roșie trece mai ales drept. Dar lumina albastră se împrăștie peste tot, în toate direcțiile. Deci oriunde te uiți pe cer, niște lumină albastră care sare ajunge la ochii tăi. De aceea tot cerul arată albastru! La apus, lumina soarelui trebuie să călătorească prin mai multă atmosferă. Până ajunge la noi, cea mai mare parte din lumina albastră s-a împrăștiat, și vedem roșurile și portocaliile care au trecut. Nu e uimitor? Cerul e ca o pictură mare colorată făcută de lumină și aer lucrând împreună!",
+                "parentQuestions": [
+                    "Ce culori sunt ascunse în lumina soarelui?",
+                    "De ce face lumina albastră cerul albastru?",
+                    "Ce culori vedem la apus și de ce?"
+                ]
+            },
+            "it": {
+                "title": "Perché il cielo è blu?",
+                "text": "Hai mai guardato in alto e ti sei chiesto perché il cielo è blu? È un'ottima domanda! Lascia che ti racconti un segreto interessante sulla luce solare. La luce solare sembra bianca, ma in realtà è fatta di molti colori mescolati insieme. Rosso, arancione, giallo, verde, blu e viola! È come un arcobaleno nascosto. Quando la luce solare viaggia dal sole alla Terra, deve passare attraverso la nostra atmosfera. Questa è l'aria tutto intorno a noi. L'atmosfera è piena di particelle minuscole, molto più piccole di quello che puoi vedere. Ecco dove avviene la magia. Quando la luce colpisce queste particelle minuscole, rimbalza come una palla che rimbalza sui muri. Ma ecco il trucco: la luce blu rimbalza più degli altri colori! La luce rossa passa principalmente dritta. Ma la luce blu si disperde ovunque, in tutte le direzioni. Quindi ovunque guardi nel cielo, un po' di quella luce blu che rimbalza raggiunge i tuoi occhi. Ecco perché tutto il cielo sembra blu! Al tramonto, la luce solare deve viaggiare attraverso più atmosfera. Quando ci raggiunge, la maggior parte della luce blu si è dispersa, e vediamo i rossi e gli arancioni che sono passati. Non è fantastico? Il cielo è come un grande dipinto colorato fatto dalla luce e dall'aria che lavorano insieme!",
+                "parentQuestions": [
+                    "Quali colori sono nascosti nella luce solare?",
+                    "Perché la luce blu rende il cielo blu?",
+                    "Quali colori vediamo al tramonto e perché?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "curiosities-002-how-birds-fly",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "birds",
+            "flying",
+            "wings",
+            "feathers"
+        ],
+        "tags_ro": [
+            "păsări",
+            "zbor",
+            "aripi",
+            "pene"
+        ],
+        "tags_it": [
+            "uccelli",
+            "volare",
+            "ali",
+            "piume"
+        ],
+        "locales": {
+            "en": {
+                "title": "How Do Birds Fly?",
+                "text": "Birds make flying look so easy, don't they? But how do they do it? Let's discover the amazing secrets of bird flight! First, birds have special bodies designed for flying. Their bones are hollow, which means they have tiny air pockets inside. This makes birds super light! A bird's bones are as strong as yours but much lighter. Second, look at those beautiful wings. Wings are shaped in a special way called an airfoil. The top of the wing is curved, and the bottom is flatter. When a bird flaps its wings, air moves faster over the top than the bottom. This creates lift, the force that pushes the bird up into the sky! Third, feathers are incredible. They're light but strong, and they help birds steer and balance. Each feather fits perfectly with the others, like a puzzle, to create a smooth surface for flying. When birds want to go up, they flap harder. To glide, they hold their wings still and let the wind carry them. To turn, they tilt one wing or the other. Some birds can even fly backward or hover in one spot! Next time you see a bird, watch carefully. You're watching a perfect flying machine that took millions of years to develop!",
+                "parentQuestions": [
+                    "What makes bird bones special for flying?",
+                    "How do wings create lift?",
+                    "What do you think is the hardest part about flying?"
+                ]
+            },
+            "ro": {
+                "title": "Cum zboară păsările?",
+                "text": "Păsările fac zborul să pară atât de ușor, nu-i așa? Dar cum fac asta? Să descoperim secretele uimitoare ale zborului păsărilor! În primul rând, păsările au corpuri speciale proiectate pentru zbor. Oasele lor sunt goale, ceea ce înseamnă că au mici buzunare de aer înăuntru. Asta face păsările super ușoare! Oasele unei păsări sunt la fel de puternice ca ale tale dar mult mai ușoare. În al doilea rând, uită-te la acele aripi frumoase. Aripile au o formă specială numită aripă. Partea de sus a aripii e curbată, și partea de jos e mai plată. Când o pasăre își bate aripile, aerul se mișcă mai repede peste partea de sus decât de jos. Asta creează forța de ridicare, forța care împinge pasărea sus în cer! În al treilea rând, penele sunt incredibile. Sunt ușoare dar puternice și ajută păsările să se conducă și să se echilibreze. Fiecare pană se potrivește perfect cu celelalte, ca un puzzle, pentru a crea o suprafață netedă pentru zbor. Când păsările vor să urce, bat mai tare. Pentru a plana, țin aripile nemișcate și lasă vântul să le poarte. Pentru a se întoarce, înclină o aripă sau cealaltă. Unele păsări pot chiar zbura înapoi sau să plutească într-un loc! Data viitoare când vezi o pasăre, privește cu atenție. Privești o mașină de zbor perfectă care a durat milioane de ani să se dezvolte!",
+                "parentQuestions": [
+                    "Ce face oasele păsărilor speciale pentru zbor?",
+                    "Cum creează aripile forța de ridicare?",
+                    "Ce crezi că e cel mai greu lucru la zbor?"
+                ]
+            },
+            "it": {
+                "title": "Come volano gli uccelli?",
+                "text": "Gli uccelli fanno sembrare il volo così facile, vero? Ma come lo fanno? Scopriamo i segreti incredibili del volo degli uccelli! Prima di tutto, gli uccelli hanno corpi speciali progettati per volare. Le loro ossa sono cave, il che significa che hanno piccole sacche d'aria dentro. Questo rende gli uccelli super leggeri! Le ossa di un uccello sono forti come le tue ma molto più leggere. Secondo, guarda quelle belle ali. Le ali hanno una forma speciale chiamata profilo alare. La parte superiore dell'ala è curva, e quella inferiore è più piatta. Quando un uccello batte le ali, l'aria si muove più velocemente sopra che sotto. Questo crea la portanza, la forza che spinge l'uccello su nel cielo! Terzo, le piume sono incredibili. Sono leggere ma forti e aiutano gli uccelli a sterzare e bilanciarsi. Ogni piuma si incastra perfettamente con le altre, come un puzzle, per creare una superficie liscia per volare. Quando gli uccelli vogliono salire, battono più forte. Per planare, tengono le ali ferme e lasciano che il vento li porti. Per girare, inclinano un'ala o l'altra. Alcuni uccelli possono persino volare all'indietro o librarsi in un punto! La prossima volta che vedi un uccello, guarda attentamente. Stai guardando una macchina volante perfetta che ha impiegato milioni di anni per svilupparsi!",
+                "parentQuestions": [
+                    "Cosa rende speciali le ossa degli uccelli per volare?",
+                    "Come creano portanza le ali?",
+                    "Cosa pensi sia la parte più difficile del volare?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

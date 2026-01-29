@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "emotions-009-feeling-disappointed",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "disappointment",
+            "expectations",
+            "coping",
+            "hope"
+        ],
+        "tags_ro": [
+            "dezamăgire",
+            "așteptări",
+            "adaptare",
+            "speranță"
+        ],
+        "tags_it": [
+            "delusione",
+            "aspettative",
+            "affrontare",
+            "speranza"
+        ],
+        "locales": {
+            "en": {
+                "title": "When Plans Fall Through",
+                "text": "Ella had been excited all week. Today was supposed to be the beach trip! But when she woke up, rain was pouring down. 'The beach trip is canceled,' Dad said sadly. Ella felt something sink in her tummy. She sat on the couch and didn't want to do anything. 'I'm disappointed,' she said quietly. 'I know, honey. Disappointment is a heavy feeling. It happens when we were hoping for something and it doesn't happen.' 'It's not fair,' Ella said. 'No, it doesn't feel fair when we really want something and can't have it.' Dad sat with her, letting her feel sad. 'Is it okay to feel this way?' Ella asked. 'Absolutely. All feelings are allowed. The beach will still be there another day.' 'But I wanted TODAY to be special.' 'I understand. What if we made today special in a different way? It won't be the beach, but maybe there's something else we could enjoy?' Ella thought. 'Could we make blanket forts and watch movies?' 'That sounds perfect.' Ella still felt a little disappointed. But maybe today could be good in a different way. Not what she expected, but still special.",
+                "parentQuestions": [
+                    "Why was Ella disappointed?",
+                    "What did Ella decide to do instead?",
+                    "When have you felt disappointed? What helped?"
+                ]
+            },
+            "ro": {
+                "title": "Când planurile nu merg",
+                "text": "Ella fusese entuziasmată toată săptămâna. Astăzi trebuia să fie excursia la plajă! Dar când se trezi, ploaia torențială cădea. 'Excursia la plajă e anulată,' spuse Tata trist. Ella simți ceva scufundându-se în burticaele ei. Stătu pe canapea și nu voia să facă nimic. 'Sunt dezamăgită,' spuse ea încet. 'Știu, draga mea. Dezamăgirea e un sentiment greu. Se întâmplă când speram la ceva și nu se întâmplă.' 'Nu e corect,' spuse Ella. 'Nu, nu se simte corect când vrem cu adevărat ceva și nu putem avea.' Tata stătu cu ea, lăsând-o să se simtă tristă. 'E în regulă să mă simt așa?' întrebă Ella. 'Absolut. Toate sentimentele sunt permise. Plaja va fi acolo în altă zi.' 'Dar am vrut ca AZI să fie special.' 'Înțeleg. Dacă am face ziua de azi specială într-un mod diferit? Nu va fi plaja, dar poate e altceva de care ne-am putea bucura?' Ella se gândi. 'Am putea face corturi din pături și să privim filme?' 'Sună perfect.' Ella se simțea încă puțin dezamăgită. Dar poate ziua de azi putea fi bună într-un mod diferit. Nu ce se aștepta, dar tot specială.",
+                "parentQuestions": [
+                    "De ce era Ella dezamăgită?",
+                    "Ce a decis Ella să facă în schimb?",
+                    "Când te-ai simțit dezamăgit? Ce te-a ajutat?"
+                ]
+            },
+            "it": {
+                "title": "Quando i piani vanno male",
+                "text": "Ella era stata emozionata tutta la settimana. Oggi doveva essere la gita al mare! Ma quando si svegliò, pioveva a dirotto. 'La gita al mare è annullata,' disse Papà tristemente. Ella sentì qualcosa affondare nella sua pancia. Si sedette sul divano e non voleva fare niente. 'Sono delusa,' disse piano. 'Lo so, tesoro. La delusione è un sentimento pesante. Succede quando speravamo in qualcosa e non succede.' 'Non è giusto,' disse Ella. 'No, non sembra giusto quando vogliamo davvero qualcosa e non possiamo averla.' Papà si sedette con lei, lasciandola sentirsi triste. 'Va bene sentirsi così?' chiese Ella. 'Assolutamente. Tutti i sentimenti sono permessi. Il mare sarà ancora lì un altro giorno.' 'Ma volevo che OGGI fosse speciale.' 'Capisco. E se rendessimo oggi speciale in un modo diverso? Non sarà il mare, ma forse c'è qualcos'altro che potremmo goderci?' Ella pensò. 'Potremmo fare fortini di coperte e guardare film?' 'Sembra perfetto.' Ella si sentiva ancora un po' delusa. Ma forse oggi poteva essere bello in un modo diverso. Non quello che si aspettava, ma comunque speciale.",
+                "parentQuestions": [
+                    "Perché Ella era delusa?",
+                    "Cosa ha deciso di fare Ella invece?",
+                    "Quando ti sei sentito deluso? Cosa ti ha aiutato?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "emotions-010-feeling-shy",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "shyness",
+            "new situations",
+            "courage",
+            "acceptance"
+        ],
+        "tags_ro": [
+            "timiditate",
+            "situații noi",
+            "curaj",
+            "acceptare"
+        ],
+        "tags_it": [
+            "timidezza",
+            "nuove situazioni",
+            "coraggio",
+            "accettazione"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Quiet Courage",
+                "text": "It was Jamie's first day at the new school. There were so many new faces! Jamie wanted to hide behind Mom and never come out. 'I feel shy,' Jamie whispered. 'That's okay,' Mom said. 'Shyness means your body is being careful in a new situation. It's not bad.' 'But everyone else looks like they're not shy.' 'Some people show it less, but almost everyone feels shy sometimes. Even grownups.' Jamie looked at the classroom door. The shy feeling was like butterflies in the tummy. 'You don't have to be loud or outgoing,' Mom said. 'You can be quiet and still be brave. Brave doesn't mean not feeling scared. It means trying even when you do.' 'What if no one likes me?' 'They'll like you when they get to know you. Real friendship takes time.' Mom gave Jamie a tiny stone. 'This is a courage stone. When you feel shy, hold it and remember I believe in you.' Jamie held the stone tight and took a deep breath. The butterflies were still there, but they felt lighter. One small step. Then another. Jamie walked through the door. Being shy was okay. Being brave was possible even while being shy.",
+                "parentQuestions": [
+                    "Why did Jamie feel shy?",
+                    "What did Mom give Jamie for courage?",
+                    "Do you sometimes feel shy? That's okay!"
+                ]
+            },
+            "ro": {
+                "title": "Curajul tăcut",
+                "text": "Era prima zi a lui Jamie la noua școală. Erau atât de multe fețe noi! Jamie voia să se ascundă în spatele Mamei și să nu iasă niciodată. 'Mă simt timid,' șopti Jamie. 'E în regulă,' spuse Mama. 'Timiditatea înseamnă că corpul tău e atent într-o situație nouă. Nu e rău.' 'Dar toți ceilalți arată ca și cum nu sunt timizi.' 'Unii oameni arată mai puțin, dar aproape toată lumea se simte timidă uneori. Chiar și adulții.' Jamie privi ușa clasei. Sentimentul de timiditate era ca niște fluturi în burtică. 'Nu trebuie să fii zgomotos sau extrovertit,' spuse Mama. 'Poți fi liniștit și tot să fii curajos. Curajos nu înseamnă să nu simți frică. Înseamnă să încerci chiar și când simți.' 'Dacă nu mă place nimeni?' 'O să te placă când te vor cunoaște. Prietenia adevărată ia timp.' Mama îi dădu lui Jamie o piatră mică. 'Aceasta e o piatră a curajului. Când te simți timid, ține-o și amintește-ți că eu cred în tine.' Jamie ținea piatra strâns și inspiră adânc. Fluturii erau încă acolo, dar se simțeau mai ușori. Un mic pas. Apoi altul. Jamie trecu prin ușă. A fi timid era în regulă. A fi curajos era posibil chiar și în timp ce ești timid.",
+                "parentQuestions": [
+                    "De ce se simțea Jamie timid?",
+                    "Ce i-a dat Mama lui Jamie pentru curaj?",
+                    "Te simți uneori timid? E în regulă!"
+                ]
+            },
+            "it": {
+                "title": "Il coraggio silenzioso",
+                "text": "Era il primo giorno di Jamie nella nuova scuola. C'erano così tante facce nuove! Jamie voleva nascondersi dietro la Mamma e non uscire mai. 'Mi sento timido,' sussurrò Jamie. 'Va bene,' disse la Mamma. 'La timidezza significa che il tuo corpo sta facendo attenzione in una situazione nuova. Non è male.' 'Ma tutti gli altri sembrano non essere timidi.' 'Alcune persone lo mostrano meno, ma quasi tutti si sentono timidi a volte. Anche gli adulti.' Jamie guardò la porta della classe. La sensazione di timidezza era come farfalle nella pancia. 'Non devi essere rumoroso o estroverso,' disse la Mamma. 'Puoi essere tranquillo e comunque essere coraggioso. Coraggioso non significa non avere paura. Significa provare anche quando ce l'hai.' 'E se non piaccio a nessuno?' 'Ti piaceranno quando ti conosceranno. L'amicizia vera richiede tempo.' La Mamma diede a Jamie una piccola pietra. 'Questa è una pietra del coraggio. Quando ti senti timido, tienila e ricorda che credo in te.' Jamie tenne la pietra stretta e fece un respiro profondo. Le farfalle erano ancora lì, ma sembravano più leggere. Un piccolo passo. Poi un altro. Jamie attraversò la porta. Essere timido era okay. Essere coraggioso era possibile anche mentre si è timidi.",
+                "parentQuestions": [
+                    "Perché Jamie si sentiva timido?",
+                    "Cosa ha dato la Mamma a Jamie per il coraggio?",
+                    "Ti senti a volte timido? Va bene!"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

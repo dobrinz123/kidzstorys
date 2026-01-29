@@ -1,0 +1,116 @@
+{
+  "common": {
+    "close": "Închide",
+    "save": "Salvează",
+    "cancel": "Anulează",
+    "continue": "Continuă",
+    "loading": "Se încarcă...",
+    "error": "Eroare",
+    "retry": "Încearcă din nou"
+  },
+  "auth": {
+    "signIn": "Intră în cont",
+    "signUp": "Înregistrează-te",
+    "email": "Email",
+    "password": "Parolă",
+    "name": "Nume",
+    "createAccount": "Creează cont",
+    "alreadyHaveAccount": "Ai deja un cont?",
+    "dontHaveAccount": "Nu ai cont?"
+  },
+  "home": {
+    "title": "Povești",
+    "seeAll": "Vezi toate",
+    "pickOneNow": "Alege una acum",
+    "recommended": "Recomandate pentru tine",
+    "filters": {
+      "age": "Vârstă",
+      "duration": "Durată",
+      "state": "Starea copilului"
+    },
+    "ageBrackets": {
+      "3-4": "Vârste 3-4",
+      "5-6": "Vârste 5-6",
+      "7-8": "Vârste 7-8",
+      "9-10": "Vârste 9-10"
+    },
+    "durations": {
+      "3": "3 minute",
+      "5": "5 minute",
+      "8": "8 minute",
+      "12": "12 minute"
+    },
+    "states": {
+      "calm": "Liniștit",
+      "normal": "Normal",
+      "agitated": "Agitat"
+    }
+  },
+  "categories": {
+    "bedtime": "Pentru somn",
+    "calmDown": "Calmare",
+    "emotions": "Emoții",
+    "adventure": "Aventură",
+    "learnToRead": "Învăț să citesc",
+    "curiosities": "Curiozități"
+  },
+  "paywall": {
+    "title": "Deblochează toate poveștile",
+    "subtitle": "Acces nelimitat la peste 100 de povești multilingve",
+    "feature1": "100+ povești originale în EN, RO, IT",
+    "feature2": "Povești noi în fiecare săptămână",
+    "feature3": "Întrebări de discuție pentru părinți",
+    "feature4": "Fără reclame",
+    "restore": "Restaurează achizițiile",
+    "subscribe": "Abonează-te acum"
+  },
+  "story": {
+    "readingTime": "{{minutes}} min citire",
+    "ageRange": "Vârste {{min}}-{{max}}",
+    "parentQuestions": "Întrebări pentru copilul tău",
+    "markComplete": "Marchează ca citită",
+    "addToFavorites": "Adaugă la favorite",
+    "removeFromFavorites": "Elimină din favorite",
+    "locked": "Abonează-te pentru a debloca această poveste",
+    "nextSimilar": "Următoarea poveste similară"
+  },
+  "favorites": {
+    "title": "Favorite",
+    "empty": "Nicio poveste favorită încă",
+    "emptyDescription": "Poveștile tale favorite vor apărea aici",
+    "requiresSubscription": "Favoritele necesită un abonament activ"
+  },
+  "profiles": {
+    "title": "Profile copii",
+    "create": "Creează profil",
+    "edit": "Editează profilul",
+    "delete": "Șterge profilul",
+    "nickname": "Poreclă",
+    "age": "Vârstă",
+    "maxReached": "Maxim 3 profile permise"
+  },
+  "routines": {
+    "title": "Rutine de somn",
+    "create": "Creează rutină",
+    "time": "Oră",
+    "category": "Categorie",
+    "duration": "Durată",
+    "enabled": "Activată"
+  },
+  "settings": {
+    "title": "Setări",
+    "language": "Limbă",
+    "languages": {
+      "en": "English",
+      "ro": "Română",
+      "it": "Italiano"
+    },
+    "subscription": "Status abonament",
+    "manageSubscription": "Gestionează abonamentul",
+    "restorePurchases": "Restaurează achizițiile",
+    "logout": "Deconectare",
+    "active": "Activ",
+    "inactive": "Inactiv",
+    "expiresOn": "Expiră pe {{date}}"
+  }
+}

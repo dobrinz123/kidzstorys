@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "curiosities-009-why-moon-changes-shape",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "moon",
+            "phases",
+            "orbit",
+            "sun"
+        ],
+        "tags_ro": [
+            "lună",
+            "faze",
+            "orbită",
+            "soare"
+        ],
+        "tags_it": [
+            "luna",
+            "fasi",
+            "orbita",
+            "sole"
+        ],
+        "locales": {
+            "en": {
+                "title": "Why Does the Moon Change Shape?",
+                "text": "Sometimes the moon looks like a big round circle. Other times it's just a sliver, like a banana. And sometimes you can't see it at all! Why does the moon change shape? Here's the cool answer: the moon doesn't actually change shape! It's always a round ball. What changes is how much of it we can see lit up. The moon doesn't make its own light. It shines because the sun's light bounces off it, like a mirror. As the moon travels around Earth, we see different amounts of its bright, sunny side. Imagine holding a ball in front of a lamp. If you stand behind the ball, the lit side faces away from you and you see darkness. Walk around to the side, and you see half the ball lit up. Stand on the other side, and the whole lit face looks at you! That's exactly what happens with the moon. When we see the whole lit side, it's a full moon. When we see just a little edge, it's a crescent. When the lit side faces completely away from Earth, we call it a new moon, and we can't see it at all. This whole cycle takes about a month. Next month, try watching the moon each night. You'll see it slowly change from new to full and back again. It's like a giant clock in the sky!",
+                "parentQuestions": [
+                    "Does the moon really change shape?",
+                    "Where does the moon's light come from?",
+                    "What shape is the moon tonight?"
+                ]
+            },
+            "ro": {
+                "title": "De ce își schimbă luna forma?",
+                "text": "Uneori luna arată ca un cerc mare rotund. Alteori e doar o feliuță, ca o banană. Și uneori nu o poți vedea deloc! De ce își schimbă luna forma? Iată răspunsul tare: luna nu își schimbă de fapt forma! E întotdeauna o minge rotundă. Ce se schimbă e cât de mult din ea vedem iluminat. Luna nu face propria lumină. Strălucește pentru că lumina soarelui se reflectă de ea, ca o oglindă. Pe măsură ce luna călătorește în jurul Pământului, vedem cantități diferite din partea ei luminoasă și însorită. Imaginează-ți că ții o minge în fața unei lămpi. Dacă stai în spatele mingii, partea luminată e întoarsă de la tine și vezi întuneric. Mergi pe o parte și vezi jumătate din minge luminată. Stai pe cealaltă parte și toată fața luminată se uită la tine! Exact asta se întâmplă cu luna. Când vedem toată partea luminată, e lună plină. Când vedem doar o margine mică, e semilună. Când partea luminată e complet întoarsă de la Pământ, o numim lună nouă și nu o putem vedea deloc. Tot acest ciclu durează aproximativ o lună. Luna viitoare, încearcă să privești luna în fiecare noapte. O vei vedea schimbându-se încet de la nouă la plină și înapoi. E ca un ceas uriaș pe cer!",
+                "parentQuestions": [
+                    "Chiar își schimbă luna forma?",
+                    "De unde vine lumina lunii?",
+                    "Ce formă are luna în noaptea asta?"
+                ]
+            },
+            "it": {
+                "title": "Perché la luna cambia forma?",
+                "text": "A volte la luna sembra un grande cerchio rotondo. Altre volte è solo una fettina, come una banana. E a volte non la puoi vedere affatto! Perché la luna cambia forma? Ecco la risposta interessante: la luna in realtà non cambia forma! È sempre una palla rotonda. Quello che cambia è quanto di essa possiamo vedere illuminato. La luna non produce la propria luce. Brilla perché la luce del sole rimbalza su di essa, come uno specchio. Mentre la luna viaggia intorno alla Terra, vediamo diverse quantità del suo lato luminoso e soleggiato. Immagina di tenere una palla davanti a una lampada. Se stai dietro la palla, il lato illuminato è rivolto lontano da te e vedi il buio. Cammina di lato, e vedi metà della palla illuminata. Stai dall'altra parte, e tutta la faccia illuminata ti guarda! Questo è esattamente quello che succede con la luna. Quando vediamo tutto il lato illuminato, è luna piena. Quando vediamo solo un piccolo bordo, è una falce. Quando il lato illuminato è completamente rivolto lontano dalla Terra, la chiamiamo luna nuova, e non possiamo vederla affatto. Tutto questo ciclo dura circa un mese. Il mese prossimo, prova a guardare la luna ogni notte. La vedrai cambiare lentamente da nuova a piena e di nuovo indietro. È come un orologio gigante nel cielo!",
+                "parentQuestions": [
+                    "La luna cambia davvero forma?",
+                    "Da dove viene la luce della luna?",
+                    "Che forma ha la luna stasera?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "curiosities-010-how-do-seeds-grow",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "seeds",
+            "plants",
+            "grow",
+            "nature"
+        ],
+        "tags_ro": [
+            "semințe",
+            "plante",
+            "cresc",
+            "natură"
+        ],
+        "tags_it": [
+            "semi",
+            "piante",
+            "crescono",
+            "natura"
+        ],
+        "locales": {
+            "en": {
+                "title": "How Do Seeds Grow Into Plants?",
+                "text": "A tiny seed can become a huge tree! How does that happen? Let's discover the amazing journey of a seed. A seed is like a tiny suitcase packed with everything a baby plant needs to start growing. Inside each seed is a tiny plant embryo, waiting to wake up. There's also food stored inside to give the baby plant energy until it can make its own. When a seed lands in warm, wet soil, something magical begins. Water soaks into the seed and wakes up the baby plant inside. This is called germination. First, a tiny root pokes out and digs down into the soil. The root finds water and nutrients that the plant needs. Then a little stem reaches up toward the light. Soon, tiny leaves pop out! Now the plant can do something amazing. Its leaves catch sunlight and use it to make food from air and water. This is called photosynthesis, and it's like the plant's own kitchen. The more sunlight and water the plant gets, the bigger it grows. Bigger leaves catch more light. Stronger roots find more water. And slowly, bit by bit, that tiny seed becomes a full-grown plant or even a giant tree! Next time you eat an apple, look at those little seeds. Each one could become a whole apple tree!",
+                "parentQuestions": [
+                    "What is inside a seed?",
+                    "What wakes up a seed?",
+                    "Have you ever planted a seed and watched it grow?"
+                ]
+            },
+            "ro": {
+                "title": "Cum cresc semințele în plante?",
+                "text": "O sămânță mică poate deveni un copac uriaș! Cum se întâmplă asta? Să descoperim călătoria uimitoare a unei semințe. O sămânță e ca o valiză mică plină cu tot ce are nevoie o plantă bebeluș să înceapă să crească. În fiecare sămânță e un embrion de plantă mic, așteptând să se trezească. E și mâncare depozitată înăuntru să dea plantei bebeluș energie până poate face propria mâncare. Când o sămânță aterizează în sol cald și umed, ceva magic începe. Apa se înmoaie în sămânță și trezește planta bebeluș dinăuntru. Aceasta se numește germinare. Întâi, o rădăcină mică iese și sapă în jos în sol. Rădăcina găsește apa și nutrienții de care planta are nevoie. Apoi o tulpină mică merge în sus spre lumină. În curând, frunze mici apar! Acum planta poate face ceva uimitor. Frunzele prind lumina soarelui și o folosesc să facă mâncare din aer și apă. Aceasta se numește fotosinteză și e ca bucătăria proprie a plantei. Cu cât mai multă lumină și apă primește planta, cu atât crește mai mare. Frunze mai mari prind mai multă lumină. Rădăcini mai puternice găsesc mai multă apă. Și încet, puțin câte puțin, acea sămânță mică devine o plantă adultă sau chiar un copac uriaș! Data viitoare când mănânci un măr, uită-te la acele semințe mici. Fiecare ar putea deveni un măr întreg!",
+                "parentQuestions": [
+                    "Ce e în interiorul unei semințe?",
+                    "Ce trezește o sămânță?",
+                    "Ai plantat vreodată o sămânță și ai privit-o crescând?"
+                ]
+            },
+            "it": {
+                "title": "Come crescono i semi in piante?",
+                "text": "Un piccolo seme può diventare un enorme albero! Come succede? Scopriamo il viaggio incredibile di un seme. Un seme è come una piccola valigia piena di tutto ciò di cui ha bisogno una pianta bebè per iniziare a crescere. Dentro ogni seme c'è un piccolo embrione di pianta, che aspetta di svegliarsi. C'è anche cibo conservato dentro per dare alla pianta bebè energia finché non può fare il proprio. Quando un seme atterra in terreno caldo e umido, inizia qualcosa di magico. L'acqua si assorbe nel seme e sveglia la pianta bebè dentro. Questo si chiama germinazione. Prima, una piccola radice esce e scava giù nel terreno. La radice trova acqua e nutrienti di cui la pianta ha bisogno. Poi un piccolo stelo si allunga verso la luce. Presto, piccole foglie spuntano! Ora la pianta può fare qualcosa di incredibile. Le sue foglie catturano la luce solare e la usano per fare cibo dall'aria e dall'acqua. Questo si chiama fotosintesi, ed è come la cucina della pianta. Più luce solare e acqua riceve la pianta, più grande cresce. Foglie più grandi catturano più luce. Radici più forti trovano più acqua. E lentamente, poco a poco, quel piccolo seme diventa una pianta adulta o anche un albero gigante! La prossima volta che mangi una mela, guarda quei piccoli semi. Ognuno potrebbe diventare un intero melo!",
+                "parentQuestions": [
+                    "Cosa c'è dentro un seme?",
+                    "Cosa sveglia un seme?",
+                    "Hai mai piantato un seme e lo hai visto crescere?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

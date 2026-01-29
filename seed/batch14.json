@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "calm-down-005-rainbow-breath",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "rainbow",
+            "colors",
+            "breathing",
+            "calm"
+        ],
+        "tags_ro": [
+            "curcubeu",
+            "culori",
+            "respirație",
+            "calm"
+        ],
+        "tags_it": [
+            "arcobaleno",
+            "colori",
+            "respirazione",
+            "calma"
+        ],
+        "locales": {
+            "en": {
+                "title": "Rainbow Breathing",
+                "text": "Sophie was frustrated and upset. Nothing was going her way today. Her grandpa took her hand gently. 'Let's paint a rainbow with our breath,' he said. Sophie didn't understand but she listened. 'Close your eyes. Imagine a beautiful rainbow in front of you. We're going to breathe through each color.' Grandpa's voice was calm. 'Start with red. Breathe in red, strong and powerful. Now breathe out and let any anger float away.' Sophie imagined red and breathed. 'Orange is next. Breathe in orange, warm and sunny. Breathe out and relax your shoulders.' Sophie felt her shoulders drop. 'Yellow now. Breathe in yellow, bright like happiness. Breathe out slowly.' Sophie felt a tiny smile forming. 'Green is for calm. Breathe in green, cool and peaceful. Let it fill your whole body.' Sophie imagined green leaves and grass. 'Blue like the calm sky. Breathe in blue, soft and gentle. Breathe out any worries.' Sophie's mind felt clearer. 'Purple for imagination. Breathe in purple, dreamy and kind. Breathe out and smile.' Sophie felt much better. The rainbow had worked its magic. 'Whenever you feel upset,' Grandpa said, 'paint a rainbow with your breath.' Sophie nodded, feeling calm and peaceful like a rainbow after a storm.",
+                "parentQuestions": [
+                    "How many colors did Sophie breathe?",
+                    "Which color helped Sophie let go of anger?",
+                    "What is your favorite color in the rainbow?"
+                ]
+            },
+            "ro": {
+                "title": "Respirația curcubeului",
+                "text": "Sofia era frustrată și supărată. Nimic nu-i mergea azi. Bunicu-su îi luă mâna blând. 'Hai să pictăm un curcubeu cu respirația noastră,' spuse el. Sofia nu înțelese dar ascultă. 'Închide ochii. Imaginează-ți un curcubeu frumos în fața ta. O să respirăm prin fiecare culoare.' Vocea bunicului era calmă. 'Începe cu roșu. Inspiră roșu, puternic. Acum expiră și lasă orice furie să plutească departe.' Sofia și-l imaginea pe roșu și respiră. 'Urmează portocaliul. Inspiră portocaliu, cald și însorit. Expiră și relaxează-ți umerii.' Sofia simți umerii coborând. 'Galben acum. Inspiră galben, strălucitor ca fericirea. Expiră încet.' Sofia simți un zâmbet mic formându-se. 'Verdele e pentru calm. Inspiră verde, răcoros și pașnic. Lasă-l să-ți umple tot corpul.' Sofia își imaginea frunze verzi și iarbă. 'Albastru ca cerul calm. Inspiră albastru, moale și blând. Expiră orice griji.' Mintea Sofiei se simți mai limpede. 'Violet pentru imaginație. Inspiră violet, visător și bun. Expiră și zâmbește.' Sofia se simțea mult mai bine. Curcubeul își făcuse magia. 'Oricând te simți supărată,' spuse bunicul, 'pictează un curcubeu cu respirația ta.' Sofia dădu din cap, simțindu-se calmă și pașnică ca un curcubeu după furtună.",
+                "parentQuestions": [
+                    "Prin câte culori a respirat Sofia?",
+                    "Ce culoare a ajutat-o pe Sofia să scape de furie?",
+                    "Care e culoarea ta preferată din curcubeu?"
+                ]
+            },
+            "it": {
+                "title": "La respirazione dell'arcobaleno",
+                "text": "Sofia era frustrata e arrabbiata. Niente andava per il verso giusto oggi. Il suo nonno le prese la mano dolcemente. 'Dipingiamo un arcobaleno con il nostro respiro,' disse. Sofia non capiva ma ascoltò. 'Chiudi gli occhi. Immagina un bellissimo arcobaleno davanti a te. Respireremo attraverso ogni colore.' La voce del Nonno era calma. 'Inizia con il rosso. Inspira rosso, forte e potente. Ora espira e lascia che la rabbia fluttui via.' Sofia immaginò il rosso e respirò. 'Arancione è il prossimo. Inspira arancione, caldo e soleggiato. Espira e rilassa le spalle.' Sofia sentì le spalle abbassarsi. 'Giallo ora. Inspira giallo, luminoso come la felicità. Espira lentamente.' Sofia sentì un piccolo sorriso formarsi. 'Verde è per la calma. Inspira verde, fresco e pacifico. Lascia che riempia tutto il tuo corpo.' Sofia immaginò foglie verdi e erba. 'Blu come il cielo calmo. Inspira blu, morbido e gentile. Espira tutte le preoccupazioni.' La mente di Sofia si sentì più chiara. 'Viola per l'immaginazione. Inspira viola, sognante e gentile. Espira e sorridi.' Sofia si sentiva molto meglio. L'arcobaleno aveva fatto la sua magia. 'Quando ti senti arrabbiata,' disse il Nonno, 'dipingi un arcobaleno con il tuo respiro.' Sofia annuì, sentendosi calma e pacifica come un arcobaleno dopo la tempesta.",
+                "parentQuestions": [
+                    "Quanti colori ha respirato Sofia?",
+                    "Quale colore ha aiutato Sofia a lasciar andare la rabbia?",
+                    "Qual è il tuo colore preferito nell'arcobaleno?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "calm-down-006-peaceful-pond",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "pond",
+            "frog",
+            "patience",
+            "stillness"
+        ],
+        "tags_ro": [
+            "iaz",
+            "broască",
+            "răbdare",
+            "liniște"
+        ],
+        "tags_it": [
+            "stagno",
+            "rana",
+            "pazienza",
+            "quiete"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Peaceful Pond",
+                "text": "Oscar was feeling jumpy and couldn't sit still. His mind was racing like a busy buzzing bee. His aunt took him outside to the garden pond. 'Watch the pond,' she said softly. Oscar looked. The water was still and smooth like a mirror. 'See how calm the water is? But look, a thought comes.' A leaf fell onto the pond. Ripples spread out in circles. 'Your mind is like this pond. Thoughts fall in like leaves. Watch what happens.' Oscar watched. The ripples spread out, then slowly, slowly got smaller until the pond was smooth again. 'Your busy thoughts are like those ripples,' Aunt said. 'They come, they spread, but if you just watch them without chasing them, they fade away.' Oscar breathed slowly and watched the pond. Another thought came, like a small ripple. He didn't chase it. He just watched. It faded. The pond became still again. Each breath made Oscar calmer. He imagined his mind smooth like the pond water. 'The pond is always peaceful underneath,' his aunt said. 'And so are you.' Oscar felt the stillness inside himself, calm and clear like the beautiful pond.",
+                "parentQuestions": [
+                    "What did Oscar watch to feel calmer?",
+                    "What happened to the ripples in the pond?",
+                    "Can you imagine your mind like a calm pond?"
+                ]
+            },
+            "ro": {
+                "title": "Iazul pașnic",
+                "text": "Oscar se simțea agitat și nu putea sta locului. Mintea lui alerga ca o albino ocupată. Mătușa lui îl duse afară la iazul din grădină. 'Privește iazul,' spuse ea blând. Oscar privi. Apa era liniștită și netedă ca o oglindă. 'Vezi cât de calmă e apa? Dar uite, vine un gând.' O frunză căzu pe iaz. Valuri se răspândiră în cercuri. 'Mintea ta e ca acest iaz. Gândurile cad ca frunzele. Privește ce se întâmplă.' Oscar privi. Valurile se răspândiră, apoi încet, încet deveniră mai mici până când iazul fu din nou neted. 'Gândurile tale agitate sunt ca acele valuri,' spuse Mătușa. 'Vin, se răspândesc, dar dacă doar le privești fără să le urmărești, dispar.' Oscar respiră încet și privi iazul. Alt gând veni, ca un val mic. Nu îl urmări. Doar îl privi. Se stinse. Iazul deveni din nou liniștit. Fiecare respirație îl făcu pe Oscar mai calm. Își imaginea mintea netedă ca apa iazului. 'Iazul e întotdeauna pașnic dedesubt,' spuse mătușa lui. 'Și la fel ești și tu.' Oscar simți liniștea în el însuși, calmă și limpede ca frumosul iaz.",
+                "parentQuestions": [
+                    "Ce a privit Oscar pentru a se simți mai calm?",
+                    "Ce s-a întâmplat cu valurile din iaz?",
+                    "Poți să-ți imaginezi mintea ca un iaz calm?"
+                ]
+            },
+            "it": {
+                "title": "Lo stagno pacifico",
+                "text": "Oscar si sentiva agitato e non riusciva a stare fermo. La sua mente correva come un'ape affaccendata. Sua zia lo portò fuori allo stagno del giardino. 'Guarda lo stagno,' disse dolcemente. Oscar guardò. L'acqua era ferma e liscia come uno specchio. 'Vedi quanto è calma l'acqua? Ma guarda, arriva un pensiero.' Una foglia cadde sullo stagno. Increspature si diffusero in cerchi. 'La tua mente è come questo stagno. I pensieri cadono come foglie. Guarda cosa succede.' Oscar guardò. Le increspature si diffusero, poi lentamente, lentamente diventarono più piccole fino a quando lo stagno tornò liscio. 'I tuoi pensieri agitati sono come quelle increspature,' disse la Zia. 'Vengono, si diffondono, ma se li guardi senza inseguirli, svaniscono.' Oscar respirò lentamente e guardò lo stagno. Un altro pensiero venne, come una piccola increspatura. Non lo inseguì. Lo guardò soltanto. Svanì. Lo stagno divenne di nuovo calmo. Ogni respiro rese Oscar più calmo. Immaginò la sua mente liscia come l'acqua dello stagno. 'Lo stagno è sempre pacifico sotto,' disse sua zia. 'E anche tu.' Oscar sentì la quiete dentro di sé, calma e chiara come il bellissimo stagno.",
+                "parentQuestions": [
+                    "Cosa guardava Oscar per sentirsi più calmo?",
+                    "Cosa è successo alle increspature nello stagno?",
+                    "Puoi immaginare la tua mente come uno stagno calmo?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

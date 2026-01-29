@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "calm-down-003-counting-stars",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "counting",
+            "stars",
+            "calm",
+            "breathe"
+        ],
+        "tags_ro": [
+            "numărare",
+            "stele",
+            "calm",
+            "respirație"
+        ],
+        "tags_it": [
+            "contare",
+            "stelle",
+            "calma",
+            "respiro"
+        ],
+        "locales": {
+            "en": {
+                "title": "Counting Stars to Calm",
+                "text": "Emma was feeling worried and couldn't stop her thoughts from racing. Her mom sat beside her on the porch swing. 'Look up at the sky,' Mom said gently. 'Let's count stars together.' Emma looked up. The night sky was full of twinkling lights. 'Find the brightest star you can see. Now take a deep breath in while you look at it.' Emma breathed in slowly. 'Now breathe out slowly while we count to five. One star, two stars, three stars, four stars, five stars.' Emma breathed out, letting her worries float away like little clouds. 'Let's do it again,' Mom said. 'Find another bright star.' Emma found one. She breathed in. Then she counted stars while breathing out. One, two, three, four, five. Her shoulders felt less tight. Her thoughts slowed down. They did it five more times. Each time, Emma felt calmer. The stars seemed to wink at her, like tiny friends saying everything would be okay. 'The stars are always there,' Mom said, 'even when we can't see them. And so is calm, waiting inside you.' Emma smiled. She felt much better now. The stars had helped wash her worries away.",
+                "parentQuestions": [
+                    "What did Emma count to feel calmer?",
+                    "How did breathing slowly help Emma?",
+                    "What do you like to count when you need to feel calm?"
+                ]
+            },
+            "ro": {
+                "title": "Numărând stele pentru a te calma",
+                "text": "Emma se simțea îngrijorată și nu putea opri gândurile să-i alerge. Mama ei stătu lângă ea pe leagănul de pe verandă. 'Uită-te sus la cer,' spuse Mama blând. 'Hai să numărăm stele împreună.' Emma se uită în sus. Cerul nopții era plin de luminițe sclipitoare. 'Găsește cea mai strălucitoare stea pe care o poți vedea. Acum inspiră adânc în timp ce te uiți la ea.' Emma inspiră încet. 'Acum expiră încet în timp ce numărăm până la cinci. O stea, două stele, trei stele, patru stele, cinci stele.' Emma expiră, lăsându-și grijile să plutească departe ca niște nori mici. 'Hai să o facem din nou,' spuse Mama. 'Găsește altă stea strălucitoare.' Emma găsi una. Inspiră. Apoi numără stele în timp ce expiră. Unu, doi, trei, patru, cinci. Umerii ei se simțeau mai puțin tensionați. Gândurile i se încetiniră. Au făcut asta de încă cinci ori. De fiecare dată, Emma se simți mai calmă. Stelele păreau să-i facă cu ochiul, ca niște prieteni micuți spunând că totul va fi bine. 'Stelele sunt mereu acolo,' spuse Mama, 'chiar și când nu le putem vedea. Și la fel și calmul, așteptând în interiorul tău.' Emma zâmbi. Se simțea mult mai bine acum. Stelele ajutaseră să-i spele grijile.",
+                "parentQuestions": [
+                    "Ce a numărat Emma pentru a se simți mai calmă?",
+                    "Cum a ajutat-o pe Emma respirația lentă?",
+                    "Ce îți place să numeri când ai nevoie să te simți calm?"
+                ]
+            },
+            "it": {
+                "title": "Contare le stelle per calmarsi",
+                "text": "Emma si sentiva preoccupata e non riusciva a fermare i suoi pensieri che correvano. Sua mamma si sedette accanto a lei sull'altalena del portico. 'Guarda su verso il cielo,' disse dolcemente la Mamma. 'Contiamo le stelle insieme.' Emma guardò su. Il cielo notturno era pieno di luci scintillanti. 'Trova la stella più luminosa che riesci a vedere. Ora fai un respiro profondo mentre la guardi.' Emma inspirò lentamente. 'Ora espira lentamente mentre contiamo fino a cinque. Una stella, due stelle, tre stelle, quattro stelle, cinque stelle.' Emma espirò, lasciando che le sue preoccupazioni fluttuassero via come piccole nuvole. 'Facciamolo di nuovo,' disse la Mamma. 'Trova un'altra stella luminosa.' Emma ne trovò una. Ispirò. Poi contò le stelle mentre espirava. Uno, due, tre, quattro, cinque. Le sue spalle si sentivano meno tese. I suoi pensieri rallentarono. Lo fecero altre cinque volte. Ogni volta, Emma si sentiva più calma. Le stelle sembravano farle l'occhiolino, come piccoli amici che dicevano che tutto sarebbe andato bene. 'Le stelle sono sempre lì,' disse la Mamma, 'anche quando non le possiamo vedere. E così la calma, che aspetta dentro di te.' Emma sorrise. Si sentiva molto meglio ora. Le stelle avevano aiutato a lavare via le sue preoccupazioni.",
+                "parentQuestions": [
+                    "Cosa contava Emma per sentirsi più calma?",
+                    "Come ha aiutato Emma respirare lentamente?",
+                    "Cosa ti piace contare quando hai bisogno di sentirti calmo?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "calm-down-004-melting-ice",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "tension",
+            "relax",
+            "body",
+            "melting"
+        ],
+        "tags_ro": [
+            "tensiune",
+            "relaxare",
+            "corp",
+            "topire"
+        ],
+        "tags_it": [
+            "tensione",
+            "rilassamento",
+            "corpo",
+            "scioglimento"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Melting Ice Exercise",
+                "text": "Jake was feeling tight and tense. His whole body felt stiff like frozen ice. His dad noticed and sat down with him. 'Let's try something,' Dad said. 'First, pretend you're frozen solid. Make your whole body as stiff as ice. Squeeze your fists tight. Scrunch up your shoulders. Make your face all tight.' Jake did it. He was a frozen ice statue. 'Now the warm sun is starting to shine on you,' Dad continued. 'Feel the warmth on your head. Now slowly, your forehead starts to melt and relax. Let it go soft.' Jake relaxed his forehead. 'The warmth moves to your face. Your eyes relax. Your cheeks get soft. Your jaw melts.' Jake felt his face going loose and comfortable. 'Now the sun warms your shoulders. They melt down, down, down.' Jake's shoulders dropped slowly. He was melting. 'Your arms feel warm, your fists open. Your fingers spread out like little puddles.' Jake's hands relaxed. 'All the way down to your toes, you're melting into a comfortable puddle of relaxation.' Jake felt like he was sinking into the chair. All the tightness was gone. He was a warm, soft, relaxed puddle. 'How do you feel?' Dad asked. 'Much better,' Jake smiled. The frozen feeling was completely gone.",
+                "parentQuestions": [
+                    "What did Jake pretend to be at first?",
+                    "How did imagining the sun help Jake relax?",
+                    "Can you try making yourself tight and then melting like Jake?"
+                ]
+            },
+            "ro": {
+                "title": "Exercițiul gheții care se topește",
+                "text": "Jake se simțea încordat și tensionat. Tot corpul lui se simțea rigid ca gheața înghețată. Tatăl lui observă și se așeză cu el. 'Hai să încercăm ceva,' spuse Tata. 'Întâi, pretinde că ești înghețat complet. Fă tot corpul tău rigid ca gheața. Strânge pumnii tare. Ridică-ți umerii. Fă-ți fața toată încordată.' Jake făcu asta. Era o statuie de gheață înghețată. 'Acum soarele cald începe să strălucească pe tine,' continuă Tata. 'Simte căldura pe capul tău. Acum încet, fruntea ta începe să se topească și să se relaxeze. Las-o să devină moale.' Jake își relaxă fruntea. 'Căldura se mută pe fața ta. Ochii tăi se relaxează. Obrajii devin moi. Maxilarul se topește.' Jake simți cum fața i se relaxa și deveni confortabilă. 'Acum soarele încălzește umerii tăi. Se topesc în jos, în jos, în jos.' Umerii lui Jake coborâră încet. Se topea. 'Brațele tale se simt calde, pumnii se deschid. Degetele se întind ca niște mici bălți.' Mâinile lui Jake se relaxară. 'Până jos la degetele de la picioare, te topești într-o baltă confortabilă de relaxare.' Jake se simți ca și cum s-ar scufunda în scaun. Toată încordarea dispăruse. Era o baltă caldă, moale, relaxată. 'Cum te simți?' întrebă Tata. 'Mult mai bine,' zâmbi Jake. Senzația de înghețare dispăruse complet.",
+                "parentQuestions": [
+                    "Ce a pretins Jake că este la început?",
+                    "Cum l-a ajutat să se relaxeze pe Jake imaginarea soarelui?",
+                    "Poți încerca să te faci încordat și apoi să te topești ca Jake?"
+                ]
+            },
+            "it": {
+                "title": "L'esercizio del ghiaccio che si scioglie",
+                "text": "Jake si sentiva teso e contratto. Tutto il suo corpo si sentiva rigido come ghiaccio congelato. Suo papà lo notò e si sedette con lui. 'Proviamo qualcosa,' disse Papà. 'Prima, fingi di essere congelato. Rendi tutto il tuo corpo rigido come ghiaccio. Stringi i pugni forte. Contrai le spalle. Rendi la faccia tutta tesa.' Jake lo fece. Era una statua di ghiaccio congelata. 'Ora il sole caldo inizia a splendere su di te,' continuò Papà. 'Senti il calore sulla tua testa. Ora lentamente, la tua fronte inizia a sciogliersi e rilassarsi. Lasciala andare morbida.' Jake rilassò la fronte. 'Il calore si sposta sul tuo viso. I tuoi occhi si rilassano. Le tue guance diventano morbide. La mascella si scioglie.' Jake sentì il suo viso diventare sciolto e comodo. 'Ora il sole scalda le tue spalle. Si sciolgono giù, giù, giù.' Le spalle di Jake scesero lentamente. Si stava sciogliendo. 'Le tue braccia si sentono calde, i pugni si aprono. Le dita si allargano come piccole pozzanghere.' Le mani di Jake si rilassarono. 'Fino alle dita dei piedi, ti stai sciogliendo in una comoda pozzanghera di rilassamento.' Jake si sentì come se stesse affondando nella sedia. Tutta la tensione era sparita. Era una pozzanghera calda, morbida, rilassata. 'Come ti senti?' chiese Papà. 'Molto meglio,' sorrise Jake. La sensazione di congelamento era completamente sparita.",
+                "parentQuestions": [
+                    "Cosa fingeva di essere Jake all'inizio?",
+                    "Come ha aiutato Jake a rilassarsi immaginare il sole?",
+                    "Puoi provare a renderti teso e poi scioglierti come Jake?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

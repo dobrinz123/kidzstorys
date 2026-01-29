@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "emotions-011-feeling-left-out",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "exclusion",
+            "belonging",
+            "inclusion",
+            "kindness"
+        ],
+        "tags_ro": [
+            "excludere",
+            "apartenență",
+            "includere",
+            "bunătate"
+        ],
+        "tags_it": [
+            "esclusione",
+            "appartenenza",
+            "inclusione",
+            "gentilezza"
+        ],
+        "locales": {
+            "en": {
+                "title": "When You're Not Invited",
+                "text": "At school, Zoe saw her friends whispering together. They ran off to play without asking her to join. Zoe's heart hurt. She felt invisible, like she didn't matter. At home, she told her older brother. 'They left me out,' Zoe said, tears falling. 'That really hurts,' her brother said. 'Feeling left out is one of the hardest feelings.' 'Why didn't they want me?' 'I don't know. Maybe they didn't realize how it felt. Or maybe they were being thoughtless. But it's not about you being bad or wrong.' 'It feels like it's about me,' Zoe said. 'I know. But here's what I've learned: people sometimes do unkind things, but it doesn't mean you're not worthy of kindness.' Zoe wiped her tears. 'What do I do now?' 'You could tell them how you felt. Or find other friends who make you feel included. YOU get to choose who to spend time with too.' 'There's Maya. She's always nice to me.' 'Then maybe Maya is a good friend to grow closer to.' Zoe felt a little better. Being left out hurt, but she wasn't stuck. She could be the friend she wished she had.",
+                "parentQuestions": [
+                    "Why was Zoe sad?",
+                    "What did Zoe's brother suggest she could do?",
+                    "Have you ever felt left out? How did you handle it?"
+                ]
+            },
+            "ro": {
+                "title": "Când nu ești invitat",
+                "text": "La școală, Zoe văzu prietenele ei șoptind împreună. Alergară să se joace fără să o invite să li se alăture. Inima lui Zoe o durea. Se simțea invizibilă, de parcă nu conta. Acasă, îi povesti fratelui ei mai mare. 'M-au lăsat pe dinafară,' spuse Zoe, cu lacrimi căzând. 'Asta doare cu adevărat,' spuse fratele ei. 'Să te simți exclus e unul dintre cele mai grele sentimente.' 'De ce nu m-au vrut?' 'Nu știu. Poate nu și-au dat seama cum se simte. Sau poate au fost fără grijă. Dar nu e despre tine că ai fi rea sau greșită.' 'Se simte ca și cum ar fi despre mine,' spuse Zoe. 'Știu. Dar iată ce am învățat: oamenii fac uneori lucruri nedrăguțe, dar asta nu înseamnă că nu meriți bunătate.' Zoe își șterse lacrimile. 'Ce fac acum?' 'Ai putea să le spui cum te-ai simțit. Sau găsește alți prieteni care te fac să te simți inclusă. TU alegi și tu cu cine să-ți petreci timpul.' 'E Maya. Ea e mereu drăguță cu mine.' 'Atunci poate Maya e o prietenă bună de care să te apropii.' Zoe se simți puțin mai bine. Să fii lăsată pe dinafară durea, dar nu era blocată. Putea fi prietena pe care și-o dorea.",
+                "parentQuestions": [
+                    "De ce era Zoe tristă?",
+                    "Ce a sugerat fratele lui Zoe că ar putea face?",
+                    "Te-ai simțit vreodată exclus? Cum ai gestionat?"
+                ]
+            },
+            "it": {
+                "title": "Quando non sei invitato",
+                "text": "A scuola, Zoe vide le sue amiche sussurrare insieme. Corsero a giocare senza chiederle di unirsi. Il cuore di Zoe le faceva male. Si sentiva invisibile, come se non contasse. A casa, lo raccontò a suo fratello maggiore. 'Mi hanno esclusa,' disse Zoe, con le lacrime che cadevano. 'Questo fa davvero male,' disse suo fratello. 'Sentirsi esclusi è uno dei sentimenti più difficili.' 'Perché non mi volevano?' 'Non lo so. Forse non si sono rese conto di come ci si sente. O forse sono state sconsiderate. Ma non riguarda te che sei cattiva o sbagliata.' 'Sembra che riguardi me,' disse Zoe. 'Lo so. Ma ecco cosa ho imparato: le persone a volte fanno cose sgarbate, ma non significa che non meriti gentilezza.' Zoe si asciugò le lacrime. 'Cosa faccio adesso?' 'Potresti dire loro come ti sei sentita. O trovare altri amici che ti fanno sentire inclusa. TU puoi scegliere con chi passare il tempo.' 'C'è Maya. Lei è sempre gentile con me.' 'Allora forse Maya è una buona amica a cui avvicinarsi.' Zoe si sentì un po' meglio. Essere esclusa faceva male, ma non era bloccata. Poteva essere l'amica che avrebbe voluto avere.",
+                "parentQuestions": [
+                    "Perché Zoe era triste?",
+                    "Cosa ha suggerito il fratello di Zoe che potesse fare?",
+                    "Ti sei mai sentito escluso? Come l'hai gestito?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "emotions-012-feeling-nervous",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "nervousness",
+            "performance",
+            "butterflies",
+            "preparation"
+        ],
+        "tags_ro": [
+            "nervozitate",
+            "spectacol",
+            "fluturi",
+            "pregătire"
+        ],
+        "tags_it": [
+            "nervosismo",
+            "performance",
+            "farfalle",
+            "preparazione"
+        ],
+        "locales": {
+            "en": {
+                "title": "Butterflies Before the Show",
+                "text": "Tomorrow was the school play and Liam had a big part. His tummy felt wobbly. His heart beat fast just thinking about it. 'I feel nervous,' he told his dad. 'I might mess up in front of everyone.' 'Ah, the butterflies,' Dad said, putting his hand on Liam's chest. 'Tell me about them.' 'They're flying around in my tummy. I hate them.' 'Here's a secret: those butterflies mean you care. It means this matters to you. Even famous actors get butterflies.' 'They do?' 'Oh yes. They just learn to dance with the butterflies instead of fighting them.' 'How?' 'First, remember you've practiced. You know your lines. Second, take slow breaths to help the butterflies fly in a pattern instead of all over the place.' Liam breathed slowly. 'Third, remind yourself: it's okay to make mistakes. Everyone does. The show goes on.' 'What if I forget my words?' 'You pause, take a breath, and keep going. No one expects perfect. They just want to enjoy the show.' Liam felt the butterflies settling a bit. They were still there, but now they felt more like excitement than fear. Maybe he could do this after all.",
+                "parentQuestions": [
+                    "Why did Liam feel nervous?",
+                    "What did Dad say about butterflies?",
+                    "When do you get butterflies in your tummy?"
+                ]
+            },
+            "ro": {
+                "title": "Fluturi înainte de spectacol",
+                "text": "Mâine era piesa de teatru a școlii și Liam avea un rol mare. Burtica lui se simțea agitată. Inima îi bătea repede doar gândindu-se la asta. 'Mă simt nervos,' îi spuse tatălui său. 'S-ar putea să greșesc în fața tuturor.' 'Ah, fluturii,' spuse Tata, punându-și mâna pe pieptul lui Liam. 'Povestește-mi despre ei.' 'Zboară prin burta mea. Îi urăsc.' 'Iată un secret: acei fluturi înseamnă că îți pasă. Înseamnă că asta contează pentru tine. Chiar și actorii faimoși au fluturi.' 'Chiar?' 'O, da. Doar învață să danseze cu fluturii în loc să lupte cu ei.' 'Cum?' 'Întâi, amintește-ți că ai exersat. Îți știi replicile. În al doilea rând, respiră încet pentru a-i ajuta pe fluturi să zboare într-un tipar în loc de peste tot.' Liam respiră încet. 'În al treilea rând, amintește-ți: e în regulă să faci greșeli. Toată lumea face. Spectacolul continuă.' 'Dacă uit cuvintele?' 'Faci o pauză, respiri, și continui. Nimeni nu așteaptă perfect. Vor doar să se bucure de spectacol.' Liam simți fluturii așezându-se puțin. Erau încă acolo, dar acum se simțeau mai mult ca entuziasm decât frică. Poate că putea face asta până la urmă.",
+                "parentQuestions": [
+                    "De ce se simțea Liam nervos?",
+                    "Ce a spus Tata despre fluturi?",
+                    "Când ai fluturi în burtă?"
+                ]
+            },
+            "it": {
+                "title": "Farfalle prima dello spettacolo",
+                "text": "Domani c'era lo spettacolo della scuola e Liam aveva una parte importante. La sua pancia si sentiva traballante. Il suo cuore batteva forte solo pensandoci. 'Mi sento nervoso,' disse a suo papà. 'Potrei sbagliare davanti a tutti.' 'Ah, le farfalle,' disse Papà, mettendo la mano sul petto di Liam. 'Raccontami di loro.' 'Volano nella mia pancia. Le odio.' 'Ecco un segreto: quelle farfalle significano che ti importa. Significa che questo conta per te. Anche gli attori famosi hanno le farfalle.' 'Davvero?' 'Oh sì. Imparano solo a ballare con le farfalle invece di combatterle.' 'Come?' 'Prima, ricorda che hai fatto prove. Conosci le tue battute. Secondo, fai respiri lenti per aiutare le farfalle a volare in un pattern invece che dappertutto.' Liam respirò lentamente. 'Terzo, ricorda a te stesso: va bene fare errori. Tutti ne fanno. Lo spettacolo continua.' 'E se dimentico le parole?' 'Fai una pausa, respiri, e continui. Nessuno si aspetta la perfezione. Vogliono solo godersi lo spettacolo.' Liam sentì le farfalle calmarsi un po'. Erano ancora lì, ma ora sembravano più eccitazione che paura. Forse ce la poteva fare dopotutto.",
+                "parentQuestions": [
+                    "Perché Liam si sentiva nervoso?",
+                    "Cosa ha detto Papà sulle farfalle?",
+                    "Quando ti vengono le farfalle nella pancia?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "emotions-005-feeling-lonely",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "loneliness",
+            "friendship",
+            "connection",
+            "reaching out"
+        ],
+        "tags_ro": [
+            "singurătate",
+            "prietenie",
+            "legătură",
+            "comunicare"
+        ],
+        "tags_it": [
+            "solitudine",
+            "amicizia",
+            "connessione",
+            "contatto"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Lonely Cloud",
+                "text": "At recess, Kai sat alone on the bench. Everyone else was playing in groups. Kai felt like a lonely cloud floating by itself in a big empty sky. When he got home, his older sister Mia noticed he was quiet. 'What's up, little bro?' Kai sighed. 'No one wants to play with me. I'm invisible.' Mia sat beside him. 'That sounds really hard. Feeling lonely hurts.' 'It does,' Kai agreed. 'Sometimes,' Mia said, 'when we feel left out, we wait for others to invite us. But what if you made the first move?' 'What do you mean?' 'What if you walked up to someone and asked to join? Or asked someone to play your game?' 'But what if they say no?' Kai worried. 'They might. And that would sting. But they also might say yes. You won't know unless you try.' Kai thought about Marcus, who always played with blocks. 'I could ask Marcus.' 'That's brave!' Mia said. 'And remember, one good friend is worth more than a crowd.' The next day, Kai tried. 'Can I build with you?' he asked Marcus. Marcus smiled. 'Sure!' And just like that, the lonely cloud found another cloud to float with.",
+                "parentQuestions": [
+                    "How did Kai feel at recess?",
+                    "What advice did Mia give Kai?",
+                    "Have you ever felt lonely? What helped?"
+                ]
+            },
+            "ro": {
+                "title": "Norul singuratic",
+                "text": "La recreație, Kai stătea singur pe bancă. Toți ceilalți se jucau în grupuri. Kai se simțea ca un nor singuratic plutind singur pe un cer mare și gol. Când ajunse acasă, sora lui mai mare Mia observă că era tăcut. 'Ce e, frățioare?' Kai oftă. 'Nimeni nu vrea să se joace cu mine. Sunt invizibil.' Mia se așeză lângă el. 'Asta sună foarte greu. Să te simți singur doare.' 'Așa e,' fu de acord Kai. 'Uneori,' spuse Mia, 'când ne simțim excluși, așteptăm ca alții să ne invite. Dar ce-ar fi să faci tu primul pas?' 'Ce vrei să spui?' 'Dacă ai merge la cineva și ai cere să te alături? Sau ai cere cuiva să se joace jocul tău?' 'Dar dacă zic nu?' se îngrijoră Kai. 'S-ar putea. Și asta ar durea. Dar s-ar putea și să zică da. Nu vei ști decât dacă încerci.' Kai se gândi la Marcus, care se juca mereu cu cuburi. 'Aș putea să-l întreb pe Marcus.' 'E curajos!' spuse Mia. 'Și ține minte, un prieten bun valorează mai mult decât o mulțime.' A doua zi, Kai încercă. 'Pot să construiesc cu tine?' îl întrebă pe Marcus. Marcus zâmbi. 'Sigur!' Și așa, norul singuratic găsi alt nor cu care să plutească.",
+                "parentQuestions": [
+                    "Cum se simțea Kai la recreație?",
+                    "Ce sfat i-a dat Mia lui Kai?",
+                    "Te-ai simțit vreodată singur? Ce te-a ajutat?"
+                ]
+            },
+            "it": {
+                "title": "La nuvola solitaria",
+                "text": "Durante la ricreazione, Kai sedeva da solo sulla panchina. Tutti gli altri giocavano in gruppi. Kai si sentiva come una nuvola solitaria che fluttuava da sola in un grande cielo vuoto. Quando tornò a casa, sua sorella maggiore Mia notò che era silenzioso. 'Che c'è, fratellino?' Kai sospirò. 'Nessuno vuole giocare con me. Sono invisibile.' Mia si sedette accanto a lui. 'Sembra davvero difficile. Sentirsi soli fa male.' 'È vero,' concordò Kai. 'A volte,' disse Mia, 'quando ci sentiamo esclusi, aspettiamo che gli altri ci invitino. Ma se facessi tu il primo passo?' 'Cosa intendi?' 'Se andassi da qualcuno e chiedessi di unirti? O chiedessi a qualcuno di giocare al tuo gioco?' 'Ma se dicono di no?' si preoccupò Kai. 'Potrebbero. E farebbe male. Ma potrebbero anche dire di sì. Non lo saprai finché non provi.' Kai pensò a Marco, che giocava sempre con i blocchi. 'Potrei chiedere a Marco.' 'È coraggioso!' disse Mia. 'E ricorda, un buon amico vale più di una folla.' Il giorno dopo, Kai provò. 'Posso costruire con te?' chiese a Marco. Marco sorrise. 'Certo!' E così, la nuvola solitaria trovò un'altra nuvola con cui fluttuare.",
+                "parentQuestions": [
+                    "Come si sentiva Kai durante la ricreazione?",
+                    "Che consiglio ha dato Mia a Kai?",
+                    "Ti sei mai sentito solo? Cosa ti ha aiutato?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "emotions-006-sad-rainy-day",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "sadness",
+            "tears",
+            "comfort",
+            "healing"
+        ],
+        "tags_ro": [
+            "tristețe",
+            "lacrimi",
+            "confort",
+            "vindecare"
+        ],
+        "tags_it": [
+            "tristezza",
+            "lacrime",
+            "conforto",
+            "guarigione"
+        ],
+        "locales": {
+            "en": {
+                "title": "It's Okay to Feel Sad",
+                "text": "Luna's goldfish Bubbles had died. She felt a heavy, gray feeling in her chest. Tears kept coming even when she tried to stop them. Her dad sat with her. 'You're feeling very sad,' he said gently. Luna nodded, more tears falling. 'I miss Bubbles.' 'Of course you do. Bubbles was special to you. It's okay to cry.' 'I don't want to cry anymore,' Luna said. 'Tears are how we let sadness out,' Dad explained. 'Imagine if you kept it all inside. It would hurt even more.' Luna let herself cry. Dad just sat there, not trying to fix it, just being with her. 'Will I feel sad forever?' Luna asked. 'No, sweetheart. Sadness comes and goes like rain. Right now it's raining hard. But it will slow down, and eventually the sun will peek through.' 'When?' 'I don't know exactly. But I'll be right here with you through the rain.' Luna leaned against Dad. It still hurt. But somehow, crying and being held made the heavy feeling a tiny bit lighter. Sadness was hard, but she wasn't alone in it.",
+                "parentQuestions": [
+                    "Why was Luna sad?",
+                    "What did Dad say about tears?",
+                    "What helps you feel better when you're sad?"
+                ]
+            },
+            "ro": {
+                "title": "E în regulă să fii trist",
+                "text": "Peștișorul auriu al Lunei, Bula, murise. Simțea un sentiment greu și cenușiu în piept. Lacrimile continuau să vină chiar și când încerca să le oprească. Tatăl ei stătu cu ea. 'Te simți foarte tristă,' spuse el blând. Luna dădu din cap, mai multe lacrimi căzând. 'Mi-e dor de Bula.' 'Normal că ți-e. Bula era special pentru tine. E în regulă să plângi.' 'Nu mai vreau să plâng,' spuse Luna. 'Lacrimile sunt modul în care lăsăm tristețea să iasă,' explică Tata. 'Imaginează-ți dacă ai păstra totul înăuntru. Ar durea și mai mult.' Luna se lăsă să plângă. Tata doar stătu acolo, fără să încerce să repare, doar fiind cu ea. 'O să mă simt tristă pentru totdeauna?' întrebă Luna. 'Nu, draga mea. Tristețea vine și pleacă ca ploaia. Acum plouă tare. Dar se va încetini, și în cele din urmă soarele va apărea.' 'Când?' 'Nu știu exact. Dar voi fi chiar aici cu tine prin ploaie.' Luna se sprijini de Tata. Încă durea. Dar cumva, plânsul și îmbrățișarea făcură sentimentul greu puțin mai ușor. Tristețea era grea, dar nu era singură în ea.",
+                "parentQuestions": [
+                    "De ce era tristă Luna?",
+                    "Ce a spus Tata despre lacrimi?",
+                    "Ce te ajută să te simți mai bine când ești trist?"
+                ]
+            },
+            "it": {
+                "title": "Va bene sentirsi tristi",
+                "text": "Il pesciolino rosso di Luna, Bollicina, era morto. Sentiva una sensazione pesante e grigia nel petto. Le lacrime continuavano a venire anche quando cercava di fermarle. Suo papà si sedette con lei. 'Ti senti molto triste,' disse dolcemente. Luna annuì, altre lacrime che cadevano. 'Mi manca Bollicina.' 'Certo che ti manca. Bollicina era speciale per te. Va bene piangere.' 'Non voglio più piangere,' disse Luna. 'Le lacrime sono il modo in cui lasciamo uscire la tristezza,' spiegò Papà. 'Immagina se tenessi tutto dentro. Farebbe ancora più male.' Luna si lasciò piangere. Papà rimase semplicemente lì, senza cercare di aggiustare, solo stando con lei. 'Mi sentirò triste per sempre?' chiese Luna. 'No, tesoro. La tristezza va e viene come la pioggia. Adesso sta piovendo forte. Ma rallenterà, e alla fine il sole farà capolino.' 'Quando?' 'Non lo so esattamente. Ma sarò proprio qui con te attraverso la pioggia.' Luna si appoggiò a Papà. Faceva ancora male. Ma in qualche modo, piangere ed essere tenuta rese la sensazione pesante un po' più leggera. La tristezza era difficile, ma non era sola.",
+                "parentQuestions": [
+                    "Perché Luna era triste?",
+                    "Cosa ha detto Papà sulle lacrime?",
+                    "Cosa ti aiuta a sentirti meglio quando sei triste?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

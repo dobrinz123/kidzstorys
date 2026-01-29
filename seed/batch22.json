@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "emotions-007-feeling-worried",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "worry",
+            "anxiety",
+            "thoughts",
+            "present"
+        ],
+        "tags_ro": [
+            "îngrijorare",
+            "anxietate",
+            "gânduri",
+            "prezent"
+        ],
+        "tags_it": [
+            "preoccupazione",
+            "ansia",
+            "pensieri",
+            "presente"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Worry Bees",
+                "text": "Ava had lots of worrying thoughts buzzing in her head. What if she failed the test? What if her friends didn't like her anymore? What if something bad happened? The worries buzzed like bees, around and around. Mom noticed Ava couldn't focus. 'Lots of worry bees today?' Mom asked. Ava nodded. 'They won't stop buzzing.' 'Here's something about worry,' Mom said. 'Worry lives in the future. It's about things that haven't happened yet.' 'But they might happen,' Ava said. 'They might. Or they might not. But right now, in this moment, are you okay?' Ava thought. 'I guess... yes?' 'That's where peace lives. In right now. Can you tell me five things you can see right now?' Ava looked around. 'The couch. A lamp. My shoes. The window. You.' 'And in this moment with these things, are you safe?' 'Yes.' 'When the worry bees come, bring yourself back to now. The future hasn't happened. You're here, and you're okay.' Ava took a breath. The buzzing got a little quieter. Present was easier than future. She was here now, and right now, she was alright.",
+                "parentQuestions": [
+                    "What did Mom say about where worry lives?",
+                    "What helped Ava feel better?",
+                    "What five things can you see right now?"
+                ]
+            },
+            "ro": {
+                "title": "Albinuțele îngrijorării",
+                "text": "Ava avea multe gânduri de îngrijorare zumzăind în cap. Ce-ar fi dacă pica testul? Ce-ar fi dacă prietenii ei nu o mai plăceau? Ce-ar fi dacă se întâmpla ceva rău? Grijile zumzăiau ca niște albine, în cerc și în cerc. Mama observă că Ava nu se putea concentra. 'Multe albinuțe ale îngrijorării azi?' întrebă Mama. Ava dădu din cap. 'Nu se opresc din zumzăit.' 'Iată ceva despre îngrijorare,' spuse Mama. 'Îngrijorarea trăiește în viitor. E despre lucruri care nu s-au întâmplat încă.' 'Dar s-ar putea întâmpla,' spuse Ava. 'S-ar putea. Sau nu. Dar chiar acum, în acest moment, ești bine?' Ava se gândi. 'Cred că... da?' 'Acolo trăiește pacea. În acum. Poți să-mi spui cinci lucruri pe care le poți vedea chiar acum?' Ava privi în jur. 'Canapeaua. O lampă. Pantofii mei. Fereastra. Tu.' 'Și în acest moment cu aceste lucruri, ești în siguranță?' 'Da.' 'Când vin albinuțele îngrijorării, adu-te înapoi în acum. Viitorul nu s-a întâmplat. Ești aici, și ești bine.' Ava respiră. Zumzăitul deveni puțin mai încet. Prezentul era mai ușor decât viitorul. Era aici acum, și acum, era bine.",
+                "parentQuestions": [
+                    "Ce a spus Mama despre unde trăiește îngrijorarea?",
+                    "Ce a ajutat-o pe Ava să se simtă mai bine?",
+                    "Ce cinci lucruri poți vedea chiar acum?"
+                ]
+            },
+            "it": {
+                "title": "Le api della preoccupazione",
+                "text": "Ava aveva molti pensieri preoccupanti che ronzavano nella sua testa. E se falliva il test? E se i suoi amici non le piacessero più? E se succedesse qualcosa di brutto? Le preoccupazioni ronzavano come api, in tondo e in tondo. La Mamma notò che Ava non riusciva a concentrarsi. 'Tante api della preoccupazione oggi?' chiese la Mamma. Ava annuì. 'Non smettono di ronzare.' 'Ecco qualcosa sulla preoccupazione,' disse la Mamma. 'La preoccupazione vive nel futuro. Riguarda cose che non sono ancora successe.' 'Ma potrebbero succedere,' disse Ava. 'Potrebbero. O potrebbero no. Ma proprio adesso, in questo momento, stai bene?' Ava pensò. 'Credo... sì?' 'È lì che vive la pace. Nell'adesso. Puoi dirmi cinque cose che puoi vedere proprio adesso?' Ava si guardò intorno. 'Il divano. Una lampada. Le mie scarpe. La finestra. Tu.' 'E in questo momento con queste cose, sei al sicuro?' 'Sì.' 'Quando arrivano le api della preoccupazione, riportati all'adesso. Il futuro non è ancora successo. Sei qui, e stai bene.' Ava fece un respiro. Il ronzio divenne un po' più silenzioso. Il presente era più facile del futuro. Era qui adesso, e adesso, stava bene.",
+                "parentQuestions": [
+                    "Cosa ha detto la Mamma su dove vive la preoccupazione?",
+                    "Cosa ha aiutato Ava a sentirsi meglio?",
+                    "Quali cinque cose puoi vedere proprio adesso?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "emotions-008-feeling-frustrated",
+        "categorySlug": "emotions",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "frustration",
+            "patience",
+            "trying again",
+            "growth"
+        ],
+        "tags_ro": [
+            "frustrare",
+            "răbdare",
+            "a încerca din nou",
+            "creștere"
+        ],
+        "tags_it": [
+            "frustrazione",
+            "pazienza",
+            "riprovare",
+            "crescita"
+        ],
+        "locales": {
+            "en": {
+                "title": "When Things Don't Work",
+                "text": "Max couldn't tie his shoes. He had tried ten times already! He threw the shoe across the room and yelled, 'I can't do it!' His mom picked up the shoe calmly. 'You're feeling frustrated,' she said. 'VERY frustrated!' Max agreed. 'Frustration happens when we try hard but things don't work. It's a normal feeling.' 'It's an AWFUL feeling,' Max said. 'I know. But here's something interesting. Frustration means you care enough to try. And trying is how we get better.' 'But I can't do it,' Max repeated. 'Can't do it YET,' Mom corrected. 'There's a big difference. You couldn't ride a bike yet. Then you could. You couldn't write your name yet. Then you could.' Max thought about that. 'So I'll be able to tie my shoes... eventually?' 'With practice, yes. Every time you try, your brain learns a little more. Even the failed tries.' Mom sat beside him. 'Want to try again together? We could take it slow, one step at a time.' Max took a breath. The frustration was still there, but it felt smaller. He picked up his shoe. 'Show me again.' This time, he tried more slowly. And it almost worked.",
+                "parentQuestions": [
+                    "Why was Max frustrated?",
+                    "What does 'yet' mean for learning?",
+                    "What have you learned to do that was hard at first?"
+                ]
+            },
+            "ro": {
+                "title": "Când lucrurile nu merg",
+                "text": "Max nu putea să-și lege șireturile. Încercase deja de zece ori! Aruncă pantoful prin cameră și strigă, 'Nu pot!' Mama ridică pantoful calm. 'Te simți frustrat,' spuse ea. 'FOARTE frustrat!' fu de acord Max. 'Frustrarea se întâmplă când încercăm tare dar lucrurile nu merg. E un sentiment normal.' 'E un sentiment ÎNGROZITOR,' spuse Max. 'Știu. Dar iată ceva interesant. Frustrarea înseamnă că îți pasă suficient cât să încerci. Iar încercatul e modul în care devenim mai buni.' 'Dar nu pot să o fac,' repetă Max. 'Nu poți să o faci ÎNCĂ,' corectă Mama. 'E o mare diferență. Nu puteai să mergi pe bicicletă încă. Apoi puteai. Nu puteai să-ți scrii numele încă. Apoi puteai.' Max se gândi la asta. 'Deci o să pot să-mi leg șireturile... în cele din urmă?' 'Cu practică, da. De fiecare dată când încerci, creierul tău învață puțin mai mult. Chiar și încercările eșuate.' Mama se așeză lângă el. 'Vrei să încerci din nou împreună? Am putea să o luăm încet, un pas pe rând.' Max respiră. Frustrarea era încă acolo, dar se simțea mai mică. Ridică pantoful. 'Arată-mi din nou.' De data asta, încercă mai încet. Și aproape că a funcționat.",
+                "parentQuestions": [
+                    "De ce era Max frustrat?",
+                    "Ce înseamnă 'încă' pentru învățat?",
+                    "Ce ai învățat să faci care a fost greu la început?"
+                ]
+            },
+            "it": {
+                "title": "Quando le cose non funzionano",
+                "text": "Max non riusciva ad allacciarsi le scarpe. L'aveva provato già dieci volte! Lanciò la scarpa attraverso la stanza e urlò, 'Non ce la faccio!' La sua mamma raccolse la scarpa con calma. 'Ti senti frustrato,' disse. 'MOLTO frustrato!' concordò Max. 'La frustrazione succede quando proviamo tanto ma le cose non funzionano. È un sentimento normale.' 'È un sentimento TERRIBILE,' disse Max. 'Lo so. Ma ecco qualcosa di interessante. La frustrazione significa che ti importa abbastanza da provare. E provare è come miglioriamo.' 'Ma non ci riesco,' ripeté Max. 'Non ci riesci ANCORA,' corresse la Mamma. 'C'è una grande differenza. Non sapevi ancora andare in bicicletta. Poi ci sei riuscito. Non sapevi ancora scrivere il tuo nome. Poi ci sei riuscito.' Max ci pensò. 'Quindi riuscirò ad allacciarmi le scarpe... alla fine?' 'Con la pratica, sì. Ogni volta che provi, il tuo cervello impara un po' di più. Anche i tentativi falliti.' La Mamma si sedette accanto a lui. 'Vuoi riprovare insieme? Potremmo andare piano, un passo alla volta.' Max fece un respiro. La frustrazione era ancora lì, ma sembrava più piccola. Prese la sua scarpa. 'Fammi vedere di nuovo.' Questa volta, provò più lentamente. E quasi funzionò.",
+                "parentQuestions": [
+                    "Perché Max era frustrato?",
+                    "Cosa significa 'ancora' per l'apprendimento?",
+                    "Cosa hai imparato a fare che era difficile all'inizio?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "calm-down-007-flower-power",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "flower",
+            "breathing",
+            "smell",
+            "blow"
+        ],
+        "tags_ro": [
+            "floare",
+            "respirație",
+            "miros",
+            "suflu"
+        ],
+        "tags_it": [
+            "fiore",
+            "respirazione",
+            "profumo",
+            "soffio"
+        ],
+        "locales": {
+            "en": {
+                "title": "Smell the Flower, Blow the Pinwheel",
+                "text": "Lily was upset and crying. Her mom knelt beside her. 'Let's do our special breathing,' Mom said gently. 'Remember? Smell the flower, blow the pinwheel.' Mom held up her hand like a flower. 'First, pretend this is the most beautiful flower. What color is it?' 'Purple,' Lily sniffled. 'Perfect. Now smell the beautiful purple flower. Take a big, slow breath in through your nose, like you're smelling the sweetest smell.' Lily breathed in slowly through her nose. 'Wonderful. Now...' Mom made her other hand into a pinwheel shape. 'Blow gently on the pinwheel. Watch it spin slowly. Blow out softly and slowly through your mouth.' Lily breathed out slowly, imaging the pinwheel spinning gently. 'Again,' Mom said. 'Smell the flower. Nice and slow.' Lily smelled the imaginary purple flower. 'Now blow the pinwheel. Gentle and slow.' Lily blew softly. They did it five more times. Each time, Lily felt calmer. Her tears slowed. Her breathing became steady. 'You can do this anytime,' Mom said. 'Just smell a pretend flower and blow a pretend pinwheel.' Lily nodded and smiled a little. The flower and pinwheel had helped her feel so much better.",
+                "parentQuestions": [
+                    "What color flower did Lily imagine?",
+                    "How did Lily breathe in and out?",
+                    "Can you practice smelling a flower and blowing a pinwheel?"
+                ]
+            },
+            "ro": {
+                "title": "Miroase floarea, suflă morișca",
+                "text": "Crina era supărată și plângea. Mama ei îngenunche lângă ea. 'Hai să facem respirația noastră specială,' spuse Mama blând. 'Îți amintești? Miroase floarea, suflă morișca.' Mama ridică mâna ca o floare. 'Întâi, pretinde că aceasta e cea mai frumoasă floare. Ce culoare are?' 'Mov,' trase Crina aer pe nas. 'Perfect. Acum miroase frumoasa floare mov. Inspiră mare și încet pe nas, ca și cum ai mirosi cel mai dulce miros.' Crina inspiră încet pe nas. 'Minunat. Acum...' Mama făcu cealaltă mână în formă de morișcă. 'Suflă ușor pe morișcă. Privește cum se învârte încet. Suflă afară ușor și încet pe gură.' Crina expiră încet, imaginându-și morișca învârtindu-se blând. 'Din nou,' spuse Mama. 'Miroase floarea. Frumos și încet.' Crina miosi floarea mov imaginară. 'Acum suflă morișca. Blând și încet.' Crina suflă ușor. Au făcut asta de încă cinci ori. De fiecare dată, Crina se simți mai calmă. Lacrimile i se opriră. Respirația deveni constantă. 'Poți face asta oricând,' spuse Mama. 'Doar miroase o floare imaginară și suflă o morișcă imaginară.' Crina dădu din cap și zâmbi puțin. Floarea și morișca o ajutaseră să se simtă mult mai bine.",
+                "parentQuestions": [
+                    "Ce culoare și-a imaginat Crina floarea?",
+                    "Cum a inspirat și expirat Crina?",
+                    "Poți exersa să miroși o floare și să sufli o morișcă?"
+                ]
+            },
+            "it": {
+                "title": "Annusa il fiore, soffia la girandola",
+                "text": "Giglio era arrabbiata e piangeva. La sua mamma si inginocchiò accanto a lei. 'Facciamo la nostra respirazione speciale,' disse dolcemente la Mamma. 'Ricordi? Annusa il fiore, soffia la girandola.' La Mamma alzò la mano come un fiore. 'Prima, fingi che questo sia il fiore più bello. Di che colore è?' 'Viola,' singhiozzò Giglio. 'Perfetto. Ora annusa il bellissimo fiore viola. Fai un respiro grande e lento attraverso il naso, come se stessi annusando il profumo più dolce.' Giglio inspirò lentamente attraverso il naso. 'Meraviglioso. Ora...' La Mamma fece l'altra mano a forma di girandola. 'Soffia dolcemente sulla girandola. Guardala girare lentamente. Soffia fuori dolcemente e lentamente attraverso la bocca.' Giglio espirò lentamente, immaginando la girandola che girava dolcemente. 'Di nuovo,' disse la Mamma. 'Annusa il fiore. Bello e lento.' Giglio annusò l'immaginario fiore viola. 'Ora soffia la girandola. Dolce e lento.' Giglio soffiò dolcemente. Lo fecero altre cinque volte. Ogni volta, Giglio si sentiva più calma. Le lacrime rallentarono. Il suo respiro divenne costante. 'Puoi farlo in qualsiasi momento,' disse la Mamma. 'Basta annusare un fiore finto e soffiare una girandola finta.' Giglio annuì e sorrise un po'. Il fiore e la girandola l'avevano aiutata a sentirsi molto meglio.",
+                "parentQuestions": [
+                    "Di che colore immaginava Giglio il fiore?",
+                    "Come inspirava ed espirava Giglio?",
+                    "Puoi esercitarti ad annusare un fiore e soffiare una girandola?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "calm-down-008-turtle-shell",
+        "categorySlug": "calm-down",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 5,
+        "tags_en": [
+            "turtle",
+            "safe space",
+            "retreat",
+            "calm"
+        ],
+        "tags_ro": [
+            "broască țestoasă",
+            "loc sigur",
+            "retragere",
+            "calm"
+        ],
+        "tags_it": [
+            "tartaruga",
+            "spazio sicuro",
+            "rifugio",
+            "calma"
+        ],
+        "locales": {
+            "en": {
+                "title": "Tommy's Turtle Trick",
+                "text": "Tommy was overwhelmed. There was too much noise and too many people. He wanted to hide. His teacher sat next to him. 'Let's be turtles,' she said kindly. 'When turtles feel overwhelmed, they go into their shells where it's quiet and safe.' Tommy listened. 'First, curl up small, like a turtle going into its shell. Wrap your arms around your legs.' Tommy curled up into a ball. 'Now close your eyes. You're inside your turtle shell. It's quiet here. It's safe. Nothing can bother you.' Tommy kept his eyes closed. He imagined he had a beautiful shell, painted with swirls of blue and green. 'Take slow breaths inside your shell. In through your nose, one, two, three. Out through your mouth, one, two, three, four.' Tommy breathed slowly. The imaginary shell felt so peaceful. 'In your shell, think of your favorite calm place. Maybe a cozy bed, or a quiet garden.' Tommy thought of his grandmother's garden. 'Stay in your shell as long as you need,' Teacher said. 'When you're ready, slowly come out.' Tommy stayed curled up, breathing slowly. He felt safe and calm. When he was ready, he slowly uncurled, feeling much, much better.",
+                "parentQuestions": [
+                    "What did Tommy imagine to feel safe?",
+                    "Where did Tommy think of in his turtle shell?",
+                    "Can you try curling up like a turtle when you feel overwhelmed?"
+                ]
+            },
+            "ro": {
+                "title": "Trucul broaștei țestoase al lui Tomi",
+                "text": "Tomi era copleșit. Era prea mult zgomot și prea mulți oameni. Voia să se ascundă. Învățătoarea lui stătu lângă el. 'Hai să fim broaște țestoase,' spuse ea cu bunătate. 'Când broaștele țestoase se simt copleșite, intră în carapacele lor unde e liniște și siguranță.' Tomi ascultă. 'Întâi, ghemuiește-te mic, ca o broască țestoasă intrând în carapace. Înfășoară-ți brațele în jurul picioarelor.' Tomi se ghemui într-o minge. 'Acum închide ochii. Ești în carapacea ta de broască țestoasă. E liniște aici. E sigur. Nimic nu te poate deranja.' Tomi ținu ochii închiși. Își imaginea că avea o carapace frumoasă, pictată cu spirale de albastru și verde. 'Respiră încet în carapacea ta. Inspiră pe nas, unu, doi, trei. Expiră pe gură, unu, doi, trei, patru.' Tomi respiră încet. Carapacea imaginară se simțea atât de pașnică. 'În carapacea ta, gândește-te la locul tău preferat de calm. Poate un pat confortabil, sau o grădină liniștită.' Tomi se gândi la grădina bunicii lui. 'Stai în carapacea ta cât ai nevoie,' spuse Învățătoarea. 'Când ești gata, ieși încet.' Tomi rămase ghemuit, respirând încet. Se simțea în siguranță și calm. Când fu gata, se desfăcu încet, simțindu-se mult, mult mai bine.",
+                "parentQuestions": [
+                    "Ce și-a imaginat Tomi pentru a se simți în siguranță?",
+                    "La ce loc s-a gândit Tomi în carapacea lui de broască?",
+                    "Poți încerca să te ghemuiești ca o broască țestoasă când te simți copleșit?"
+                ]
+            },
+            "it": {
+                "title": "Il trucco della tartaruga di Tommi",
+                "text": "Tommi era sopraffatto. C'era troppo rumore e troppe persone. Voleva nascondersi. La sua maestra si sedette accanto a lui. 'Facciamo le tartarughe,' disse gentilmente. 'Quando le tartarughe si sentono sopraffatte, entrano nei loro gusci dove è silenzioso e sicuro.' Tommi ascoltò. 'Prima, raggomitolati piccolo, come una tartaruga che entra nel suo guscio. Avvolgi le braccia intorno alle gambe.' Tommi si raggomitolò in una palla. 'Ora chiudi gli occhi. Sei dentro il tuo guscio di tartaruga. È silenzioso qui. È sicuro. Niente può disturbarti.' Tommi tenne gli occhi chiusi. Immaginò di avere un bellissimo guscio, dipinto con spirali di blu e verde. 'Fai respiri lenti dentro il tuo guscio. Inspira dal naso, uno, due, tre. Espira dalla bocca, uno, due, tre, quattro.' Tommi respirò lentamente. Il guscio immaginario sembrava così pacifico. 'Nel tuo guscio, pensa al tuo posto calmo preferito. Forse un letto accogliente, o un giardino tranquillo.' Tommi pensò al giardino di sua nonna. 'Resta nel tuo guscio quanto hai bisogno,' disse la Maestra. 'Quando sei pronto, esci lentamente.' Tommi rimase raggomitolato, respirando lentamente. Si sentiva al sicuro e calmo. Quando fu pronto, si srotolò lentamente, sentendosi molto, molto meglio.",
+                "parentQuestions": [
+                    "Cosa immaginava Tommi per sentirsi al sicuro?",
+                    "A che posto pensava Tommi nel suo guscio di tartaruga?",
+                    "Puoi provare a raggomitolarti come una tartaruga quando ti senti sopraffatto?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

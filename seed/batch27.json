@@ -1,0 +1,116 @@
+[
+    {
+        "storyKey": "adventure-maple-forest-003",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "underground",
+            "crystals",
+            "discovery"
+        ],
+        "tags_ro": [
+            "pădure",
+            "subteran",
+            "cristale",
+            "descoperire"
+        ],
+        "tags_it": [
+            "bosco",
+            "sotterraneo",
+            "cristalli",
+            "scoperta"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 3,
+        "locales": {
+            "en": {
+                "title": "The Crystal Cavern",
+                "text": "Beyond the secret door, Milo, Ruby, and Finn discovered a breathtaking cavern. Crystals of every color covered the walls, and they sparkled like rainbow stars! 'It's so beautiful!' Ruby gasped. The crystals gave off a soft glow, lighting their way. In the center of the cavern was a small underground stream with the clearest water they had ever seen. 'Look at the map,' Milo said. 'There's a drawing of a crystal here, and an arrow pointing deeper.' They followed the stream, marveling at the crystal formations. Some looked like frozen waterfalls. Others looked like flowers made of light. Then Finn noticed something odd. 'That crystal is different!' He pointed to a large blue crystal that stood alone. Unlike the others, it had something inside it! They gathered around to look. Inside the crystal was another piece of paper! 'How do we get it out?' Ruby wondered. Milo studied the crystal carefully. 'Maybe we're not supposed to break it. Look, there are words carved at the bottom.' Finn read slowly: 'Kindness is the key.' They thought hard. What did that mean? Then Ruby had an idea. She gently placed her paw on the crystal and said, 'Please, may we see what's inside?' The crystal glowed brighter, and the paper slowly floated up and out! Magic! What secret did the new paper hold?",
+                "parentQuestions": [
+                    "What did the friends find in the Crystal Cavern?",
+                    "What was the 'key' to opening the crystal?",
+                    "Why do you think kindness worked like magic?"
+                ]
+            },
+            "ro": {
+                "title": "Caverna de cristal",
+                "text": "Dincolo de ușa secretă, Milo, Rubina și Fini descoperiră o cavernă uimitoare. Cristale de toate culorile acopereau pereții și sclipeau ca stele de curcubeu! 'E atât de frumos!' exclamă Rubina. Cristalele emanau o strălucire blândă, luminându-le calea. În centrul cavernei era un mic pârâu subteran cu cea mai limpede apă pe care o văzuseră vreodată. 'Uită-te la hartă,' spuse Milo. 'E un desen al unui cristal aici și o săgeată arătând mai adânc.' Urmară pârâul, minunându-se de formațiunile de cristal. Unele arătau ca niște cascade înghețate. Altele arătau ca flori făcute din lumină. Apoi Fini observă ceva ciudat. 'Cristalul ăla e diferit!' Arătă spre un cristal mare albastru care stătea singur. Spre deosebire de celelalte, avea ceva în interior! Se adunară să privească. În interiorul cristalului era altă bucată de hârtie! 'Cum o scoatem?' se întrebă Rubina. Milo studie cristalul cu atenție. 'Poate nu trebuie să-l spargem. Uite, sunt cuvinte sculptate la bază.' Fini citi încet: 'Bunătatea este cheia.' Se gândiră serios. Ce însemna asta? Apoi Rubina avu o idee. Puse blând laba pe cristal și spuse: 'Te rog, ne lași să vedem ce e înăuntru?' Cristalul străluci mai puternic și hârtia plutea încet în sus și în afară! Magie! Ce secret conținea noua hârtie?",
+                "parentQuestions": [
+                    "Ce au găsit prietenii în Caverna de Cristal?",
+                    "Care era 'cheia' pentru a deschide cristalul?",
+                    "De ce crezi că bunătatea a funcționat ca magia?"
+                ]
+            },
+            "it": {
+                "title": "La caverna di cristallo",
+                "text": "Oltre la porta segreta, Milo, Rubina e Finn scoprirono una caverna mozzafiato. Cristalli di ogni colore coprivano le pareti e brillavano come stelle arcobaleno! 'È così bello!' esclamò Rubina. I cristalli emanavano un bagliore morbido, illuminando la loro strada. Al centro della caverna c'era un piccolo ruscello sotterraneo con l'acqua più limpida che avessero mai visto. 'Guarda la mappa,' disse Milo. 'C'è un disegno di un cristallo qui e una freccia che punta più in profondità.' Seguirono il ruscello, meravigliandosi delle formazioni di cristallo. Alcune sembravano cascate ghiacciate. Altre sembravano fiori fatti di luce. Poi Finn notò qualcosa di strano. 'Quel cristallo è diverso!' Indicò un grande cristallo blu che stava da solo. A differenza degli altri, aveva qualcosa dentro! Si radunarono per guardare. Dentro il cristallo c'era un altro pezzo di carta! 'Come lo tiriamo fuori?' si chiese Rubina. Milo studiò il cristallo attentamente. 'Forse non dobbiamo romperlo. Guarda, ci sono parole incise alla base.' Finn lesse lentamente: 'La gentilezza è la chiave.' Pensarono intensamente. Cosa significava? Poi Rubina ebbe un'idea. Mise dolcemente la zampa sul cristallo e disse: 'Per favore, possiamo vedere cosa c'è dentro?' Il cristallo brillò più forte e la carta fluttuò lentamente su e fuori! Magia! Che segreto conteneva la nuova carta?",
+                "parentQuestions": [
+                    "Cosa hanno trovato gli amici nella Caverna di Cristallo?",
+                    "Qual era la 'chiave' per aprire il cristallo?",
+                    "Perché pensi che la gentilezza abbia funzionato come magia?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "adventure-maple-forest-004",
+        "categorySlug": "adventure",
+        "ageMin": 4,
+        "ageMax": 7,
+        "durationMin": 8,
+        "tags_en": [
+            "forest",
+            "riddle",
+            "bridge",
+            "courage"
+        ],
+        "tags_ro": [
+            "pădure",
+            "ghicitoare",
+            "pod",
+            "curaj"
+        ],
+        "tags_it": [
+            "bosco",
+            "indovinello",
+            "ponte",
+            "coraggio"
+        ],
+        "seriesId": "maple-forest",
+        "episodeNo": 4,
+        "locales": {
+            "en": {
+                "title": "The Bridge of Riddles",
+                "text": "The paper from the crystal revealed the next clue: 'Cross the Bridge of Riddles, where questions are the way.' Milo, Ruby, and Finn emerged from the cavern into a part of the forest they had never seen. Before them stretched a long wooden bridge over a deep, misty ravine. 'I don't see any riddles,' Finn said nervously. But when they stepped onto the bridge, a voice spoke from nowhere! 'To cross, you must answer true. Three riddles for the three of you.' The friends looked at each other bravely. The first riddle came: 'I have hands but cannot clap. I have a face but cannot smile. What am I?' Milo thought hard. 'A clock!' The bridge glowed green. Correct! The second riddle: 'The more you take, the more you leave behind. What am I?' Ruby's ears twitched as she thought. 'Footsteps!' Another green glow. The third riddle: 'I am not alive, but I grow. I don't have lungs, but I need air. I don't have a mouth, but water kills me. What am I?' Finn's eyes lit up. 'Fire!' The entire bridge glowed bright green. 'Well answered, brave travelers. You may pass.' They carefully crossed the ancient bridge, proud of their teamwork. What awaited them on the other side?",
+                "parentQuestions": [
+                    "What did the friends need to do to cross the bridge?",
+                    "Can you figure out what the answers to the riddles were?",
+                    "Have you ever been brave when something seemed scary?"
+                ]
+            },
+            "ro": {
+                "title": "Podul ghicitorilor",
+                "text": "Hârtia din cristal dezvălui următorul indiciu: 'Traversează Podul Ghicitorilor, unde întrebările sunt calea.' Milo, Rubina și Fini ieșiră din cavernă într-o parte a pădurii pe care nu o mai văzuseră. În fața lor se întindea un pod lung de lemn peste o râpă adâncă și ceață. 'Nu văd nicio ghicitoare,' spuse Fini nervos. Dar când pășiră pe pod, o voce vorbi de nicăieri! 'Pentru a traversa, trebuie să răspundeți corect. Trei ghicitori pentru voi trei.' Prietenii se priviră cu curaj. Prima ghicitoare veni: 'Am mâini dar nu pot apluda. Am o față dar nu pot zâmbi. Ce sunt?' Milo se gândi serios. 'Un ceas!' Podul străluci verde. Corect! A doua ghicitoare: 'Cu cât iei mai mult, cu atât lași mai mult în urmă. Ce sunt?' Urechile Rubinei tresăriră gândindu-se. 'Pașii!' Altă strălucire verde. A treia ghicitoare: 'Nu sunt viu, dar cresc. Nu am plămâni, dar am nevoie de aer. Nu am gură, dar apa mă omoară. Ce sunt?' Ochii lui Fini se luminară. 'Focul!' Întregul pod străluci verde puternic. 'Ați răspuns bine, călători curajoși. Puteți trece.' Traversară cu grijă podul străvechi, mândri de lucrul în echipă. Ce îi aștepta de cealaltă parte?",
+                "parentQuestions": [
+                    "Ce trebuiau să facă prietenii pentru a traversa podul?",
+                    "Poți ghici care erau răspunsurile la ghicitori?",
+                    "Ai fost vreodată curajos când ceva părea înfricoșător?"
+                ]
+            },
+            "it": {
+                "title": "Il ponte degli indovinelli",
+                "text": "La carta del cristallo rivelò l'indizio successivo: 'Attraversa il Ponte degli Indovinelli, dove le domande sono la via.' Milo, Rubina e Finn emersero dalla caverna in una parte del bosco che non avevano mai visto. Davanti a loro si estendeva un lungo ponte di legno sopra un profondo burrone nebbioso. 'Non vedo nessun indovinello,' disse Finn nervosamente. Ma quando misero piede sul ponte, una voce parlò dal nulla! 'Per attraversare, dovete rispondere veramente. Tre indovinelli per voi tre.' Gli amici si guardarono coraggiosamente. Il primo indovinello arrivò: 'Ho le mani ma non posso applaudire. Ho una faccia ma non posso sorridere. Cosa sono?' Milo pensò intensamente. 'Un orologio!' Il ponte brillò di verde. Corretto! Il secondo indovinello: 'Più ne prendi, più ne lasci dietro. Cosa sono?' Le orecchie di Rubina si mossero mentre pensava. 'Le impronte!' Un altro bagliore verde. Il terzo indovinello: 'Non sono vivo, ma cresco. Non ho polmoni, ma ho bisogno d'aria. Non ho bocca, ma l'acqua mi uccide. Cosa sono?' Gli occhi di Finn si illuminarono. 'Il fuoco!' L'intero ponte brillò di verde intenso. 'Avete risposto bene, coraggiosi viaggiatori. Potete passare.' Attraversarono con attenzione l'antico ponte, fieri del loro lavoro di squadra. Cosa li aspettava dall'altra parte?",
+                "parentQuestions": [
+                    "Cosa dovevano fare gli amici per attraversare il ponte?",
+                    "Riesci a capire quali erano le risposte agli indovinelli?",
+                    "Sei mai stato coraggioso quando qualcosa sembrava spaventoso?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

@@ -1,0 +1,167 @@
+[
+    {
+        "storyKey": "learn-to-read-004-sun-fun",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "sun",
+            "fun",
+            "run",
+            "play"
+        ],
+        "tags_ro": [
+            "soare",
+            "distracție",
+            "alerga",
+            "joc"
+        ],
+        "tags_it": [
+            "sole",
+            "divertimento",
+            "correre",
+            "giocare"
+        ],
+        "locales": {
+            "en": {
+                "title": "Fun in the Sun",
+                "text": "The sun is up. Time for fun! I run in the sun. Run, run, run! I see my friend Bun. Bun is a bunny. Bun wants to run too. We run and have fun. We jump. We hop. We spin. We stop! We sit in the sun. We had so much fun. I love Bun. Bun loves me. Best friends we will be! The end.",
+                "parentQuestions": [
+                    "Who is Bun?",
+                    "What did they do in the sun?",
+                    "Who is your best friend?"
+                ]
+            },
+            "ro": {
+                "title": "Distracție la soare",
+                "text": "Soarele e sus. E timpul pentru distracție! Alerg la soare. Alerg, alerg, alerg! Îl văd pe prietenul meu Puf. Puf e un iepuraș. Puf vrea să alerge și el. Alergăm și ne distrăm. Sărim. Țopăim. Ne rotim. Ne oprim! Stăm la soare. Ne-am distrat atât de mult. Îl iubesc pe Puf. Puf mă iubește pe mine. Cei mai buni prieteni vom fi! Sfârșit.",
+                "parentQuestions": [
+                    "Cine e Puf?",
+                    "Ce au făcut la soare?",
+                    "Cine e cel mai bun prieten al tău?"
+                ]
+            },
+            "it": {
+                "title": "Divertimento al sole",
+                "text": "Il sole è alto. È ora di divertirsi! Corro al sole. Corro, corro, corro! Vedo il mio amico Puffy. Puffy è un coniglietto. Anche Puffy vuole correre. Corriamo e ci divertiamo. Saltiamo. Saltelliam. Giriamo. Ci fermiamo! Stiamo al sole. Ci siamo divertiti tanto. Amo Puffy. Puffy mi ama. Migliori amici saremo! Fine.",
+                "parentQuestions": [
+                    "Chi è Puffy?",
+                    "Cosa hanno fatto al sole?",
+                    "Chi è il tuo migliore amico?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-005-hen-pen",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "hen",
+            "pen",
+            "ten",
+            "eggs"
+        ],
+        "tags_ro": [
+            "găină",
+            "coteț",
+            "zece",
+            "ouă"
+        ],
+        "tags_it": [
+            "gallina",
+            "recinto",
+            "dieci",
+            "uova"
+        ],
+        "locales": {
+            "en": {
+                "title": "The Hen in the Pen",
+                "text": "A hen lives in a pen. The pen is near Ben. Ben is a boy of ten. The hen likes Ben. Ben likes the hen. The hen has eggs. One, two, three. Four, five, six. Seven, eight, nine, ten! Ten eggs for the hen! The eggs go crack. Little chicks come out. Peep, peep, peep! Ben smiles. The hen smiles too. Happy hen! Happy Ben! The end.",
+                "parentQuestions": [
+                    "How many eggs did the hen have?",
+                    "What came out of the eggs?",
+                    "Can you count to ten?"
+                ]
+            },
+            "ro": {
+                "title": "Găina din coteț",
+                "text": "O găină trăiește în coteț. Cotețul e lângă Ben. Ben e un băiat de zece ani. Găinii îi place de Ben. Lui Ben îi place găina. Găina are ouă. Unu, doi, trei. Patru, cinci, șase. Șapte, opt, nouă, zece! Zece ouă pentru găină! Ouăle fac crac. Puișori mici ies. Piu, piu, piu! Ben zâmbește. Și găina zâmbește. Găină fericită! Ben fericit! Sfârșit.",
+                "parentQuestions": [
+                    "Câte ouă avea găina?",
+                    "Ce a ieșit din ouă?",
+                    "Poți număra până la zece?"
+                ]
+            },
+            "it": {
+                "title": "La gallina nel recinto",
+                "text": "Una gallina vive in un recinto. Il recinto è vicino a Ben. Ben è un ragazzo di dieci anni. Alla gallina piace Ben. A Ben piace la gallina. La gallina ha delle uova. Uno, due, tre. Quattro, cinque, sei. Sette, otto, nove, dieci! Dieci uova per la gallina! Le uova fanno crac. Escono piccoli pulcini. Pio, pio, pio! Ben sorride. Anche la gallina sorride. Gallina felice! Ben felice! Fine.",
+                "parentQuestions": [
+                    "Quante uova aveva la gallina?",
+                    "Cosa è uscito dalle uova?",
+                    "Sai contare fino a dieci?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "learn-to-read-006-red-bed",
+        "categorySlug": "learn-to-read",
+        "ageMin": 4,
+        "ageMax": 6,
+        "durationMin": 3,
+        "tags_en": [
+            "bed",
+            "red",
+            "ted",
+            "sleep"
+        ],
+        "tags_ro": [
+            "pat",
+            "roșu",
+            "Ted",
+            "somn"
+        ],
+        "tags_it": [
+            "letto",
+            "rosso",
+            "Ted",
+            "dormire"
+        ],
+        "locales": {
+            "en": {
+                "title": "Ted's Red Bed",
+                "text": "Ted has a bed. The bed is red. Ted loves his red bed. Ted gets in bed. He puts his head on the pillow. Ted has a toy named Fred. Fred is a bear. Ted puts Fred in bed. Ted and Fred in the red bed. Time to rest. Close your eyes. Sleep tight. Ted dreams of stars. Ted dreams of the moon. Ted dreams of friends. In his red bed. The end.",
+                "parentQuestions": [
+                    "What color is Ted's bed?",
+                    "Who is Fred?",
+                    "What do you dream about?"
+                ]
+            },
+            "ro": {
+                "title": "Patul roșu al lui Ted",
+                "text": "Ted are un pat. Patul e roșu. Ted iubește patul lui roșu. Ted se bagă în pat. Pune capul pe pernă. Ted are o jucărie numită Fred. Fred e un urs. Ted îl pune pe Fred în pat. Ted și Fred în patul roșu. E timpul să te odihnești. Închide ochii. Somn ușor. Ted visează stele. Ted visează luna. Ted visează prieteni. În patul lui roșu. Sfârșit.",
+                "parentQuestions": [
+                    "Ce culoare are patul lui Ted?",
+                    "Cine e Fred?",
+                    "Ce visezi tu?"
+                ]
+            },
+            "it": {
+                "title": "Il letto rosso di Ted",
+                "text": "Ted ha un letto. Il letto è rosso. Ted ama il suo letto rosso. Ted si mette a letto. Mette la testa sul cuscino. Ted ha un giocattolo di nome Fred. Fred è un orso. Ted mette Fred a letto. Ted e Fred nel letto rosso. È ora di riposare. Chiudi gli occhi. Dormi bene. Ted sogna le stelle. Ted sogna la luna. Ted sogna gli amici. Nel suo letto rosso. Fine.",
+                "parentQuestions": [
+                    "Di che colore è il letto di Ted?",
+                    "Chi è Fred?",
+                    "Cosa sogni tu?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

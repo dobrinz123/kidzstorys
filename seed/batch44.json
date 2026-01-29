@@ -1,0 +1,112 @@
+[
+    {
+        "storyKey": "curiosities-007-where-does-honey-come",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "bees",
+            "honey",
+            "flowers",
+            "nature"
+        ],
+        "tags_ro": [
+            "albine",
+            "miere",
+            "flori",
+            "natură"
+        ],
+        "tags_it": [
+            "api",
+            "miele",
+            "fiori",
+            "natura"
+        ],
+        "locales": {
+            "en": {
+                "title": "Where Does Honey Come From?",
+                "text": "Honey is delicious on toast and in tea. But have you ever wondered where it comes from? The answer is amazing: bees make it! Let's follow a bee to learn how. Honeybees visit flowers to collect nectar. Nectar is a sweet liquid that flowers make. The bee sucks up the nectar with her long tongue, like using a straw! She stores it in a special honey stomach, which is different from her regular stomach. One bee might visit hundreds of flowers in one day! When the bee's honey stomach is full, she flies back to the hive. There, she passes the nectar to another bee, mouth to mouth. That bee chews it and passes it to another bee. Each time, the nectar mixes with special enzymes that change its chemistry. Then bees put the nectar into honeycomb cells. But it's still too watery to be honey. So bees fan it with their wings to evaporate the water! They fan and fan until it's thick and sticky. When it's ready, they cap the cell with wax to save it for later. Making just one pound of honey takes about sixty thousand bee trips to flowers. That's a lot of work! So next time you enjoy honey, thank the busy bees who made it!",
+                "parentQuestions": [
+                    "What do bees collect from flowers?",
+                    "How do bees make nectar into honey?",
+                    "Why do you think bees work so hard?"
+                ]
+            },
+            "ro": {
+                "title": "De unde vine mierea?",
+                "text": "Mierea e delicioasă pe pâine prăjită și în ceai. Dar te-ai întrebat vreodată de unde vine? Răspunsul e uimitor: albinele o fac! Să urmăm o albină să învățăm cum. Albinele melifere vizitează florile să colecteze nectar. Nectarul e un lichid dulce pe care îl fac florile. Albina suge nectarul cu limba ei lungă, ca și cum ar folosi un pai! Îl depozitează într-un stomac special de miere, care e diferit de stomacul ei normal. O albină ar putea vizita sute de flori într-o zi! Când stomacul de miere al albinei e plin, zboară înapoi la stup. Acolo, trece nectarul altei albine, din gură în gură. Acea albină îl mestecă și îl trece altei albine. De fiecare dată, nectarul se amestecă cu enzime speciale care îi schimbă chimia. Apoi albinele pun nectarul în celulele fagurilor. Dar e încă prea apos ca să fie miere. Așa că albinele îl ventilează cu aripile pentru a evapora apa! Ventilează și ventilează până devine gros și lipicios. Când e gata, acoperă celula cu ceară pentru a o păstra pentru mai târziu. A face doar o jumătate de kilogram de miere necesită aproximativ șaizeci de mii de călătorii ale albinelor la flori. E multă muncă! Deci data viitoare când te bucuri de miere, mulțumește albinelor harnice care au făcut-o!",
+                "parentQuestions": [
+                    "Ce colectează albinele de la flori?",
+                    "Cum transformă albinele nectarul în miere?",
+                    "De ce crezi că albinele muncesc atât de mult?"
+                ]
+            },
+            "it": {
+                "title": "Da dove viene il miele?",
+                "text": "Il miele è delizioso sul pane tostato e nel tè. Ma ti sei mai chiesto da dove viene? La risposta è incredibile: lo fanno le api! Seguiamo un'ape per imparare come. Le api da miele visitano i fiori per raccogliere il nettare. Il nettare è un liquido dolce che producono i fiori. L'ape succhia il nettare con la sua lunga lingua, come usare una cannuccia! Lo conserva in uno stomaco speciale per il miele, che è diverso dal suo stomaco normale. Un'ape potrebbe visitare centinaia di fiori in un giorno! Quando lo stomaco del miele dell'ape è pieno, vola di nuovo all'alveare. Lì, passa il nettare a un'altra ape, da bocca a bocca. Quell'ape lo mastica e lo passa a un'altra ape. Ogni volta, il nettare si mescola con enzimi speciali che ne cambiano la chimica. Poi le api mettono il nettare nelle celle del favo. Ma è ancora troppo acquoso per essere miele. Così le api lo ventilano con le loro ali per far evaporare l'acqua! Ventilano e ventilano finché non diventa denso e appiccicoso. Quando è pronto, sigillano la cella con la cera per conservarlo per dopo. Fare solo mezzo chilo di miele richiede circa sessantamila viaggi delle api ai fiori. È molto lavoro! Quindi la prossima volta che gusti il miele, ringrazia le api laboriose che l'hanno fatto!",
+                "parentQuestions": [
+                    "Cosa raccolgono le api dai fiori?",
+                    "Come trasformano le api il nettare in miele?",
+                    "Perché pensi che le api lavorino così duramente?"
+                ]
+            }
+        },
+        "isPublished": true
+    },
+    {
+        "storyKey": "curiosities-008-how-do-magnets-work",
+        "categorySlug": "curiosities",
+        "ageMin": 5,
+        "ageMax": 8,
+        "durationMin": 5,
+        "tags_en": [
+            "magnets",
+            "attract",
+            "science",
+            "metal"
+        ],
+        "tags_ro": [
+            "magneți",
+            "atrag",
+            "știință",
+            "metal"
+        ],
+        "tags_it": [
+            "magneti",
+            "attrazione",
+            "scienza",
+            "metallo"
+        ],
+        "locales": {
+            "en": {
+                "title": "How Do Magnets Work?",
+                "text": "Have you ever played with magnets? They can pull things toward them like magic! But how do they work? Let's find out! Everything in the world is made of tiny, tiny things called atoms. Atoms are so small that you can't see them, even with a magnifying glass. Inside atoms are even tinier parts called electrons, which spin around like tiny planets. In most things, these electrons spin in all different directions. They're messy and mixed up. But in magnets, something special happens. The electrons all line up and spin in the same direction! This creates an invisible force field around the magnet. Every magnet has two ends called poles: a north pole and a south pole. Here's a fun rule: opposite poles attract, and same poles repel. That means a north pole and a south pole will pull toward each other. But two north poles will push away from each other! Magnets only attract certain metals like iron, nickel, and cobalt. They won't stick to wood, plastic, or even some metals like aluminum. The Earth itself is like a giant magnet! That's how compasses work: the compass needle is a magnet that always points toward Earth's magnetic north pole. Pretty cool, right?",
+                "parentQuestions": [
+                    "What are the two ends of a magnet called?",
+                    "What happens when two same poles meet?",
+                    "Can you find something in your house that a magnet sticks to?"
+                ]
+            },
+            "ro": {
+                "title": "Cum funcționează magneții?",
+                "text": "Te-ai jucat vreodată cu magneți? Pot trage lucrurile spre ei ca prin magie! Dar cum funcționează? Să aflăm! Totul în lume e făcut din lucruri mici, mici numite atomi. Atomii sunt atât de mici încât nu-i poți vedea, nici cu o lupă. În atomi sunt părți și mai mici numite electroni, care se rotesc ca niște planete mici. În majoritatea lucrurilor, acești electroni se rotesc în toate direcțiile diferite. Sunt dezordonați și amestecați. Dar în magneți, se întâmplă ceva special. Electronii se aliniază și se rotesc în aceeași direcție! Asta creează un câmp de forță invizibil în jurul magnetului. Fiecare magnet are două capete numite poli: un pol nord și un pol sud. Iată o regulă distractivă: polii opuși se atrag, și polii identici se resping. Asta înseamnă că un pol nord și un pol sud se vor trage unul spre altul. Dar doi poli nord se vor împinge unul de celălalt! Magneții atrag doar anumite metale precum fierul, nichelul și cobaltul. Nu se vor lipi de lemn, plastic sau chiar unele metale precum aluminiul. Pământul însuși e ca un magnet uriaș! Așa funcționează busolele: acul busolei e un magnet care arată întotdeauna spre polul nord magnetic al Pământului. Destul de tare, nu?",
+                "parentQuestions": [
+                    "Cum se numesc cele două capete ale unui magnet?",
+                    "Ce se întâmplă când se întâlnesc doi poli identici?",
+                    "Poți găsi ceva în casa ta de care se lipește un magnet?"
+                ]
+            },
+            "it": {
+                "title": "Come funzionano i magneti?",
+                "text": "Hai mai giocato con i magneti? Possono tirare le cose verso di loro come per magia! Ma come funzionano? Scopriamolo! Tutto nel mondo è fatto di cose minuscole chiamate atomi. Gli atomi sono così piccoli che non puoi vederli, nemmeno con una lente d'ingrandimento. Dentro gli atomi ci sono parti ancora più piccole chiamate elettroni, che girano come piccoli pianeti. Nella maggior parte delle cose, questi elettroni girano in tutte le direzioni diverse. Sono disordinati e mescolati. Ma nei magneti, succede qualcosa di speciale. Gli elettroni si allineano e girano tutti nella stessa direzione! Questo crea un campo di forza invisibile intorno al magnete. Ogni magnete ha due estremità chiamate poli: un polo nord e un polo sud. Ecco una regola divertente: i poli opposti si attraggono, e i poli uguali si respingono. Ciò significa che un polo nord e un polo sud si tireranno l'uno verso l'altro. Ma due poli nord si spingeranno via! I magneti attraggono solo certi metalli come ferro, nichel e cobalto. Non si attaccheranno al legno, alla plastica o anche ad alcuni metalli come l'alluminio. La Terra stessa è come un magnete gigante! Ecco come funzionano le bussole: l'ago della bussola è un magnete che punta sempre verso il polo nord magnetico della Terra. Piuttosto bello, vero?",
+                "parentQuestions": [
+                    "Come si chiamano le due estremità di un magnete?",
+                    "Cosa succede quando due poli uguali si incontrano?",
+                    "Riesci a trovare qualcosa in casa tua a cui si attacca un magnete?"
+                ]
+            }
+        },
+        "isPublished": true
+    }
+]

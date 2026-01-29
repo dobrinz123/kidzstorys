@@ -1,0 +1,28 @@
+{
+  "name": "story-kids-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kids Stories - Production-ready subscription app with multilingual content",
+  "scripts": {
+    "mobile": "pnpm --filter mobile start",
+    "mobile:web": "pnpm --filter mobile web",
+    "mobile:dev-client": "pnpm --filter mobile dev-client",
+    "admin": "pnpm --filter admin dev",
+    "convex:dev": "pnpm --filter convex dev",
+    "convex:deploy": "pnpm --filter convex deploy",
+    "seed": "pnpm --filter seed run seed",
+    "validate-stories": "pnpm --filter tools run validate",
+    "install:all": "pnpm install"
+  },
+  "dependencies": {
+    "@google/genai": "^0.14.1"
+  },
+  "devDependencies": {
+    "convex": "^1.31.6",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
