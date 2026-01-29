@@ -1,0 +1,5 @@
+{
+  "buildCommand": "pnpm exec convex codegen && pnpm --filter admin run build",
+  "outputDirectory": "apps/admin/.next",
+  "installCommand": "pnpm install"
+}
