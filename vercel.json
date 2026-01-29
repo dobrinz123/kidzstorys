@@ -1,7 +1,0 @@
-{
-  "version": 2,
-  "framework": "nextjs",
-  "buildCommand": "pnpm exec convex codegen && pnpm --filter admin build",
-  "outputDirectory": "apps/admin/.next",
-  "installCommand": "pnpm install"
-}
