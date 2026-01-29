@@ -124,7 +124,7 @@ export default function UsersPage() {
                     </td>
                     <td>
                       <div className="flex items-center gap-2">
-                        <SubscriptionBadge type={user.subscriptionType} />
+                        <SubscriptionBadge type={user.subscriptionType as "monthly" | "yearly" | "trial" | null} />
                         {user.entitlementActive && (
                           <span className="w-2 h-2 rounded-full bg-success-500" title="Active" />
                         )}
