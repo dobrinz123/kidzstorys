@@ -1,7 +1,5 @@
 # 📚 StoryKids - Interactive Stories for Children
 
-> **A Netflix-like platform for children's stories, available on Web, iOS, and Android.**
-
 StoryKids is a cross-platform application designed to provide engaging, educational, and interactive stories for children. It features a robust subscription model, multilingual support, and a dedicated parent dashboard for tracking progress.
 
 ## ✨ Features
