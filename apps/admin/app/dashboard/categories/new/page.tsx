@@ -250,8 +250,8 @@ export default function NewCategoryPage() {
                         type="button"
                         onClick={() => setFormData(prev => ({ ...prev, iconKey: key }))}
                         className={`p-2 text-2xl rounded-lg border-2 transition-colors ${formData.iconKey === key
-                            ? 'border-primary-500 bg-primary-50'
-                            : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                          ? 'border-primary-500 bg-primary-50'
+                          : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                           }`}
                         title={label}
                       >
@@ -295,7 +295,7 @@ export default function NewCategoryPage() {
             <Button
               type="submit"
               leftIcon={<Save size={18} />}
-              isLoading={isSubmitting}
+              isLoading={isSubmitting} /* Deployment Fix */
             >
               Create Category
             </Button>
