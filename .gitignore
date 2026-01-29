@@ -37,8 +37,7 @@ lerna-debug.log*
 .expo/
 .expo-shared/
 
-# Convex
-convex/_generated/
+# Convex (keep _generated in git for Vercel builds)
 
 # Mobile
 apps/mobile/.expo/
