@@ -90,7 +90,11 @@ export default function SignInScreen() {
                 return;
             }
 
-            await setAuthUser(user.userId);
+            await setAuthUser({
+                userId: user.userId,
+                sessionToken: user.sessionToken,
+                expiresAt: user.expiresAt,
+            });
 
             if (Platform.OS !== "web") {
                 await ensureRevenueCatId({ userId: user.userId });

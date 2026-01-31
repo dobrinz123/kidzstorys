@@ -25,7 +25,7 @@ const REVENUECAT_WEB_KEY =
 const ENTITLEMENT_ID =
   Constants.expoConfig?.extra?.EXPO_PUBLIC_REVENUECAT_ENTITLEMENT_ID ||
   process.env.EXPO_PUBLIC_REVENUECAT_ENTITLEMENT_ID ||
-  "PREMIUM";
+  "PREMIUM"; // matches RevenueCat dashboard entitlement ID
 
 // ============ MOCK MODE ============
 const hasKeyForPlatform = Platform.select({
@@ -35,6 +35,8 @@ const hasKeyForPlatform = Platform.select({
   default: false
 });
 
+// Mock mode only when no key is available for the current platform
+// For web with REVENUECAT_WEB_KEY configured, use real RevenueCat
 const MOCK_MODE = __DEV__ && !hasKeyForPlatform;
 const MOCK_STORAGE_KEY = "mock_premium_purchased";
 
@@ -56,8 +58,8 @@ export async function initializeRevenueCat() {
     console.log("[RevenueCat] Initializing Web SDK...");
 
     // PurchasesWeb.configure returns the instance
-    if (!webPurchases) {
-      webPurchases = PurchasesWeb.configure(REVENUECAT_WEB_KEY, currentAppUserId || undefined);
+    if (!webPurchases && REVENUECAT_WEB_KEY) {
+      webPurchases = PurchasesWeb.configure(REVENUECAT_WEB_KEY, currentAppUserId ?? "anonymous");
     }
     return;
   }

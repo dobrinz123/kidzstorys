@@ -84,24 +84,35 @@ export const getCurrentAdmin = query({
 
 // ============ ADMIN USER MUTATIONS ============
 
-// Admin login
+// Generate session token for admin
+function generateSessionToken(): string {
+  const array = new Uint8Array(32);
+  crypto.getRandomValues(array);
+  return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+const SESSION_EXPIRY_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+// Admin login with session token
 export const adminLogin = mutation({
   args: {
     email: v.string(),
     password: v.string(),
   },
   handler: async (ctx, args) => {
+    const normalizedEmail = args.email.toLowerCase().trim();
+
     // Find user by email
     const user = await ctx.db
       .query("users")
-      .withIndex("by_email", (q) => q.eq("email", args.email))
+      .withIndex("by_email", (q) => q.eq("email", normalizedEmail))
       .first();
 
     if (!user) {
       throw new Error("Invalid credentials");
     }
 
-    // Check password (note: should use proper hashing in production)
+    // Check password
     if (!user.passwordHash) {
       throw new Error("Invalid credentials");
     }
@@ -122,15 +133,31 @@ export const adminLogin = mutation({
       throw new Error("Not authorized for admin access");
     }
 
+    const now = Date.now();
+
+    // Generate session token
+    const sessionToken = generateSessionToken();
+    const expiresAt = now + SESSION_EXPIRY_MS;
+
+    await ctx.db.insert("sessions", {
+      userId: user._id,
+      token: sessionToken,
+      expiresAt,
+      createdAt: now,
+      lastActiveAt: now,
+    });
+
     // Update last active
     await ctx.db.patch(user._id, {
-      lastActiveAt: Date.now(),
-      updatedAt: Date.now(),
+      lastActiveAt: now,
+      updatedAt: now,
     });
 
     return {
       userId: user._id,
       adminUserId: adminUser._id,
+      sessionToken,
+      expiresAt,
       email: user.email,
       name: user.name,
       role: adminUser.role,
@@ -138,8 +165,66 @@ export const adminLogin = mutation({
   },
 });
 
-// Seed admin user (internal/dev only - bypasses admin check)
-export const seedAdmin = mutation({
+// Validate admin session and return current admin user
+export const validateAdminSession = query({
+  args: { sessionToken: v.string() },
+  handler: async (ctx, args) => {
+    // Find session
+    const session = await ctx.db
+      .query("sessions")
+      .withIndex("by_token", (q) => q.eq("token", args.sessionToken))
+      .first();
+
+    if (!session || session.expiresAt < Date.now()) {
+      return null;
+    }
+
+    // Get user
+    const user = await ctx.db.get(session.userId);
+    if (!user) {
+      return null;
+    }
+
+    // Get admin user - verify role from server
+    const adminUser = await ctx.db
+      .query("adminUsers")
+      .withIndex("by_userId", (q) => q.eq("userId", session.userId))
+      .first();
+
+    if (!adminUser) {
+      return null;
+    }
+
+    return {
+      userId: user._id,
+      adminUserId: adminUser._id,
+      email: user.email,
+      name: user.name,
+      role: adminUser.role, // Role from server, not client storage
+      sessionExpiresAt: session.expiresAt,
+    };
+  },
+});
+
+// Admin logout
+export const adminLogout = mutation({
+  args: { sessionToken: v.string() },
+  handler: async (ctx, args) => {
+    const session = await ctx.db
+      .query("sessions")
+      .withIndex("by_token", (q) => q.eq("token", args.sessionToken))
+      .first();
+
+    if (session) {
+      await ctx.db.delete(session._id);
+    }
+
+    return { success: true };
+  },
+});
+
+// Seed admin user - INTERNAL ONLY (can only be called from Convex dashboard or other internal functions)
+export const seedAdmin = internalMutation({
   args: {
     email: v.string(),
     userId: v.id("users"),
@@ -170,8 +255,8 @@ export const seedAdmin = mutation({
   },
 });
 
-// Force reset password (dev only)
-export const resetUserPassword = mutation({
+// Force reset password - INTERNAL ONLY (can only be called from Convex dashboard or other internal functions)
+export const resetUserPassword = internalMutation({
   args: {
     email: v.string(),
     password: v.string(),
@@ -191,6 +276,7 @@ export const resetUserPassword = mutation({
 
     await ctx.db.patch(user._id, {
       passwordHash: passwordHash,
+      updatedAt: Date.now(),
     });
 
     return true;

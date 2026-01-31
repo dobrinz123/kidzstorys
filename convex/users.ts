@@ -2,6 +2,20 @@ import { v, ConvexError } from "convex/values";
 import { query, mutation, action } from "./_generated/server";
 import { api, internal } from "./_generated/api";
 import * as bcrypt from "bcryptjs";
+import { checkRateLimit, resetRateLimit, formatRetryTime } from "./lib/rateLimit";
+import { validateEmail, validatePassword, validateName } from "./lib/validation";
+
+// ============ SESSION TOKEN UTILITIES ============
+
+// Generate cryptographically secure session token (64 hex chars)
+function generateSessionToken(): string {
+  const array = new Uint8Array(32);
+  crypto.getRandomValues(array);
+  return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+// Session expiration time: 7 days
+const SESSION_EXPIRY_MS = 7 * 24 * 60 * 60 * 1000;
 
 // Sign up new user
 export const signUp = mutation({
@@ -14,10 +28,41 @@ export const signUp = mutation({
     ),
   },
   handler: async (ctx, args) => {
+    // Validate email
+    const emailValidation = validateEmail(args.email);
+    if (!emailValidation.valid) {
+      throw new ConvexError(emailValidation.error!);
+    }
+
+    // Validate password
+    const passwordValidation = validatePassword(args.password);
+    if (!passwordValidation.valid) {
+      throw new ConvexError(passwordValidation.error!);
+    }
+
+    // Validate name if provided
+    if (args.name) {
+      const nameValidation = validateName(args.name);
+      if (!nameValidation.valid) {
+        throw new ConvexError(nameValidation.error!);
+      }
+    }
+
+    // Normalize email
+    const normalizedEmail = args.email.toLowerCase().trim();
+
+    // Check rate limit
+    const rateCheck = await checkRateLimit(ctx, "signUp", normalizedEmail);
+    if (!rateCheck.allowed) {
+      throw new ConvexError(
+        `Too many signup attempts. Please try again in ${formatRetryTime(rateCheck.retryAfterMs!)}.`
+      );
+    }
+
     // Check if user exists
     const existing = await ctx.db
       .query("users")
-      .withIndex("by_email", (q) => q.eq("email", args.email))
+      .withIndex("by_email", (q) => q.eq("email", normalizedEmail))
       .first();
 
     if (existing) {
@@ -29,16 +74,35 @@ export const signUp = mutation({
 
     const now = Date.now();
     const userId = await ctx.db.insert("users", {
-      email: args.email,
+      email: normalizedEmail,
       passwordHash: passwordHash,
-      name: args.name,
+      name: args.name?.trim(),
       entitlementActive: false,
       preferredLanguage: args.preferredLanguage || "en",
       createdAt: now,
       updatedAt: now,
     });
 
-    return { userId };
+    // Create session token for automatic login after signup
+    const sessionToken = generateSessionToken();
+    const expiresAt = now + SESSION_EXPIRY_MS;
+
+    await ctx.db.insert("sessions", {
+      userId,
+      token: sessionToken,
+      expiresAt,
+      createdAt: now,
+      lastActiveAt: now,
+    });
+
+    // Clear rate limit on successful signup
+    await resetRateLimit(ctx, "signUp", normalizedEmail);
+
+    return {
+      userId,
+      sessionToken,
+      expiresAt,
+    };
   },
 });
 
@@ -49,9 +113,20 @@ export const signIn = mutation({
     password: v.string(),
   },
   handler: async (ctx, args) => {
+    // Normalize email
+    const normalizedEmail = args.email.toLowerCase().trim();
+
+    // Check rate limit
+    const rateCheck = await checkRateLimit(ctx, "signIn", normalizedEmail);
+    if (!rateCheck.allowed) {
+      throw new ConvexError(
+        `Too many login attempts. Please try again in ${formatRetryTime(rateCheck.retryAfterMs!)}.`
+      );
+    }
+
     const user = await ctx.db
       .query("users")
-      .withIndex("by_email", (q) => q.eq("email", args.email))
+      .withIndex("by_email", (q) => q.eq("email", normalizedEmail))
       .first();
 
     if (!user || !user.passwordHash) {
@@ -65,14 +140,33 @@ export const signIn = mutation({
       return null;
     }
 
+    const now = Date.now();
+
+    // Generate session token
+    const sessionToken = generateSessionToken();
+    const expiresAt = now + SESSION_EXPIRY_MS;
+
+    await ctx.db.insert("sessions", {
+      userId: user._id,
+      token: sessionToken,
+      expiresAt,
+      createdAt: now,
+      lastActiveAt: now,
+    });
+
     // Update last active timestamp
     await ctx.db.patch(user._id, {
-      lastActiveAt: Date.now(),
-      updatedAt: Date.now(),
+      lastActiveAt: now,
+      updatedAt: now,
     });
+
+    // Clear rate limit on successful login
+    await resetRateLimit(ctx, "signIn", normalizedEmail);
 
     return {
       userId: user._id,
+      sessionToken,
+      expiresAt,
       email: user.email,
       name: user.name,
       preferredLanguage: user.preferredLanguage,
@@ -247,6 +341,15 @@ export const deleteAccount = mutation({
       await ctx.db.delete(adminUser._id);
     }
 
+    // Delete all sessions
+    const sessions = await ctx.db
+      .query("sessions")
+      .withIndex("by_userId", (q) => q.eq("userId", args.userId))
+      .collect();
+    for (const session of sessions) {
+      await ctx.db.delete(session._id);
+    }
+
     // Finally delete the user
     await ctx.db.delete(args.userId);
 
@@ -254,15 +357,32 @@ export const deleteAccount = mutation({
   },
 });
 
+// Generate cryptographically secure reset token (32 hex chars)
+function generateSecureResetToken(): string {
+  const array = new Uint8Array(16);
+  crypto.getRandomValues(array);
+  return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join("").toUpperCase();
+}
+
 // Internal mutation to generate and store reset token
 export const generateResetToken = mutation({
   args: {
     email: v.string(),
   },
   handler: async (ctx, args) => {
+    const normalizedEmail = args.email.toLowerCase().trim();
+
+    // Check rate limit for password reset requests
+    const rateCheck = await checkRateLimit(ctx, "passwordReset", normalizedEmail);
+    if (!rateCheck.allowed) {
+      throw new ConvexError(
+        `Too many reset attempts. Please try again in ${formatRetryTime(rateCheck.retryAfterMs!)}.`
+      );
+    }
+
     const user = await ctx.db
       .query("users")
-      .withIndex("by_email", (q) => q.eq("email", args.email))
+      .withIndex("by_email", (q) => q.eq("email", normalizedEmail))
       .first();
 
     if (!user) {
@@ -270,13 +390,14 @@ export const generateResetToken = mutation({
       return { exists: false };
     }
 
-    // Generate reset token (6-digit code)
-    const resetToken = Math.random().toString(36).substring(2, 8).toUpperCase();
-    const resetTokenExpiresAt = Date.now() + 30 * 60 * 1000; // 30 minutes
+    // Generate cryptographically secure reset token (32 hex chars)
+    const resetToken = generateSecureResetToken();
+    const resetTokenExpiresAt = Date.now() + 15 * 60 * 1000; // 15 minutes (reduced from 30)
 
     await ctx.db.patch(user._id, {
       resetToken,
       resetTokenExpiresAt,
+      resetAttempts: 0, // Reset verification attempts
       updatedAt: Date.now(),
     });
 
@@ -332,21 +453,41 @@ export const requestPasswordReset = action({
   },
 });
 
-// Verify reset token is valid
-export const verifyResetToken = query({
+// Verify reset token is valid (converted to mutation to track attempts)
+export const verifyResetToken = mutation({
   args: {
     email: v.string(),
     token: v.string(),
   },
   handler: async (ctx, args) => {
+    const normalizedEmail = args.email.toLowerCase().trim();
+
     const user = await ctx.db
       .query("users")
-      .withIndex("by_email", (q) => q.eq("email", args.email))
+      .withIndex("by_email", (q) => q.eq("email", normalizedEmail))
       .first();
 
     if (!user) {
       return { valid: false, error: "Invalid token" };
     }
+
+    // Check if too many verification attempts
+    const maxAttempts = 5;
+    if ((user.resetAttempts || 0) >= maxAttempts) {
+      // Invalidate token after too many attempts
+      await ctx.db.patch(user._id, {
+        resetToken: undefined,
+        resetTokenExpiresAt: undefined,
+        resetAttempts: undefined,
+        updatedAt: Date.now(),
+      });
+      return { valid: false, error: "Too many attempts. Please request a new code." };
+    }
+
+    // Increment attempt counter
+    await ctx.db.patch(user._id, {
+      resetAttempts: (user.resetAttempts || 0) + 1,
+    });
 
     if (!user.resetToken || user.resetToken !== args.token.toUpperCase()) {
       return { valid: false, error: "Invalid token" };
@@ -368,9 +509,11 @@ export const resetPassword = mutation({
     newPassword: v.string(),
   },
   handler: async (ctx, args) => {
+    const normalizedEmail = args.email.toLowerCase().trim();
+
     const user = await ctx.db
       .query("users")
-      .withIndex("by_email", (q) => q.eq("email", args.email))
+      .withIndex("by_email", (q) => q.eq("email", normalizedEmail))
       .first();
 
     if (!user) {
@@ -388,13 +531,27 @@ export const resetPassword = mutation({
     // Hash new password
     const passwordHash = await bcrypt.hash(args.newPassword, 10);
 
-    // Update password and clear token
+    // Update password and clear token + reset attempts
     await ctx.db.patch(user._id, {
       passwordHash: passwordHash,
       resetToken: undefined,
       resetTokenExpiresAt: undefined,
+      resetAttempts: undefined,
       updatedAt: Date.now(),
     });
+
+    // Invalidate all existing sessions (force re-login with new password)
+    const sessions = await ctx.db
+      .query("sessions")
+      .withIndex("by_userId", (q) => q.eq("userId", user._id))
+      .collect();
+
+    for (const session of sessions) {
+      await ctx.db.delete(session._id);
+    }
+
+    // Clear rate limit for password reset
+    await resetRateLimit(ctx, "passwordReset", normalizedEmail);
 
     return { success: true };
   },
@@ -419,5 +576,109 @@ export const getUserContactInfo = query({
       phoneLastDigits: user.phone ? user.phone.slice(-4) : null,
       emailMasked: user.email.replace(/(.{2})(.*)(@.*)/, "$1***$3"),
     };
+  },
+});
+
+// ============ SESSION MANAGEMENT ============
+
+// Validate session token and return user data
+export const validateSession = query({
+  args: { sessionToken: v.string() },
+  handler: async (ctx, args) => {
+    const session = await ctx.db
+      .query("sessions")
+      .withIndex("by_token", (q) => q.eq("token", args.sessionToken))
+      .first();
+
+    if (!session) {
+      return null;
+    }
+
+    // Check if session expired
+    if (session.expiresAt < Date.now()) {
+      return null;
+    }
+
+    const user = await ctx.db.get(session.userId);
+    if (!user) {
+      return null;
+    }
+
+    // Check if entitlement expired
+    let entitlementActive = user.entitlementActive;
+    if (user.entitlementActive && user.entitlementExpiresAt) {
+      if (Date.now() > user.entitlementExpiresAt) {
+        entitlementActive = false;
+      }
+    }
+
+    return {
+      userId: user._id,
+      email: user.email,
+      name: user.name,
+      preferredLanguage: user.preferredLanguage,
+      entitlementActive,
+      entitlementExpiresAt: user.entitlementExpiresAt,
+      sessionExpiresAt: session.expiresAt,
+    };
+  },
+});
+
+// Sign out - invalidate session
+export const signOut = mutation({
+  args: { sessionToken: v.string() },
+  handler: async (ctx, args) => {
+    const session = await ctx.db
+      .query("sessions")
+      .withIndex("by_token", (q) => q.eq("token", args.sessionToken))
+      .first();
+
+    if (session) {
+      await ctx.db.delete(session._id);
+    }
+
+    return { success: true };
+  },
+});
+
+// Refresh session - extend expiration time
+export const refreshSession = mutation({
+  args: { sessionToken: v.string() },
+  handler: async (ctx, args) => {
+    const session = await ctx.db
+      .query("sessions")
+      .withIndex("by_token", (q) => q.eq("token", args.sessionToken))
+      .first();
+
+    if (!session || session.expiresAt < Date.now()) {
+      return null;
+    }
+
+    const now = Date.now();
+    const newExpiresAt = now + SESSION_EXPIRY_MS;
+
+    await ctx.db.patch(session._id, {
+      expiresAt: newExpiresAt,
+      lastActiveAt: now,
+    });
+
+    return { expiresAt: newExpiresAt };
+  },
+});
+
+// Sign out all sessions for a user (useful for security)
+export const signOutAllSessions = mutation({
+  args: { userId: v.id("users") },
+  handler: async (ctx, args) => {
+    const sessions = await ctx.db
+      .query("sessions")
+      .withIndex("by_userId", (q) => q.eq("userId", args.userId))
+      .collect();
+
+    for (const session of sessions) {
+      await ctx.db.delete(session._id);
+    }
+
+    return { deletedCount: sessions.length };
   },
 });

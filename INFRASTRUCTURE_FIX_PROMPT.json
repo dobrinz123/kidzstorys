@@ -1,0 +1,531 @@
+{
+  "project": "Story Kids Infrastructure Fix",
+  "version": "1.0.0",
+  "description": "Comprehensive prompt to fix all 20 infrastructure issues identified in the shake test",
+  "overall_risk_level": "MEDIUM-HIGH",
+  "total_issues": 20,
+
+  "issues": [
+    {
+      "id": 1,
+      "severity": "CRITICAL",
+      "title": "Hardcoded Test API Keys in Production Config",
+      "file": "apps/mobile/app.json",
+      "lines": "44-47",
+      "current_code": {
+        "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "test_HlVTAKhLwKNVwWqguygDdjGWEaY",
+        "EXPO_PUBLIC_REVENUECAT_ANDROID_KEY": "test_HlVTAKhLwKNVwWqguygDdjGWEaY",
+        "EXPO_PUBLIC_REVENUECAT_WEB_KEY": "test_HlVTAKhLwKNVwWqguygDdjGWEaY"
+      },
+      "problem": "Test keys bundled into production builds prevent real purchases",
+      "solution": {
+        "approach": "Use EAS Secrets and environment variables instead of hardcoding",
+        "steps": [
+          "Remove hardcoded keys from app.json",
+          "Create .env.production with production keys",
+          "Configure EAS secrets: eas secret:create --name EXPO_PUBLIC_REVENUECAT_IOS_KEY --value <prod_key>",
+          "Update app.json to use dynamic config via app.config.js"
+        ],
+        "new_app_config_js": "export default ({ config }) => ({\n  ...config,\n  extra: {\n    ...config.extra,\n    EXPO_PUBLIC_REVENUECAT_IOS_KEY: process.env.EXPO_PUBLIC_REVENUECAT_IOS_KEY,\n    EXPO_PUBLIC_REVENUECAT_ANDROID_KEY: process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_KEY,\n    EXPO_PUBLIC_REVENUECAT_WEB_KEY: process.env.EXPO_PUBLIC_REVENUECAT_WEB_KEY,\n    EXPO_PUBLIC_REVENUECAT_ENTITLEMENT_ID: process.env.EXPO_PUBLIC_REVENUECAT_ENTITLEMENT_ID || 'premium'\n  }\n});",
+        "updated_app_json": {
+          "extra": {
+            "router": { "origin": false },
+            "eas": { "projectId": "YOUR_ACTUAL_PROJECT_ID" }
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "severity": "CRITICAL",
+      "title": "No Session Token Authentication",
+      "files": ["convex/users.ts", "apps/mobile/src/store/authStore.ts"],
+      "problem": "Client-provided userId is trusted without server-side session validation",
+      "solution": {
+        "approach": "Implement JWT-based session tokens with server-side validation",
+        "steps": [
+          "Add session token generation on sign-in",
+          "Store session tokens in database with expiry",
+          "Validate session token on every authenticated request",
+          "Add session refresh mechanism"
+        ],
+        "new_schema_addition": {
+          "sessions": {
+            "fields": {
+              "userId": "v.id('users')",
+              "token": "v.string()",
+              "expiresAt": "v.number()",
+              "createdAt": "v.number()",
+              "userAgent": "v.optional(v.string())",
+              "ipAddress": "v.optional(v.string())"
+            },
+            "indexes": [
+              { "name": "by_token", "fields": ["token"] },
+              { "name": "by_user", "fields": ["userId"] },
+              { "name": "by_expiry", "fields": ["expiresAt"] }
+            ]
+          }
+        },
+        "new_auth_helper_functions": {
+          "generateSessionToken": "import { randomBytes } from 'crypto';\nexport function generateSessionToken(): string {\n  return randomBytes(32).toString('hex');\n}",
+          "createSession": "export const createSession = internalMutation({\n  args: { userId: v.id('users') },\n  handler: async (ctx, args) => {\n    const token = generateSessionToken();\n    const expiresAt = Date.now() + (7 * 24 * 60 * 60 * 1000); // 7 days\n    await ctx.db.insert('sessions', {\n      userId: args.userId,\n      token,\n      expiresAt,\n      createdAt: Date.now()\n    });\n    return { token, expiresAt };\n  }\n});",
+          "validateSession": "export const validateSession = query({\n  args: { token: v.string() },\n  handler: async (ctx, args) => {\n    const session = await ctx.db\n      .query('sessions')\n      .withIndex('by_token', q => q.eq('token', args.token))\n      .first();\n    if (!session || session.expiresAt < Date.now()) {\n      return null;\n    }\n    return { userId: session.userId, expiresAt: session.expiresAt };\n  }\n});",
+          "requireSession": "export async function requireSession(\n  ctx: QueryCtx | MutationCtx,\n  token: string\n): Promise<Id<'users'>> {\n  const session = await ctx.db\n    .query('sessions')\n    .withIndex('by_token', q => q.eq('token', token))\n    .first();\n  if (!session || session.expiresAt < Date.now()) {\n    throw new Error('Invalid or expired session');\n  }\n  return session.userId;\n}"
+        },
+        "updated_signIn": "export const signIn = mutation({\n  args: { email: v.string(), password: v.string() },\n  handler: async (ctx, args) => {\n    const user = await ctx.db.query('users').withIndex('by_email', q => q.eq('email', args.email)).first();\n    if (!user || !user.passwordHash) return null;\n    const isValid = await bcrypt.compare(args.password, user.passwordHash);\n    if (!isValid) return null;\n    \n    // Generate session token\n    const token = crypto.randomUUID() + crypto.randomUUID();\n    const expiresAt = Date.now() + (7 * 24 * 60 * 60 * 1000);\n    await ctx.db.insert('sessions', { userId: user._id, token, expiresAt, createdAt: Date.now() });\n    \n    await ctx.db.patch(user._id, { lastActiveAt: Date.now(), updatedAt: Date.now() });\n    \n    return {\n      userId: user._id,\n      sessionToken: token,\n      expiresAt,\n      email: user.email,\n      name: user.name,\n      preferredLanguage: user.preferredLanguage,\n      entitlementActive: user.entitlementActive\n    };\n  }\n});",
+        "updated_authStore": "interface AuthState {\n  userId: Id<'users'> | null;\n  sessionToken: string | null;\n  sessionExpiresAt: number | null;\n  setAuthUser: (data: { userId: Id<'users'>; sessionToken: string; expiresAt: number }) => void;\n  signOut: () => void;\n  isSessionValid: () => boolean;\n}\n\nexport const useAuthStore = create<AuthState>()(\n  persist(\n    (set, get) => ({\n      userId: null,\n      sessionToken: null,\n      sessionExpiresAt: null,\n      setAuthUser: ({ userId, sessionToken, expiresAt }) => {\n        set({ userId, sessionToken, sessionExpiresAt: expiresAt });\n        useUserStore.getState().initializeForUser(userId);\n      },\n      signOut: () => {\n        useUserStore.getState().clearUserData();\n        set({ userId: null, sessionToken: null, sessionExpiresAt: null });\n      },\n      isSessionValid: () => {\n        const { sessionExpiresAt } = get();\n        return sessionExpiresAt ? Date.now() < sessionExpiresAt : false;\n      }\n    }),\n    { name: 'auth-storage', storage: createJSONStorage(() => AsyncStorage) }\n  )\n);"
+      }
+    },
+    {
+      "id": 3,
+      "severity": "CRITICAL",
+      "title": "Unprotected Admin Mutation - seedAdmin",
+      "file": "convex/admin.ts",
+      "lines": "142-171",
+      "problem": "seedAdmin mutation can be called by anyone to grant themselves admin access",
+      "solution": {
+        "approach": "Convert to internalMutation and add environment check",
+        "fixed_code": "// Seed admin user - INTERNAL ONLY (can only be called from other Convex functions)\nexport const seedAdmin = internalMutation({\n  args: {\n    email: v.string(),\n    userId: v.id('users'),\n    role: v.union(v.literal('admin'), v.literal('editor')),\n    secretKey: v.string() // Additional verification\n  },\n  handler: async (ctx, args) => {\n    // Verify secret key matches environment variable\n    const adminSeedSecret = process.env.ADMIN_SEED_SECRET;\n    if (!adminSeedSecret || args.secretKey !== adminSeedSecret) {\n      throw new Error('Unauthorized: Invalid seed secret');\n    }\n    \n    // Check if already admin\n    const existingAdmin = await ctx.db\n      .query('adminUsers')\n      .withIndex('by_userId', q => q.eq('userId', args.userId))\n      .first();\n    \n    if (existingAdmin) {\n      return existingAdmin._id;\n    }\n    \n    const now = Date.now();\n    const adminUserId = await ctx.db.insert('adminUsers', {\n      email: args.email,\n      userId: args.userId,\n      role: args.role,\n      createdAt: now,\n      updatedAt: now\n    });\n    \n    return adminUserId;\n  }\n});",
+        "env_variable_to_add": "ADMIN_SEED_SECRET=<generate-strong-random-secret>"
+      }
+    },
+    {
+      "id": 4,
+      "severity": "CRITICAL",
+      "title": "Unprotected Password Reset Mutation - resetUserPassword",
+      "file": "convex/admin.ts",
+      "lines": "174-198",
+      "problem": "Anyone can reset any user's password without authorization",
+      "solution": {
+        "approach": "Convert to internalMutation with admin verification",
+        "fixed_code": "// Force reset password - INTERNAL ONLY, requires admin verification\nexport const resetUserPassword = internalMutation({\n  args: {\n    performedByAdminId: v.id('adminUsers'),\n    email: v.string(),\n    newPassword: v.string()\n  },\n  handler: async (ctx, args) => {\n    // Verify performer is admin\n    const performer = await ctx.db.get(args.performedByAdminId);\n    if (!performer || performer.role !== 'admin') {\n      throw new Error('Only admins can force reset passwords');\n    }\n    \n    const user = await ctx.db\n      .query('users')\n      .withIndex('by_email', q => q.eq('email', args.email))\n      .first();\n    \n    if (!user) {\n      throw new Error('User not found');\n    }\n    \n    // Validate password strength\n    if (args.newPassword.length < 8) {\n      throw new Error('Password must be at least 8 characters');\n    }\n    \n    const passwordHash = await bcrypt.hash(args.newPassword, 10);\n    \n    await ctx.db.patch(user._id, {\n      passwordHash,\n      updatedAt: Date.now()\n    });\n    \n    // Invalidate all existing sessions for this user\n    const sessions = await ctx.db\n      .query('sessions')\n      .withIndex('by_user', q => q.eq('userId', user._id))\n      .collect();\n    \n    for (const session of sessions) {\n      await ctx.db.delete(session._id);\n    }\n    \n    // Log the action\n    await ctx.db.insert('auditLog', {\n      entityType: 'user',\n      entityId: user._id,\n      action: 'update',\n      description: `Password force reset for: ${args.email}`,\n      performedBy: args.performedByAdminId,\n      performedAt: Date.now()\n    });\n    \n    return true;\n  }\n});"
+      }
+    },
+    {
+      "id": 5,
+      "severity": "HIGH",
+      "title": "No Rate Limiting Anywhere",
+      "files": ["convex/users.ts", "convex/email.ts"],
+      "problem": "No rate limiting on auth endpoints enables brute force attacks and email bombing",
+      "solution": {
+        "approach": "Implement rate limiting using a rateLimits table",
+        "new_schema_addition": {
+          "rateLimits": {
+            "fields": {
+              "key": "v.string()",
+              "action": "v.string()",
+              "count": "v.number()",
+              "windowStart": "v.number()",
+              "blockedUntil": "v.optional(v.number())"
+            },
+            "indexes": [
+              { "name": "by_key_action", "fields": ["key", "action"] }
+            ]
+          }
+        },
+        "rate_limit_helper": "// convex/lib/rateLimit.ts\nimport { MutationCtx } from '../_generated/server';\n\ninterface RateLimitConfig {\n  maxAttempts: number;\n  windowMs: number;\n  blockDurationMs: number;\n}\n\nconst RATE_LIMITS: Record<string, RateLimitConfig> = {\n  'login': { maxAttempts: 5, windowMs: 15 * 60 * 1000, blockDurationMs: 30 * 60 * 1000 },\n  'signup': { maxAttempts: 3, windowMs: 60 * 60 * 1000, blockDurationMs: 60 * 60 * 1000 },\n  'password_reset': { maxAttempts: 3, windowMs: 60 * 60 * 1000, blockDurationMs: 60 * 60 * 1000 },\n  'password_reset_verify': { maxAttempts: 5, windowMs: 30 * 60 * 1000, blockDurationMs: 60 * 60 * 1000 }\n};\n\nexport async function checkRateLimit(\n  ctx: MutationCtx,\n  key: string,\n  action: string\n): Promise<{ allowed: boolean; retryAfter?: number }> {\n  const config = RATE_LIMITS[action];\n  if (!config) return { allowed: true };\n  \n  const now = Date.now();\n  const record = await ctx.db\n    .query('rateLimits')\n    .withIndex('by_key_action', q => q.eq('key', key).eq('action', action))\n    .first();\n  \n  // Check if blocked\n  if (record?.blockedUntil && now < record.blockedUntil) {\n    return { allowed: false, retryAfter: record.blockedUntil - now };\n  }\n  \n  // Check if within window\n  if (record && now - record.windowStart < config.windowMs) {\n    if (record.count >= config.maxAttempts) {\n      // Block the user\n      await ctx.db.patch(record._id, {\n        blockedUntil: now + config.blockDurationMs\n      });\n      return { allowed: false, retryAfter: config.blockDurationMs };\n    }\n    // Increment count\n    await ctx.db.patch(record._id, { count: record.count + 1 });\n  } else {\n    // Start new window\n    if (record) {\n      await ctx.db.patch(record._id, {\n        count: 1,\n        windowStart: now,\n        blockedUntil: undefined\n      });\n    } else {\n      await ctx.db.insert('rateLimits', {\n        key,\n        action,\n        count: 1,\n        windowStart: now\n      });\n    }\n  }\n  \n  return { allowed: true };\n}",
+        "updated_signIn_with_rate_limit": "export const signIn = mutation({\n  args: { email: v.string(), password: v.string() },\n  handler: async (ctx, args) => {\n    // Check rate limit\n    const rateCheck = await checkRateLimit(ctx, args.email.toLowerCase(), 'login');\n    if (!rateCheck.allowed) {\n      throw new ConvexError(`Too many login attempts. Try again in ${Math.ceil(rateCheck.retryAfter! / 60000)} minutes.`);\n    }\n    \n    const user = await ctx.db.query('users').withIndex('by_email', q => q.eq('email', args.email)).first();\n    if (!user || !user.passwordHash) {\n      return null;\n    }\n    \n    const isValid = await bcrypt.compare(args.password, user.passwordHash);\n    if (!isValid) {\n      return null;\n    }\n    \n    // ... rest of sign in logic\n  }\n});"
+      }
+    },
+    {
+      "id": 6,
+      "severity": "HIGH",
+      "title": "Weak Password Reset Token",
+      "file": "convex/users.ts",
+      "lines": "273-275",
+      "current_code": "const resetToken = Math.random().toString(36).substring(2, 8).toUpperCase();",
+      "problem": "Only 6 chars using non-cryptographic Math.random()",
+      "solution": {
+        "approach": "Use crypto.getRandomValues() with longer token and add attempt limiting",
+        "fixed_code": "// Generate cryptographically secure reset token\nfunction generateSecureToken(): string {\n  const array = new Uint8Array(32);\n  crypto.getRandomValues(array);\n  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');\n}\n\n// In generateResetToken mutation:\nconst resetToken = generateSecureToken(); // 64 hex chars\nconst resetTokenExpiresAt = Date.now() + 15 * 60 * 1000; // Reduced to 15 minutes\n\nawait ctx.db.patch(user._id, {\n  resetToken,\n  resetTokenExpiresAt,\n  resetAttempts: 0, // Track verification attempts\n  updatedAt: Date.now()\n});",
+        "schema_update": {
+          "users": {
+            "add_field": "resetAttempts: v.optional(v.number())"
+          }
+        },
+        "updated_verifyResetToken": "export const verifyResetToken = mutation({\n  args: { email: v.string(), token: v.string() },\n  handler: async (ctx, args) => {\n    const user = await ctx.db\n      .query('users')\n      .withIndex('by_email', q => q.eq('email', args.email))\n      .first();\n    \n    if (!user) {\n      return { valid: false, error: 'Invalid token' };\n    }\n    \n    // Check attempt limit\n    if ((user.resetAttempts || 0) >= 5) {\n      // Invalidate token after 5 failed attempts\n      await ctx.db.patch(user._id, {\n        resetToken: undefined,\n        resetTokenExpiresAt: undefined,\n        resetAttempts: undefined\n      });\n      return { valid: false, error: 'Too many attempts. Request a new code.' };\n    }\n    \n    // Increment attempts\n    await ctx.db.patch(user._id, {\n      resetAttempts: (user.resetAttempts || 0) + 1\n    });\n    \n    if (!user.resetToken || user.resetToken !== args.token) {\n      return { valid: false, error: 'Invalid token' };\n    }\n    \n    if (!user.resetTokenExpiresAt || Date.now() > user.resetTokenExpiresAt) {\n      return { valid: false, error: 'Token expired' };\n    }\n    \n    return { valid: true };\n  }\n});"
+      }
+    },
+    {
+      "id": 7,
+      "severity": "HIGH",
+      "title": "Missing Input Validation",
+      "files": ["convex/users.ts", "convex/profiles.ts"],
+      "problem": "No validation on email format, password strength, string lengths",
+      "solution": {
+        "approach": "Add validation helpers and apply to all mutations",
+        "validation_helpers": "// convex/lib/validation.ts\n\nexport const EMAIL_REGEX = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\nexport const PHONE_REGEX = /^\\+?[1-9]\\d{6,14}$/;\n\nexport interface ValidationResult {\n  valid: boolean;\n  errors: string[];\n}\n\nexport function validateEmail(email: string): ValidationResult {\n  const errors: string[] = [];\n  if (!email || email.length === 0) {\n    errors.push('Email is required');\n  } else if (email.length > 254) {\n    errors.push('Email too long');\n  } else if (!EMAIL_REGEX.test(email)) {\n    errors.push('Invalid email format');\n  }\n  return { valid: errors.length === 0, errors };\n}\n\nexport function validatePassword(password: string): ValidationResult {\n  const errors: string[] = [];\n  if (!password || password.length < 8) {\n    errors.push('Password must be at least 8 characters');\n  }\n  if (password.length > 128) {\n    errors.push('Password too long');\n  }\n  if (!/[A-Z]/.test(password)) {\n    errors.push('Password must contain at least one uppercase letter');\n  }\n  if (!/[a-z]/.test(password)) {\n    errors.push('Password must contain at least one lowercase letter');\n  }\n  if (!/[0-9]/.test(password)) {\n    errors.push('Password must contain at least one number');\n  }\n  return { valid: errors.length === 0, errors };\n}\n\nexport function validatePhone(phone: string): ValidationResult {\n  const errors: string[] = [];\n  if (phone && !PHONE_REGEX.test(phone.replace(/[\\s-]/g, ''))) {\n    errors.push('Invalid phone number format');\n  }\n  return { valid: errors.length === 0, errors };\n}\n\nexport function validateStringLength(value: string, fieldName: string, min: number, max: number): ValidationResult {\n  const errors: string[] = [];\n  if (value.length < min) {\n    errors.push(`${fieldName} must be at least ${min} characters`);\n  }\n  if (value.length > max) {\n    errors.push(`${fieldName} must be at most ${max} characters`);\n  }\n  return { valid: errors.length === 0, errors };\n}",
+        "updated_signUp": "export const signUp = mutation({\n  args: {\n    email: v.string(),\n    password: v.string(),\n    name: v.optional(v.string()),\n    preferredLanguage: v.optional(v.union(v.literal('en'), v.literal('ro'), v.literal('it')))\n  },\n  handler: async (ctx, args) => {\n    // Validate email\n    const emailValidation = validateEmail(args.email);\n    if (!emailValidation.valid) {\n      throw new ConvexError(emailValidation.errors.join(', '));\n    }\n    \n    // Validate password\n    const passwordValidation = validatePassword(args.password);\n    if (!passwordValidation.valid) {\n      throw new ConvexError(passwordValidation.errors.join(', '));\n    }\n    \n    // Validate name if provided\n    if (args.name) {\n      const nameValidation = validateStringLength(args.name, 'Name', 1, 100);\n      if (!nameValidation.valid) {\n        throw new ConvexError(nameValidation.errors.join(', '));\n      }\n    }\n    \n    // Normalize email\n    const normalizedEmail = args.email.toLowerCase().trim();\n    \n    // Check if user exists\n    const existing = await ctx.db\n      .query('users')\n      .withIndex('by_email', q => q.eq('email', normalizedEmail))\n      .first();\n    \n    if (existing) {\n      throw new ConvexError('User already exists');\n    }\n    \n    const passwordHash = await bcrypt.hash(args.password, 10);\n    const now = Date.now();\n    \n    const userId = await ctx.db.insert('users', {\n      email: normalizedEmail,\n      passwordHash,\n      name: args.name?.trim(),\n      entitlementActive: false,\n      preferredLanguage: args.preferredLanguage || 'en',\n      createdAt: now,\n      updatedAt: now\n    });\n    \n    return { userId };\n  }\n});"
+      }
+    },
+    {
+      "id": 8,
+      "severity": "HIGH",
+      "title": "Demo Trial Bypass",
+      "file": "convex/subscriptions.ts",
+      "lines": "115-155",
+      "problem": "Users can repeatedly activate demo trials",
+      "solution": {
+        "approach": "Track trial usage per user and prevent reactivation",
+        "schema_update": {
+          "users": {
+            "add_fields": [
+              "hasUsedTrial: v.optional(v.boolean())",
+              "trialUsedAt: v.optional(v.number())"
+            ]
+          }
+        },
+        "fixed_code": "export const activateDemoTrial = mutation({\n  args: {\n    userId: v.id('users'),\n    plan: v.union(v.literal('monthly'), v.literal('yearly'))\n  },\n  handler: async (ctx, args) => {\n    const user = await ctx.db.get(args.userId);\n    if (!user) {\n      throw new Error('User not found');\n    }\n    \n    // Check if user already used trial\n    if (user.hasUsedTrial) {\n      throw new Error('Trial already used. Please subscribe to continue.');\n    }\n    \n    // Check if user already has active subscription\n    if (user.entitlementActive && user.entitlementExpiresAt && user.entitlementExpiresAt > Date.now()) {\n      throw new Error('You already have an active subscription.');\n    }\n    \n    const now = Date.now();\n    const trialDays = 15;\n    const expiresAt = now + (trialDays * 24 * 60 * 60 * 1000);\n    \n    await ctx.db.patch(args.userId, {\n      entitlementActive: true,\n      entitlementExpiresAt: expiresAt,\n      subscriptionType: 'trial',\n      hasUsedTrial: true,\n      trialUsedAt: now,\n      updatedAt: now\n    });\n    \n    await ctx.db.insert('subscriptionEvents', {\n      userId: args.userId,\n      revenueCatAppUserId: `user:${args.userId}`,\n      eventType: 'TRIAL_STARTED',\n      productId: args.plan === 'yearly' ? 'yearly_subscription' : 'monthly_subscription',\n      expiresAt,\n      isTrial: true,\n      processedAt: now\n    });\n    \n    return {\n      success: true,\n      expiresAt,\n      message: 'Trial activated for 15 days'\n    };\n  }\n});"
+      }
+    },
+    {
+      "id": 9,
+      "severity": "MEDIUM",
+      "title": "Scalability Issue - listBooks Query",
+      "file": "convex/books.ts",
+      "lines": "8-76",
+      "problem": "Loads ALL books into memory, then filters client-side",
+      "solution": {
+        "approach": "Use proper Convex indexes for filtering and pagination",
+        "fixed_code": "export const listBooks = query({\n  args: {\n    status: v.optional(v.union(v.literal('draft'), v.literal('ready'), v.literal('published'))),\n    categoryId: v.optional(v.id('categories')),\n    search: v.optional(v.string()),\n    limit: v.optional(v.number()),\n    cursor: v.optional(v.string()) // Use cursor-based pagination\n  },\n  handler: async (ctx, args) => {\n    const limit = Math.min(args.limit || 20, 100); // Cap at 100\n    \n    let query = ctx.db.query('books');\n    \n    // Use index for status filtering\n    if (args.status) {\n      query = query.withIndex('by_status', q => q.eq('status', args.status));\n    }\n    \n    // Apply cursor if provided\n    let books;\n    if (args.cursor) {\n      const cursorData = JSON.parse(atob(args.cursor));\n      books = await query\n        .filter(q => q.lt(q.field('updatedAt'), cursorData.updatedAt))\n        .order('desc')\n        .take(limit + 1);\n    } else {\n      books = await query.order('desc').take(limit + 1);\n    }\n    \n    // Filter by category in memory (for combined filters)\n    if (args.categoryId) {\n      books = books.filter(b => b.categoryId === args.categoryId);\n    }\n    \n    // Search filter (consider full-text search for scale)\n    if (args.search) {\n      const searchLower = args.search.toLowerCase();\n      books = books.filter(book =>\n        book.cover.title_en.toLowerCase().includes(searchLower) ||\n        book.cover.title_ro.toLowerCase().includes(searchLower) ||\n        book.cover.title_it.toLowerCase().includes(searchLower) ||\n        book.bookKey.toLowerCase().includes(searchLower)\n      );\n    }\n    \n    const hasMore = books.length > limit;\n    if (hasMore) books = books.slice(0, limit);\n    \n    // Batch category lookups\n    const categoryIds = [...new Set(books.map(b => b.categoryId))];\n    const categories = await Promise.all(categoryIds.map(id => ctx.db.get(id)));\n    const categoryMap = new Map(categories.filter(Boolean).map(c => [c!._id, c]));\n    \n    const enrichedBooks = books.map(book => ({\n      ...book,\n      category: categoryMap.get(book.categoryId) || null\n    }));\n    \n    // Generate cursor for next page\n    const nextCursor = hasMore && books.length > 0\n      ? btoa(JSON.stringify({ updatedAt: books[books.length - 1].updatedAt }))\n      : null;\n    \n    return {\n      books: enrichedBooks,\n      nextCursor,\n      hasMore\n    };\n  }\n});"
+      }
+    },
+    {
+      "id": 10,
+      "severity": "MEDIUM",
+      "title": "N+1 Query Pattern",
+      "files": ["convex/books.ts", "convex/favorites.ts", "convex/admin.ts"],
+      "problem": "Each item triggers a separate database query for related data",
+      "solution": {
+        "approach": "Batch lookups using Promise.all with deduplication",
+        "helper_function": "// convex/lib/batchLookup.ts\nimport { QueryCtx } from '../_generated/server';\nimport { Id } from '../_generated/dataModel';\n\nexport async function batchGetDocuments<T extends { _id: any }>(\n  ctx: QueryCtx,\n  ids: Id<any>[]\n): Promise<Map<string, T>> {\n  const uniqueIds = [...new Set(ids)];\n  const docs = await Promise.all(uniqueIds.map(id => ctx.db.get(id)));\n  const map = new Map<string, T>();\n  docs.forEach((doc, i) => {\n    if (doc) map.set(uniqueIds[i], doc as T);\n  });\n  return map;\n}",
+        "example_usage": "// In favorites.ts\nexport const getFavorites = query({\n  args: { userId: v.id('users'), locale: v.union(v.literal('en'), v.literal('ro'), v.literal('it')) },\n  handler: async (ctx, args) => {\n    const user = await ctx.db.get(args.userId);\n    if (!user || !user.entitlementActive) return [];\n    \n    const favorites = await ctx.db\n      .query('favorites')\n      .withIndex('by_user', q => q.eq('userId', args.userId))\n      .order('desc')\n      .collect();\n    \n    // Batch lookup all stories at once\n    const storyKeys = favorites.map(f => f.storyKey);\n    const stories = await Promise.all(\n      storyKeys.map(key =>\n        ctx.db.query('stories').withIndex('by_storyKey', q => q.eq('storyKey', key)).first()\n      )\n    );\n    \n    return stories.filter(Boolean);\n  }\n});"
+      }
+    },
+    {
+      "id": 11,
+      "severity": "MEDIUM",
+      "title": "Insecure Admin Auth Store",
+      "file": "apps/admin/hooks/useAuth.ts",
+      "lines": "66-91",
+      "problem": "Admin role stored in localStorage can be modified by attacker",
+      "solution": {
+        "approach": "Always verify role server-side, use localStorage only for session token",
+        "updated_useAuth": "'use client';\n\nimport { create } from 'zustand';\nimport { persist, createJSONStorage } from 'zustand/middleware';\nimport { Id } from '@convex/_generated/dataModel';\n\ninterface AdminAuthState {\n  sessionToken: string | null;\n  isLoading: boolean;\n}\n\ninterface AdminAuthActions {\n  setSession: (token: string) => void;\n  clearSession: () => void;\n  setLoading: (loading: boolean) => void;\n}\n\nexport const useAuthStore = create<AdminAuthState & AdminAuthActions>()(\n  persist(\n    (set) => ({\n      sessionToken: null,\n      isLoading: true,\n      setSession: (token) => set({ sessionToken: token, isLoading: false }),\n      clearSession: () => set({ sessionToken: null, isLoading: false }),\n      setLoading: (loading) => set({ isLoading: loading })\n    }),\n    {\n      name: 'admin-auth-storage',\n      storage: createJSONStorage(() => localStorage),\n      partialize: (state) => ({ sessionToken: state.sessionToken }),\n      onRehydrateStorage: () => (state) => state?.setLoading(false)\n    }\n  )\n);\n\n// Hook that fetches user data from server\nexport function useAuth() {\n  const { sessionToken, clearSession, setSession, isLoading } = useAuthStore();\n  const adminQuery = useQuery(api.admin.getCurrentAdminBySession, \n    sessionToken ? { sessionToken } : 'skip'\n  );\n  \n  return {\n    sessionToken,\n    isLoading: isLoading || adminQuery === undefined,\n    isAuthenticated: !!adminQuery,\n    user: adminQuery,\n    role: adminQuery?.role, // Role comes from SERVER, not localStorage\n    isAdmin: adminQuery?.role === 'admin',\n    isEditor: adminQuery?.role === 'editor',\n    login: async (loginMutation: Function, email: string, password: string) => {\n      const result = await loginMutation({ email, password });\n      setSession(result.sessionToken);\n      return result;\n    },\n    logout: () => clearSession()\n  };\n}",
+        "new_backend_query": "// convex/admin.ts\nexport const getCurrentAdminBySession = query({\n  args: { sessionToken: v.string() },\n  handler: async (ctx, args) => {\n    // Validate session\n    const session = await ctx.db\n      .query('sessions')\n      .withIndex('by_token', q => q.eq('token', args.sessionToken))\n      .first();\n    \n    if (!session || session.expiresAt < Date.now()) {\n      return null;\n    }\n    \n    // Get admin user\n    const adminUser = await ctx.db\n      .query('adminUsers')\n      .withIndex('by_userId', q => q.eq('userId', session.userId))\n      .first();\n    \n    if (!adminUser) return null;\n    \n    const user = await ctx.db.get(session.userId);\n    \n    return {\n      userId: session.userId,\n      adminUserId: adminUser._id,\n      email: user?.email,\n      name: user?.name,\n      role: adminUser.role // Role from database\n    };\n  }\n});"
+      }
+    },
+    {
+      "id": 12,
+      "severity": "MEDIUM",
+      "title": "Duplicate Data Structure (Stories vs Books)",
+      "files": ["convex/schema.ts", "convex/favorites.ts"],
+      "problem": "Legacy stories table alongside books table causes confusion",
+      "solution": {
+        "approach": "Add type discriminator and plan migration",
+        "schema_update": {
+          "favorites": {
+            "update_field": "contentType: v.union(v.literal('story'), v.literal('book'))",
+            "rename_field": "contentKey: v.string() // renamed from storyKey"
+          }
+        },
+        "migration_plan": [
+          "1. Add contentType field to favorites (default: 'story')",
+          "2. Rename storyKey to contentKey",
+          "3. Update all favorites queries to filter by contentType",
+          "4. Migrate stories to books table",
+          "5. Update favorites contentType for migrated content",
+          "6. Deprecate stories table (keep for rollback)",
+          "7. After validation period, remove stories table"
+        ],
+        "updated_favorites": "export const toggleFavorite = mutation({\n  args: {\n    userId: v.id('users'),\n    contentKey: v.string(),\n    contentType: v.union(v.literal('story'), v.literal('book'))\n  },\n  handler: async (ctx, args) => {\n    // ... implementation uses contentType to query correct table\n  }\n});"
+      }
+    },
+    {
+      "id": 13,
+      "severity": "MEDIUM",
+      "title": "Missing Error Boundaries and Retry Logic",
+      "file": "apps/mobile/app/paywall.tsx",
+      "problem": "No retry mechanism for transient failures",
+      "solution": {
+        "approach": "Add retry logic with exponential backoff",
+        "retry_helper": "// src/lib/retry.ts\nexport async function withRetry<T>(\n  fn: () => Promise<T>,\n  options: {\n    maxRetries?: number;\n    baseDelay?: number;\n    maxDelay?: number;\n    onRetry?: (error: Error, attempt: number) => void;\n  } = {}\n): Promise<T> {\n  const { maxRetries = 3, baseDelay = 1000, maxDelay = 10000, onRetry } = options;\n  \n  let lastError: Error;\n  \n  for (let attempt = 0; attempt <= maxRetries; attempt++) {\n    try {\n      return await fn();\n    } catch (error) {\n      lastError = error as Error;\n      \n      // Don't retry user cancellations or validation errors\n      if ((error as any).userCancelled || (error as any).code === 'VALIDATION_ERROR') {\n        throw error;\n      }\n      \n      if (attempt < maxRetries) {\n        const delay = Math.min(baseDelay * Math.pow(2, attempt), maxDelay);\n        onRetry?.(lastError, attempt + 1);\n        await new Promise(resolve => setTimeout(resolve, delay));\n      }\n    }\n  }\n  \n  throw lastError!;\n}",
+        "updated_handlePurchase": "async function handlePurchase() {\n  const pkg = getSelectedPackage();\n  \n  try {\n    setPurchasing(true);\n    \n    const customerInfo = await withRetry(\n      () => purchasePackage(pkg),\n      {\n        maxRetries: 2,\n        baseDelay: 1000,\n        onRetry: (error, attempt) => {\n          console.log(`Purchase retry ${attempt}:`, error.message);\n        }\n      }\n    );\n    \n    if (customerInfo?.entitlements.active['premium']) {\n      router.replace('/');\n    }\n  } catch (error: any) {\n    if (error.userCancelled) return;\n    \n    Alert.alert(\n      t.purchaseError,\n      t.purchaseErrorDesc,\n      [\n        { text: t.retry, onPress: handlePurchase },\n        { text: t.cancel, style: 'cancel' }\n      ]\n    );\n  } finally {\n    setPurchasing(false);\n  }\n}"
+      }
+    },
+    {
+      "id": 14,
+      "severity": "MEDIUM",
+      "title": "No CI/CD Pipeline",
+      "problem": "All deployments are manual, no automated testing",
+      "solution": {
+        "approach": "Set up GitHub Actions for automated testing and deployment",
+        "github_actions_workflow": {
+          "file": ".github/workflows/ci.yml",
+          "content": "name: CI/CD Pipeline\n\non:\n  push:\n    branches: [main, develop]\n  pull_request:\n    branches: [main]\n\njobs:\n  lint-and-test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      \n      - name: Setup pnpm\n        uses: pnpm/action-setup@v2\n        with:\n          version: 8\n      \n      - name: Setup Node.js\n        uses: actions/setup-node@v4\n        with:\n          node-version: '20'\n          cache: 'pnpm'\n      \n      - name: Install dependencies\n        run: pnpm install --frozen-lockfile\n      \n      - name: Type check\n        run: pnpm --filter admin exec tsc --noEmit\n      \n      - name: Lint\n        run: pnpm --filter admin exec eslint . --ext .ts,.tsx\n      \n      - name: Run tests\n        run: pnpm test\n\n  deploy-convex:\n    needs: lint-and-test\n    if: github.ref == 'refs/heads/main'\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      \n      - uses: pnpm/action-setup@v2\n        with:\n          version: 8\n      \n      - uses: actions/setup-node@v4\n        with:\n          node-version: '20'\n          cache: 'pnpm'\n      \n      - run: pnpm install --frozen-lockfile\n      \n      - name: Deploy Convex\n        run: npx convex deploy\n        env:\n          CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}\n\n  deploy-admin:\n    needs: lint-and-test\n    if: github.ref == 'refs/heads/main'\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      \n      - name: Deploy to Vercel\n        uses: amondnet/vercel-action@v25\n        with:\n          vercel-token: ${{ secrets.VERCEL_TOKEN }}\n          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}\n          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}\n          vercel-args: '--prod'"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "severity": "LOW",
+      "title": "Vercel Config Rewrite Issue",
+      "file": "vercel.json",
+      "problem": "Rewrite may not work correctly with monorepo",
+      "solution": {
+        "approach": "Remove problematic rewrite, let Vercel handle routing",
+        "fixed_config": "{\n  \"installCommand\": \"pnpm install\",\n  \"buildCommand\": \"cd apps/admin && pnpm run build\",\n  \"outputDirectory\": \"apps/admin/.next\",\n  \"framework\": \"nextjs\"\n}"
+      }
+    },
+    {
+      "id": 16,
+      "severity": "LOW",
+      "title": "Missing Entitlement Check on Read Count",
+      "file": "convex/books.ts",
+      "lines": "786-800",
+      "problem": "Anyone can inflate read counts",
+      "solution": {
+        "fixed_code": "export const incrementReadCount = mutation({\n  args: {\n    bookKey: v.string(),\n    sessionToken: v.string()\n  },\n  handler: async (ctx, args) => {\n    // Validate session\n    const session = await ctx.db\n      .query('sessions')\n      .withIndex('by_token', q => q.eq('token', args.sessionToken))\n      .first();\n    \n    if (!session || session.expiresAt < Date.now()) {\n      throw new Error('Authentication required');\n    }\n    \n    const book = await ctx.db\n      .query('books')\n      .withIndex('by_bookKey', q => q.eq('bookKey', args.bookKey))\n      .first();\n    \n    if (!book) return;\n    \n    // Optionally: track unique reads per user to prevent gaming\n    await ctx.db.patch(book._id, {\n      readCount: (book.readCount || 0) + 1\n    });\n  }\n});"
+      }
+    },
+    {
+      "id": 17,
+      "severity": "LOW",
+      "title": "Placeholder EAS Project ID",
+      "file": "apps/mobile/app.json",
+      "line": 42,
+      "problem": "Placeholder value will cause EAS build failures",
+      "solution": {
+        "steps": [
+          "1. Run: eas project:init",
+          "2. Copy the generated project ID",
+          "3. Update app.json with real project ID"
+        ],
+        "note": "This should be done during initial EAS setup"
+      }
+    },
+    {
+      "id": 18,
+      "severity": "LOW",
+      "title": "Resend Using Dev Domain",
+      "file": "convex/email.ts",
+      "lines": "130-133",
+      "problem": "Dev email domain may go to spam",
+      "solution": {
+        "steps": [
+          "1. Verify custom domain in Resend dashboard",
+          "2. Update from address to use verified domain"
+        ],
+        "fixed_code": "from: `Story Kids <noreply@${process.env.EMAIL_DOMAIN || 'storykids.com'}>`"
+      }
+    },
+    {
+      "id": 19,
+      "severity": "LOW",
+      "title": "Missing Database Cleanup",
+      "problem": "subscriptionEvents and auditLog grow indefinitely",
+      "solution": {
+        "approach": "Add scheduled cleanup function",
+        "cleanup_function": "// convex/crons.ts\nimport { cronJobs } from 'convex/server';\nimport { internal } from './_generated/api';\n\nconst crons = cronJobs();\n\n// Run cleanup daily at 3 AM\ncrons.daily(\n  'cleanup old records',\n  { hourUTC: 3, minuteUTC: 0 },\n  internal.maintenance.cleanupOldRecords\n);\n\nexport default crons;\n\n// convex/maintenance.ts\nexport const cleanupOldRecords = internalMutation({\n  handler: async (ctx) => {\n    const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);\n    const ninetyDaysAgo = Date.now() - (90 * 24 * 60 * 60 * 1000);\n    \n    // Clean up old subscription events (keep 90 days)\n    const oldEvents = await ctx.db\n      .query('subscriptionEvents')\n      .filter(q => q.lt(q.field('processedAt'), ninetyDaysAgo))\n      .take(100);\n    \n    for (const event of oldEvents) {\n      await ctx.db.delete(event._id);\n    }\n    \n    // Clean up old audit logs (keep 90 days)\n    const oldLogs = await ctx.db\n      .query('auditLog')\n      .filter(q => q.lt(q.field('performedAt'), ninetyDaysAgo))\n      .take(100);\n    \n    for (const log of oldLogs) {\n      await ctx.db.delete(log._id);\n    }\n    \n    // Clean up expired sessions (keep 7 days past expiry)\n    const expiredSessions = await ctx.db\n      .query('sessions')\n      .filter(q => q.lt(q.field('expiresAt'), thirtyDaysAgo))\n      .take(100);\n    \n    for (const session of expiredSessions) {\n      await ctx.db.delete(session._id);\n    }\n    \n    // Clean up old rate limit records\n    const oldRateLimits = await ctx.db\n      .query('rateLimits')\n      .filter(q => q.lt(q.field('windowStart'), thirtyDaysAgo))\n      .take(100);\n    \n    for (const record of oldRateLimits) {\n      await ctx.db.delete(record._id);\n    }\n    \n    return {\n      deletedEvents: oldEvents.length,\n      deletedLogs: oldLogs.length,\n      deletedSessions: expiredSessions.length,\n      deletedRateLimits: oldRateLimits.length\n    };\n  }\n});"
+      }
+    },
+    {
+      "id": 20,
+      "severity": "LOW",
+      "title": "No Crash Reporting / Analytics",
+      "problem": "No visibility into production errors",
+      "solution": {
+        "approach": "Integrate Sentry for error tracking",
+        "steps": [
+          "1. Install Sentry: pnpm --filter mobile add @sentry/react-native",
+          "2. Configure in app entry point",
+          "3. Add source maps upload to EAS build"
+        ],
+        "sentry_setup": "// apps/mobile/src/lib/sentry.ts\nimport * as Sentry from '@sentry/react-native';\n\nexport function initSentry() {\n  if (!__DEV__) {\n    Sentry.init({\n      dsn: process.env.EXPO_PUBLIC_SENTRY_DSN,\n      environment: process.env.EXPO_PUBLIC_ENV || 'production',\n      tracesSampleRate: 0.2,\n      enableAutoSessionTracking: true,\n      attachStacktrace: true\n    });\n  }\n}\n\nexport function captureException(error: Error, context?: Record<string, any>) {\n  if (!__DEV__) {\n    Sentry.captureException(error, { extra: context });\n  }\n  console.error(error);\n}",
+        "app_entry_update": "// In App.tsx or _layout.tsx\nimport { initSentry } from '../src/lib/sentry';\n\ninitSentry();"
+      }
+    }
+  ],
+
+  "new_files_to_create": [
+    {
+      "path": "convex/lib/validation.ts",
+      "description": "Input validation helpers"
+    },
+    {
+      "path": "convex/lib/rateLimit.ts",
+      "description": "Rate limiting helpers"
+    },
+    {
+      "path": "convex/lib/batchLookup.ts",
+      "description": "Batch database lookup helpers"
+    },
+    {
+      "path": "convex/maintenance.ts",
+      "description": "Database cleanup functions"
+    },
+    {
+      "path": "convex/crons.ts",
+      "description": "Scheduled job definitions"
+    },
+    {
+      "path": "apps/mobile/app.config.js",
+      "description": "Dynamic Expo config for environment variables"
+    },
+    {
+      "path": "apps/mobile/src/lib/retry.ts",
+      "description": "Retry logic with exponential backoff"
+    },
+    {
+      "path": "apps/mobile/src/lib/sentry.ts",
+      "description": "Sentry crash reporting setup"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "description": "CI/CD pipeline"
+    }
+  ],
+
+  "schema_updates": {
+    "new_tables": {
+      "sessions": {
+        "fields": {
+          "userId": "v.id('users')",
+          "token": "v.string()",
+          "expiresAt": "v.number()",
+          "createdAt": "v.number()",
+          "userAgent": "v.optional(v.string())",
+          "ipAddress": "v.optional(v.string())"
+        },
+        "indexes": [
+          { "name": "by_token", "fields": ["token"] },
+          { "name": "by_user", "fields": ["userId"] },
+          { "name": "by_expiry", "fields": ["expiresAt"] }
+        ]
+      },
+      "rateLimits": {
+        "fields": {
+          "key": "v.string()",
+          "action": "v.string()",
+          "count": "v.number()",
+          "windowStart": "v.number()",
+          "blockedUntil": "v.optional(v.number())"
+        },
+        "indexes": [
+          { "name": "by_key_action", "fields": ["key", "action"] }
+        ]
+      }
+    },
+    "table_updates": {
+      "users": {
+        "add_fields": [
+          "resetAttempts: v.optional(v.number())",
+          "hasUsedTrial: v.optional(v.boolean())",
+          "trialUsedAt: v.optional(v.number())"
+        ]
+      },
+      "favorites": {
+        "add_field": "contentType: v.optional(v.union(v.literal('story'), v.literal('book')))"
+      }
+    }
+  },
+
+  "environment_variables_to_add": {
+    "convex": [
+      "ADMIN_SEED_SECRET",
+      "EMAIL_DOMAIN"
+    ],
+    "mobile": [
+      "EXPO_PUBLIC_SENTRY_DSN",
+      "EXPO_PUBLIC_ENV"
+    ],
+    "github_secrets": [
+      "CONVEX_DEPLOY_KEY",
+      "VERCEL_TOKEN",
+      "VERCEL_ORG_ID",
+      "VERCEL_PROJECT_ID"
+    ],
+    "eas_secrets": [
+      "EXPO_PUBLIC_REVENUECAT_IOS_KEY",
+      "EXPO_PUBLIC_REVENUECAT_ANDROID_KEY",
+      "EXPO_PUBLIC_REVENUECAT_WEB_KEY"
+    ]
+  },
+
+  "implementation_order": {
+    "phase_1_critical": {
+      "name": "Security Hardening",
+      "priority": "IMMEDIATE",
+      "issues": [1, 2, 3, 4],
+      "estimated_effort": "2-3 days",
+      "tasks": [
+        "Remove hardcoded API keys",
+        "Implement session token authentication",
+        "Convert seedAdmin to internalMutation",
+        "Convert resetUserPassword to internalMutation"
+      ]
+    },
+    "phase_2_high": {
+      "name": "Attack Prevention",
+      "priority": "HIGH",
+      "issues": [5, 6, 7, 8],
+      "estimated_effort": "2-3 days",
+      "tasks": [
+        "Add rate limiting infrastructure",
+        "Improve password reset token security",
+        "Add input validation helpers",
+        "Fix demo trial bypass"
+      ]
+    },
+    "phase_3_medium": {
+      "name": "Performance & Reliability",
+      "priority": "MEDIUM",
+      "issues": [9, 10, 11, 12, 13, 14],
+      "estimated_effort": "3-4 days",
+      "tasks": [
+        "Optimize listBooks query",
+        "Fix N+1 query patterns",
+        "Secure admin auth store",
+        "Plan stories to books migration",
+        "Add retry logic",
+        "Set up CI/CD"
+      ]
+    },
+    "phase_4_low": {
+      "name": "Polish & Maintenance",
+      "priority": "LOW",
+      "issues": [15, 16, 17, 18, 19, 20],
+      "estimated_effort": "2 days",
+      "tasks": [
+        "Fix Vercel config",
+        "Add auth to read count",
+        "Update EAS project ID",
+        "Configure email domain",
+        "Add database cleanup crons",
+        "Integrate Sentry"
+      ]
+    }
+  },
+
+  "testing_checklist": {
+    "security": [
+      "Verify session tokens are validated on all protected endpoints",
+      "Test rate limiting blocks brute force attempts",
+      "Confirm seedAdmin and resetUserPassword are not accessible from client",
+      "Verify password reset tokens are cryptographically secure",
+      "Test that expired sessions are rejected"
+    ],
+    "functionality": [
+      "Test complete sign up flow with validation",
+      "Test sign in with session token generation",
+      "Test password reset flow end-to-end",
+      "Verify demo trial can only be used once",
+      "Test purchase flow with retry logic"
+    ],
+    "performance": [
+      "Benchmark listBooks with 1000+ books",
+      "Verify N+1 queries are eliminated",
+      "Test pagination with cursor-based approach"
+    ]
+  }
+}

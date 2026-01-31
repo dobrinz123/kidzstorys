@@ -10,8 +10,12 @@ import {
   Platform,
 } from "react-native";
 import { useRouter } from "expo-router";
+import { useMutation } from "convex/react";
+import { api } from "../../../convex/_generated/api";
 import { getOfferings, purchasePackage, restorePurchases } from "../src/lib/revenuecat";
 import { useLanguageStore } from "../src/store/languageStore";
+import { useAuthStore } from "../src/store/authStore";
+import { withRetry, revenueCatRetryOptions } from "../src/lib/retry";
 
 // Translations for paywall
 const TRANSLATIONS = {
@@ -135,6 +139,8 @@ export default function PaywallScreen() {
   const router = useRouter();
   const language = useLanguageStore((state: any) => state.language);
   const t = TRANSLATIONS[language as keyof typeof TRANSLATIONS] || TRANSLATIONS.ro;
+  const userId = useAuthStore((state) => state.userId);
+  const activateDemoTrial = useMutation(api.subscriptions.activateDemoTrial);
 
   const [offering, setOffering] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -147,10 +153,19 @@ export default function PaywallScreen() {
 
   async function loadOfferings() {
     try {
-      const offers = await getOfferings();
+      // Use retry logic for loading offerings
+      const offers = await withRetry(
+        () => getOfferings(),
+        {
+          ...revenueCatRetryOptions,
+          onRetry: (error, attempt, delay) => {
+            console.log(`[Paywall] Retry loading offerings (attempt ${attempt}) after ${delay}ms:`, error.message);
+          },
+        }
+      );
       setOffering(offers);
     } catch (error) {
-      console.error("Error loading offerings:", error);
+      console.error("Error loading offerings after retries:", error);
     } finally {
       setLoading(false);
     }
@@ -209,9 +224,52 @@ export default function PaywallScreen() {
 
     try {
       setPurchasing(true);
-      console.log("[Paywall] Calling purchasePackage...");
-      // Pass package or null - purchasePackage handles mock mode internally
-      const customerInfo = await purchasePackage(pkg);
+
+      // For web/demo mode, activate trial directly in Convex
+      if (Platform.OS === "web" && userId) {
+        console.log("[Paywall] Web demo mode - activating trial via Convex");
+        const result = await activateDemoTrial({
+          userId,
+          plan: selectedPlan,
+        });
+        console.log("[Paywall] Demo trial activated:", result);
+
+        // Also do the mock purchase for local state
+        await purchasePackage(pkg);
+
+        // Success! Navigate to home
+        router.replace("/");
+        return;
+      }
+
+      console.log("[Paywall] Calling purchasePackage with retry...");
+      // Use retry logic for purchase (with user cancellation detection)
+      const customerInfo = await withRetry(
+        () => purchasePackage(pkg),
+        {
+          ...revenueCatRetryOptions,
+          shouldRetry: (error) => {
+            // Don't retry user cancellations
+            if ((error as any).userCancelled) {
+              return false;
+            }
+            // Don't retry specific RevenueCat errors
+            const message = error.message?.toLowerCase() || "";
+            if (
+              message.includes("cancelled") ||
+              message.includes("canceled") ||
+              message.includes("already") ||
+              message.includes("invalid")
+            ) {
+              return false;
+            }
+            return true;
+          },
+          onRetry: (error, attempt, delay) => {
+            console.log(`[Paywall] Retry purchase (attempt ${attempt}) after ${delay}ms:`, error.message);
+          },
+        }
+      );
       console.log("[Paywall] purchasePackage result:", customerInfo);
 
       if (customerInfo?.entitlements.active["premium"]) {
@@ -224,7 +282,10 @@ export default function PaywallScreen() {
       }
     } catch (error: any) {
       console.error("[Paywall] Purchase error:", error);
-      Alert.alert(t.purchaseError, t.purchaseErrorDesc);
+      // Don't show error for user cancellations
+      if (!error.userCancelled) {
+        Alert.alert(t.purchaseError, t.purchaseErrorDesc);
+      }
     } finally {
       setPurchasing(false);
     }

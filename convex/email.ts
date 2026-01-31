@@ -128,7 +128,8 @@ export const sendPasswordResetEmail = action({
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "Story Kids <onboarding@resend.dev>",
+          // Use custom domain from env or fallback to Resend dev domain
+          from: `Story Kids <${process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev"}>`,
           to: [args.to],
           subject: template.subject,
           html: template.html,

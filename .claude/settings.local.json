@@ -22,7 +22,20 @@
       "Bash(dir /s /b \"C:\\\\Users\\\\david\\\\Desktop\\\\RANDOM\\\\STORY_KIDS\")",
       "Bash(git rev-parse:*)",
       "Bash(npx vercel --prod)",
-      "Bash(npx vercel:*)"
+      "Bash(npx vercel:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(pnpm admin:*)",
+      "Bash(pnpm convex:dev:*)",
+      "Bash(where:*)",
+      "Bash(npm install:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm mobile:web:*)",
+      "Bash(npx convex deploy:*)",
+      "Bash(npx convex dashboard)",
+      "Bash(npx convex:*)",
+      "Bash(CONVEX_DEPLOYMENT=dev:content-dolphin-131 npx convex dev:*)",
+      "Bash(git -C \"C:\\\\Users\\\\david\\\\Desktop\\\\RANDOM\\\\STORY_KIDS\" log --oneline -10)"
     ]
   }
 }

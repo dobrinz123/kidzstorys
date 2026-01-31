@@ -44,6 +44,8 @@ export default function LoginPage() {
       setAuth({
         userId: result.userId,
         adminUserId: result.adminUserId,
+        sessionToken: result.sessionToken,
+        expiresAt: result.expiresAt,
         email: result.email,
         name: result.name,
         role: result.role,

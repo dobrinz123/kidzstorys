@@ -111,6 +111,61 @@ export const updateEntitlement = internalMutation({
   },
 });
 
+// Activate mock/demo trial for a user (for demo purposes)
+export const activateDemoTrial = mutation({
+  args: {
+    userId: v.id("users"),
+    plan: v.union(v.literal("monthly"), v.literal("yearly")),
+  },
+  handler: async (ctx, args) => {
+    const user = await ctx.db.get(args.userId);
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    // Check if user has already used their trial
+    if (user.hasUsedTrial) {
+      throw new Error("Trial already used. Please subscribe to continue using premium features.");
+    }
+
+    // Check if user already has an active subscription
+    if (user.entitlementActive && user.entitlementExpiresAt && user.entitlementExpiresAt > Date.now()) {
+      throw new Error("You already have an active subscription.");
+    }
+
+    const now = Date.now();
+    // 15 days trial for demo
+    const trialDays = 15;
+    const expiresAt = now + (trialDays * 24 * 60 * 60 * 1000);
+
+    await ctx.db.patch(args.userId, {
+      entitlementActive: true,
+      entitlementExpiresAt: expiresAt,
+      subscriptionType: "trial",
+      hasUsedTrial: true,
+      trialUsedAt: now,
+      updatedAt: now,
+    });
+
+    // Log the trial activation
+    await ctx.db.insert("subscriptionEvents", {
+      userId: args.userId,
+      revenueCatAppUserId: `user:${args.userId}`,
+      eventType: "DEMO_TRIAL_STARTED",
+      productId: args.plan === "yearly" ? "yearly_subscription" : "monthly_subscription",
+      expiresAt: expiresAt,
+      isTrial: true,
+      processedAt: now,
+    });
+
+    return {
+      success: true,
+      expiresAt,
+      message: "Demo trial activated for 15 days"
+    };
+  },
+});
+
 // Ensure user has RevenueCat app user ID set
 export const ensureRevenueCatId = mutation({
   args: { userId: v.id("users") },

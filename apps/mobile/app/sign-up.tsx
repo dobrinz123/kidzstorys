@@ -78,18 +78,22 @@ export default function SignUpScreen() {
 
         setLoading(true);
         try {
-            const { userId } = await signUp({
+            const result = await signUp({
                 email,
-                passwordHash: password, // In production, hash this!
+                password, // Will be hashed on the server
                 name,
                 preferredLanguage: language,
             });
 
-            await setAuthUser(userId);
+            await setAuthUser({
+                userId: result.userId,
+                sessionToken: result.sessionToken,
+                expiresAt: result.expiresAt,
+            });
 
             if (Platform.OS !== "web") {
-                await ensureRevenueCatId({ userId });
-                await loginRevenueCatUser(userId);
+                await ensureRevenueCatId({ userId: result.userId });
+                await loginRevenueCatUser(result.userId);
             }
 
             Alert.alert(t.success, t.accountCreated);

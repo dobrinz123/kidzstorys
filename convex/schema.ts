@@ -34,6 +34,11 @@ export default defineSchema({
     // Password Reset
     resetToken: v.optional(v.string()),
     resetTokenExpiresAt: v.optional(v.number()),
+    resetAttempts: v.optional(v.number()), // Track verification attempts
+
+    // Trial tracking
+    hasUsedTrial: v.optional(v.boolean()),
+    trialUsedAt: v.optional(v.number()),
 
     // Activity tracking for statistics
     lastActiveAt: v.optional(v.number()),
@@ -47,6 +52,29 @@ export default defineSchema({
     .index("by_subscription_type", ["subscriptionType", "entitlementActive"])
     .index("by_last_active", ["lastActiveAt"])
     .index("by_created", ["createdAt"]),
+
+  // User sessions for secure authentication
+  sessions: defineTable({
+    userId: v.id("users"),
+    token: v.string(), // Secure random token (64 hex chars)
+    expiresAt: v.number(), // Unix timestamp
+    createdAt: v.number(),
+    lastActiveAt: v.number(),
+    userAgent: v.optional(v.string()),
+  })
+    .index("by_token", ["token"])
+    .index("by_userId", ["userId"])
+    .index("by_expires", ["expiresAt"]),
+
+  // Rate limiting for security
+  rateLimits: defineTable({
+    key: v.string(), // e.g., "signIn:user@email.com"
+    action: v.string(), // "signIn", "signUp", "passwordReset"
+    count: v.number(),
+    windowStart: v.number(), // Start of current window
+    blockedUntil: v.optional(v.number()),
+  })
+    .index("by_key_action", ["key", "action"]),
 
   adminUsers: defineTable({
     email: v.string(),
