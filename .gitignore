@@ -51,3 +51,5 @@ apps/admin/out/
 
 # OS
 Thumbs.db
+
+.vercel
