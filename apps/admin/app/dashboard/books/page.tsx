@@ -36,7 +36,7 @@ export default function BooksPage() {
     status: statusFilter ? statusFilter as any : undefined,
     categoryId: categoryFilter ? categoryFilter as any : undefined,
     search: search || undefined,
-    limit: 50,
+    limit: 200,
   });
 
   const categories = useQuery(api.categories.getAllCategories);
