@@ -10,12 +10,9 @@ import {
   Platform,
 } from "react-native";
 import { useRouter } from "expo-router";
-import { useMutation } from "convex/react";
-import { api } from "../../../convex/_generated/api";
-import { getOfferings, purchasePackage, restorePurchases, loginRevenueCatUser, initializeRevenueCat } from "../src/lib/revenuecat";
+import { getOfferings, purchasePackage, restorePurchases, loginRevenueCatUser } from "../src/lib/revenuecat";
 import { useLanguageStore } from "../src/store/languageStore";
 import { useAuthStore } from "../src/store/authStore";
-import { withRetry, revenueCatRetryOptions } from "../src/lib/retry";
 
 // Translations for paywall
 const TRANSLATIONS = {
@@ -140,7 +137,6 @@ export default function PaywallScreen() {
   const language = useLanguageStore((state: any) => state.language);
   const t = TRANSLATIONS[language as keyof typeof TRANSLATIONS] || TRANSLATIONS.ro;
   const userId = useAuthStore((state) => state.userId);
-  const activateDemoTrial = useMutation(api.subscriptions.activateDemoTrial);
 
   const [offering, setOffering] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -155,22 +151,33 @@ export default function PaywallScreen() {
     try {
       // Initialize RevenueCat with user ID if available
       if (userId && Platform.OS === "web") {
-        await loginRevenueCatUser(userId);
+        const loginResult = await loginRevenueCatUser(userId);
+        console.log("[Paywall] RevenueCat login result:", loginResult);
       }
 
-      // Use retry logic for loading offerings
-      const offers = await withRetry(
-        () => getOfferings(),
-        {
-          ...revenueCatRetryOptions,
-          onRetry: (error, attempt, delay) => {
-            console.log(`[Paywall] Retry loading offerings (attempt ${attempt}) after ${delay}ms:`, error.message);
-          },
-        }
-      );
-      setOffering(offers);
+      // Fetch offerings
+      const offers = await getOfferings();
+      console.log("[Paywall] Offerings result:", offers ? `${offers.availablePackages?.length} packages` : "null");
+
+      if (!offers || !offers.availablePackages?.length) {
+        console.error("[Paywall] No offerings available");
+        // Show error to user
+        Alert.alert(
+          t.purchaseError,
+          "Could not load subscription options. Please check your internet connection and try again.",
+          [{ text: "OK", onPress: () => router.back() }]
+        );
+        setOffering(null);
+      } else {
+        setOffering(offers);
+      }
     } catch (error) {
-      console.error("Error loading offerings after retries:", error);
+      console.error("[Paywall] Error loading offerings:", error);
+      Alert.alert(
+        t.purchaseError,
+        "Failed to load subscription options. Please try again later.",
+        [{ text: "OK", onPress: () => router.back() }]
+      );
     } finally {
       setLoading(false);
     }
@@ -227,6 +234,13 @@ export default function PaywallScreen() {
     const pkg = getSelectedPackage();
     console.log("[Paywall] Selected package:", pkg);
 
+    // Validate package
+    if (!pkg || !pkg.identifier) {
+      console.error("[Paywall] No valid package selected");
+      Alert.alert(t.purchaseError, "No subscription package selected. Please try again.");
+      return;
+    }
+
     if (!userId) {
       Alert.alert(t.purchaseError, "Please log in first to subscribe.");
       return;
@@ -237,38 +251,24 @@ export default function PaywallScreen() {
 
       // Make sure RevenueCat is initialized with user ID for web
       if (Platform.OS === "web") {
-        await loginRevenueCatUser(userId);
+        const loginResult = await loginRevenueCatUser(userId);
+        if (!loginResult) {
+          throw new Error("Failed to initialize payment system");
+        }
       }
 
-      console.log("[Paywall] Calling purchasePackage with retry...");
-      // Use retry logic for purchase (with user cancellation detection)
-      const customerInfo = await withRetry(
-        () => purchasePackage(pkg),
-        {
-          ...revenueCatRetryOptions,
-          shouldRetry: (error) => {
-            // Don't retry user cancellations
-            if ((error as any).userCancelled) {
-              return false;
-            }
-            // Don't retry specific RevenueCat errors
-            const message = error.message?.toLowerCase() || "";
-            if (
-              message.includes("cancelled") ||
-              message.includes("canceled") ||
-              message.includes("already") ||
-              message.includes("invalid")
-            ) {
-              return false;
-            }
-            return true;
-          },
-          onRetry: (error, attempt, delay) => {
-            console.log(`[Paywall] Retry purchase (attempt ${attempt}) after ${delay}ms:`, error.message);
-          },
-        }
-      );
-      console.log("[Paywall] purchasePackage result:", customerInfo);
+      console.log("[Paywall] Starting purchase for package:", pkg.identifier);
+
+      // Direct purchase without retry (user interaction can't be retried)
+      const customerInfo = await purchasePackage(pkg);
+
+      console.log("[Paywall] purchasePackage result:", customerInfo ? "success" : "cancelled");
+
+      if (customerInfo === null) {
+        // User cancelled - do nothing
+        console.log("[Paywall] User cancelled purchase");
+        return;
+      }
 
       // Check for premium entitlement (case insensitive)
       const hasEntitlement = customerInfo?.entitlements?.active?.["PREMIUM"] ||
@@ -276,18 +276,32 @@ export default function PaywallScreen() {
 
       if (hasEntitlement) {
         console.log("[Paywall] Premium entitlement found, navigating to home");
-        // Success! Navigate to home
-        router.replace("/");
-      } else if (customerInfo === null) {
-        console.log("[Paywall] User cancelled or null result");
-        // User cancelled - do nothing
+        Alert.alert(
+          "Success!",
+          "Your subscription is now active. Enjoy all the stories!",
+          [{ text: "OK", onPress: () => router.replace("/") }]
+        );
+      } else {
+        // Purchase completed but no entitlement - might need time to process
+        console.log("[Paywall] Purchase completed but no entitlement yet");
+        Alert.alert(
+          "Processing",
+          "Your purchase is being processed. Please wait a moment and check again.",
+          [{ text: "OK" }]
+        );
       }
     } catch (error: any) {
       console.error("[Paywall] Purchase error:", error);
+
+      const errorMessage = error?.message || "";
+
       // Don't show error for user cancellations
-      if (!error.userCancelled) {
-        Alert.alert(t.purchaseError, t.purchaseErrorDesc);
+      if (errorMessage.toLowerCase().includes("cancel") ||
+          errorMessage.toLowerCase().includes("abort")) {
+        return;
       }
+
+      Alert.alert(t.purchaseError, t.purchaseErrorDesc);
     } finally {
       setPurchasing(false);
     }
@@ -296,9 +310,19 @@ export default function PaywallScreen() {
   async function handleRestore() {
     try {
       setPurchasing(true);
+
+      // Make sure RevenueCat is initialized
+      if (userId && Platform.OS === "web") {
+        await loginRevenueCatUser(userId);
+      }
+
       const customerInfo = await restorePurchases();
 
-      if (customerInfo?.entitlements.active["premium"]) {
+      // Check both cases for entitlement
+      const hasEntitlement = customerInfo?.entitlements?.active?.["PREMIUM"] ||
+                             customerInfo?.entitlements?.active?.["premium"];
+
+      if (hasEntitlement) {
         Alert.alert(t.restoreSuccess, t.restoreSuccessDesc, [
           { text: "OK", onPress: () => router.replace("/") }
         ]);
@@ -306,7 +330,7 @@ export default function PaywallScreen() {
         Alert.alert(t.restoreError, t.restoreErrorDesc);
       }
     } catch (error) {
-      console.error("Restore error:", error);
+      console.error("[Paywall] Restore error:", error);
       Alert.alert(t.restoreError, t.restoreErrorDesc);
     } finally {
       setPurchasing(false);
