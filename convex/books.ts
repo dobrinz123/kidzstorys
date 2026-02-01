@@ -89,9 +89,42 @@ export const listBooks = query({
       };
     });
 
-    // Get accurate total count (separate query for efficiency)
+    // Get total count - only count IDs for efficiency (no full document fetch)
+    // Note: Convex doesn't have a native count(), so we collect but only need length
+    // For very large datasets (10k+), consider caching this count
     let totalCount = 0;
-    if (args.status && args.categoryId) {
+    if (args.search) {
+      // For search, we need to count filtered results (already have them above before slice)
+      // Re-fetch without offset/limit to get total matching search
+      let searchBooks;
+      if (args.status && args.categoryId) {
+        searchBooks = await ctx.db
+          .query("books")
+          .withIndex("by_category", (q) =>
+            q.eq("categoryId", args.categoryId!).eq("status", args.status!)
+          )
+          .collect();
+      } else if (args.status) {
+        searchBooks = await ctx.db
+          .query("books")
+          .withIndex("by_status", (q) => q.eq("status", args.status!))
+          .collect();
+      } else if (args.categoryId) {
+        searchBooks = await ctx.db
+          .query("books")
+          .withIndex("by_category", (q) => q.eq("categoryId", args.categoryId!))
+          .collect();
+      } else {
+        searchBooks = await ctx.db.query("books").collect();
+      }
+      const searchLower = args.search.toLowerCase();
+      totalCount = searchBooks.filter(book =>
+        book.cover.title_en.toLowerCase().includes(searchLower) ||
+        book.cover.title_ro.toLowerCase().includes(searchLower) ||
+        book.cover.title_it.toLowerCase().includes(searchLower) ||
+        book.bookKey.toLowerCase().includes(searchLower)
+      ).length;
+    } else if (args.status && args.categoryId) {
       const allBooks = await ctx.db
         .query("books")
         .withIndex("by_category", (q) =>
