@@ -23,7 +23,6 @@ const TRANSLATIONS = {
         appName: "KidStoryz",
         tagline: "Povești magice pentru copii curioși",
         features: [
-            "📚 50+ povești în 3 limbi",
             "🌙 Povești de somn, aventuri, emoții",
             "👶 Potrivite pentru 3-7 ani",
         ],
@@ -36,7 +35,6 @@ const TRANSLATIONS = {
         appName: "KidStoryz",
         tagline: "Magical stories for curious kids",
         features: [
-            "📚 50+ stories in 3 languages",
             "🌙 Bedtime, adventure, emotions",
             "👶 Perfect for ages 3-7",
         ],
@@ -49,7 +47,6 @@ const TRANSLATIONS = {
         appName: "KidStoryz",
         tagline: "Storie magiche per bambini curiosi",
         features: [
-            "📚 50+ storie in 3 lingue",
             "🌙 Storie per dormire, avventure, emozioni",
             "👶 Perfette per 3-7 anni",
         ],

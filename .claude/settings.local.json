@@ -35,7 +35,8 @@
       "Bash(npx convex dashboard)",
       "Bash(npx convex:*)",
       "Bash(CONVEX_DEPLOYMENT=dev:content-dolphin-131 npx convex dev:*)",
-      "Bash(git -C \"C:\\\\Users\\\\david\\\\Desktop\\\\RANDOM\\\\STORY_KIDS\" log --oneline -10)"
+      "Bash(git -C \"C:\\\\Users\\\\david\\\\Desktop\\\\RANDOM\\\\STORY_KIDS\" log --oneline -10)",
+      "Bash(git add:*)"
     ]
   }
 }

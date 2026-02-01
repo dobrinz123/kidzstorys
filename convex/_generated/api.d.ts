@@ -19,6 +19,7 @@ import type * as favorites from "../favorites.js";
 import type * as fix_whale_pages from "../fix_whale_pages.js";
 import type * as http from "../http.js";
 import type * as lib_authHelper from "../lib/authHelper.js";
+import type * as lib_crypto from "../lib/crypto.js";
 import type * as lib_rateLimit from "../lib/rateLimit.js";
 import type * as lib_recommendationEngine from "../lib/recommendationEngine.js";
 import type * as lib_validation from "../lib/validation.js";
@@ -50,6 +51,7 @@ declare const fullApi: ApiFromModules<{
   fix_whale_pages: typeof fix_whale_pages;
   http: typeof http;
   "lib/authHelper": typeof lib_authHelper;
+  "lib/crypto": typeof lib_crypto;
   "lib/rateLimit": typeof lib_rateLimit;
   "lib/recommendationEngine": typeof lib_recommendationEngine;
   "lib/validation": typeof lib_validation;

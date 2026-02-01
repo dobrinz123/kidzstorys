@@ -12,7 +12,7 @@ import {
 import { useRouter } from "expo-router";
 import { useMutation } from "convex/react";
 import { api } from "../../../convex/_generated/api";
-import { getOfferings, purchasePackage, restorePurchases } from "../src/lib/revenuecat";
+import { getOfferings, purchasePackage, restorePurchases, loginRevenueCatUser, initializeRevenueCat } from "../src/lib/revenuecat";
 import { useLanguageStore } from "../src/store/languageStore";
 import { useAuthStore } from "../src/store/authStore";
 import { withRetry, revenueCatRetryOptions } from "../src/lib/retry";
@@ -149,10 +149,15 @@ export default function PaywallScreen() {
 
   useEffect(() => {
     loadOfferings();
-  }, []);
+  }, [userId]);
 
   async function loadOfferings() {
     try {
+      // Initialize RevenueCat with user ID if available
+      if (userId && Platform.OS === "web") {
+        await loginRevenueCatUser(userId);
+      }
+
       // Use retry logic for loading offerings
       const offers = await withRetry(
         () => getOfferings(),
@@ -222,24 +227,17 @@ export default function PaywallScreen() {
     const pkg = getSelectedPackage();
     console.log("[Paywall] Selected package:", pkg);
 
+    if (!userId) {
+      Alert.alert(t.purchaseError, "Please log in first to subscribe.");
+      return;
+    }
+
     try {
       setPurchasing(true);
 
-      // For web/demo mode, activate trial directly in Convex
-      if (Platform.OS === "web" && userId) {
-        console.log("[Paywall] Web demo mode - activating trial via Convex");
-        const result = await activateDemoTrial({
-          userId,
-          plan: selectedPlan,
-        });
-        console.log("[Paywall] Demo trial activated:", result);
-
-        // Also do the mock purchase for local state
-        await purchasePackage(pkg);
-
-        // Success! Navigate to home
-        router.replace("/");
-        return;
+      // Make sure RevenueCat is initialized with user ID for web
+      if (Platform.OS === "web") {
+        await loginRevenueCatUser(userId);
       }
 
       console.log("[Paywall] Calling purchasePackage with retry...");
@@ -272,7 +270,11 @@ export default function PaywallScreen() {
       );
       console.log("[Paywall] purchasePackage result:", customerInfo);
 
-      if (customerInfo?.entitlements.active["premium"]) {
+      // Check for premium entitlement (case insensitive)
+      const hasEntitlement = customerInfo?.entitlements?.active?.["PREMIUM"] ||
+                             customerInfo?.entitlements?.active?.["premium"];
+
+      if (hasEntitlement) {
         console.log("[Paywall] Premium entitlement found, navigating to home");
         // Success! Navigate to home
         router.replace("/");

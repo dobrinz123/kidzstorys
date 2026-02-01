@@ -160,7 +160,14 @@ export function useAuth() {
 
     // If we have a token but query is still loading
     if (serverSession === undefined) {
-      return;
+      // Set a safety timeout to prevent infinite loading
+      const timer = setTimeout(() => {
+        if (store.isLoading) {
+          console.warn('Server session verification timed out. Clearing auth.');
+          store.clearAuth();
+        }
+      }, 5000);
+      return () => clearTimeout(timer);
     }
 
     if (serverSession === null) {
@@ -170,18 +177,6 @@ export function useAuth() {
       // Update with server-verified data
       store.updateFromServer(serverSession);
     }
-    // Safety timeout: If server verification takes too long (e.g. 5s), stop loading
-    // to allow the UI to make a decision (likely redirect to login if not verified)
-    const timer = setTimeout(() => {
-      if (store.isLoading && serverSession === undefined) {
-        console.warn('Server session verification timed out. Resetting auth.');
-        store.setLoading(false);
-        // Optional: clear auth if we don't trust the persisted state without verification
-        // store.clearAuth(); 
-      }
-    }, 5000);
-
-    return () => clearTimeout(timer);
   }, [serverSession, store.sessionToken, store.isLoading]);
 
   const login = async (

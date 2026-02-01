@@ -1,7 +1,7 @@
 import { v, ConvexError } from "convex/values";
 import { query, mutation, action } from "./_generated/server";
 import { api, internal } from "./_generated/api";
-import * as bcrypt from "bcryptjs";
+import { hashPassword, verifyPassword } from "./lib/crypto";
 import { checkRateLimit, resetRateLimit, formatRetryTime } from "./lib/rateLimit";
 import { validateEmail, validatePassword, validateName } from "./lib/validation";
 
@@ -70,7 +70,7 @@ export const signUp = mutation({
     }
 
     // Hash password
-    const passwordHash = await bcrypt.hash(args.password, 10);
+    const passwordHash = await hashPassword(args.password);
 
     const now = Date.now();
     const userId = await ctx.db.insert("users", {
@@ -134,7 +134,7 @@ export const signIn = mutation({
     }
 
     // Verify password
-    const isValid = await bcrypt.compare(args.password, user.passwordHash);
+    const isValid = await verifyPassword(args.password, user.passwordHash);
 
     if (!isValid) {
       return null;
@@ -529,7 +529,7 @@ export const resetPassword = mutation({
     }
 
     // Hash new password
-    const passwordHash = await bcrypt.hash(args.newPassword, 10);
+    const passwordHash = await hashPassword(args.newPassword);
 
     // Update password and clear token + reset attempts
     await ctx.db.patch(user._id, {

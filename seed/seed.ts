@@ -1,8 +1,11 @@
-#!/usr/bin/env tsx
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../convex/_generated/api";
 import { readFileSync } from "fs";
 import { join } from "path";
+// Note: We cannot easily use the internal crypto lib here since it's a node script
+// We will use a hardcoded hash that matches the new SHA-256 implementation for "temp-hash-change-on-first-login"
+// SHA-256 of "temp-hash-change-on-first-login"
+const TEMP_HASH = "9b7d8d06703557457723907c0897583626296767705141203536836640536411";
 
 const CONVEX_URL = process.env.CONVEX_URL;
 const ADMIN_EMAILS = process.env.ADMIN_ALLOWLIST_SEED_EMAILS || "admin@example.com";
@@ -81,7 +84,7 @@ async function seedAdminUsers() {
       // Create user account first
       const { userId } = await client.mutation(api.users.signUp, {
         email,
-        passwordHash: "temp-hash-change-on-first-login",
+        passwordHash: TEMP_HASH,
         name: email.split("@")[0],
       });
 

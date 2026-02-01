@@ -1,7 +1,7 @@
 import { v } from "convex/values";
 import { query, mutation, internalMutation } from "./_generated/server";
 import { Id } from "./_generated/dataModel";
-import * as bcrypt from "bcryptjs";
+import { hashPassword, verifyPassword } from "./lib/crypto";
 
 // ============ ADMIN USER QUERIES ============
 
@@ -117,7 +117,7 @@ export const adminLogin = mutation({
       throw new Error("Invalid credentials");
     }
 
-    const isValid = await bcrypt.compare(args.password, user.passwordHash);
+    const isValid = await verifyPassword(args.password, user.passwordHash);
 
     if (!isValid) {
       throw new Error("Invalid credentials");
@@ -272,7 +272,7 @@ export const resetUserPassword = internalMutation({
     }
 
     // Hash password
-    const passwordHash = await bcrypt.hash(args.password, 10);
+    const passwordHash = await hashPassword(args.password);
 
     await ctx.db.patch(user._id, {
       passwordHash: passwordHash,

@@ -25,7 +25,7 @@ export default function RootLayout() {
     }
   }, [fontsLoaded]);
 
-  if (!fontsLoaded) return null;
+  // if (!fontsLoaded) return null; // Don't block UI on fonts to allow web to render even if fonts fail
 
   return (
     <ConvexProvider client={convex}>

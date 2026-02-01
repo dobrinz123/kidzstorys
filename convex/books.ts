@@ -89,9 +89,36 @@ export const listBooks = query({
       };
     });
 
+    // Get accurate total count (separate query for efficiency)
+    let totalCount = 0;
+    if (args.status && args.categoryId) {
+      const allBooks = await ctx.db
+        .query("books")
+        .withIndex("by_category", (q) =>
+          q.eq("categoryId", args.categoryId!).eq("status", args.status!)
+        )
+        .collect();
+      totalCount = allBooks.length;
+    } else if (args.status) {
+      const allBooks = await ctx.db
+        .query("books")
+        .withIndex("by_status", (q) => q.eq("status", args.status!))
+        .collect();
+      totalCount = allBooks.length;
+    } else if (args.categoryId) {
+      const allBooks = await ctx.db
+        .query("books")
+        .withIndex("by_category", (q) => q.eq("categoryId", args.categoryId!))
+        .collect();
+      totalCount = allBooks.length;
+    } else {
+      const allBooks = await ctx.db.query("books").collect();
+      totalCount = allBooks.length;
+    }
+
     return {
       books: enrichedBooks,
-      total: books.length, // Note: accurate count requires separate query for large datasets
+      total: totalCount,
       hasMore,
     };
   },
