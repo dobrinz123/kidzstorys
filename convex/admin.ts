@@ -475,19 +475,36 @@ export const cleanupInvalidTrialStatus = mutation({
       throw new Error("Only admins can cleanup trial status");
     }
 
-    // Find users with subscriptionType set but entitlement not active
+    // Find users with invalid subscription status:
+    // 1. Users with subscriptionType set but entitlement not active
+    // 2. Users with subscriptionType="trial" but hasUsedTrial is not true (they never actually started a trial)
+    // 3. Users with subscriptionType="trial" and entitlementActive but no valid RevenueCat subscription
     const users = await ctx.db.query("users").collect();
-    const invalidUsers = users.filter(u =>
-      u.subscriptionType && !u.entitlementActive
-    );
+    const invalidUsers = users.filter(u => {
+      // Case 1: subscriptionType set but not active
+      if (u.subscriptionType && !u.entitlementActive) {
+        return true;
+      }
+      // Case 2: Trial status but never used trial mechanism
+      if (u.subscriptionType === "trial" && !u.hasUsedTrial) {
+        return true;
+      }
+      // Case 3: Trial status but no RevenueCat ID (fake trial)
+      if (u.subscriptionType === "trial" && !u.revenueCatAppUserId) {
+        return true;
+      }
+      return false;
+    });
 
     const now = Date.now();
     const cleanedEmails: string[] = [];
 
-    // Clear subscriptionType for invalid users
+    // Clear subscriptionType AND entitlementActive for truly invalid users
     for (const user of invalidUsers) {
       await ctx.db.patch(user._id, {
         subscriptionType: undefined,
+        entitlementActive: false,
+        entitlementExpiresAt: undefined,
         updatedAt: now,
       });
       cleanedEmails.push(user.email);
