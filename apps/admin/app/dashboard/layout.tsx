@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '../../hooks/useAuth';
 import { Sidebar } from '../../components/layout/Sidebar';
+import { MobileHeader } from '../../components/layout/MobileHeader';
 import { PageLoading } from '../../components/ui/Loading';
 
 export default function DashboardLayout({
@@ -13,6 +14,7 @@ export default function DashboardLayout({
 }) {
   const router = useRouter();
   const { isAuthenticated, isLoading, role, name, email, clearAuth } = useAuthStore();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
@@ -39,12 +41,20 @@ export default function DashboardLayout({
 
   return (
     <div className="min-h-screen bg-surface-primary">
+      {/* Mobile Header */}
+      <MobileHeader onMenuClick={() => setSidebarOpen(true)} />
+
+      {/* Sidebar */}
       <Sidebar
         userRole={role}
         userName={name || email || 'Admin'}
         onLogout={handleLogout}
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
       />
-      <main className="ml-64 transition-all duration-300">
+
+      {/* Main content - responsive margins */}
+      <main className="pt-14 md:pt-0 md:ml-64 transition-all duration-300">
         {children}
       </main>
     </div>
