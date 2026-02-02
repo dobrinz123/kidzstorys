@@ -895,3 +895,87 @@ export const incrementReadCount = mutation({
     });
   },
 });
+
+// ============ CONTENT AUDIT ============
+
+// Validate all books for content consistency across languages
+export const validateAllBooksContent = query({
+  args: {},
+  handler: async (ctx) => {
+    const books = await ctx.db.query("books").collect();
+    const issues: Array<{
+      bookKey: string;
+      bookId: Id<"books">;
+      title: string;
+      status: string;
+      pageCount: number;
+      problems: string[];
+    }> = [];
+
+    for (const book of books) {
+      const problems: string[] = [];
+
+      // Check cover titles
+      if (!book.cover.title_en?.trim()) problems.push("Missing EN title");
+      if (!book.cover.title_ro?.trim()) problems.push("Missing RO title");
+      if (!book.cover.title_it?.trim()) problems.push("Missing IT title");
+
+      // Check cover image
+      if (!book.cover.imageId && !book.cover.legacyAssetKey) {
+        problems.push("Missing cover image");
+      }
+
+      // Check pages
+      for (let i = 0; i < book.pages.length; i++) {
+        const page = book.pages[i];
+        const pageNum = i + 1;
+
+        // Check image
+        if (!page.imageId && !page.legacyAssetKey) {
+          problems.push(`Page ${pageNum}: Missing image`);
+        }
+
+        // Check text in all languages
+        if (!page.text_en?.trim()) problems.push(`Page ${pageNum}: Missing EN text`);
+        if (!page.text_ro?.trim()) problems.push(`Page ${pageNum}: Missing RO text`);
+        if (!page.text_it?.trim()) problems.push(`Page ${pageNum}: Missing IT text`);
+
+        // Check text length consistency (flag if any language is 3x longer/shorter)
+        const lengths = [
+          page.text_en?.length || 0,
+          page.text_ro?.length || 0,
+          page.text_it?.length || 0
+        ].filter(l => l > 0);
+
+        if (lengths.length === 3) {
+          const max = Math.max(...lengths);
+          const min = Math.min(...lengths);
+          if (max > min * 3) {
+            problems.push(`Page ${pageNum}: Text lengths very different (${min}-${max} chars)`);
+          }
+        }
+      }
+
+      if (problems.length > 0) {
+        issues.push({
+          bookKey: book.bookKey,
+          bookId: book._id,
+          title: book.cover.title_en || book.cover.title_ro || "Untitled",
+          status: book.status,
+          pageCount: book.pages.length,
+          problems,
+        });
+      }
+    }
+
+    // Sort by number of problems (worst first)
+    issues.sort((a, b) => b.problems.length - a.problems.length);
+
+    return {
+      totalBooks: books.length,
+      booksWithIssues: issues.length,
+      booksOk: books.length - issues.length,
+      issues,
+    };
+  },
+});

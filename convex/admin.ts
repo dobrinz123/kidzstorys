@@ -450,3 +450,64 @@ export const listAdminUsers = query({
     return enrichedAdmins;
   },
 });
+
+// Cleanup invalid trial status - fixes users with subscriptionType but no active entitlement
+export const cleanupInvalidTrialStatus = mutation({
+  args: { sessionToken: v.string() },
+  handler: async (ctx, args) => {
+    // Verify admin via session (same pattern as validateAdminSession)
+    const session = await ctx.db
+      .query("sessions")
+      .withIndex("by_token", (q) => q.eq("token", args.sessionToken))
+      .first();
+
+    if (!session || session.expiresAt < Date.now()) {
+      throw new Error("Unauthorized - invalid or expired session");
+    }
+
+    // Verify user is admin
+    const adminUser = await ctx.db
+      .query("adminUsers")
+      .withIndex("by_userId", (q) => q.eq("userId", session.userId))
+      .first();
+
+    if (!adminUser || adminUser.role !== "admin") {
+      throw new Error("Only admins can cleanup trial status");
+    }
+
+    // Find users with subscriptionType set but entitlement not active
+    const users = await ctx.db.query("users").collect();
+    const invalidUsers = users.filter(u =>
+      u.subscriptionType && !u.entitlementActive
+    );
+
+    const now = Date.now();
+    const cleanedEmails: string[] = [];
+
+    // Clear subscriptionType for invalid users
+    for (const user of invalidUsers) {
+      await ctx.db.patch(user._id, {
+        subscriptionType: undefined,
+        updatedAt: now,
+      });
+      cleanedEmails.push(user.email);
+    }
+
+    // Log the cleanup action
+    if (cleanedEmails.length > 0) {
+      await ctx.db.insert("auditLog", {
+        entityType: "user",
+        entityId: "bulk-cleanup",
+        action: "update",
+        description: `Cleaned up invalid trial status for ${cleanedEmails.length} users: ${cleanedEmails.join(", ")}`,
+        performedBy: adminUser._id,
+        performedAt: now,
+      });
+    }
+
+    return {
+      cleaned: cleanedEmails.length,
+      users: cleanedEmails,
+    };
+  },
+});

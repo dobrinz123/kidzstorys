@@ -13,6 +13,7 @@ import {
   ChevronLeft,
   ChevronRight,
   X,
+  ClipboardCheck,
 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { UserRole } from '../../types';
@@ -50,6 +51,12 @@ const navItems: NavItem[] = [
     href: '/dashboard/categories',
     label: 'Categories',
     icon: <FolderOpen size={20} />,
+    roles: ['admin'],
+  },
+  {
+    href: '/dashboard/content-audit',
+    label: 'Content Audit',
+    icon: <ClipboardCheck size={20} />,
     roles: ['admin'],
   },
   {

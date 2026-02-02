@@ -2,7 +2,7 @@
 
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useQuery } from 'convex/react';
 import { api } from '@convex/_generated/api';
 import { UserRole } from '../types';
@@ -151,6 +151,12 @@ export const useAuthStore = create<AdminAuthStore>()(
 export function useAuth() {
   const store = useAuthStore();
 
+  // Use ref to track loading state for timeout callback (avoids stale closure)
+  const isLoadingRef = useRef(store.isLoading);
+  useEffect(() => {
+    isLoadingRef.current = store.isLoading;
+  }, [store.isLoading]);
+
   // Verify session with server whenever we have a token
   const serverSession = useQuery(
     api.admin.validateAdminSession,
@@ -159,19 +165,23 @@ export function useAuth() {
 
   // Update local state when server responds
   useEffect(() => {
-    // Absolute safety timeout - ALWAYS runs to prevent infinite loading
+    // Aggressive timeout using ref to avoid stale closure problem
     const absoluteTimeout = setTimeout(() => {
-      if (store.isLoading) {
-        console.warn('Absolute timeout reached (8s). Forcing loading end.');
-        store.setLoading(false);
+      if (isLoadingRef.current) {
+        console.warn('Loading timeout (3s) - clearing auth and redirecting to login');
+        store.clearAuth();
+        // Force redirect to login page
+        if (typeof window !== 'undefined') {
+          window.location.href = '/login';
+        }
       }
-    }, 8000);
+    }, 3000); // 3 seconds - aggressive timeout
 
     // If no session token, we're not authenticated - stop loading immediately
     if (!store.sessionToken) {
       store.setLoading(false);
       clearTimeout(absoluteTimeout);
-      return () => {};
+      return;
     }
 
     // If we have a response from server
@@ -184,12 +194,12 @@ export function useAuth() {
         // Update with server-verified data
         store.updateFromServer(serverSession);
       }
-      return () => {};
+      return;
     }
 
     // Cleanup
     return () => clearTimeout(absoluteTimeout);
-  }, [serverSession, store.sessionToken]); // Removed store.isLoading from deps to prevent re-render loops
+  }, [serverSession, store.sessionToken]);
 
   const login = async (
     loginMutation: (args: { email: string; password: string }) => Promise<{

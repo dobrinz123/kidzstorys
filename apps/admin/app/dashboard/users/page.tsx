@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { useQuery } from 'convex/react';
+import { useQuery, useMutation } from 'convex/react';
 import { api } from '@convex/_generated/api';
-import { useRole } from '../../../hooks/useAuth';
+import { useRole, useAuthStore } from '../../../hooks/useAuth';
 import { Header, HeaderSearch } from '../../../components/layout/Header';
 import { AdminOnly } from '../../../components/layout/RoleGuard';
 import { Card } from '../../../components/ui/Card';
 import { Select } from '../../../components/ui/Select';
+import { Button } from '../../../components/ui/Button';
 import { SubscriptionBadge, Badge } from '../../../components/ui/Badge';
 import { NoUsersEmptyState, NoSearchResultsEmptyState } from '../../../components/ui/EmptyState';
 import { SkeletonTable } from '../../../components/ui/Loading';
@@ -17,12 +18,18 @@ import {
   Calendar,
   Globe,
   Clock,
+  Trash2,
 } from 'lucide-react';
 
 export default function UsersPage() {
   const { role } = useRole();
+  const { sessionToken } = useAuthStore();
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<string>('all');
+  const [isCleaningUp, setIsCleaningUp] = useState(false);
+  const [cleanupResult, setCleanupResult] = useState<{ cleaned: number; users: string[] } | null>(null);
+
+  const cleanupMutation = useMutation(api.admin.cleanupInvalidTrialStatus);
 
   const usersResult = useQuery(api.statistics.listUsers, {
     filter: filter as any,
@@ -49,6 +56,20 @@ export default function UsersPage() {
     it: '🇮🇹',
   };
 
+  const handleCleanupTrials = async () => {
+    if (!sessionToken) return;
+    setIsCleaningUp(true);
+    setCleanupResult(null);
+    try {
+      const result = await cleanupMutation({ sessionToken });
+      setCleanupResult(result);
+    } catch (error) {
+      console.error('Cleanup failed:', error);
+    } finally {
+      setIsCleaningUp(false);
+    }
+  };
+
   return (
     <AdminOnly currentRole={role}>
       <div className="p-6">
@@ -60,6 +81,21 @@ export default function UsersPage() {
             { label: 'Users' },
           ]}
         />
+
+        {/* Cleanup Result Banner */}
+        {cleanupResult && (
+          <Card className="p-4 mb-4 bg-success-50 border-success-200">
+            <div className="flex items-center gap-2 text-success-700">
+              <Trash2 size={18} />
+              <span>
+                Cleaned up {cleanupResult.cleaned} users with invalid trial status
+                {cleanupResult.users.length > 0 && (
+                  <span className="ml-1">({cleanupResult.users.join(', ')})</span>
+                )}
+              </span>
+            </div>
+          </Card>
+        )}
 
         {/* Filters */}
         <Card className="p-4 mb-6">
@@ -77,6 +113,16 @@ export default function UsersPage() {
               onChange={(e) => setFilter(e.target.value)}
               className="w-48"
             />
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={handleCleanupTrials}
+              isLoading={isCleaningUp}
+              leftIcon={<Trash2 size={16} />}
+              title="Remove trial status from users who don't have active entitlements"
+            >
+              Cleanup Invalid Trials
+            </Button>
           </div>
         </Card>
 
