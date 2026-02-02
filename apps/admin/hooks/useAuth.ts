@@ -151,11 +151,25 @@ export const useAuthStore = create<AdminAuthStore>()(
 export function useAuth() {
   const store = useAuthStore();
 
-  // Use ref to track loading state for timeout callback (avoids stale closure)
-  const isLoadingRef = useRef(store.isLoading);
+  // GUARANTEED TIMEOUT: This will ALWAYS fire after 2 seconds, no matter what
+  // It's in a separate effect with empty deps so it only runs once on mount
   useEffect(() => {
-    isLoadingRef.current = store.isLoading;
-  }, [store.isLoading]);
+    const guaranteedTimeout = setTimeout(() => {
+      // Get current state directly from store
+      const currentState = useAuthStore.getState();
+      if (currentState.isLoading) {
+        console.warn('[useAuth] GUARANTEED 2s timeout - forcing loading to end');
+        currentState.setLoading(false);
+        // If no session token or auth failed, redirect to login
+        if (!currentState.isAuthenticated && typeof window !== 'undefined') {
+          console.warn('[useAuth] No auth after timeout, redirecting to login');
+          window.location.href = '/login';
+        }
+      }
+    }, 2000);
+
+    return () => clearTimeout(guaranteedTimeout);
+  }, []); // Empty deps = only runs once on mount
 
   // Verify session with server whenever we have a token
   const serverSession = useQuery(
@@ -165,28 +179,14 @@ export function useAuth() {
 
   // Update local state when server responds
   useEffect(() => {
-    // Aggressive timeout using ref to avoid stale closure problem
-    const absoluteTimeout = setTimeout(() => {
-      if (isLoadingRef.current) {
-        console.warn('Loading timeout (3s) - clearing auth and redirecting to login');
-        store.clearAuth();
-        // Force redirect to login page
-        if (typeof window !== 'undefined') {
-          window.location.href = '/login';
-        }
-      }
-    }, 3000); // 3 seconds - aggressive timeout
-
     // If no session token, we're not authenticated - stop loading immediately
     if (!store.sessionToken) {
       store.setLoading(false);
-      clearTimeout(absoluteTimeout);
       return;
     }
 
     // If we have a response from server
     if (serverSession !== undefined) {
-      clearTimeout(absoluteTimeout);
       if (serverSession === null) {
         // Session invalid on server - clear local auth
         store.clearAuth();
@@ -194,11 +194,7 @@ export function useAuth() {
         // Update with server-verified data
         store.updateFromServer(serverSession);
       }
-      return;
     }
-
-    // Cleanup
-    return () => clearTimeout(absoluteTimeout);
   }, [serverSession, store.sessionToken]);
 
   const login = async (
