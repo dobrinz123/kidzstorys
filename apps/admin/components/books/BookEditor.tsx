@@ -29,6 +29,7 @@ import {
   Clock,
   History,
   Eye,
+  Trash2,
 } from 'lucide-react';
 
 interface BookEditorProps {
@@ -78,6 +79,11 @@ export function BookEditor({ bookId, initialBook }: BookEditorProps) {
   const createBook = useMutation(api.books.createBook);
   const updateBook = useMutation(api.books.updateBook);
   const publishBook = useMutation(api.books.publishBook);
+  const deleteBookMutation = useMutation(api.books.deleteBook);
+
+  // Delete state
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
 
 
 
@@ -195,6 +201,22 @@ export function BookEditor({ bookId, initialBook }: BookEditorProps) {
     ]);
   };
 
+  const handleDelete = async () => {
+    if (!adminUserId || !bookId) return;
+
+    setIsDeleting(true);
+    try {
+      await deleteBookMutation({ bookId, adminUserId });
+      success('Book deleted successfully');
+      router.push('/dashboard/books');
+    } catch (err: any) {
+      showError(err.message || 'Failed to delete book');
+    } finally {
+      setIsDeleting(false);
+      setShowDeleteDialog(false);
+    }
+  };
+
   const handlePageChange = (index: number, updatedPage: BookPage) => {
     const newPages = [...pages];
     newPages[index] = updatedPage;
@@ -282,13 +304,23 @@ export function BookEditor({ bookId, initialBook }: BookEditorProps) {
 
         <div className="flex items-center gap-3">
           {bookId && (
-            <Button
-              variant="ghost"
-              onClick={() => router.push(`/dashboard/books/${bookId}/versions`)}
-              leftIcon={<History size={18} />}
-            >
-              History
-            </Button>
+            <>
+              <Button
+                variant="ghost"
+                onClick={() => router.push(`/dashboard/books/${bookId}/versions`)}
+                leftIcon={<History size={18} />}
+              >
+                History
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() => setShowDeleteDialog(true)}
+                leftIcon={<Trash2 size={18} />}
+                className="text-error-600 hover:text-error-700 hover:bg-error-50"
+              >
+                Delete
+              </Button>
+            </>
           )}
           <Button
             variant="secondary"
@@ -451,6 +483,17 @@ export function BookEditor({ bookId, initialBook }: BookEditorProps) {
         title="Unsaved Changes"
         message="You have unsaved changes. Are you sure you want to leave? Your changes will be lost."
         confirmLabel="Leave"
+        variant="danger"
+      />
+
+      {/* Delete Book Dialog */}
+      <ConfirmDialog
+        isOpen={showDeleteDialog}
+        onClose={() => setShowDeleteDialog(false)}
+        onConfirm={handleDelete}
+        title="Delete Book"
+        message={`Are you sure you want to delete "${cover.title_en || 'this book'}"? This action cannot be undone and will remove all versions and data.`}
+        confirmLabel={isDeleting ? 'Deleting...' : 'Delete Book'}
         variant="danger"
       />
     </div>

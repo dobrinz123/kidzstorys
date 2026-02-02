@@ -20,39 +20,43 @@ export const listBooks = query({
 
     // Get books based on filter conditions
     let books;
-    
+
+    // When searching, we need to fetch all books first, then filter, then paginate
+    // Otherwise, search would only work on the first page of results
+    const needsFullFetch = !!args.search;
+
     if (args.status && args.categoryId) {
       // Use composite index for category + status
-      books = await ctx.db
+      const query = ctx.db
         .query("books")
         .withIndex("by_category", (q) =>
           q.eq("categoryId", args.categoryId!).eq("status", args.status!)
         )
-        .order("desc")
-        .take(limit + offset + 1);
+        .order("desc");
+      books = needsFullFetch ? await query.collect() : await query.take(limit + offset + 1);
     } else if (args.status) {
       // Use status index
-      books = await ctx.db
+      const query = ctx.db
         .query("books")
         .withIndex("by_status", (q) => q.eq("status", args.status!))
-        .order("desc")
-        .take(limit + offset + 1);
+        .order("desc");
+      books = needsFullFetch ? await query.collect() : await query.take(limit + offset + 1);
     } else if (args.categoryId) {
       // Filter by category
-      books = await ctx.db
+      const query = ctx.db
         .query("books")
         .withIndex("by_category", (q) => q.eq("categoryId", args.categoryId!))
-        .order("desc")
-        .take(limit + offset + 1);
+        .order("desc");
+      books = needsFullFetch ? await query.collect() : await query.take(limit + offset + 1);
     } else {
       // No filter - get all books
-      books = await ctx.db
+      const query = ctx.db
         .query("books")
-        .order("desc")
-        .take(limit + offset + 1);
+        .order("desc");
+      books = needsFullFetch ? await query.collect() : await query.take(limit + offset + 1);
     }
 
-    // Apply search filter (still in memory, but on smaller dataset)
+    // Apply search filter (now works on full dataset when searching)
     if (args.search) {
       const searchLower = args.search.toLowerCase();
       books = books.filter(book =>
