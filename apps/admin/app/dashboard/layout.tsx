@@ -13,8 +13,21 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const router = useRouter();
-  const { isAuthenticated, isLoading, role, name, email, clearAuth } = useAuthStore();
+  const { isAuthenticated, isLoading, role, name, email, clearAuth, setLoading } = useAuthStore();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // GUARANTEED TIMEOUT: Force stop loading after 2 seconds
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      // Get fresh state to avoid stale closure
+      const currentState = useAuthStore.getState();
+      if (currentState.isLoading) {
+        console.warn('[DashboardLayout] GUARANTEED 2s timeout - forcing loading to end');
+        currentState.setLoading(false);
+      }
+    }, 2000);
+    return () => clearTimeout(timeout);
+  }, []); // Empty deps = runs once on mount
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
