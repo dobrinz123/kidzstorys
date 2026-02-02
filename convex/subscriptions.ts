@@ -2,6 +2,28 @@ import { v } from "convex/values";
 import { query, mutation, internalMutation } from "./_generated/server";
 import { Id } from "./_generated/dataModel";
 
+// Helper to determine subscriptionType from productId and isTrial flag
+function getSubscriptionType(
+  productId: string | undefined,
+  isTrial: boolean,
+  entitlementActive: boolean
+): "trial" | "monthly" | "yearly" | undefined {
+  // If not active, clear the subscription type
+  if (!entitlementActive) return undefined;
+
+  // If no product info, can't determine type
+  if (!productId) return undefined;
+
+  // If it's a trial period
+  if (isTrial) return "trial";
+
+  // Determine by product ID
+  if (productId.includes("monthly") || productId.includes("month")) return "monthly";
+  if (productId.includes("yearly") || productId.includes("annual")) return "yearly";
+
+  return undefined;
+}
+
 // Check user's entitlement status
 export const checkEntitlement = query({
   args: { userId: v.id("users") },
@@ -59,13 +81,18 @@ export const updateEntitlement = internalMutation({
         if (userById) {
           const now = Date.now();
 
-          // Update user with entitlement info
+          // Update user with entitlement info and subscription type
           await ctx.db.patch(userById._id, {
             entitlementActive: args.entitlementActive,
             entitlementExpiresAt: args.expiresAt,
             revenueCatAppUserId: args.revenueCatAppUserId,
             lastCustomerInfoSyncedAt: now,
             updatedAt: now,
+            subscriptionType: getSubscriptionType(
+              args.productId,
+              args.isTrial || false,
+              args.entitlementActive
+            ),
           });
 
           // Log event
@@ -88,12 +115,17 @@ export const updateEntitlement = internalMutation({
 
     const now = Date.now();
 
-    // Update user entitlement
+    // Update user entitlement and subscription type
     await ctx.db.patch(user._id, {
       entitlementActive: args.entitlementActive,
       entitlementExpiresAt: args.expiresAt,
       lastCustomerInfoSyncedAt: now,
       updatedAt: now,
+      subscriptionType: getSubscriptionType(
+        args.productId,
+        args.isTrial || false,
+        args.entitlementActive
+      ),
     });
 
     // Log event

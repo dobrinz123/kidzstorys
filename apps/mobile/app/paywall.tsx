@@ -165,7 +165,7 @@ export default function PaywallScreen() {
         Alert.alert(
           t.purchaseError,
           "Could not load subscription options. Please check your internet connection and try again.",
-          [{ text: "OK", onPress: () => router.back() }]
+          [{ text: "OK", onPress: () => router.replace("/") }]
         );
         setOffering(null);
       } else {
@@ -176,7 +176,7 @@ export default function PaywallScreen() {
       Alert.alert(
         t.purchaseError,
         "Failed to load subscription options. Please try again later.",
-        [{ text: "OK", onPress: () => router.back() }]
+        [{ text: "OK", onPress: () => router.replace("/") }]
       );
     } finally {
       setLoading(false);
@@ -349,7 +349,7 @@ export default function PaywallScreen() {
     <View style={styles.container}>
       {/* Back Button - Fixed at top */}
       <View style={styles.backButtonContainer}>
-        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+        <TouchableOpacity style={styles.backButton} onPress={() => router.replace("/")}>
           <Text style={styles.backText}>{t.back}</Text>
         </TouchableOpacity>
       </View>

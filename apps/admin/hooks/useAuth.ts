@@ -131,8 +131,17 @@ export const useAuthStore = create<AdminAuthStore>()(
         isAuthenticated: state.isAuthenticated,
       }),
       onRehydrateStorage: () => (state) => {
-        // After rehydration, mark as needing server verification
-        state?.setLoading(true);
+        // After rehydration, check if token is valid before setting loading
+        if (state?.sessionExpiresAt && Date.now() > state.sessionExpiresAt) {
+          // Token expired, clear auth immediately
+          state.clearAuth();
+        } else if (state?.sessionToken) {
+          // Has valid token, mark as needing server verification
+          state.setLoading(true);
+        } else {
+          // No token, don't load
+          state?.setLoading(false);
+        }
       },
     }
   )
@@ -150,34 +159,37 @@ export function useAuth() {
 
   // Update local state when server responds
   useEffect(() => {
-    // If no session token, we're not authenticated - stop loading
-    if (!store.sessionToken) {
+    // Absolute safety timeout - ALWAYS runs to prevent infinite loading
+    const absoluteTimeout = setTimeout(() => {
       if (store.isLoading) {
+        console.warn('Absolute timeout reached (8s). Forcing loading end.');
         store.setLoading(false);
       }
-      return;
+    }, 8000);
+
+    // If no session token, we're not authenticated - stop loading immediately
+    if (!store.sessionToken) {
+      store.setLoading(false);
+      clearTimeout(absoluteTimeout);
+      return () => {};
     }
 
-    // If we have a token but query is still loading
-    if (serverSession === undefined) {
-      // Set a safety timeout to prevent infinite loading
-      const timer = setTimeout(() => {
-        if (store.isLoading) {
-          console.warn('Server session verification timed out. Clearing auth.');
-          store.clearAuth();
-        }
-      }, 5000);
-      return () => clearTimeout(timer);
+    // If we have a response from server
+    if (serverSession !== undefined) {
+      clearTimeout(absoluteTimeout);
+      if (serverSession === null) {
+        // Session invalid on server - clear local auth
+        store.clearAuth();
+      } else {
+        // Update with server-verified data
+        store.updateFromServer(serverSession);
+      }
+      return () => {};
     }
 
-    if (serverSession === null) {
-      // Session invalid on server - clear local auth
-      store.clearAuth();
-    } else {
-      // Update with server-verified data
-      store.updateFromServer(serverSession);
-    }
-  }, [serverSession, store.sessionToken, store.isLoading]);
+    // Cleanup
+    return () => clearTimeout(absoluteTimeout);
+  }, [serverSession, store.sessionToken]); // Removed store.isLoading from deps to prevent re-render loops
 
   const login = async (
     loginMutation: (args: { email: string; password: string }) => Promise<{

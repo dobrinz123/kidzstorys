@@ -24,33 +24,27 @@ import {
   MoreVertical,
   Clock,
   Users,
-  ChevronLeft,
-  ChevronRight,
 } from 'lucide-react';
 
-const PAGE_SIZE = 25;
+const PAGE_SIZE = 500; // Show all books at once for easy search
 
 export default function BooksPage() {
   const { canCreateBooks, canDeleteBooks } = useRole();
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('');
   const [categoryFilter, setCategoryFilter] = useState<string>('');
-  const [currentPage, setCurrentPage] = useState(0);
 
-  // Reset to first page when filters change
+  // Simple handlers for filters
   const handleSearchChange = (value: string) => {
     setSearch(value);
-    setCurrentPage(0);
   };
 
   const handleStatusChange = (value: string) => {
     setStatusFilter(value);
-    setCurrentPage(0);
   };
 
   const handleCategoryChange = (value: string) => {
     setCategoryFilter(value);
-    setCurrentPage(0);
   };
 
   const booksResult = useQuery(api.books.listBooks, {
@@ -58,7 +52,7 @@ export default function BooksPage() {
     categoryId: categoryFilter ? categoryFilter as any : undefined,
     search: search || undefined,
     limit: PAGE_SIZE,
-    offset: currentPage * PAGE_SIZE,
+    // No offset - load all books at once for easy search across all
   });
 
   const categories = useQuery(api.categories.getAllCategories);
@@ -66,11 +60,6 @@ export default function BooksPage() {
   const isLoading = booksResult === undefined;
   const books = booksResult?.books || [];
   const total = booksResult?.total || 0;
-  const hasMore = booksResult?.hasMore || false;
-
-  const totalPages = Math.ceil(total / PAGE_SIZE);
-  const startItem = currentPage * PAGE_SIZE + 1;
-  const endItem = Math.min((currentPage + 1) * PAGE_SIZE, total);
 
   const statusOptions = [
     { value: '', label: 'All Statuses' },
@@ -219,60 +208,12 @@ export default function BooksPage() {
             </table>
           </Card>
 
-          {/* Pagination */}
-          {total > PAGE_SIZE && (
-            <div className="flex items-center justify-between mt-4 px-2">
-              <p className="text-sm text-gray-600">
-                Showing {startItem}-{endItem} of {total} books
-              </p>
-              <div className="flex items-center gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setCurrentPage(p => Math.max(0, p - 1))}
-                  disabled={currentPage === 0}
-                  leftIcon={<ChevronLeft size={16} />}
-                >
-                  Previous
-                </Button>
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
-                    // Show pages around current page
-                    let pageNum = i;
-                    if (totalPages > 5) {
-                      if (currentPage < 3) {
-                        pageNum = i;
-                      } else if (currentPage > totalPages - 4) {
-                        pageNum = totalPages - 5 + i;
-                      } else {
-                        pageNum = currentPage - 2 + i;
-                      }
-                    }
-                    return (
-                      <Button
-                        key={pageNum}
-                        variant={currentPage === pageNum ? 'primary' : 'ghost'}
-                        size="sm"
-                        onClick={() => setCurrentPage(pageNum)}
-                        className="min-w-[36px]"
-                      >
-                        {pageNum + 1}
-                      </Button>
-                    );
-                  })}
-                </div>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setCurrentPage(p => p + 1)}
-                  disabled={!hasMore && currentPage >= totalPages - 1}
-                  rightIcon={<ChevronRight size={16} />}
-                >
-                  Next
-                </Button>
-              </div>
-            </div>
-          )}
+          {/* Show total count at bottom */}
+          <div className="flex items-center justify-center mt-4 px-2">
+            <p className="text-sm text-gray-600">
+              Showing {books.length} of {total} books
+            </p>
+          </div>
         </>
       )}
     </div>

@@ -9,6 +9,7 @@ import { useSubscription } from "../src/hooks/useSubscription";
 import { useMutation } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import Purchases from "react-native-purchases";
+import { getOfferings, purchasePackage, loginRevenueCatUser } from "../src/lib/revenuecat";
 
 const TRANSLATIONS = {
     ro: {
@@ -236,8 +237,69 @@ export default function AccountPage() {
         }
     };
 
-    const handleSubscribe = (plan: 'monthly' | 'annual') => {
-        router.push("/paywall");
+    const [isSubscribing, setIsSubscribing] = useState(false);
+
+    const handleSubscribe = async (plan: 'monthly' | 'annual') => {
+        if (isSubscribing) return;
+
+        try {
+            setIsSubscribing(true);
+
+            // Initialize RevenueCat with user ID
+            if (convexUser?._id && Platform.OS === "web") {
+                const loginResult = await loginRevenueCatUser(convexUser._id);
+                if (!loginResult) {
+                    throw new Error("Failed to initialize payment system");
+                }
+            }
+
+            // Get offerings
+            const offerings = await getOfferings();
+            if (!offerings?.availablePackages?.length) {
+                Alert.alert("Error", "Could not load subscription options. Please try again.");
+                return;
+            }
+
+            // Find the right package
+            const pkg = plan === 'annual'
+                ? offerings.availablePackages.find((p: any) =>
+                    p.identifier.includes("annual") || p.identifier.includes("yearly"))
+                : offerings.availablePackages.find((p: any) =>
+                    p.identifier.includes("month") && !p.identifier.includes("annual"));
+
+            if (!pkg) {
+                Alert.alert("Error", "Package not found. Please try again.");
+                return;
+            }
+
+            // Start purchase directly
+            const customerInfo = await purchasePackage(pkg);
+
+            if (customerInfo === null) {
+                // User cancelled
+                return;
+            }
+
+            // Check for premium entitlement
+            const hasEntitlement = customerInfo?.entitlements?.active?.["premium"] ||
+                                   customerInfo?.entitlements?.active?.["PREMIUM"];
+
+            if (hasEntitlement) {
+                Alert.alert("Success!", "Your subscription is now active. Enjoy all the stories!", [
+                    { text: "OK", onPress: () => router.replace("/") }
+                ]);
+            } else {
+                Alert.alert("Processing", "Your purchase is being processed. Please wait a moment.");
+            }
+        } catch (error: any) {
+            console.error("[Account] Subscribe error:", error);
+            // Don't show error for cancellations
+            if (!error.message?.toLowerCase().includes("cancel")) {
+                Alert.alert("Error", "Purchase failed. Please try again.");
+            }
+        } finally {
+            setIsSubscribing(false);
+        }
     };
 
     const handleEditPhone = () => {
@@ -339,19 +401,31 @@ export default function AccountPage() {
                                     <Text style={styles.paywallDesc}>{t.unlockDesc}</Text>
 
                                     {/* Monthly Plan */}
-                                    <TouchableOpacity style={styles.subOption} onPress={() => handleSubscribe('monthly')}>
+                                    <TouchableOpacity
+                                        style={[styles.subOption, isSubscribing && { opacity: 0.6 }]}
+                                        onPress={() => handleSubscribe('monthly')}
+                                        disabled={isSubscribing}
+                                    >
                                         <View style={styles.subHeader}>
                                             <Text style={styles.subTitle}>{t.monthly}</Text>
                                             <Text style={styles.subPrice}>{t.monthlyPrice}</Text>
                                         </View>
                                         <Text style={styles.subDesc}>{t.cancelAnytime}</Text>
                                         <View style={styles.subBtn}>
-                                            <Text style={styles.subBtnText}>{t.startMonthly}</Text>
+                                            {isSubscribing ? (
+                                                <ActivityIndicator color="#fff" size="small" />
+                                            ) : (
+                                                <Text style={styles.subBtnText}>{t.startMonthly}</Text>
+                                            )}
                                         </View>
                                     </TouchableOpacity>
 
                                     {/* Annual Plan */}
-                                    <TouchableOpacity style={[styles.subOption, { borderColor: '#7C4DFF', borderWidth: 2 }]} onPress={() => handleSubscribe('annual')}>
+                                    <TouchableOpacity
+                                        style={[styles.subOption, { borderColor: '#7C4DFF', borderWidth: 2 }, isSubscribing && { opacity: 0.6 }]}
+                                        onPress={() => handleSubscribe('annual')}
+                                        disabled={isSubscribing}
+                                    >
                                         <View style={styles.badge}>
                                             <Text style={styles.badgeText}>{t.bestValue}</Text>
                                         </View>
@@ -361,7 +435,11 @@ export default function AccountPage() {
                                         </View>
                                         <Text style={styles.subDesc}>{t.savePercent}</Text>
                                         <View style={[styles.subBtn, { backgroundColor: '#7C4DFF' }]}>
-                                            <Text style={styles.subBtnText}>{t.startAnnual}</Text>
+                                            {isSubscribing ? (
+                                                <ActivityIndicator color="#fff" size="small" />
+                                            ) : (
+                                                <Text style={styles.subBtnText}>{t.startAnnual}</Text>
+                                            )}
                                         </View>
                                     </TouchableOpacity>
                                 </View>

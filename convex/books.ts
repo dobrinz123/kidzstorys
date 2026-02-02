@@ -14,8 +14,8 @@ export const listBooks = query({
     offset: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
-    // Cap limit at 500 to prevent memory issues
-    const limit = Math.min(args.limit || 20, 500);
+    // Cap limit at 1000 to support showing all books
+    const limit = Math.min(args.limit || 500, 1000);
     const offset = args.offset || 0;
 
     // Get books based on filter conditions
