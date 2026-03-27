@@ -150,11 +150,11 @@ Plans:
   5. Regression test: reading without audiobook ON is unchanged
   6. All PREMIUM users can access audiobook feature without additional action
 
+**Plans:** 2 plans
+
 Plans:
-- [ ] 08-01: Trigger and monitor initial generation batch for all published books
-- [ ] 08-02: End-to-end QA pass (10 books, both languages, auto-turn, language switch)
-- [ ] 08-03: Performance and memory leak test
-- [ ] 08-04: Regression test suite for non-audiobook reading flow
+- [ ] 08-01-PLAN.md — Deploy to production + set ElevenLabs env vars + trigger and monitor bulk generation
+- [ ] 08-02-PLAN.md — End-to-end QA: 10 books, voice quality, memory test, regression, access control
 
 ## Progress
 
@@ -167,4 +167,4 @@ Plans:
 | 5. Audiobook Toggle UI | 0/2 | Not started | - |
 | 6. Playback Engine | 0/2 | Not started | - |
 | 7. Language Switching | 0/1 | Not started | - |
-| 8. Seeding & QA | 0/4 | Not started | - |
+| 8. Seeding & QA | 0/2 | Not started | - |
