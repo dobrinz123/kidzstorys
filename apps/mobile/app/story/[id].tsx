@@ -782,6 +782,39 @@ export default function StoryReader() {
                 <Text style={styles.title} numberOfLines={1}>
                     {title}
                 </Text>
+
+                {/* Audiobook toggle — only for Convex books that have audio for current language */}
+                {convexBook && bookHasAudio && hasAccess && (
+                    <TouchableOpacity
+                        style={styles.audiobookToggle}
+                        onPress={toggleAudiobook}
+                        accessibilityLabel={isAudiobookEnabled ? "Turn off audiobook" : "Turn on audiobook"}
+                        accessibilityRole="button"
+                    >
+                        <Ionicons
+                            name={isAudiobookEnabled ? "headset" : "headset-outline"}
+                            size={24}
+                            color={isAudiobookEnabled ? BOOK_COLORS.buttonBg : BOOK_COLORS.textSecondary}
+                        />
+                    </TouchableOpacity>
+                )}
+
+                {/* Lock icon for non-PREMIUM users when book has audio — taps to paywall */}
+                {convexBook && bookHasAudio && !hasAccess && (
+                    <TouchableOpacity
+                        style={styles.audiobookToggle}
+                        onPress={() => router.push("/(paywall)")}
+                        accessibilityLabel="Unlock audiobook"
+                        accessibilityRole="button"
+                    >
+                        <Ionicons
+                            name="lock-closed-outline"
+                            size={20}
+                            color={BOOK_COLORS.textSecondary}
+                        />
+                    </TouchableOpacity>
+                )}
+
                 <Text style={styles.pageNumber}>
                     {currentPage + 1} / {totalPages}
                 </Text>
@@ -1087,6 +1120,9 @@ const styles = StyleSheet.create({
         color: BOOK_COLORS.textSecondary,
         fontSize: 14,
         fontFamily: "ComicNeue_400Regular",
+    },
+    audiobookToggle: {
+        padding: 8,
     },
 
     // Book content area
