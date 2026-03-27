@@ -37,7 +37,7 @@
 
 ### Audio Generation (Backend)
 
-- [ ] **GEN-01**: Convex schema stores per-page audio URLs for EN and RO
+- [x] **GEN-01**: Convex schema stores per-page audio URLs for EN and RO
 - [ ] **GEN-02**: Convex schema tracks per-page generation status (pending / generating / done / failed)
 - [ ] **GEN-03**: ElevenLabs `eleven_multilingual_v2` model used for all TTS generation
 - [ ] **GEN-04**: Audio files stored in Convex File Storage and served via stable public URLs

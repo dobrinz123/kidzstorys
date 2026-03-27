@@ -29,7 +29,7 @@ Eight phases taking StoryKids from its current state (no audio) to a fully-shipp
   5. Convex migration deployed to production environment
 
 Plans:
-- [ ] 01-01: Extend pages schema with audio URL and storage ID fields
+- [x] 01-01: Extend pages schema with audio URL and storage ID fields
 - [ ] 01-02: Create audioJobs table with indexes
 - [ ] 01-03: Create audioGenBatches table and update TypeScript types
 
@@ -161,7 +161,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Data Model | 0/3 | Not started | - |
+| 1. Data Model | 1/3 | In Progress|  |
 | 2. TTS Integration | 0/4 | Not started | - |
 | 3. Generation Pipeline | 0/3 | Not started | - |
 | 4. Admin Dashboard UI | 0/5 | Not started | - |

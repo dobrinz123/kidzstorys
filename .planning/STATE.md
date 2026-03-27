@@ -1,3 +1,16 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: unknown
+last_updated: "2026-03-27T18:07:15.910Z"
+progress:
+  total_phases: 8
+  completed_phases: 0
+  total_plans: 3
+  completed_plans: 1
+---
+
 # STATE.md — Project Memory
 
 ## Project Reference
@@ -5,15 +18,16 @@
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Every child can hear their book read aloud in their native language, hands-free, with the same page-turn feel they love.
-**Current focus:** Phase 1 — Data Model & Schema
+**Current focus:** Phase 01 — data-model
 
 ---
 
 ## Current Status
 
-**Phase:** Not started — ready for `/gsd:plan-phase 1`
+**Phase:** 01 — data-model (in progress, plan 01-01 complete)
 **Milestone:** v2.0 Audiobook
 **Phases complete:** 0 / 8
+**Plans complete:** 1 / 3 (phase 01)
 
 ---
 
@@ -28,6 +42,8 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | Access control | Existing RevenueCat PREMIUM entitlement — no new paywall |
 | Generation model | Pre-generate + store (not on-demand) |
 | Page-turn trigger | `didJustFinish` in expo-av AVPlaybackStatus |
+| audioStatus design (01-01) | Optional union (undefined = no job created) to avoid spurious states on existing books |
+| Snapshot mirroring (01-01) | bookVersions.snapshot.pages mirrors books.pages shape for complete version history |
 
 ---
 
@@ -66,8 +82,8 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — project initialized, codebase mapped, research complete, REQUIREMENTS + ROADMAP created.
-Next action: `/gsd:plan-phase 1` — Data Model & Schema
+Last session: 2026-03-27 — Completed 01-01-PLAN.md (audio fields in schema)
+Next action: Execute 01-02-PLAN.md — audioJobs table
 
 ---
 *Last updated: 2026-03-27 — initial project setup*
