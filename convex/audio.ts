@@ -1,4 +1,4 @@
-import { internalAction, internalMutation, internalQuery } from "./_generated/server";
+import { internalAction, internalMutation, internalQuery, mutation, query } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
 
@@ -216,5 +216,74 @@ export const generatePageAudio = internalAction({
       });
       throw error;
     }
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 6 — startAudioBatch (public mutation, per D-04, ADMIN-01)
+// Creates audioJobs for all pages x {en, ro} where audioStatus is not "done".
+// ---------------------------------------------------------------------------
+export const startAudioBatch = mutation({
+  args: { bookId: v.id("books") },
+  handler: async (ctx, args) => {
+    const book = await ctx.db.get(args.bookId);
+    if (!book) throw new Error(`Book not found: ${args.bookId}`);
+
+    const batchId = `batch_${Date.now()}`;
+    const locales = ["en", "ro"] as const;
+    const now = Date.now();
+    let totalJobs = 0;
+
+    for (let pageIndex = 0; pageIndex < book.pages.length; pageIndex++) {
+      const page = book.pages[pageIndex];
+      for (const locale of locales) {
+        const statusKey = `audioStatus_${locale}` as "audioStatus_en" | "audioStatus_ro";
+        // Skip pages already done (idempotency, per D-04)
+        if (page[statusKey] === "done") continue;
+
+        await ctx.db.insert("audioJobs", {
+          bookId: args.bookId,
+          pageIndex,
+          locale,
+          status: "pending",
+          retryCount: 0,
+          batchId,
+          createdAt: now,
+        });
+        totalJobs++;
+      }
+    }
+
+    // Skip batch creation if no jobs needed (all pages already done)
+    if (totalJobs === 0) {
+      return { batchId: null, totalJobs: 0 };
+    }
+
+    await ctx.db.insert("audioGenBatches", {
+      batchId,
+      locales: ["en", "ro"],
+      status: "queued",
+      totalJobs,
+      completedJobs: 0,
+      failedJobs: 0,
+      createdAt: now,
+    });
+
+    return { batchId, totalJobs };
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 7 — getGenerationProgress (public query, per D-05, ADMIN-06)
+// Returns the batch record for admin UI progress display.
+// ---------------------------------------------------------------------------
+export const getGenerationProgress = query({
+  args: { batchId: v.string() },
+  handler: async (ctx, args) => {
+    const batch = await ctx.db
+      .query("audioGenBatches")
+      .withIndex("by_batchId", (q) => q.eq("batchId", args.batchId))
+      .unique();
+    return batch;
   },
 });
