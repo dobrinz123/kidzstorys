@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: 1
+current_plan: 2
 status: unknown
-stopped_at: Completed 02-tts-integration 02-02-PLAN.md
-last_updated: "2026-03-27T19:32:05.467Z"
+stopped_at: Completed 04-admin-dashboard-ui 04-01-PLAN.md
+last_updated: "2026-03-27T20:03:25.746Z"
 progress:
   total_phases: 8
-  completed_phases: 2
-  total_plans: 7
-  completed_plans: 5
+  completed_phases: 3
+  total_plans: 9
+  completed_plans: 8
 ---
 
 # STATE.md — Project Memory
@@ -20,17 +20,17 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Every child can hear their book read aloud in their native language, hands-free, with the same page-turn feel they love.
-**Current focus:** Phase 03 — generation-pipeline
+**Current focus:** Phase 04 — admin-dashboard-ui
 
 ---
 
 ## Current Status
 
-**Phase:** 02 — tts-integration (COMPLETE)
+**Phase:** 04 — admin-dashboard-ui (IN PROGRESS)
 **Milestone:** v2.0 Audiobook
-**Phases complete:** 2 / 8
-**Plans complete:** 2 / 2 (phase 02) | 6 total
-**Current Plan:** 1
+**Phases complete:** 3 / 8
+**Plans complete:** 1 / 2 (phase 04) | 8 total
+**Current Plan:** 2
 
 ---
 
@@ -55,6 +55,8 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | Computed key typing (02-01) | audioStatus_en/ro keys cast to explicit union types (not any) for TypeScript compliance |
 | @edge-runtime/vm explicit dep (02-02) | vitest edge-runtime environment requires @edge-runtime/vm as explicit devDependency — not pulled in transitively |
 | anyApi works with convex-test (02-02) | Generated api.js uses anyApi so internal.audio.generatePageAudio resolves at test runtime via glob — no dev server needed |
+| AudioStatusBadge dot variant (04-01) | Uses dot variant of existing Badge for visual consistency with StatusBadge pattern |
+| getAudioOverview scope (04-01) | Only counts published books — draft/ready excluded from audio progress metrics |
 
 ---
 
@@ -94,9 +96,9 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — Phase 02 plan 02 complete (convex/audio.test.ts, 4 tests pass)
-Stopped at: Completed 02-tts-integration 02-02-PLAN.md
-Next action: Execute Phase 03 — batch-scheduler
+Last session: 2026-03-27T20:03:25.742Z
+Stopped at: Completed 04-admin-dashboard-ui 04-01-PLAN.md
+Next action: Execute Phase 04 Plan 02 — full audio dashboard page
 
 ---
-*Last updated: 2026-03-27 — Phase 02 complete*
+*Last updated: 2026-03-27 — Phase 04 plan 01 complete*

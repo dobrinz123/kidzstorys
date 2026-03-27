@@ -49,9 +49,9 @@
 - [ ] **ADMIN-01**: Admin can trigger audio generation for a specific book (EN, RO, or both)
 - [ ] **ADMIN-02**: Admin can trigger bulk generation for all books with missing audio
 - [ ] **ADMIN-03**: Admin can see generation status per book (none / partial / complete / failed)
-- [ ] **ADMIN-04**: Admin can see a list of failed jobs with error messages
-- [ ] **ADMIN-05**: Admin can manually retry failed jobs
-- [ ] **ADMIN-06**: Admin dashboard shows overall progress (X/Y pages done with progress bar)
+- [x] **ADMIN-04**: Admin can see a list of failed jobs with error messages
+- [x] **ADMIN-05**: Admin can manually retry failed jobs
+- [x] **ADMIN-06**: Admin dashboard shows overall progress (X/Y pages done with progress bar)
 
 ---
 

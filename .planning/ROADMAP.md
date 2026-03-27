@@ -84,7 +84,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Backend additions (getFailedJobs, retryFailedJob, getAudioOverview) + Sidebar Audio entry + ProgressBar + AudioStatusBadge
+- [x] 04-01-PLAN.md — Backend additions (getFailedJobs, retryFailedJob, getAudioOverview) + Sidebar Audio entry + ProgressBar + AudioStatusBadge
 - [ ] 04-02-PLAN.md — Full audio dashboard page (/dashboard/audio) + Books table audio column + per-book generate button
 
 ### Phase 5: Audiobook Toggle UI
@@ -164,7 +164,7 @@ Plans:
 | 1. Data Model | 3/3 | Complete | 2026-03-27 |
 | 2. TTS Integration | 2/2 | Complete | 2026-03-27 |
 | 3. Generation Pipeline | 1/2 | In Progress | - |
-| 4. Admin Dashboard UI | 0/2 | Not started | - |
+| 4. Admin Dashboard UI | 1/2 | In Progress | - |
 | 5. Audiobook Toggle UI | 0/4 | Not started | - |
 | 6. Playback Engine | 0/5 | Not started | - |
 | 7. Language Switching | 0/3 | Not started | - |
