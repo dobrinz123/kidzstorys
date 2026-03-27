@@ -344,3 +344,132 @@ export const startBulkAudioGeneration = mutation({
     return { batchesCreated: results.length, results };
   },
 });
+
+// ---------------------------------------------------------------------------
+// Export 9 — getPendingJobs (internalQuery, per D-02)
+// Actions cannot call ctx.db, so this query is the bridge.
+// Returns up to 5 pending audioJobs using the by_status index.
+// ---------------------------------------------------------------------------
+export const getPendingJobs = internalQuery({
+  args: {},
+  handler: async (ctx) => {
+    return await ctx.db
+      .query("audioJobs")
+      .withIndex("by_status", (q) => q.eq("status", "pending"))
+      .take(5);
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 10 — requeueJob (internalMutation, per D-03)
+// Resets a failed job to "pending" if retryCount < 3. No-op if >= 3.
+// ---------------------------------------------------------------------------
+export const requeueJob = internalMutation({
+  args: { jobId: v.id("audioJobs") },
+  handler: async (ctx, args) => {
+    const job = await ctx.db.get(args.jobId);
+    if (!job) return;
+    if (job.retryCount >= 3) return; // Permanent failure — do not requeue
+    await ctx.db.patch(args.jobId, {
+      status: "pending",
+      retryCount: job.retryCount + 1,
+    });
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 11 — incrementBatchCompleted (internalMutation, per D-05)
+// Increments completedJobs on the batch. Finalizes when all jobs settled.
+// ---------------------------------------------------------------------------
+export const incrementBatchCompleted = internalMutation({
+  args: { batchId: v.string() },
+  handler: async (ctx, args) => {
+    const batch = await ctx.db
+      .query("audioGenBatches")
+      .withIndex("by_batchId", (q) => q.eq("batchId", args.batchId))
+      .unique();
+    if (!batch) return;
+
+    const newCompleted = batch.completedJobs + 1;
+    const isDone = newCompleted + batch.failedJobs >= batch.totalJobs;
+
+    await ctx.db.patch(batch._id, {
+      completedJobs: newCompleted,
+      status: isDone ? "completed" : "processing",
+      completedAt: isDone ? Date.now() : undefined,
+    });
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 12 — incrementBatchFailed (internalMutation, per D-05)
+// Increments failedJobs on the batch. Finalizes when all jobs settled.
+// Batch is "failed" only if ALL jobs permanently failed; otherwise "completed".
+// ---------------------------------------------------------------------------
+export const incrementBatchFailed = internalMutation({
+  args: { batchId: v.string() },
+  handler: async (ctx, args) => {
+    const batch = await ctx.db
+      .query("audioGenBatches")
+      .withIndex("by_batchId", (q) => q.eq("batchId", args.batchId))
+      .unique();
+    if (!batch) return;
+
+    const newFailed = batch.failedJobs + 1;
+    const isDone = batch.completedJobs + newFailed >= batch.totalJobs;
+    const allFailed = isDone && batch.completedJobs === 0 && newFailed === batch.totalJobs;
+
+    await ctx.db.patch(batch._id, {
+      failedJobs: newFailed,
+      status: isDone ? (allFailed ? "failed" : "completed") : "processing",
+      completedAt: isDone ? Date.now() : undefined,
+    });
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 13 — processAudioQueue (internalAction, per D-01, D-02, D-03)
+// Cron-driven: picks up to 5 pending jobs, calls generatePageAudio sequentially.
+// MUST be internalAction — mutations cannot call ctx.runAction.
+// ---------------------------------------------------------------------------
+export const processAudioQueue = internalAction({
+  args: {},
+  handler: async (ctx) => {
+    // 1. Get up to 5 pending jobs (via internalQuery — actions can't call ctx.db)
+    const jobs = await ctx.runQuery(internal.audio.getPendingJobs);
+    if (jobs.length === 0) return; // Nothing to process — idle tick
+
+    // 2. Process sequentially (D-02: for-loop, not parallel)
+    for (const job of jobs) {
+      try {
+        await ctx.runAction(internal.audio.generatePageAudio, {
+          jobId: job._id,
+          bookId: job.bookId,
+          pageIndex: job.pageIndex,
+          locale: job.locale,
+        });
+        // Success: increment batch completed counter
+        if (job.batchId) {
+          await ctx.runMutation(internal.audio.incrementBatchCompleted, {
+            batchId: job.batchId,
+          });
+        }
+      } catch {
+        // generatePageAudio already called markFailed (status="failed") before throwing.
+        // requeueJob will reset to "pending" if retryCount < 3, or no-op if retryCount >= 3.
+        await ctx.runMutation(internal.audio.requeueJob, { jobId: job._id });
+
+        // job.retryCount is the value BEFORE this attempt. After 3 failures:
+        //   attempt 1: retryCount=0 -> requeueJob sets retryCount=1
+        //   attempt 2: retryCount=1 -> requeueJob sets retryCount=2
+        //   attempt 3: retryCount=2 -> requeueJob sets retryCount=3
+        //   attempt 4: retryCount=3 -> requeueJob is a no-op -> permanently failed
+        if (job.retryCount >= 3 && job.batchId) {
+          await ctx.runMutation(internal.audio.incrementBatchFailed, {
+            batchId: job.batchId,
+          });
+        }
+      }
+    }
+  },
+});
