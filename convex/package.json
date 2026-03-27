@@ -4,15 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "convex dev",
-    "deploy": "convex deploy"
+    "deploy": "convex deploy",
+    "test": "vitest run"
   },
   "dependencies": {
-    "convex": "^1.16.0",
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "convex": "^1.16.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.10.0",
+    "@vitest/runner": "^4.1.2",
+    "convex-test": "^0.0.44",
     "typescript": "^5.3.3",
-    "@types/bcryptjs": "^2.4.6"
+    "vitest": "^4.1.2"
   }
 }
