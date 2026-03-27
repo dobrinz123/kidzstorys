@@ -81,12 +81,11 @@ Plans:
   6. "Retry All Failed" bulk action works
   7. "Generate All Missing" button shows confirmation modal before triggering
 
+**Plans:** 2 plans
+
 Plans:
-- [ ] 04-01: Add Audio section to admin sidebar and create audio dashboard page
-- [ ] 04-02: Build progress panel component with real-time polling
-- [ ] 04-03: Add audio status column to books table
-- [ ] 04-04: Build failed jobs list with per-job retry and bulk retry
-- [ ] 04-05: Add per-book generate button on book detail/edit page
+- [ ] 04-01-PLAN.md — Backend additions (getFailedJobs, retryFailedJob, getAudioOverview) + Sidebar Audio entry + ProgressBar + AudioStatusBadge
+- [ ] 04-02-PLAN.md — Full audio dashboard page (/dashboard/audio) + Books table audio column + per-book generate button
 
 ### Phase 5: Audiobook Toggle UI
 **Goal**: User can toggle audiobook mode on/off from inside the book reader; feature respects subscription status.
@@ -165,7 +164,7 @@ Plans:
 | 1. Data Model | 3/3 | Complete | 2026-03-27 |
 | 2. TTS Integration | 2/2 | Complete | 2026-03-27 |
 | 3. Generation Pipeline | 1/2 | In Progress | - |
-| 4. Admin Dashboard UI | 0/5 | Not started | - |
+| 4. Admin Dashboard UI | 0/2 | Not started | - |
 | 5. Audiobook Toggle UI | 0/4 | Not started | - |
 | 6. Playback Engine | 0/5 | Not started | - |
 | 7. Language Switching | 0/3 | Not started | - |
