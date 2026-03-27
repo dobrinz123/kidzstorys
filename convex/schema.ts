@@ -348,6 +348,26 @@ export default defineSchema({
     .index("by_book_locale", ["bookId", "locale"])
     .index("by_batch", ["batchId", "status"]),
 
+  // Batch run tracking
+  audioGenBatches: defineTable({
+    batchId: v.string(),             // unique batch identifier, e.g. "batch_1711234567890"
+    locales: v.array(v.union(v.literal("en"), v.literal("ro"))),
+    status: v.union(
+      v.literal("queued"),
+      v.literal("processing"),
+      v.literal("paused"),
+      v.literal("completed"),
+      v.literal("failed")
+    ),
+    totalJobs: v.number(),
+    completedJobs: v.number(),
+    failedJobs: v.number(),
+    createdAt: v.number(),
+    completedAt: v.optional(v.number()),
+  })
+    .index("by_status", ["status", "createdAt"])
+    .index("by_batchId", ["batchId"]),
+
   // ============ LEGACY STORIES (kept for backward compatibility) ============
   stories: defineTable({
     storyKey: v.string(),
