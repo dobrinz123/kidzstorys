@@ -143,6 +143,22 @@ export const updateEntitlement = internalMutation({
   },
 });
 
+// Grant permanent premium access (admin use only)
+export const grantPremium = internalMutation({
+  args: { userId: v.id("users") },
+  handler: async (ctx, args) => {
+    const user = await ctx.db.get(args.userId);
+    if (!user) throw new Error("User not found");
+    await ctx.db.patch(args.userId, {
+      entitlementActive: true,
+      entitlementExpiresAt: Date.now() + 100 * 365 * 24 * 60 * 60 * 1000, // 100 years
+      subscriptionType: "yearly",
+      updatedAt: Date.now(),
+    });
+    return { success: true };
+  },
+});
+
 // Activate mock/demo trial for a user (for demo purposes)
 export const activateDemoTrial = mutation({
   args: {
