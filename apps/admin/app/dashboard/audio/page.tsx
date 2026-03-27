@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { useQuery, useMutation } from 'convex/react';
 import { api } from '@convex/_generated/api';
 import { Id } from '@convex/_generated/dataModel';
@@ -13,7 +13,7 @@ import { ConfirmDialog } from '../../../components/ui/Modal';
 import { PageLoading } from '../../../components/ui/Loading';
 import { EmptyState } from '../../../components/ui/EmptyState';
 import { useToast } from '../../../components/ui/Toast';
-import { Play, RefreshCw, AlertTriangle, Volume2, BookOpen } from 'lucide-react';
+import { Play, Pause, RefreshCw, AlertTriangle, Volume2, BookOpen } from 'lucide-react';
 
 type BookAudioStatus = 'none' | 'partial' | 'complete' | 'failed';
 
@@ -44,6 +44,27 @@ export default function AudioPage() {
   const [retryingJobId, setRetryingJobId] = useState<string | null>(null);
   const [isRetryingAll, setIsRetryingAll] = useState(false);
   const [generatingBookId, setGeneratingBookId] = useState<string | null>(null);
+  const [playingId, setPlayingId] = useState<string | null>(null); // "bookId_locale_pageIndex"
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const handlePlayPreview = useCallback((audioUrl: string, id: string) => {
+    // If same audio is playing, pause it
+    if (playingId === id && audioRef.current) {
+      audioRef.current.pause();
+      setPlayingId(null);
+      return;
+    }
+    // Stop any currently playing audio
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+    const audio = new Audio(audioUrl);
+    audio.onended = () => setPlayingId(null);
+    audio.onerror = () => setPlayingId(null);
+    audio.play();
+    audioRef.current = audio;
+    setPlayingId(id);
+  }, [playingId]);
 
   const overview = useQuery(api.audio.getAudioOverview);
   const failedJobs = useQuery(api.audio.getFailedJobs);
@@ -318,12 +339,15 @@ export default function AudioPage() {
                   <th>Book</th>
                   <th>Pages</th>
                   <th>Audio Status</th>
+                  <th>Preview</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 {books.map((book) => {
                   const audioStatus = getBookAudioStatus(book.pages);
+                  const firstPageEnUrl = book.pages[0]?.audioUrl_en;
+                  const firstPageRoUrl = book.pages[0]?.audioUrl_ro;
                   return (
                     <tr key={book._id}>
                       <td>
@@ -339,6 +363,36 @@ export default function AudioPage() {
                       </td>
                       <td>
                         <AudioStatusBadge status={audioStatus} />
+                      </td>
+                      <td>
+                        <div className="flex gap-1">
+                          {firstPageEnUrl ? (
+                            <Button
+                              variant={playingId === `${book._id}_en` ? 'primary' : 'ghost'}
+                              size="sm"
+                              onClick={() => handlePlayPreview(firstPageEnUrl, `${book._id}_en`)}
+                              title="Preview English audio (page 1)"
+                            >
+                              {playingId === `${book._id}_en` ? <Pause size={14} /> : <Play size={14} />}
+                              <span className="ml-1 text-xs">EN</span>
+                            </Button>
+                          ) : (
+                            <span className="text-xs text-gray-400">—</span>
+                          )}
+                          {firstPageRoUrl ? (
+                            <Button
+                              variant={playingId === `${book._id}_ro` ? 'primary' : 'ghost'}
+                              size="sm"
+                              onClick={() => handlePlayPreview(firstPageRoUrl, `${book._id}_ro`)}
+                              title="Preview Romanian audio (page 1)"
+                            >
+                              {playingId === `${book._id}_ro` ? <Pause size={14} /> : <Play size={14} />}
+                              <span className="ml-1 text-xs">RO</span>
+                            </Button>
+                          ) : (
+                            <span className="text-xs text-gray-400">—</span>
+                          )}
+                        </div>
                       </td>
                       <td>
                         <Button
