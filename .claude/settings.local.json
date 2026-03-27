@@ -43,7 +43,13 @@
       "Bash(find:*)",
       "Read(//c/tmp/**)",
       "Bash(npx get-shit-done-cc@latest)",
-      "Bash(cat ~/.claude/get-shit-done/bin/*.js)"
+      "Bash(cat ~/.claude/get-shit-done/bin/*.js)",
+      "WebSearch",
+      "Bash(git cherry-pick:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm test:*)",
+      "Bash(git:*)",
+      "Bash(node:*)"
     ]
   }
 }

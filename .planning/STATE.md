@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 current_plan: 1
-status: phase_complete
-stopped_at: Completed 03-generation-pipeline 03-02-PLAN.md
-last_updated: "2026-03-27T19:40:21Z"
+status: unknown
+stopped_at: Completed 02-tts-integration 02-02-PLAN.md
+last_updated: "2026-03-27T19:32:05.467Z"
 progress:
   total_phases: 8
-  completed_phases: 3
-  total_plans: 8
-  completed_plans: 8
+  completed_phases: 2
+  total_plans: 7
+  completed_plans: 5
 ---
 
 # STATE.md — Project Memory
@@ -20,17 +20,17 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Every child can hear their book read aloud in their native language, hands-free, with the same page-turn feel they love.
-**Current focus:** Phase 03 — generation-pipeline (COMPLETE)
+**Current focus:** Phase 03 — generation-pipeline
 
 ---
 
 ## Current Status
 
-**Phase:** 03 — generation-pipeline (COMPLETE)
+**Phase:** 02 — tts-integration (COMPLETE)
 **Milestone:** v2.0 Audiobook
-**Phases complete:** 3 / 8
-**Plans complete:** 2 / 2 (phase 03) | 8 total
-**Current Plan:** Next phase
+**Phases complete:** 2 / 8
+**Plans complete:** 2 / 2 (phase 02) | 6 total
+**Current Plan:** 1
 
 ---
 
@@ -55,10 +55,6 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | Computed key typing (02-01) | audioStatus_en/ro keys cast to explicit union types (not any) for TypeScript compliance |
 | @edge-runtime/vm explicit dep (02-02) | vitest edge-runtime environment requires @edge-runtime/vm as explicit devDependency — not pulled in transitively |
 | anyApi works with convex-test (02-02) | Generated api.js uses anyApi so internal.audio.generatePageAudio resolves at test runtime via glob — no dev server needed |
-| Empty batch skip (03-01) | startAudioBatch returns { batchId: null, totalJobs: 0 } when all pages already done — no empty audioGenBatches records |
-| Bulk batchId uniqueness (03-01) | startBulkAudioGeneration uses batch_{timestamp}_{bookId} format to avoid collisions in same transaction |
-| Batch partial failure status (03-02) | Batch "completed" if any job succeeded, "failed" only if ALL jobs permanently failed |
-| Retry ceiling guard locations (03-02) | retryCount >= 3 checked in both requeueJob (no-op) and processAudioQueue (batch counter trigger) |
 
 ---
 
@@ -98,9 +94,9 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — Phase 03 complete (queue processor + cron added)
-Stopped at: Completed 03-generation-pipeline 03-02-PLAN.md
-Next action: Execute Phase 04 — admin UI for audio generation
+Last session: 2026-03-27 — Phase 02 plan 02 complete (convex/audio.test.ts, 4 tests pass)
+Stopped at: Completed 02-tts-integration 02-02-PLAN.md
+Next action: Execute Phase 03 — batch-scheduler
 
 ---
-*Last updated: 2026-03-27 — Phase 03 complete*
+*Last updated: 2026-03-27 — Phase 02 complete*
