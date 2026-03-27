@@ -238,8 +238,11 @@ export const startAudioBatch = mutation({
       const page = book.pages[pageIndex];
       for (const locale of locales) {
         const statusKey = `audioStatus_${locale}` as "audioStatus_en" | "audioStatus_ro";
+        const textKey = `text_${locale}` as "text_en" | "text_ro";
         // Skip pages already done (idempotency, per D-04)
         if (page[statusKey] === "done") continue;
+        // Skip pages with empty text — no audio to generate, saves API tokens
+        if (!page[textKey] || (page[textKey] as string).trim() === "") continue;
 
         await ctx.db.insert("audioJobs", {
           bookId: args.bookId,
@@ -312,7 +315,10 @@ export const startBulkAudioGeneration = mutation({
         const page = book.pages[pageIndex];
         for (const locale of locales) {
           const statusKey = `audioStatus_${locale}` as "audioStatus_en" | "audioStatus_ro";
+          const textKey = `text_${locale}` as "text_en" | "text_ro";
           if (page[statusKey] === "done") continue;
+          // Skip pages with empty text — no audio to generate, saves API tokens
+          if (!page[textKey] || (page[textKey] as string).trim() === "") continue;
 
           await ctx.db.insert("audioJobs", {
             bookId: book._id,
