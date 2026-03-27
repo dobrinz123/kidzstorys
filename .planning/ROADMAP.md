@@ -62,10 +62,11 @@ Plans:
   4. `getGenerationProgress` query returns accurate X/Y counts for admin UI
   5. Batch completes with correct final status (completed or failed)
 
+**Plans:** 2 plans
+
 Plans:
-- [ ] 03-01: Create startAudioBatch mutation and audioGenBatches tracking
-- [ ] 03-02: Create processAudioQueue scheduled internal action (30s poll, 5 jobs/run)
-- [ ] 03-03: Create getGenerationProgress query and batch status queries
+- [ ] 03-01-PLAN.md — Create startAudioBatch mutation, getGenerationProgress query, startBulkAudioGeneration mutation
+- [ ] 03-02-PLAN.md — Create processAudioQueue internalAction + 4 DB helpers + cron entry (30s interval)
 
 ### Phase 4: Admin Dashboard UI
 **Goal**: Admin can view generation status, trigger generation per-book or bulk, and retry failures.
@@ -163,7 +164,7 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Data Model | 3/3 | Complete | 2026-03-27 |
 | 2. TTS Integration | 0/2 | Planned | - |
-| 3. Generation Pipeline | 0/3 | Not started | - |
+| 3. Generation Pipeline | 0/2 | Planned | - |
 | 4. Admin Dashboard UI | 0/5 | Not started | - |
 | 5. Audiobook Toggle UI | 0/4 | Not started | - |
 | 6. Playback Engine | 0/5 | Not started | - |
