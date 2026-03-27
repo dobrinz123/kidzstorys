@@ -117,12 +117,11 @@ Plans:
   6. Sound object is unloaded on every page change (no memory leak after 20 pages)
   7. Manual page turn while audio plays stops audio and turns page normally
 
+**Plans:** 2 plans
+
 Plans:
-- [ ] 06-01: Create useAudiobook hook with load/play/pause/stop/completion callback
-- [ ] 06-02: Set Audio.setAudioModeAsync at app startup and add expo-av plugin to app.json
-- [ ] 06-03: Integrate useAudiobook hook into book reader (auto-play on page load, auto-turn on finish)
-- [ ] 06-04: Implement next-page audio preloading
-- [ ] 06-05: Add edge case handling (missing URL, manual turn, unmount cleanup)
+- [ ] 06-01-PLAN.md — iOS audio mode setup (_layout.tsx + app.json) + useAudiobook hook (AUDIO-07, AUDIO-02, AUDIO-06, AUDIO-08)
+- [ ] 06-02-PLAN.md — Full reader integration in [id].tsx: auto-play, auto-turn, manual-stop, toggle-off, unmount cleanup (AUDIO-02, AUDIO-03, AUDIO-06, AUDIO-08)
 
 ### Phase 7: Language Switching
 **Goal**: Audio language follows the user's selected app language (EN/RO) with graceful handling of missing audio.
@@ -166,6 +165,6 @@ Plans:
 | 3. Generation Pipeline | 1/2 | In Progress | - |
 | 4. Admin Dashboard UI | 2/2 | Complete   | 2026-03-27 |
 | 5. Audiobook Toggle UI | 0/2 | Not started | - |
-| 6. Playback Engine | 0/5 | Not started | - |
+| 6. Playback Engine | 0/2 | Not started | - |
 | 7. Language Switching | 0/3 | Not started | - |
 | 8. Seeding & QA | 0/4 | Not started | - |
