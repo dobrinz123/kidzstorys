@@ -14,6 +14,7 @@ import {
   ChevronRight,
   X,
   ClipboardCheck,
+  Volume2,
 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { UserRole } from '../../types';
@@ -57,6 +58,12 @@ const navItems: NavItem[] = [
     href: '/dashboard/content-audit',
     label: 'Content Audit',
     icon: <ClipboardCheck size={20} />,
+    roles: ['admin'],
+  },
+  {
+    href: '/dashboard/audio',
+    label: 'Audio',
+    icon: <Volume2 size={20} />,
     roles: ['admin'],
   },
   {

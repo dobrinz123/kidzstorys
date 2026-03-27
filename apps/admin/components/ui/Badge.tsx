@@ -100,3 +100,23 @@ export function RoleBadge({ role }: { role: 'admin' | 'editor' }) {
 
   return <Badge variant={variant}>{label}</Badge>;
 }
+
+// Audio status badge for per-book audio generation state
+export function AudioStatusBadge({
+  status,
+}: {
+  status: 'none' | 'partial' | 'complete' | 'failed';
+}) {
+  const config = {
+    none: { variant: 'gray' as const, label: 'No Audio' },
+    partial: { variant: 'warning' as const, label: 'Partial' },
+    complete: { variant: 'success' as const, label: 'Complete' },
+    failed: { variant: 'error' as const, label: 'Failed' },
+  };
+  const { variant, label } = config[status];
+  return (
+    <Badge variant={variant} dot>
+      {label}
+    </Badge>
+  );
+}
