@@ -2,16 +2,17 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useQuery } from 'convex/react';
+import { useQuery, useMutation } from 'convex/react';
 import { api } from '@convex/_generated/api';
 import { useRole } from '../../../hooks/useAuth';
 import { Header, HeaderSearch } from '../../../components/layout/Header';
 import { Button } from '../../../components/ui/Button';
 import { Card } from '../../../components/ui/Card';
 import { Select } from '../../../components/ui/Select';
-import { StatusBadge, Badge } from '../../../components/ui/Badge';
+import { StatusBadge, Badge, AudioStatusBadge } from '../../../components/ui/Badge';
 import { NoBooksEmptyState, NoSearchResultsEmptyState } from '../../../components/ui/EmptyState';
 import { PageLoading, SkeletonTable } from '../../../components/ui/Loading';
+import { useToast } from '../../../components/ui/Toast';
 import { formatRelativeTime } from '../../../lib/utils';
 import { CATEGORY_ICONS } from '../../../lib/constants';
 import {
@@ -24,7 +25,30 @@ import {
   MoreVertical,
   Clock,
   Users,
+  Volume2,
 } from 'lucide-react';
+
+type BookAudioStatus = 'none' | 'partial' | 'complete' | 'failed';
+
+function getBookAudioStatus(pages: Array<{
+  audioStatus_en?: string;
+  audioStatus_ro?: string;
+}>): BookAudioStatus {
+  if (pages.length === 0) return 'none';
+  let doneCount = 0;
+  let failedCount = 0;
+  const totalSlots = pages.length * 2;
+  for (const page of pages) {
+    if (page.audioStatus_en === 'done') doneCount++;
+    if (page.audioStatus_ro === 'done') doneCount++;
+    if (page.audioStatus_en === 'failed') failedCount++;
+    if (page.audioStatus_ro === 'failed') failedCount++;
+  }
+  if (failedCount > 0) return 'failed';
+  if (doneCount === totalSlots) return 'complete';
+  if (doneCount > 0) return 'partial';
+  return 'none';
+}
 
 const PAGE_SIZE = 500; // Show all books at once for easy search
 
@@ -56,6 +80,26 @@ export default function BooksPage() {
   });
 
   const categories = useQuery(api.categories.getAllCategories);
+
+  const { success, error: showError } = useToast();
+  const [generatingBookId, setGeneratingBookId] = useState<string | null>(null);
+  const startBatch = useMutation(api.audio.startAudioBatch);
+
+  const handleGenerateAudio = async (bookId: string) => {
+    setGeneratingBookId(bookId);
+    try {
+      const result = await startBatch({ bookId: bookId as any });
+      if (result.totalJobs === 0) {
+        success('All audio already generated for this book!');
+      } else {
+        success(`Queued ${result.totalJobs} job(s) for generation`);
+      }
+    } catch {
+      showError('Failed to start audio generation');
+    } finally {
+      setGeneratingBookId(null);
+    }
+  };
 
   const isLoading = booksResult === undefined;
   const books = booksResult?.books || [];
@@ -140,6 +184,7 @@ export default function BooksPage() {
                   <th>Category</th>
                   <th>Status</th>
                   <th>Pages</th>
+                  <th>Audio</th>
                   <th>Stats</th>
                   <th>Updated</th>
                   <th></th>
@@ -179,6 +224,9 @@ export default function BooksPage() {
                       <span className="text-gray-600">{book.pages.length} pages</span>
                     </td>
                     <td>
+                      <AudioStatusBadge status={getBookAudioStatus(book.pages)} />
+                    </td>
+                    <td>
                       <div className="flex items-center gap-4 text-sm text-gray-500">
                         <span className="flex items-center gap-1">
                           <Eye size={14} />
@@ -196,11 +244,24 @@ export default function BooksPage() {
                       </span>
                     </td>
                     <td>
-                      <Link href={`/dashboard/books/${book._id}`}>
-                        <Button variant="ghost" size="sm" leftIcon={<Edit size={16} />}>
-                          Edit
+                      <div className="flex items-center gap-2">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          leftIcon={<Volume2 size={16} />}
+                          isLoading={generatingBookId === book._id}
+                          disabled={getBookAudioStatus(book.pages) === 'complete'}
+                          onClick={() => handleGenerateAudio(book._id)}
+                          title="Generate audio for this book"
+                        >
+                          Audio
                         </Button>
-                      </Link>
+                        <Link href={`/dashboard/books/${book._id}`}>
+                          <Button variant="ghost" size="sm" leftIcon={<Edit size={16} />}>
+                            Edit
+                          </Button>
+                        </Link>
+                      </div>
                     </td>
                   </tr>
                 ))}
