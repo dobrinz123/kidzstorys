@@ -1,14 +1,14 @@
 'use client';
 
-import { useState } from 'react';
-import { useQuery } from 'convex/react';
+import { useState, useRef } from 'react';
+import { useQuery, useMutation } from 'convex/react';
 import { api } from '@convex/_generated/api';
 import { ImageUploader } from './ImageUploader';
 import { LanguageTabs } from '../ui/Tabs';
 import { Textarea } from '../ui/Input';
 import { Button } from '../ui/Button';
 import { cn } from '../../lib/utils';
-import { Trash2, GripVertical, ChevronUp, ChevronDown, AlertCircle, CheckCircle } from 'lucide-react';
+import { Trash2, GripVertical, ChevronUp, ChevronDown, AlertCircle, CheckCircle, Play, Pause, Volume2, X } from 'lucide-react';
 import { BookPage, Language } from '../../types';
 import { Id } from '@convex/_generated/dataModel';
 
@@ -16,6 +16,7 @@ interface PageEditorProps {
   page: BookPage;
   pageIndex: number;
   totalPages: number;
+  bookId?: Id<"books">;
   onChange: (page: BookPage) => void;
   onDelete: () => void;
   onMoveUp: () => void;
@@ -27,6 +28,7 @@ export function PageEditor({
   page,
   pageIndex,
   totalPages,
+  bookId,
   onChange,
   onDelete,
   onMoveUp,
@@ -35,6 +37,10 @@ export function PageEditor({
 }: PageEditorProps) {
   const [activeLanguage, setActiveLanguage] = useState<Language>('en');
   const [isExpanded, setIsExpanded] = useState(true);
+  const [playingLocale, setPlayingLocale] = useState<string | null>(null);
+  const [deletingLocale, setDeletingLocale] = useState<string | null>(null);
+  const audioElRef = useRef<HTMLAudioElement | null>(null);
+  const deletePageAudio = useMutation(api.audio.deletePageAudio);
 
   // Fetch image URL if not provided prop but ID exists
   const fetchedImageUrl = useQuery(api.books.getFileUrl, page.imageId ? { storageId: page.imageId } : "skip");
@@ -193,6 +199,76 @@ export function PageEditor({
               </p>
             </div>
           </div>
+
+          {/* Audio Preview Section */}
+          {((page as any).audioUrl_en || (page as any).audioUrl_ro) && (
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <div className="flex items-center gap-2 mb-3">
+                <Volume2 size={16} className="text-gray-500" />
+                <span className="text-sm font-medium text-gray-700">Audio</span>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {(['en', 'ro'] as const).map((locale) => {
+                  const audioUrl = (page as any)[`audioUrl_${locale}`] as string | undefined;
+                  const audioStatus = (page as any)[`audioStatus_${locale}`] as string | undefined;
+                  if (!audioUrl || audioStatus !== 'done') return null;
+                  const isPlaying = playingLocale === locale;
+                  const isDeleting = deletingLocale === locale;
+                  return (
+                    <div key={locale} className="flex items-center gap-2 bg-gray-50 rounded-lg px-3 py-2">
+                      <span className="text-xs font-semibold text-gray-500 uppercase w-6">{locale}</span>
+                      <Button
+                        variant={isPlaying ? 'primary' : 'ghost'}
+                        size="sm"
+                        onClick={() => {
+                          if (isPlaying && audioElRef.current) {
+                            audioElRef.current.pause();
+                            setPlayingLocale(null);
+                            return;
+                          }
+                          if (audioElRef.current) audioElRef.current.pause();
+                          const audio = new Audio(audioUrl);
+                          audio.onended = () => setPlayingLocale(null);
+                          audio.play();
+                          audioElRef.current = audio;
+                          setPlayingLocale(locale);
+                        }}
+                        title={isPlaying ? 'Pause' : `Play ${locale.toUpperCase()} audio`}
+                      >
+                        {isPlaying ? <Pause size={14} /> : <Play size={14} />}
+                      </Button>
+                      {bookId && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-error-500 hover:text-error-700 hover:bg-error-50"
+                          isLoading={isDeleting}
+                          onClick={async () => {
+                            if (!confirm(`Delete ${locale.toUpperCase()} audio for page ${pageIndex + 1}?`)) return;
+                            setDeletingLocale(locale);
+                            if (isPlaying && audioElRef.current) {
+                              audioElRef.current.pause();
+                              setPlayingLocale(null);
+                            }
+                            try {
+                              await deletePageAudio({ bookId, pageIndex, locale });
+                            } catch (err) {
+                              alert(err instanceof Error ? err.message : 'Failed to delete audio');
+                            } finally {
+                              setDeletingLocale(null);
+                            }
+                          }}
+                          title={`Delete ${locale.toUpperCase()} audio`}
+                        >
+                          <X size={14} />
+                        </Button>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

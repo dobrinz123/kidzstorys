@@ -446,6 +446,7 @@ export function BookEditor({ bookId, initialBook }: BookEditorProps) {
               page={page}
               pageIndex={index}
               totalPages={pages.length}
+              bookId={bookId}
               onChange={(updated) => handlePageChange(index, updated)}
               onDelete={() => handleDeletePage(index)}
               onMoveUp={() => handleMovePage(index, 'up')}

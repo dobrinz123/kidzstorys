@@ -13,7 +13,7 @@ import { ConfirmDialog } from '../../../components/ui/Modal';
 import { PageLoading } from '../../../components/ui/Loading';
 import { EmptyState } from '../../../components/ui/EmptyState';
 import { useToast } from '../../../components/ui/Toast';
-import { Play, Pause, RefreshCw, AlertTriangle, Volume2, BookOpen } from 'lucide-react';
+import { Play, Pause, Square, RefreshCw, AlertTriangle, Volume2, BookOpen } from 'lucide-react';
 
 type BookAudioStatus = 'none' | 'partial' | 'complete' | 'failed';
 
@@ -69,10 +69,12 @@ export default function AudioPage() {
   const overview = useQuery(api.audio.getAudioOverview);
   const failedJobs = useQuery(api.audio.getFailedJobs);
   const booksResult = useQuery(api.books.listBooks, { limit: 500 });
+  const isPaused = useQuery(api.audio.getGenerationPaused);
 
   const startBulk = useMutation(api.audio.startBulkAudioGeneration);
   const retryJob = useMutation(api.audio.retryFailedJob);
   const startBatch = useMutation(api.audio.startAudioBatch);
+  const togglePause = useMutation(api.audio.toggleGenerationPause);
 
   // Wait for all queries before rendering
   if (overview === undefined || failedJobs === undefined || booksResult === undefined) {
@@ -163,12 +165,29 @@ export default function AudioPage() {
           { label: 'Audio Generation' },
         ]}
         actions={
-          <Button
-            leftIcon={<Play size={18} />}
-            onClick={() => setConfirmBulkOpen(true)}
-          >
-            Generate All Missing
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              variant={isPaused ? 'primary' : 'outline'}
+              leftIcon={isPaused ? <Play size={18} /> : <Square size={18} />}
+              onClick={async () => {
+                try {
+                  await togglePause({ paused: !isPaused });
+                  success(isPaused ? 'Generation resumed' : 'Generation paused');
+                } catch {
+                  showError('Failed to toggle generation');
+                }
+              }}
+            >
+              {isPaused ? 'Resume Generation' : 'Stop Generation'}
+            </Button>
+            <Button
+              leftIcon={<Play size={18} />}
+              onClick={() => setConfirmBulkOpen(true)}
+              disabled={!isPaused}
+            >
+              Generate All Missing
+            </Button>
+          </div>
         }
       />
 

@@ -368,6 +368,12 @@ export default defineSchema({
     .index("by_status", ["status", "createdAt"])
     .index("by_batchId", ["batchId"]),
 
+  // ============ APP SETTINGS ============
+  appSettings: defineTable({
+    key: v.string(),
+    value: v.string(),
+  }).index("by_key", ["key"]),
+
   // ============ LEGACY STORIES (kept for backward compatibility) ============
   stories: defineTable({
     storyKey: v.string(),

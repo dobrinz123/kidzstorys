@@ -34,6 +34,7 @@ crons.monthly(
 // Process audio generation queue every 30 seconds (D-01)
 // Picks up to 5 pending audioJobs per tick and calls generatePageAudio sequentially.
 // Idle ticks (0 jobs) return immediately — cheap single DB query.
+// Checks appSettings.generationPaused flag before processing — admin can pause/resume from dashboard
 crons.interval(
   "process audio queue",
   { seconds: 30 },

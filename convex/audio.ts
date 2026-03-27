@@ -434,6 +434,56 @@ export const incrementBatchFailed = internalMutation({
 });
 
 // ---------------------------------------------------------------------------
+// Export 13a — isGenerationPaused (internalQuery)
+// Checks the appSettings table for the "generationPaused" flag.
+// ---------------------------------------------------------------------------
+export const isGenerationPaused = internalQuery({
+  args: {},
+  handler: async (ctx) => {
+    const setting = await ctx.db
+      .query("appSettings")
+      .withIndex("by_key", (q) => q.eq("key", "generationPaused"))
+      .unique();
+    return setting?.value === "true";
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 13b — toggleGenerationPause (public mutation)
+// Admin can pause/resume audio generation from the dashboard.
+// ---------------------------------------------------------------------------
+export const toggleGenerationPause = mutation({
+  args: { paused: v.boolean() },
+  handler: async (ctx, args) => {
+    const setting = await ctx.db
+      .query("appSettings")
+      .withIndex("by_key", (q) => q.eq("key", "generationPaused"))
+      .unique();
+    if (setting) {
+      await ctx.db.patch(setting._id, { value: args.paused ? "true" : "false" });
+    } else {
+      await ctx.db.insert("appSettings", { key: "generationPaused", value: args.paused ? "true" : "false" });
+    }
+    return { paused: args.paused };
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 13c — getGenerationPaused (public query)
+// Admin dashboard reads this to show pause/resume button state.
+// ---------------------------------------------------------------------------
+export const getGenerationPaused = query({
+  args: {},
+  handler: async (ctx) => {
+    const setting = await ctx.db
+      .query("appSettings")
+      .withIndex("by_key", (q) => q.eq("key", "generationPaused"))
+      .unique();
+    return setting?.value === "true";
+  },
+});
+
+// ---------------------------------------------------------------------------
 // Export 13 — processAudioQueue (internalAction, per D-01, D-02, D-03)
 // Cron-driven: picks up to 5 pending jobs, calls generatePageAudio sequentially.
 // MUST be internalAction — mutations cannot call ctx.runAction.
@@ -441,6 +491,10 @@ export const incrementBatchFailed = internalMutation({
 export const processAudioQueue = internalAction({
   args: {},
   handler: async (ctx) => {
+    // 0. Check if generation is paused
+    const paused = await ctx.runQuery(internal.audio.isGenerationPaused);
+    if (paused) return; // Admin paused generation — skip this tick
+
     // 1. Get up to 5 pending jobs (via internalQuery — actions can't call ctx.db)
     const jobs = await ctx.runQuery(internal.audio.getPendingJobs);
     if (jobs.length === 0) return; // Nothing to process — idle tick
@@ -477,6 +531,63 @@ export const processAudioQueue = internalAction({
         }
       }
     }
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export — deletePageAudio (public mutation)
+// Deletes audio for a specific page + locale. Removes storage file, clears URL and status.
+// ---------------------------------------------------------------------------
+export const deletePageAudio = mutation({
+  args: {
+    bookId: v.id("books"),
+    pageIndex: v.number(),
+    locale: v.union(v.literal("en"), v.literal("ro")),
+  },
+  handler: async (ctx, args) => {
+    const book = await ctx.db.get(args.bookId);
+    if (!book) throw new Error("Book not found");
+    if (args.pageIndex < 0 || args.pageIndex >= book.pages.length) {
+      throw new Error("Invalid page index");
+    }
+
+    const page = book.pages[args.pageIndex];
+    const storageIdKey = `audioStorageId_${args.locale}` as "audioStorageId_en" | "audioStorageId_ro";
+    const urlKey = `audioUrl_${args.locale}` as "audioUrl_en" | "audioUrl_ro";
+    const statusKey = `audioStatus_${args.locale}` as "audioStatus_en" | "audioStatus_ro";
+    const generatedAtKey = `audioGeneratedAt_${args.locale}` as "audioGeneratedAt_en" | "audioGeneratedAt_ro";
+
+    // Delete from storage if exists
+    const storageId = page[storageIdKey];
+    if (storageId) {
+      await ctx.storage.delete(storageId);
+    }
+
+    // Clear audio fields on the page
+    const pages = [...book.pages];
+    pages[args.pageIndex] = {
+      ...pages[args.pageIndex],
+      [urlKey]: undefined,
+      [storageIdKey]: undefined,
+      [statusKey]: undefined,
+      [generatedAtKey]: undefined,
+    };
+    await ctx.db.patch(args.bookId, { pages });
+
+    // Also delete any related audioJobs for this page+locale
+    const jobs = await ctx.db
+      .query("audioJobs")
+      .withIndex("by_book_locale", (q) =>
+        q.eq("bookId", args.bookId).eq("locale", args.locale)
+      )
+      .collect();
+    for (const job of jobs) {
+      if (job.pageIndex === args.pageIndex) {
+        await ctx.db.delete(job._id);
+      }
+    }
+
+    return { success: true };
   },
 });
 
