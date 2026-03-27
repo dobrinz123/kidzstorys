@@ -34,22 +34,22 @@ Plans:
 - [x] 01-03: Create audioGenBatches table and update TypeScript types
 
 ### Phase 2: TTS Integration
-**Goal**: Convex action that calls ElevenLabs, generates audio for a single page, and stores it in Convex File Storage.
+**Goal**: Convex internalAction (`generatePageAudio`) that calls ElevenLabs `eleven_multilingual_v2`, generates audio for a single page, and stores the MP3 in Convex File Storage — saving both the storageId and public URL back to the page record.
 **Depends on**: Phase 1
 **Requirements**: [GEN-03, GEN-04, GEN-05, GEN-06, VOICE-01, VOICE-02, VOICE-03]
 **Success Criteria** (what must be TRUE):
-  1. `generatePageAudio` Convex action calls ElevenLabs `eleven_multilingual_v2` model
+  1. `generatePageAudio` internalAction calls ElevenLabs `eleven_multilingual_v2` model
   2. EN and RO voice IDs are configurable via Convex environment variables
   3. Generated audio stored in Convex File Storage and URL saved to page record
-  4. Rate limiting enforces ≤100 requests/minute
-  5. Failed jobs automatically retried up to 3 times with exponential backoff
-  6. Integration test: generate audio for 1 page in EN and 1 in RO, both URLs are playable MP3s
+  4. audioStatus_{locale} transitions: pending -> generating -> done/failed on each page
+  5. Failed jobs mark audioJobs record with errorMessage (retry delegated to Phase 3)
+  6. 4 unit tests (convex-test + vitest) pass: EN happy path, RO happy path, 4xx error, empty text
+
+**Plans:** 2 plans
 
 Plans:
-- [ ] 02-01: Create generatePageAudio Convex action with ElevenLabs API call
-- [ ] 02-02: Implement Convex File Storage upload and URL persistence
-- [ ] 02-03: Add rate limiting, retry logic, and error handling
-- [ ] 02-04: Write integration test for EN + RO audio generation
+- [ ] 02-01-PLAN.md — Create convex/audio.ts with internalAction + helper queries/mutations
+- [ ] 02-02-PLAN.md — Write convex-test unit tests for generatePageAudio (4 scenarios)
 
 ### Phase 3: Generation Pipeline
 **Goal**: Admin can trigger bulk audio generation; a Convex scheduler processes the job queue automatically.
@@ -161,8 +161,8 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Data Model | 2/3 | In Progress|  |
-| 2. TTS Integration | 0/4 | Not started | - |
+| 1. Data Model | 3/3 | Complete | 2026-03-27 |
+| 2. TTS Integration | 0/2 | Planned | - |
 | 3. Generation Pipeline | 0/3 | Not started | - |
 | 4. Admin Dashboard UI | 0/5 | Not started | - |
 | 5. Audiobook Toggle UI | 0/4 | Not started | - |
