@@ -6,7 +6,7 @@ Eight phases taking StoryKids from its current state (no audio) to a fully-shipp
 
 ## Phases
 
-- [ ] **Phase 1: Data Model** - Extend Convex schema with audio fields and generation job queue
+- [x] **Phase 1: Data Model** - Extend Convex schema with audio fields and generation job queue
 - [ ] **Phase 2: TTS Integration** - ElevenLabs action, Convex file storage, voice configuration
 - [ ] **Phase 3: Generation Pipeline** - Scheduler + batch trigger for bulk audio generation
 - [ ] **Phase 4: Admin Dashboard** - Generation management UI with progress, retry, status
@@ -31,7 +31,7 @@ Eight phases taking StoryKids from its current state (no audio) to a fully-shipp
 Plans:
 - [x] 01-01: Extend pages schema with audio URL and storage ID fields
 - [x] 01-02: Create audioJobs table with indexes
-- [ ] 01-03: Create audioGenBatches table and update TypeScript types
+- [x] 01-03: Create audioGenBatches table and update TypeScript types
 
 ### Phase 2: TTS Integration
 **Goal**: Convex action that calls ElevenLabs, generates audio for a single page, and stores it in Convex File Storage.

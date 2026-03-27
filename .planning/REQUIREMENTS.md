@@ -90,7 +90,7 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| GEN-01, GEN-02 | Phase 1 | Pending |
+| GEN-01, GEN-02 | Phase 1 | Complete |
 | GEN-03, GEN-04, GEN-05, GEN-06 | Phase 2 | Pending |
 | ADMIN-01, ADMIN-02, ADMIN-06 | Phase 3 | Pending |
 | ADMIN-03, ADMIN-04, ADMIN-05 | Phase 4 | Pending |
