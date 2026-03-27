@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: 2
+current_plan: 1
 status: unknown
-stopped_at: Completed 04-admin-dashboard-ui 04-02-PLAN.md
-last_updated: "2026-03-27T20:08:28.971Z"
+stopped_at: Completed 02-tts-integration 02-02-PLAN.md
+last_updated: "2026-03-27T19:57:07.797Z"
 progress:
   total_phases: 8
-  completed_phases: 4
+  completed_phases: 3
   total_plans: 9
-  completed_plans: 9
+  completed_plans: 7
 ---
 
 # STATE.md — Project Memory
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 
 ## Current Status
 
-**Phase:** 04 — admin-dashboard-ui (COMPLETE)
+**Phase:** 02 — tts-integration (COMPLETE)
 **Milestone:** v2.0 Audiobook
-**Phases complete:** 4 / 8
-**Plans complete:** 2 / 2 (phase 04) | 9 total
-**Current Plan:** Done
+**Phases complete:** 2 / 8
+**Plans complete:** 2 / 2 (phase 02) | 6 total
+**Current Plan:** 1
 
 ---
 
@@ -55,9 +55,6 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | Computed key typing (02-01) | audioStatus_en/ro keys cast to explicit union types (not any) for TypeScript compliance |
 | @edge-runtime/vm explicit dep (02-02) | vitest edge-runtime environment requires @edge-runtime/vm as explicit devDependency — not pulled in transitively |
 | anyApi works with convex-test (02-02) | Generated api.js uses anyApi so internal.audio.generatePageAudio resolves at test runtime via glob — no dev server needed |
-| AudioStatusBadge dot variant (04-01) | Uses dot variant of existing Badge for visual consistency with StatusBadge pattern |
-| getAudioOverview scope (04-01) | Only counts published books — draft/ready excluded from audio progress metrics |
-| Client-side audio status (04-02) | Books audio status computed client-side via getBookAudioStatus helper from page audioStatus fields |
 
 ---
 
@@ -97,9 +94,9 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27T20:08:28.967Z
-Stopped at: Completed 04-admin-dashboard-ui 04-02-PLAN.md
-Next action: Execute Phase 05
+Last session: 2026-03-27 — Phase 02 plan 02 complete (convex/audio.test.ts, 4 tests pass)
+Stopped at: Completed 02-tts-integration 02-02-PLAN.md
+Next action: Execute Phase 03 — batch-scheduler
 
 ---
-*Last updated: 2026-03-27 — Phase 04 complete (all 2 plans done)*
+*Last updated: 2026-03-27 — Phase 02 complete*
