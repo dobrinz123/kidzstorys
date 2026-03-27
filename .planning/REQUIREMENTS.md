@@ -11,7 +11,7 @@
 
 - [x] **AUDIO-01**: User can toggle audiobook mode on/off from a button inside any book
 - [x] **AUDIO-02**: Audio plays the current page text in the user's selected app language (EN or RO)
-- [ ] **AUDIO-03**: When a page finishes playing, the page auto-turns (triggering existing page-turn animation and sound)
+- [x] **AUDIO-03**: When a page finishes playing, the page auto-turns (triggering existing page-turn animation and sound)
 - [x] **AUDIO-04**: Audiobook toggle state persists within the reading session (doesn't reset on page turn)
 - [x] **AUDIO-05**: When audiobook is off, book behaves exactly as before (no regression)
 - [x] **AUDIO-06**: Audio playback gracefully handles missing audio (no crash, silent fallback)
