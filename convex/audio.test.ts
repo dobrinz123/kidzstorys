@@ -1,6 +1,6 @@
 import { convexTest } from "convex-test";
 import { describe, test, expect, vi, beforeEach, afterEach } from "vitest";
-import { internal } from "./_generated/api";
+import { api, internal } from "./_generated/api";
 import schema from "./schema";
 
 // ---------------------------------------------------------------------------
@@ -246,5 +246,202 @@ describe("generatePageAudio", () => {
     const job = await t.run(async (ctx) => ctx.db.get(jobId));
     expect(job?.status).toBe("failed");
     expect(job?.errorMessage).toBeTruthy();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// getFailedJobs
+// ---------------------------------------------------------------------------
+describe("getFailedJobs", () => {
+  test("returns failed jobs enriched with bookTitle", async () => {
+    const t = convexTest(schema, import.meta.glob("./**/*.ts"));
+
+    await t.run(async (ctx) => {
+      const categoryId = await insertCategory(ctx);
+      const bookId = await insertBook(ctx, categoryId);
+      await ctx.db.insert("audioJobs", {
+        bookId,
+        pageIndex: 0,
+        locale: "en",
+        status: "failed" as const,
+        errorMessage: "test error",
+        retryCount: 0,
+        createdAt: Date.now(),
+      });
+      // Also insert a pending job that should NOT appear
+      await ctx.db.insert("audioJobs", {
+        bookId,
+        pageIndex: 0,
+        locale: "ro",
+        status: "pending" as const,
+        retryCount: 0,
+        createdAt: Date.now(),
+      });
+    });
+
+    const result = await t.query(api.audio.getFailedJobs, {});
+    expect(result).toHaveLength(1);
+    expect(result[0].status).toBe("failed");
+    expect(result[0].bookTitle).toBe("Test Book");
+    expect(result[0].errorMessage).toBe("test error");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// retryFailedJob
+// ---------------------------------------------------------------------------
+describe("retryFailedJob", () => {
+  test("resets a failed job to pending with retryCount+1", async () => {
+    const t = convexTest(schema, import.meta.glob("./**/*.ts"));
+
+    const jobId = await t.run(async (ctx) => {
+      const categoryId = await insertCategory(ctx);
+      const bookId = await insertBook(ctx, categoryId);
+      return await ctx.db.insert("audioJobs", {
+        bookId,
+        pageIndex: 0,
+        locale: "en",
+        status: "failed" as const,
+        errorMessage: "test",
+        retryCount: 1,
+        createdAt: Date.now(),
+      });
+    });
+
+    const result = await t.mutation(api.audio.retryFailedJob, { jobId });
+    expect(result).toEqual({ success: true });
+
+    const job = await t.run(async (ctx) => ctx.db.get(jobId));
+    expect(job?.status).toBe("pending");
+    expect(job?.retryCount).toBe(2);
+  });
+
+  test("throws if job is not in failed state", async () => {
+    const t = convexTest(schema, import.meta.glob("./**/*.ts"));
+
+    const jobId = await t.run(async (ctx) => {
+      const categoryId = await insertCategory(ctx);
+      const bookId = await insertBook(ctx, categoryId);
+      return await ctx.db.insert("audioJobs", {
+        bookId,
+        pageIndex: 0,
+        locale: "en",
+        status: "pending" as const,
+        retryCount: 0,
+        createdAt: Date.now(),
+      });
+    });
+
+    await expect(
+      t.mutation(api.audio.retryFailedJob, { jobId })
+    ).rejects.toThrow("Job is not in failed state");
+  });
+
+  test("throws if retryCount >= 3", async () => {
+    const t = convexTest(schema, import.meta.glob("./**/*.ts"));
+
+    const jobId = await t.run(async (ctx) => {
+      const categoryId = await insertCategory(ctx);
+      const bookId = await insertBook(ctx, categoryId);
+      return await ctx.db.insert("audioJobs", {
+        bookId,
+        pageIndex: 0,
+        locale: "en",
+        status: "failed" as const,
+        errorMessage: "test",
+        retryCount: 3,
+        createdAt: Date.now(),
+      });
+    });
+
+    await expect(
+      t.mutation(api.audio.retryFailedJob, { jobId })
+    ).rejects.toThrow("Max retries exceeded");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// getAudioOverview
+// ---------------------------------------------------------------------------
+describe("getAudioOverview", () => {
+  test("returns correct counts for published books with audio statuses", async () => {
+    const t = convexTest(schema, import.meta.glob("./**/*.ts"));
+
+    await t.run(async (ctx) => {
+      const categoryId = await insertCategory(ctx);
+      // Published book with 2 pages, mixed audio status
+      await ctx.db.insert("books", {
+        bookKey: "overview-test-1",
+        categoryId,
+        ageMin: 3,
+        ageMax: 6,
+        durationMin: 5,
+        cover: { title_en: "Book 1", title_ro: "Carte 1", title_it: "Libro 1" },
+        pages: [
+          {
+            pageNumber: 1,
+            text_en: "Page 1",
+            text_ro: "Pagina 1",
+            text_it: "Pagina 1",
+            audioStatus_en: "done" as const,
+            audioStatus_ro: "done" as const,
+          },
+          {
+            pageNumber: 2,
+            text_en: "Page 2",
+            text_ro: "Pagina 2",
+            text_it: "Pagina 2",
+            audioStatus_en: "done" as const,
+            audioStatus_ro: "failed" as const,
+          },
+        ],
+        tags_en: [],
+        tags_ro: [],
+        tags_it: [],
+        parentQuestions_en: [],
+        parentQuestions_ro: [],
+        parentQuestions_it: [],
+        status: "published" as const,
+        publishedAt: Date.now(),
+        version: 1,
+        readCount: 0,
+        favoriteCount: 0,
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+      });
+      // Draft book should NOT be counted
+      await ctx.db.insert("books", {
+        bookKey: "overview-test-2",
+        categoryId,
+        ageMin: 3,
+        ageMax: 6,
+        durationMin: 5,
+        cover: { title_en: "Draft", title_ro: "Draft", title_it: "Draft" },
+        pages: [
+          { pageNumber: 1, text_en: "X", text_ro: "X", text_it: "X" },
+        ],
+        tags_en: [],
+        tags_ro: [],
+        tags_it: [],
+        parentQuestions_en: [],
+        parentQuestions_ro: [],
+        parentQuestions_it: [],
+        status: "draft" as const,
+        version: 1,
+        readCount: 0,
+        favoriteCount: 0,
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+      });
+    });
+
+    const result = await t.query(api.audio.getAudioOverview, {});
+    expect(result.totalBooks).toBe(1);
+    expect(result.totalPages).toBe(2);
+    expect(result.doneEn).toBe(2);
+    expect(result.doneRo).toBe(1);
+    expect(result.totalSlots).toBe(4); // 2 pages * 2 locales
+    expect(result.totalDone).toBe(3); // 2 EN + 1 RO
+    expect(result.failedCount).toBe(1); // page 2 has failed RO
   });
 });

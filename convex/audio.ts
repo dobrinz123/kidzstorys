@@ -473,3 +473,90 @@ export const processAudioQueue = internalAction({
     }
   },
 });
+
+// ---------------------------------------------------------------------------
+// Export 14 — getFailedJobs (public query, per ADMIN-04)
+// Returns all failed audioJobs enriched with book title for admin dashboard.
+// ---------------------------------------------------------------------------
+export const getFailedJobs = query({
+  args: {},
+  handler: async (ctx) => {
+    const failed = await ctx.db
+      .query("audioJobs")
+      .withIndex("by_status", (q) => q.eq("status", "failed"))
+      .collect();
+
+    const bookIds = [...new Set(failed.map((j) => j.bookId))];
+    const books = await Promise.all(bookIds.map((id) => ctx.db.get(id)));
+    const bookMap = new Map(
+      books.filter(Boolean).map((b) => [b!._id, b!])
+    );
+
+    return failed.map((job) => ({
+      ...job,
+      bookTitle: bookMap.get(job.bookId)?.cover.title_en ?? "Unknown",
+    }));
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 15 — retryFailedJob (public mutation, per ADMIN-05)
+// Resets a failed job to pending. Throws if not failed or max retries exceeded.
+// ---------------------------------------------------------------------------
+export const retryFailedJob = mutation({
+  args: { jobId: v.id("audioJobs") },
+  handler: async (ctx, args) => {
+    const job = await ctx.db.get(args.jobId);
+    if (!job) throw new Error("Job not found");
+    if (job.status !== "failed") throw new Error("Job is not in failed state");
+    if (job.retryCount >= 3) throw new Error("Max retries exceeded (3/3)");
+    await ctx.db.patch(args.jobId, {
+      status: "pending",
+      retryCount: job.retryCount + 1,
+    });
+    return { success: true };
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 16 — getAudioOverview (public query, per ADMIN-06)
+// Aggregates audio generation progress across all published books.
+// ---------------------------------------------------------------------------
+export const getAudioOverview = query({
+  args: {},
+  handler: async (ctx) => {
+    const publishedBooks = await ctx.db
+      .query("books")
+      .withIndex("by_status", (q) => q.eq("status", "published"))
+      .collect();
+
+    let totalPages = 0;
+    let doneEn = 0;
+    let doneRo = 0;
+    let failedCount = 0;
+
+    for (const book of publishedBooks) {
+      for (const page of book.pages) {
+        totalPages++;
+        if (page.audioStatus_en === "done") doneEn++;
+        if (page.audioStatus_ro === "done") doneRo++;
+        if (
+          page.audioStatus_en === "failed" ||
+          page.audioStatus_ro === "failed"
+        ) {
+          failedCount++;
+        }
+      }
+    }
+
+    return {
+      totalBooks: publishedBooks.length,
+      totalPages,
+      doneEn,
+      doneRo,
+      totalSlots: totalPages * 2,
+      totalDone: doneEn + doneRo,
+      failedCount,
+    };
+  },
+});
