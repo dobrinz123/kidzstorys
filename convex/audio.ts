@@ -287,3 +287,60 @@ export const getGenerationProgress = query({
     return batch;
   },
 });
+
+// ---------------------------------------------------------------------------
+// Export 8 — startBulkAudioGeneration (public mutation, per D-04, ADMIN-02)
+// Triggers audio generation for ALL published books that have missing audio.
+// ---------------------------------------------------------------------------
+export const startBulkAudioGeneration = mutation({
+  args: {},
+  handler: async (ctx) => {
+    const publishedBooks = await ctx.db
+      .query("books")
+      .withIndex("by_status", (q) => q.eq("status", "published"))
+      .collect();
+
+    const results: Array<{ bookId: string; batchId: string; totalJobs: number }> = [];
+
+    for (const book of publishedBooks) {
+      const batchId = `batch_${Date.now()}_${book._id}`;
+      const locales = ["en", "ro"] as const;
+      const now = Date.now();
+      let totalJobs = 0;
+
+      for (let pageIndex = 0; pageIndex < book.pages.length; pageIndex++) {
+        const page = book.pages[pageIndex];
+        for (const locale of locales) {
+          const statusKey = `audioStatus_${locale}` as "audioStatus_en" | "audioStatus_ro";
+          if (page[statusKey] === "done") continue;
+
+          await ctx.db.insert("audioJobs", {
+            bookId: book._id,
+            pageIndex,
+            locale,
+            status: "pending",
+            retryCount: 0,
+            batchId,
+            createdAt: now,
+          });
+          totalJobs++;
+        }
+      }
+
+      if (totalJobs > 0) {
+        await ctx.db.insert("audioGenBatches", {
+          batchId,
+          locales: ["en", "ro"],
+          status: "queued",
+          totalJobs,
+          completedJobs: 0,
+          failedJobs: 0,
+          createdAt: now,
+        });
+        results.push({ bookId: book._id, batchId, totalJobs });
+      }
+    }
+
+    return { batchesCreated: results.length, results };
+  },
+});
