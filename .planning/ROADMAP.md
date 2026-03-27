@@ -48,7 +48,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Create convex/audio.ts with internalAction + helper queries/mutations
+- [x] 02-01-PLAN.md — Create convex/audio.ts with internalAction + helper queries/mutations
 - [ ] 02-02-PLAN.md — Write convex-test unit tests for generatePageAudio (4 scenarios)
 
 ### Phase 3: Generation Pipeline

@@ -20,9 +20,9 @@
 
 ### Voice Quality
 
-- [ ] **VOICE-01**: English audio uses a warm, natural, child-appropriate neural voice
-- [ ] **VOICE-02**: Romanian audio uses a natural, child-appropriate neural voice
-- [ ] **VOICE-03**: Audio quality is perceptibly human (no robotic artifacts, natural prosody)
+- [x] **VOICE-01**: English audio uses a warm, natural, child-appropriate neural voice
+- [x] **VOICE-02**: Romanian audio uses a natural, child-appropriate neural voice
+- [x] **VOICE-03**: Audio quality is perceptibly human (no robotic artifacts, natural prosody)
 
 ### Language Switching
 
@@ -39,8 +39,8 @@
 
 - [x] **GEN-01**: Convex schema stores per-page audio URLs for EN and RO
 - [x] **GEN-02**: Convex schema tracks per-page generation status (pending / generating / done / failed)
-- [ ] **GEN-03**: ElevenLabs `eleven_multilingual_v2` model used for all TTS generation
-- [ ] **GEN-04**: Audio files stored in Convex File Storage and served via stable public URLs
+- [x] **GEN-03**: ElevenLabs `eleven_multilingual_v2` model used for all TTS generation
+- [x] **GEN-04**: Audio files stored in Convex File Storage and served via stable public URLs
 - [ ] **GEN-05**: Generation respects ElevenLabs API rate limits (≤100 req/min)
 - [ ] **GEN-06**: Failed generation jobs are retried automatically up to 3 times
 
@@ -91,12 +91,13 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | GEN-01, GEN-02 | Phase 1 | Complete |
-| GEN-03, GEN-04, GEN-05, GEN-06 | Phase 2 | Pending |
+| GEN-03, GEN-04 | Phase 2 (02-01) | Complete |
+| GEN-05, GEN-06 | Phase 2 (02-02+) | Pending |
+| VOICE-01, VOICE-02, VOICE-03 | Phase 2 (02-01) | Complete |
 | ADMIN-01, ADMIN-02, ADMIN-06 | Phase 3 | Pending |
 | ADMIN-03, ADMIN-04, ADMIN-05 | Phase 4 | Pending |
 | AUDIO-01, AUDIO-04, AUDIO-05 | Phase 5 | Pending |
 | AUDIO-02, AUDIO-03, AUDIO-07, AUDIO-08 | Phase 6 | Pending |
-| VOICE-01, VOICE-02, VOICE-03 | Phase 2 | Pending |
 | LANG-01, LANG-02, LANG-03 | Phase 7 | Pending |
 | ACCESS-01, ACCESS-02 | Phase 5 | Pending |
 | GEN-01 through GEN-06 (seed run) | Phase 8 | Pending |

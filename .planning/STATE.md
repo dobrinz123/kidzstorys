@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: active
-last_updated: "2026-03-27T20:30:00.000Z"
+status: in_progress
+last_updated: "2026-03-27T20:54:00.000Z"
 progress:
   total_phases: 8
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 6
+  completed_plans: 4
 ---
 
 # STATE.md — Project Memory
@@ -18,16 +18,17 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Every child can hear their book read aloud in their native language, hands-free, with the same page-turn feel they love.
-**Current focus:** Phase 02 — generation-pipeline
+**Current focus:** Phase 02 — tts-integration
 
 ---
 
 ## Current Status
 
-**Phase:** 01 — data-model (COMPLETE ✓)
+**Phase:** 02 — tts-integration (IN PROGRESS)
 **Milestone:** v2.0 Audiobook
 **Phases complete:** 1 / 8
-**Plans complete:** 3 / 3 (phase 01)
+**Plans complete:** 1 / 2 (phase 02) | 4 total
+**Current Plan:** 02-01 COMPLETE — 02-02 next
 
 ---
 
@@ -47,6 +48,9 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | audioJobs page reference (01-02) | bookId + pageIndex (zero-based) — pages are embedded in books, no standalone page ID |
 | audioJobs locale scope (01-02) | en and ro only — Italian excluded from v1 TTS generation |
 | batchId type (01-02) | v.optional(v.string()) not v.id() — allows external scheduler batch identifiers |
+| internalAction DB delegation (02-01) | getPageText/markGenerating/markDone/markFailed co-located in audio.ts — action uses ctx.runQuery/runMutation only |
+| Empty-text guard in try block (02-01) | getPageText inside try so empty-text errors reach markFailed and persist to audioJobs |
+| Computed key typing (02-01) | audioStatus_en/ro keys cast to explicit union types (not any) for TypeScript compliance |
 
 ---
 
@@ -85,8 +89,9 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — Phase 01 complete (all 3 plans executed, schema deployed to production)
-Next action: Begin Phase 02 — generation-pipeline (ElevenLabs TTS + Convex job queue)
+Last session: 2026-03-27 — Phase 02 plan 01 complete (convex/audio.ts created and validated)
+Stopped at: Completed 02-tts-integration 02-01-PLAN.md
+Next action: Execute Phase 02 plan 02 — TTS integration tests (02-02)
 
 ---
 *Last updated: 2026-03-27 — initial project setup*
