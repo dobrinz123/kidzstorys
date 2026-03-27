@@ -26,6 +26,8 @@ import { ALL_STORIES } from "../../src/data/stories";
 import { getStoryScene } from "../../src/data/storyScenes";
 import { useLanguageStore } from "../../src/store/languageStore";
 import { useUserStore } from "../../src/store/userStore";
+import { useAudiobookStore } from "../../src/store/audiobookStore";
+import { Ionicons } from "@expo/vector-icons";
 import { useAuth } from "../../src/hooks/useAuth";
 import { useSubscription } from "../../src/hooks/useSubscription";
 import { usePublishedBook } from "../../src/hooks/useBooks";
@@ -151,6 +153,14 @@ export default function StoryReader() {
         };
     }, []);
 
+    // Reset audiobook toggle when leaving reader — ensures next book opens with toggle OFF.
+    // Per AUDIO-04: state persists within a session; reset only on unmount (exit).
+    useEffect(() => {
+        return () => {
+            resetAudiobook();
+        };
+    }, [resetAudiobook]);
+
     const playFlipSound = useCallback(async () => {
         try {
             if (soundRef.current) {
@@ -164,6 +174,8 @@ export default function StoryReader() {
     const currentLang = useLanguageStore((state) => state.language);
     const ui = UI_STRINGS[currentLang] || UI_STRINGS.ro;
 
+    const { isAudiobookEnabled, toggleAudiobook, resetAudiobook } = useAudiobookStore();
+
     const { addToMyList, removeFromMyList, updateProgress, removeProgress, incrementView, myList, readingProgress } = useUserStore();
     const isInMyList = myList.includes(id as string);
 
@@ -172,6 +184,15 @@ export default function StoryReader() {
 
     // Try to load book from Convex first
     const { book: convexBook, isLoading: isBookLoading } = usePublishedBook(id as string);
+
+    // Compute once when book or language changes. Checks if ANY page has completed audio
+    // for the current language. Per ANTI-PATTERN note in research: do NOT check per-page
+    // to prevent toggle flickering during page turns.
+    const bookHasAudio = useMemo(() => {
+        if (!convexBook) return false;
+        const statusKey = `audioStatus_${currentLang}` as "audioStatus_en" | "audioStatus_ro";
+        return convexBook.pages.some((page) => page[statusKey] === "done");
+    }, [convexBook, currentLang]);
 
     const isLoading = isAuthLoading || isSubLoading || isBookLoading;
 

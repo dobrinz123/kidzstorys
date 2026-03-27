@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 current_plan: 1
 status: unknown
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-27T20:30:23.025Z"
+stopped_at: Completed 02-tts-integration 02-02-PLAN.md
+last_updated: "2026-03-27T20:24:56.192Z"
 progress:
   total_phases: 8
   completed_phases: 4
   total_plans: 11
-  completed_plans: 10
+  completed_plans: 9
 ---
 
 # STATE.md — Project Memory
@@ -55,8 +55,6 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | Computed key typing (02-01) | audioStatus_en/ro keys cast to explicit union types (not any) for TypeScript compliance |
 | @edge-runtime/vm explicit dep (02-02) | vitest edge-runtime environment requires @edge-runtime/vm as explicit devDependency — not pulled in transitively |
 | anyApi works with convex-test (02-02) | Generated api.js uses anyApi so internal.audio.generatePageAudio resolves at test runtime via glob — no dev server needed |
-| Audiobook toggle persistence (05-01) | Session-only Zustand store (no AsyncStorage) -- resets on app restart per AUDIO-05 |
-| resetAudiobook API (05-01) | resetAudiobook() hard-resets to false instead of setAudiobookEnabled(bool) -- simpler for the single use case |
 
 ---
 
@@ -96,9 +94,9 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27T20:30:23.022Z
-Stopped at: Completed 05-01-PLAN.md
-Next action: Execute Phase 05 plan 02 — audiobook toggle UI in reader header
+Last session: 2026-03-27 — Phase 02 plan 02 complete (convex/audio.test.ts, 4 tests pass)
+Stopped at: Completed 02-tts-integration 02-02-PLAN.md
+Next action: Execute Phase 03 — batch-scheduler
 
 ---
-*Last updated: 2026-03-27 — Phase 05 plan 01 complete*
+*Last updated: 2026-03-27 — Phase 02 complete*
