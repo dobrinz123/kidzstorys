@@ -101,7 +101,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Zustand audiobookStore (session-only) + ConvexBook type updated with audio fields
+- [x] 05-01-PLAN.md — Zustand audiobookStore (session-only) + ConvexBook type updated with audio fields
 - [ ] 05-02-PLAN.md — Toggle/lock icon in reader header, bookHasAudio check, subscription gating, unmount reset
 
 ### Phase 6: Playback Engine
