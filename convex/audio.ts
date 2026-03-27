@@ -174,8 +174,10 @@ export const generatePageAudio = internalAction({
           model_id: "eleven_multilingual_v2",
           language_code: args.locale,
           voice_settings: {
-            stability: 0.5,
-            similarity_boost: 0.75,
+            stability: 0.85,          // high = calm, steady pace (good for bedtime stories)
+            similarity_boost: 0.6,     // moderate = natural without being too intense
+            style: 0.15,              // low = gentle expressiveness, not monotone but not energetic
+            use_speaker_boost: false,  // no amplification — soft, warm tone
           },
         }),
       });
