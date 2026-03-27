@@ -373,8 +373,7 @@ export default function StoryReader() {
         return () => {
             stop();
         };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentPage, isAudiobookEnabled]);
+    }, [currentPage, isAudiobookEnabled, currentAudioUrl]);
 
     // Handles two cases:
     // 1. User toggles audiobook OFF while audio is playing → stop immediately.
