@@ -153,6 +153,8 @@ export default function StoryReader() {
         };
     }, []);
 
+    const { isAudiobookEnabled, toggleAudiobook, resetAudiobook } = useAudiobookStore();
+
     // Reset audiobook toggle when leaving reader — ensures next book opens with toggle OFF.
     // Per AUDIO-04: state persists within a session; reset only on unmount (exit).
     useEffect(() => {
@@ -173,8 +175,6 @@ export default function StoryReader() {
 
     const currentLang = useLanguageStore((state) => state.language);
     const ui = UI_STRINGS[currentLang] || UI_STRINGS.ro;
-
-    const { isAudiobookEnabled, toggleAudiobook, resetAudiobook } = useAudiobookStore();
 
     const { addToMyList, removeFromMyList, updateProgress, removeProgress, incrementView, myList, readingProgress } = useUserStore();
     const isInMyList = myList.includes(id as string);
