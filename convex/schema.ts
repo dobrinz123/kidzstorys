@@ -323,6 +323,31 @@ export default defineSchema({
     .index("by_performer", ["performedBy", "performedAt"])
     .index("by_date", ["performedAt"]),
 
+  // ============ AUDIO GENERATION ============
+  // Per-page audio generation job tracking
+  audioJobs: defineTable({
+    bookId: v.id("books"),
+    pageIndex: v.number(),           // zero-based index into books.pages array
+    locale: v.union(v.literal("en"), v.literal("ro")),
+    status: v.union(
+      v.literal("pending"),
+      v.literal("generating"),
+      v.literal("done"),
+      v.literal("failed")
+    ),
+    audioStorageId: v.optional(v.id("_storage")),
+    audioUrl: v.optional(v.string()),
+    textHash: v.optional(v.string()), // SHA-256 of page text at generation time
+    errorMessage: v.optional(v.string()),
+    retryCount: v.number(),
+    batchId: v.optional(v.string()),
+    createdAt: v.number(),
+    completedAt: v.optional(v.number()),
+  })
+    .index("by_status", ["status"])
+    .index("by_book_locale", ["bookId", "locale"])
+    .index("by_batch", ["batchId", "status"]),
+
   // ============ LEGACY STORIES (kept for backward compatibility) ============
   stories: defineTable({
     storyKey: v.string(),
