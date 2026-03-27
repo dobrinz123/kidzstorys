@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 current_plan: 1
 status: unknown
-stopped_at: Completed 02-tts-integration 02-02-PLAN.md
-last_updated: "2026-03-27T20:24:56.192Z"
+stopped_at: Completed 05-audiobook-toggle-ui 05-02-PLAN.md
+last_updated: "2026-03-27T20:41:37.382Z"
 progress:
   total_phases: 8
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 11
-  completed_plans: 9
+  completed_plans: 11
 ---
 
 # STATE.md — Project Memory
@@ -94,8 +94,8 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — Phase 02 plan 02 complete (convex/audio.test.ts, 4 tests pass)
-Stopped at: Completed 02-tts-integration 02-02-PLAN.md
+Last session: 2026-03-27T20:41:37.379Z
+Stopped at: Completed 05-audiobook-toggle-ui 05-02-PLAN.md
 Next action: Execute Phase 03 — batch-scheduler
 
 ---

@@ -9,7 +9,7 @@
 
 ### Audiobook Playback (Mobile)
 
-- [ ] **AUDIO-01**: User can toggle audiobook mode on/off from a button inside any book
+- [x] **AUDIO-01**: User can toggle audiobook mode on/off from a button inside any book
 - [ ] **AUDIO-02**: Audio plays the current page text in the user's selected app language (EN or RO)
 - [ ] **AUDIO-03**: When a page finishes playing, the page auto-turns (triggering existing page-turn animation and sound)
 - [x] **AUDIO-04**: Audiobook toggle state persists within the reading session (doesn't reset on page turn)
@@ -32,8 +32,8 @@
 
 ### Access Control
 
-- [ ] **ACCESS-01**: Audiobook feature is available to all users with active PREMIUM entitlement (RevenueCat)
-- [ ] **ACCESS-02**: Non-subscribed users do not see the audiobook toggle (or see a locked state pointing to paywall)
+- [x] **ACCESS-01**: Audiobook feature is available to all users with active PREMIUM entitlement (RevenueCat)
+- [x] **ACCESS-02**: Non-subscribed users do not see the audiobook toggle (or see a locked state pointing to paywall)
 
 ### Audio Generation (Backend)
 

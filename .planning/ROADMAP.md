@@ -102,7 +102,7 @@ Plans:
 
 Plans:
 - [x] 05-01-PLAN.md — Zustand audiobookStore (session-only) + ConvexBook type updated with audio fields
-- [ ] 05-02-PLAN.md — Toggle/lock icon in reader header, bookHasAudio check, subscription gating, unmount reset
+- [x] 05-02-PLAN.md — Toggle/lock icon in reader header, bookHasAudio check, subscription gating, unmount reset
 
 ### Phase 6: Playback Engine
 **Goal**: When audiobook mode is ON, each page plays its audio and auto-turns when the narration finishes.
