@@ -133,10 +133,10 @@ Plans:
   3. Pages with no audio for selected language are skipped silently (no crash)
   4. Books with no audio for selected language show hidden/disabled toggle
 
+**Plans:** 1 plan
+
 Plans:
-- [ ] 07-01: Map i18n.language to audioUrl field in useAudiobook hook
-- [ ] 07-02: Add language-change listener to reload audio when language switches mid-book
-- [ ] 07-03: Add per-page and per-book audio availability checks with graceful fallbacks
+- [ ] 07-01-PLAN.md — Fix auto-play useEffect dep array (add currentAudioUrl) + verify toggle-hide behavior
 
 ### Phase 8: Seeding & QA
 **Goal**: All published books have EN and RO audio. Feature is live for all PREMIUM users.
@@ -166,5 +166,5 @@ Plans:
 | 4. Admin Dashboard UI | 2/2 | Complete   | 2026-03-27 |
 | 5. Audiobook Toggle UI | 0/2 | Not started | - |
 | 6. Playback Engine | 0/2 | Not started | - |
-| 7. Language Switching | 0/3 | Not started | - |
+| 7. Language Switching | 0/1 | Not started | - |
 | 8. Seeding & QA | 0/4 | Not started | - |
