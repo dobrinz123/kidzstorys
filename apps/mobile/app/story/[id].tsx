@@ -31,6 +31,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useAuth } from "../../src/hooks/useAuth";
 import { useSubscription } from "../../src/hooks/useSubscription";
 import { usePublishedBook } from "../../src/hooks/useBooks";
+import { useAudiobook } from "../../src/hooks/useAudiobook";
 import { Audio } from "expo-av";
 
 // Page flip sound
@@ -154,6 +155,7 @@ export default function StoryReader() {
     }, []);
 
     const { isAudiobookEnabled, toggleAudiobook, resetAudiobook } = useAudiobookStore();
+    const { playPage, stop, preloadNext, playPreloaded, cleanup } = useAudiobook();
 
     // Reset audiobook toggle when leaving reader — ensures next book opens with toggle OFF.
     // Per AUDIO-04: state persists within a session; reset only on unmount (exit).
@@ -193,6 +195,32 @@ export default function StoryReader() {
         const statusKey = `audioStatus_${currentLang}` as "audioStatus_en" | "audioStatus_ro";
         return convexBook.pages.some((page) => page[statusKey] === "done");
     }, [convexBook, currentLang]);
+
+    // Audio URL for the currently displayed page, in the user's selected language.
+    // Returns undefined if: no convexBook, page out of bounds, audioStatus !== 'done', or URL missing.
+    // AUDIO-02: language selection via currentLang.
+    // AUDIO-06: undefined triggers silent no-op in useAudiobook.playPage.
+    const currentAudioUrl = useMemo(() => {
+        if (!convexBook) return undefined;
+        const page = convexBook.pages[currentPage];
+        if (!page) return undefined;
+        const statusKey = `audioStatus_${currentLang}` as "audioStatus_en" | "audioStatus_ro";
+        if (page[statusKey] !== "done") return undefined;
+        const urlKey = `audioUrl_${currentLang}` as "audioUrl_en" | "audioUrl_ro";
+        return page[urlKey];
+    }, [convexBook, currentPage, currentLang]);
+
+    // Audio URL for the NEXT page. Used for preloading (AUDIO-08).
+    // Same guards as currentAudioUrl.
+    const nextAudioUrl = useMemo(() => {
+        if (!convexBook) return undefined;
+        const page = convexBook.pages[currentPage + 1];
+        if (!page) return undefined;
+        const statusKey = `audioStatus_${currentLang}` as "audioStatus_en" | "audioStatus_ro";
+        if (page[statusKey] !== "done") return undefined;
+        const urlKey = `audioUrl_${currentLang}` as "audioUrl_en" | "audioUrl_ro";
+        return page[urlKey];
+    }, [convexBook, currentPage, currentLang]);
 
     const isLoading = isAuthLoading || isSubLoading || isBookLoading;
 
