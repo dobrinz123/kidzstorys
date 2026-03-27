@@ -519,7 +519,39 @@ export const retryFailedJob = mutation({
 });
 
 // ---------------------------------------------------------------------------
-// Export 16 — getAudioOverview (public query, per ADMIN-06)
+// Export 17 — forceRetryAllFailed (public mutation)
+// Resets ALL failed jobs to pending with retryCount=0, skipping "empty text" errors.
+// ---------------------------------------------------------------------------
+export const forceRetryAllFailed = mutation({
+  args: {},
+  handler: async (ctx) => {
+    const failedJobs = await ctx.db
+      .query("audioJobs")
+      .withIndex("by_status", (q) => q.eq("status", "failed"))
+      .collect();
+
+    let reset = 0;
+    let skipped = 0;
+    for (const job of failedJobs) {
+      // Skip jobs that failed due to empty text — those pages genuinely have no content
+      if (job.errorMessage?.includes("empty text")) {
+        skipped++;
+        continue;
+      }
+      await ctx.db.patch(job._id, {
+        status: "pending",
+        retryCount: 0,
+        errorMessage: undefined,
+        completedAt: undefined,
+      });
+      reset++;
+    }
+    return { reset, skipped, total: failedJobs.length };
+  },
+});
+
+// ---------------------------------------------------------------------------
+// Export 18 — getAudioOverview (public query, per ADMIN-06)
 // Aggregates audio generation progress across all published books.
 // ---------------------------------------------------------------------------
 export const getAudioOverview = query({
