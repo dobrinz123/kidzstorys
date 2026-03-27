@@ -31,4 +31,13 @@ crons.monthly(
   internal.maintenance.cleanupOldAuditLogs
 );
 
+// Process audio generation queue every 30 seconds (D-01)
+// Picks up to 5 pending audioJobs per tick and calls generatePageAudio sequentially.
+// Idle ticks (0 jobs) return immediately — cheap single DB query.
+crons.interval(
+  "process audio queue",
+  { seconds: 30 },
+  internal.audio.processAudioQueue
+);
+
 export default crons;
