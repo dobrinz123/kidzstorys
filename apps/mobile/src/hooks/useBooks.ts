@@ -48,6 +48,15 @@ export interface ConvexBook {
     text_en: string;
     text_ro: string;
     text_it: string;
+    // Audio fields (added Phase 1 schema, Phase 5 consumer)
+    audioUrl_en?: string;
+    audioUrl_ro?: string;
+    audioStorageId_en?: string;
+    audioStorageId_ro?: string;
+    audioStatus_en?: "pending" | "generating" | "done" | "failed";
+    audioStatus_ro?: "pending" | "generating" | "done" | "failed";
+    audioGeneratedAt_en?: number;
+    audioGeneratedAt_ro?: number;
   }>;
   category: {
     slug: string;
