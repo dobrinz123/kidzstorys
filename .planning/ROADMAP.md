@@ -9,7 +9,7 @@ Eight phases taking StoryKids from its current state (no audio) to a fully-shipp
 - [x] **Phase 1: Data Model** - Extend Convex schema with audio fields and generation job queue
 - [ ] **Phase 2: TTS Integration** - ElevenLabs action, Convex file storage, voice configuration
 - [ ] **Phase 3: Generation Pipeline** - Scheduler + batch trigger for bulk audio generation
-- [x] **Phase 4: Admin Dashboard** - Generation management UI with progress, retry, status (completed 2026-03-27)
+- [x] **Phase 4: Admin Dashboard** - Generation management UI with progress, retry, status (completed 2026-03-27)
 - [ ] **Phase 5: Audiobook Toggle UI** - On/off button in mobile reader with subscription check
 - [ ] **Phase 6: Playback Engine** - Audio playback with auto page-turn on finish
 - [ ] **Phase 7: Language Switching** - Audio follows app language (i18n), graceful fallback
@@ -98,11 +98,11 @@ Plans:
   4. Non-PREMIUM users see locked icon that navigates to paywall
   5. When no audio exists for current language, toggle is hidden or disabled
 
+**Plans:** 2 plans
+
 Plans:
-- [ ] 05-01: Add audiobook toggle button to book reader header
-- [ ] 05-02: Wire toggle state to Zustand/local state with session persistence
-- [ ] 05-03: Add subscription check and locked state for non-PREMIUM users
-- [ ] 05-04: Add language-availability check (hide toggle if no audio for current locale)
+- [ ] 05-01-PLAN.md — Zustand audiobookStore (session-only) + ConvexBook type updated with audio fields
+- [ ] 05-02-PLAN.md — Toggle/lock icon in reader header, bookHasAudio check, subscription gating, unmount reset
 
 ### Phase 6: Playback Engine
 **Goal**: When audiobook mode is ON, each page plays its audio and auto-turns when the narration finishes.
@@ -165,7 +165,7 @@ Plans:
 | 2. TTS Integration | 2/2 | Complete | 2026-03-27 |
 | 3. Generation Pipeline | 1/2 | In Progress | - |
 | 4. Admin Dashboard UI | 2/2 | Complete   | 2026-03-27 |
-| 5. Audiobook Toggle UI | 0/4 | Not started | - |
+| 5. Audiobook Toggle UI | 0/2 | Not started | - |
 | 6. Playback Engine | 0/5 | Not started | - |
 | 7. Language Switching | 0/3 | Not started | - |
 | 8. Seeding & QA | 0/4 | Not started | - |
