@@ -2,13 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
+current_plan: 02-02 COMPLETE — Phase 02 complete, Phase 03 next
 status: in_progress
-last_updated: "2026-03-27T20:54:00.000Z"
+stopped_at: Completed 02-tts-integration 02-02-PLAN.md
+last_updated: "2026-03-27T21:05:00.000Z"
 progress:
   total_phases: 8
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 6
-  completed_plans: 4
+  completed_plans: 6
 ---
 
 # STATE.md — Project Memory
@@ -18,17 +20,17 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Every child can hear their book read aloud in their native language, hands-free, with the same page-turn feel they love.
-**Current focus:** Phase 02 — tts-integration
+**Current focus:** Phase 03 — batch-scheduler (next)
 
 ---
 
 ## Current Status
 
-**Phase:** 02 — tts-integration (IN PROGRESS)
+**Phase:** 02 — tts-integration (COMPLETE)
 **Milestone:** v2.0 Audiobook
-**Phases complete:** 1 / 8
-**Plans complete:** 1 / 2 (phase 02) | 4 total
-**Current Plan:** 02-01 COMPLETE — 02-02 next
+**Phases complete:** 2 / 8
+**Plans complete:** 2 / 2 (phase 02) | 6 total
+**Current Plan:** 02-02 COMPLETE — Phase 02 complete, Phase 03 next
 
 ---
 
@@ -51,6 +53,8 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | internalAction DB delegation (02-01) | getPageText/markGenerating/markDone/markFailed co-located in audio.ts — action uses ctx.runQuery/runMutation only |
 | Empty-text guard in try block (02-01) | getPageText inside try so empty-text errors reach markFailed and persist to audioJobs |
 | Computed key typing (02-01) | audioStatus_en/ro keys cast to explicit union types (not any) for TypeScript compliance |
+| @edge-runtime/vm explicit dep (02-02) | vitest edge-runtime environment requires @edge-runtime/vm as explicit devDependency — not pulled in transitively |
+| anyApi works with convex-test (02-02) | Generated api.js uses anyApi so internal.audio.generatePageAudio resolves at test runtime via glob — no dev server needed |
 
 ---
 
@@ -61,6 +65,7 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 - ElevenLabs called from Convex internal actions (server-side, API key never exposed to client)
 - Mobile playback via `useAudiobook` hook wrapping expo-av
 - Auto page-turn calls existing `turnPage()` function — no new animation code
+- Unit tests run via `cd convex && npm test` (vitest, edge-runtime, convex-test)
 
 ---
 
@@ -89,9 +94,9 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — Phase 02 plan 01 complete (convex/audio.ts created and validated)
-Stopped at: Completed 02-tts-integration 02-01-PLAN.md
-Next action: Execute Phase 02 plan 02 — TTS integration tests (02-02)
+Last session: 2026-03-27 — Phase 02 plan 02 complete (convex/audio.test.ts, 4 tests pass)
+Stopped at: Completed 02-tts-integration 02-02-PLAN.md
+Next action: Execute Phase 03 — batch-scheduler
 
 ---
-*Last updated: 2026-03-27 — initial project setup*
+*Last updated: 2026-03-27 — Phase 02 complete*

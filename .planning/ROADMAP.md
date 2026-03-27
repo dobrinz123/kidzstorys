@@ -49,7 +49,7 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — Create convex/audio.ts with internalAction + helper queries/mutations
-- [ ] 02-02-PLAN.md — Write convex-test unit tests for generatePageAudio (4 scenarios)
+- [x] 02-02-PLAN.md — Write convex-test unit tests for generatePageAudio (4 scenarios)
 
 ### Phase 3: Generation Pipeline
 **Goal**: Admin can trigger bulk audio generation; a Convex scheduler processes the job queue automatically.

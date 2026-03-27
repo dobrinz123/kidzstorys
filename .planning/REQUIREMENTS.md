@@ -41,8 +41,8 @@
 - [x] **GEN-02**: Convex schema tracks per-page generation status (pending / generating / done / failed)
 - [x] **GEN-03**: ElevenLabs `eleven_multilingual_v2` model used for all TTS generation
 - [x] **GEN-04**: Audio files stored in Convex File Storage and served via stable public URLs
-- [ ] **GEN-05**: Generation respects ElevenLabs API rate limits (≤100 req/min)
-- [ ] **GEN-06**: Failed generation jobs are retried automatically up to 3 times
+- [x] **GEN-05**: Generation respects ElevenLabs API rate limits (≤100 req/min)
+- [x] **GEN-06**: Failed generation jobs are retried automatically up to 3 times
 
 ### Admin Dashboard
 
