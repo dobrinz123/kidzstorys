@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Stack, SplashScreen } from "expo-router";
 import { ConvexProvider } from "convex/react";
+import { Audio } from "expo-av";
 import { convex } from "../src/lib/convex";
 import { AuthGate } from "../src/hooks/AuthGate";
 import { useFonts, PatrickHand_400Regular } from "@expo-google-fonts/patrick-hand";
@@ -18,6 +19,14 @@ export default function RootLayout() {
     ComicNeue_400Regular,
     ComicNeue_700Bold,
   });
+
+  useEffect(() => {
+    Audio.setAudioModeAsync({
+      playsInSilentModeIOS: true,
+      staysActiveInBackground: false,
+      shouldDuckAndroid: true,
+    });
+  }, []);
 
   useEffect(() => {
     if (fontsLoaded) {
