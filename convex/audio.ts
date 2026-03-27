@@ -161,7 +161,19 @@ export const generatePageAudio = internalAction({
         locale: args.locale,
       });
 
-      // 4. Call ElevenLabs (per D-03, GEN-03, VOICE-01, VOICE-02, VOICE-03)
+      // 4. Preprocess text for calm narration pace
+      // Add pauses after short sentences and onomatopoeia to slow down delivery
+      const processedText = text
+        // Add pause after onomatopoeia patterns (e.g., "Pic-pic, pic-pic." → "Pic-pic... pic-pic...")
+        .replace(/([A-Za-zÀ-ž]+-[A-Za-zÀ-ž]+),\s*/g, '$1... ')
+        // Add breathing pause after short sentences (under 40 chars ending with . ! ?)
+        .replace(/([^.!?]{1,40}[.!?])\s+/g, '$1 ... ')
+        // Add pause after ellipsis if not already there
+        .replace(/\.{3}(?!\s*\.)/g, '... ')
+        // Ensure period-space patterns have gentle pause
+        .replace(/\.\s+/g, '. ... ');
+
+      // 5. Call ElevenLabs (per D-03, GEN-03, VOICE-01, VOICE-02, VOICE-03)
       const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`;
       const response = await fetch(url, {
         method: "POST",
@@ -170,13 +182,13 @@ export const generatePageAudio = internalAction({
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          text,
+          text: processedText,
           model_id: "eleven_multilingual_v2",
           language_code: args.locale,
           voice_settings: {
-            stability: 0.85,          // high = calm, steady pace (good for bedtime stories)
-            similarity_boost: 0.6,     // moderate = natural without being too intense
-            style: 0.15,              // low = gentle expressiveness, not monotone but not energetic
+            stability: 0.92,          // very high = very calm, slow, steady (bedtime story whisper)
+            similarity_boost: 0.5,     // lower = softer, more gentle
+            style: 0.08,              // minimal expressiveness — soothing, not dramatic
             use_speaker_boost: false,  // no amplification — soft, warm tone
           },
         }),
