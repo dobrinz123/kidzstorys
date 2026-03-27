@@ -341,6 +341,56 @@ export default function StoryReader() {
         preloadedPagesRef.current = preloadedPages;
     }, [preloadedPages]);
 
+    // Auto-play narration when audiobook is ON and page changes.
+    // Effect cleanup (return) calls stop(), which fires before the next page's effect runs.
+    // This is the primary mechanism for "manual turn stops audio" — React runs the cleanup
+    // of the previous effect before running the new effect on page change.
+    // AUDIO-03: onFinish calls animateToPage(currentPageRef.current + 1) to trigger the
+    // existing page-turn animation. currentPageRef (not currentPage closure) is used so
+    // the callback always has the latest page index, even if called after re-renders.
+    useEffect(() => {
+        if (!isAudiobookEnabled) return;
+
+        const onFinish = () => {
+            // Use currentPageRef for fresh value — this callback fires from expo-av's async context
+            animateToPage(currentPageRef.current + 1);
+        };
+
+        const run = async () => {
+            // Try to play preloaded sound first (AUDIO-08). Falls back to fresh load if unavailable.
+            const usedPreload = await playPreloaded(onFinish);
+            if (!usedPreload) {
+                await playPage(currentAudioUrl, onFinish);
+            }
+            // Preload the next page's audio after current starts (AUDIO-08).
+            preloadNext(nextAudioUrl);
+        };
+
+        run();
+
+        // Cleanup: stop current audio when page changes or audiobook is toggled.
+        // React calls this before running the effect again (on next page change).
+        return () => {
+            stop();
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentPage, isAudiobookEnabled]);
+
+    // Handles two cases:
+    // 1. User toggles audiobook OFF while audio is playing → stop immediately.
+    // 2. Component unmounts (user leaves reader) → cleanup both soundRef and preloadRef.
+    useEffect(() => {
+        if (!isAudiobookEnabled) {
+            // Toggle OFF: stop current audio. cleanup() unloads both current and preload sounds.
+            cleanup();
+        }
+        return () => {
+            // Unmount: always cleanup to prevent memory leak (AUDIO requirement: no leak after 20 pages).
+            cleanup();
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isAudiobookEnabled]);
+
     // Helper to ensure next page image is loaded before transition
     const ensurePagePreloaded = useCallback(async (pageIdx: number): Promise<void> => {
         // Already preloaded
