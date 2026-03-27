@@ -9,6 +9,7 @@
  */
 
 import type * as admin from "../admin.js";
+import type * as audio from "../audio.js";
 import type * as books from "../books.js";
 import type * as categories from "../categories.js";
 import type * as convex__generated_api from "../convex/_generated/api.js";
@@ -41,6 +42,7 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   admin: typeof admin;
+  audio: typeof audio;
   books: typeof books;
   categories: typeof categories;
   "convex/_generated/api": typeof convex__generated_api;
