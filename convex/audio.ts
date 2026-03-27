@@ -161,17 +161,7 @@ export const generatePageAudio = internalAction({
         locale: args.locale,
       });
 
-      // 4. Preprocess text for calm narration pace
-      // Add pauses after short sentences and onomatopoeia to slow down delivery
-      const processedText = text
-        // Add pause after onomatopoeia patterns (e.g., "Pic-pic, pic-pic." → "Pic-pic... pic-pic...")
-        .replace(/([A-Za-zÀ-ž]+-[A-Za-zÀ-ž]+),\s*/g, '$1... ')
-        // Add breathing pause after short sentences (under 40 chars ending with . ! ?)
-        .replace(/([^.!?]{1,40}[.!?])\s+/g, '$1 ... ')
-        // Add pause after ellipsis if not already there
-        .replace(/\.{3}(?!\s*\.)/g, '... ')
-        // Ensure period-space patterns have gentle pause
-        .replace(/\.\s+/g, '. ... ');
+      // 4. Send text as-is — no preprocessing (ElevenLabs interprets "..." as filler words)
 
       // 5. Call ElevenLabs (per D-03, GEN-03, VOICE-01, VOICE-02, VOICE-03)
       const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`;
@@ -182,7 +172,7 @@ export const generatePageAudio = internalAction({
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          text: processedText,
+          text,
           model_id: "eleven_multilingual_v2",
           language_code: args.locale,
           voice_settings: {
