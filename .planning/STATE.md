@@ -2,8 +2,8 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-03-27T18:26:00.000Z"
+status: active
+last_updated: "2026-03-27T20:30:00.000Z"
 progress:
   total_phases: 8
   completed_phases: 1
@@ -18,13 +18,13 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Every child can hear their book read aloud in their native language, hands-free, with the same page-turn feel they love.
-**Current focus:** Phase 01 — data-model
+**Current focus:** Phase 02 — generation-pipeline
 
 ---
 
 ## Current Status
 
-**Phase:** 01 — data-model (COMPLETE — all 3 plans done)
+**Phase:** 01 — data-model (COMPLETE ✓)
 **Milestone:** v2.0 Audiobook
 **Phases complete:** 1 / 8
 **Plans complete:** 3 / 3 (phase 01)
@@ -47,8 +47,6 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | audioJobs page reference (01-02) | bookId + pageIndex (zero-based) — pages are embedded in books, no standalone page ID |
 | audioJobs locale scope (01-02) | en and ro only — Italian excluded from v1 TTS generation |
 | batchId type (01-02) | v.optional(v.string()) not v.id() — allows external scheduler batch identifiers |
-| audioGenBatches by_status index (01-03) | Includes createdAt for time-ordered queries; audioJobs.by_status has status-only — different shapes per-table are valid in Convex |
-| Production Convex URL (01-03) | kindred-ox-197.convex.cloud is prod; content-dolphin-131 is dev — plan had inverted labels |
 
 ---
 
@@ -87,8 +85,8 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — Completed 01-03-PLAN.md (audioGenBatches table + production deploy)
-Next action: Begin Phase 02 — generation-pipeline
+Last session: 2026-03-27 — Phase 01 complete (all 3 plans executed, schema deployed to production)
+Next action: Begin Phase 02 — generation-pipeline (ElevenLabs TTS + Convex job queue)
 
 ---
 *Last updated: 2026-03-27 — initial project setup*

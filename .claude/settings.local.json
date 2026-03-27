@@ -40,7 +40,10 @@
       "Bash(pnpm add:*)",
       "Bash(pnpm build:*)",
       "Bash(grep:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Read(//c/tmp/**)",
+      "Bash(npx get-shit-done-cc@latest)",
+      "Bash(cat ~/.claude/get-shit-done/bin/*.js)"
     ]
   }
 }
