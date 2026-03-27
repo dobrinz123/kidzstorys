@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-27T18:07:15.910Z"
+last_updated: "2026-03-27T18:11:36.356Z"
 progress:
   total_phases: 8
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
+  completed_plans: 2
 ---
 
 # STATE.md — Project Memory
@@ -24,10 +24,10 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 
 ## Current Status
 
-**Phase:** 01 — data-model (in progress, plan 01-01 complete)
+**Phase:** 01 — data-model (in progress, plan 01-02 complete)
 **Milestone:** v2.0 Audiobook
 **Phases complete:** 0 / 8
-**Plans complete:** 1 / 3 (phase 01)
+**Plans complete:** 2 / 3 (phase 01)
 
 ---
 
@@ -44,6 +44,9 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | Page-turn trigger | `didJustFinish` in expo-av AVPlaybackStatus |
 | audioStatus design (01-01) | Optional union (undefined = no job created) to avoid spurious states on existing books |
 | Snapshot mirroring (01-01) | bookVersions.snapshot.pages mirrors books.pages shape for complete version history |
+| audioJobs page reference (01-02) | bookId + pageIndex (zero-based) — pages are embedded in books, no standalone page ID |
+| audioJobs locale scope (01-02) | en and ro only — Italian excluded from v1 TTS generation |
+| batchId type (01-02) | v.optional(v.string()) not v.id() — allows external scheduler batch identifiers |
 
 ---
 
@@ -82,8 +85,8 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — Completed 01-01-PLAN.md (audio fields in schema)
-Next action: Execute 01-02-PLAN.md — audioJobs table
+Last session: 2026-03-27 — Completed 01-02-PLAN.md (audioJobs table)
+Next action: Execute 01-03-PLAN.md
 
 ---
 *Last updated: 2026-03-27 — initial project setup*

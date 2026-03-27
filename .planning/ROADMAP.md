@@ -30,7 +30,7 @@ Eight phases taking StoryKids from its current state (no audio) to a fully-shipp
 
 Plans:
 - [x] 01-01: Extend pages schema with audio URL and storage ID fields
-- [ ] 01-02: Create audioJobs table with indexes
+- [x] 01-02: Create audioJobs table with indexes
 - [ ] 01-03: Create audioGenBatches table and update TypeScript types
 
 ### Phase 2: TTS Integration
@@ -161,7 +161,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Data Model | 1/3 | In Progress|  |
+| 1. Data Model | 2/3 | In Progress|  |
 | 2. TTS Integration | 0/4 | Not started | - |
 | 3. Generation Pipeline | 0/3 | Not started | - |
 | 4. Admin Dashboard UI | 0/5 | Not started | - |
