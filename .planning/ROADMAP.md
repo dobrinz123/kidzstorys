@@ -9,7 +9,7 @@ Eight phases taking StoryKids from its current state (no audio) to a fully-shipp
 - [x] **Phase 1: Data Model** - Extend Convex schema with audio fields and generation job queue
 - [ ] **Phase 2: TTS Integration** - ElevenLabs action, Convex file storage, voice configuration
 - [ ] **Phase 3: Generation Pipeline** - Scheduler + batch trigger for bulk audio generation
-- [ ] **Phase 4: Admin Dashboard** - Generation management UI with progress, retry, status
+- [x] **Phase 4: Admin Dashboard** - Generation management UI with progress, retry, status (completed 2026-03-27)
 - [ ] **Phase 5: Audiobook Toggle UI** - On/off button in mobile reader with subscription check
 - [ ] **Phase 6: Playback Engine** - Audio playback with auto page-turn on finish
 - [ ] **Phase 7: Language Switching** - Audio follows app language (i18n), graceful fallback
@@ -81,11 +81,11 @@ Plans:
   6. "Retry All Failed" bulk action works
   7. "Generate All Missing" button shows confirmation modal before triggering
 
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 04-01-PLAN.md — Backend additions (getFailedJobs, retryFailedJob, getAudioOverview) + Sidebar Audio entry + ProgressBar + AudioStatusBadge
-- [ ] 04-02-PLAN.md — Full audio dashboard page (/dashboard/audio) + Books table audio column + per-book generate button
+- [x] 04-02-PLAN.md — Full audio dashboard page (/dashboard/audio) + Books table audio column + per-book generate button
 
 ### Phase 5: Audiobook Toggle UI
 **Goal**: User can toggle audiobook mode on/off from inside the book reader; feature respects subscription status.
@@ -164,7 +164,7 @@ Plans:
 | 1. Data Model | 3/3 | Complete | 2026-03-27 |
 | 2. TTS Integration | 2/2 | Complete | 2026-03-27 |
 | 3. Generation Pipeline | 1/2 | In Progress | - |
-| 4. Admin Dashboard UI | 1/2 | In Progress | - |
+| 4. Admin Dashboard UI | 2/2 | Complete   | 2026-03-27 |
 | 5. Audiobook Toggle UI | 0/4 | Not started | - |
 | 6. Playback Engine | 0/5 | Not started | - |
 | 7. Language Switching | 0/3 | Not started | - |

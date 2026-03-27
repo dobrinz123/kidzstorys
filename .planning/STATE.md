@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 current_plan: 2
 status: unknown
-stopped_at: Completed 04-admin-dashboard-ui 04-01-PLAN.md
-last_updated: "2026-03-27T20:03:25.746Z"
+stopped_at: Completed 04-admin-dashboard-ui 04-02-PLAN.md
+last_updated: "2026-03-27T20:08:28.971Z"
 progress:
   total_phases: 8
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 9
-  completed_plans: 8
+  completed_plans: 9
 ---
 
 # STATE.md — Project Memory
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 
 ## Current Status
 
-**Phase:** 04 — admin-dashboard-ui (IN PROGRESS)
+**Phase:** 04 — admin-dashboard-ui (COMPLETE)
 **Milestone:** v2.0 Audiobook
-**Phases complete:** 3 / 8
-**Plans complete:** 1 / 2 (phase 04) | 8 total
-**Current Plan:** 2
+**Phases complete:** 4 / 8
+**Plans complete:** 2 / 2 (phase 04) | 9 total
+**Current Plan:** Done
 
 ---
 
@@ -57,6 +57,7 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | anyApi works with convex-test (02-02) | Generated api.js uses anyApi so internal.audio.generatePageAudio resolves at test runtime via glob — no dev server needed |
 | AudioStatusBadge dot variant (04-01) | Uses dot variant of existing Badge for visual consistency with StatusBadge pattern |
 | getAudioOverview scope (04-01) | Only counts published books — draft/ready excluded from audio progress metrics |
+| Client-side audio status (04-02) | Books audio status computed client-side via getBookAudioStatus helper from page audioStatus fields |
 
 ---
 
@@ -96,9 +97,9 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27T20:03:25.742Z
-Stopped at: Completed 04-admin-dashboard-ui 04-01-PLAN.md
-Next action: Execute Phase 04 Plan 02 — full audio dashboard page
+Last session: 2026-03-27T20:08:28.967Z
+Stopped at: Completed 04-admin-dashboard-ui 04-02-PLAN.md
+Next action: Execute Phase 05
 
 ---
-*Last updated: 2026-03-27 — Phase 04 plan 01 complete*
+*Last updated: 2026-03-27 — Phase 04 complete (all 2 plans done)*
