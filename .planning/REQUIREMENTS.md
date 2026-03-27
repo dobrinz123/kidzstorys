@@ -94,7 +94,7 @@
 | GEN-03, GEN-04 | Phase 2 (02-01) | Complete |
 | GEN-05, GEN-06 | Phase 2 (02-02+) | Pending |
 | VOICE-01, VOICE-02, VOICE-03 | Phase 2 (02-01) | Complete |
-| ADMIN-01, ADMIN-02, ADMIN-06 | Phase 3 | Pending |
+| ADMIN-01, ADMIN-02, ADMIN-06 | Phase 3 (backend) + Phase 4 (UI) | Backend complete (03-01) |
 | ADMIN-03, ADMIN-04, ADMIN-05 | Phase 4 | Pending |
 | AUDIO-01, AUDIO-04, AUDIO-05 | Phase 5 | Pending |
 | AUDIO-02, AUDIO-03, AUDIO-07, AUDIO-08 | Phase 6 | Pending |

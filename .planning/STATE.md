@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: 02-02 COMPLETE — Phase 02 complete, Phase 03 next
+current_plan: 03-02
 status: in_progress
-stopped_at: Completed 02-tts-integration 02-02-PLAN.md
-last_updated: "2026-03-27T21:05:00.000Z"
+stopped_at: Completed 03-generation-pipeline 03-01-PLAN.md
+last_updated: "2026-03-27T19:35:00Z"
 progress:
   total_phases: 8
   completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 7
+  completed_plans: 7
 ---
 
 # STATE.md — Project Memory
@@ -20,17 +20,17 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Every child can hear their book read aloud in their native language, hands-free, with the same page-turn feel they love.
-**Current focus:** Phase 03 — batch-scheduler (next)
+**Current focus:** Phase 03 — generation-pipeline (in progress)
 
 ---
 
 ## Current Status
 
-**Phase:** 02 — tts-integration (COMPLETE)
+**Phase:** 03 — generation-pipeline (IN PROGRESS)
 **Milestone:** v2.0 Audiobook
 **Phases complete:** 2 / 8
-**Plans complete:** 2 / 2 (phase 02) | 6 total
-**Current Plan:** 02-02 COMPLETE — Phase 02 complete, Phase 03 next
+**Plans complete:** 1 / 2 (phase 03) | 7 total
+**Current Plan:** 03-02 — processAudioQueue + cron
 
 ---
 
@@ -55,6 +55,8 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | Computed key typing (02-01) | audioStatus_en/ro keys cast to explicit union types (not any) for TypeScript compliance |
 | @edge-runtime/vm explicit dep (02-02) | vitest edge-runtime environment requires @edge-runtime/vm as explicit devDependency — not pulled in transitively |
 | anyApi works with convex-test (02-02) | Generated api.js uses anyApi so internal.audio.generatePageAudio resolves at test runtime via glob — no dev server needed |
+| Empty batch skip (03-01) | startAudioBatch returns { batchId: null, totalJobs: 0 } when all pages already done — no empty audioGenBatches records |
+| Bulk batchId uniqueness (03-01) | startBulkAudioGeneration uses batch_{timestamp}_{bookId} format to avoid collisions in same transaction |
 
 ---
 
@@ -94,9 +96,9 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — Phase 02 plan 02 complete (convex/audio.test.ts, 4 tests pass)
-Stopped at: Completed 02-tts-integration 02-02-PLAN.md
-Next action: Execute Phase 03 — batch-scheduler
+Last session: 2026-03-27 — Phase 03 plan 01 complete (startAudioBatch, getGenerationProgress, startBulkAudioGeneration)
+Stopped at: Completed 03-generation-pipeline 03-01-PLAN.md
+Next action: Execute Phase 03 plan 02 — processAudioQueue internalAction + cron
 
 ---
-*Last updated: 2026-03-27 — Phase 02 complete*
+*Last updated: 2026-03-27 — Phase 03 plan 01 complete*

@@ -65,7 +65,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Create startAudioBatch mutation, getGenerationProgress query, startBulkAudioGeneration mutation
+- [x] 03-01-PLAN.md — Create startAudioBatch mutation, getGenerationProgress query, startBulkAudioGeneration mutation
 - [ ] 03-02-PLAN.md — Create processAudioQueue internalAction + 4 DB helpers + cron entry (30s interval)
 
 ### Phase 4: Admin Dashboard UI
@@ -163,8 +163,8 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Data Model | 3/3 | Complete | 2026-03-27 |
-| 2. TTS Integration | 0/2 | Planned | - |
-| 3. Generation Pipeline | 0/2 | Planned | - |
+| 2. TTS Integration | 2/2 | Complete | 2026-03-27 |
+| 3. Generation Pipeline | 1/2 | In Progress | - |
 | 4. Admin Dashboard UI | 0/5 | Not started | - |
 | 5. Audiobook Toggle UI | 0/4 | Not started | - |
 | 6. Playback Engine | 0/5 | Not started | - |
