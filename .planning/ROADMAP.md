@@ -120,7 +120,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 06-01-PLAN.md — iOS audio mode setup (_layout.tsx + app.json) + useAudiobook hook (AUDIO-07, AUDIO-02, AUDIO-06, AUDIO-08)
+- [x] 06-01-PLAN.md — iOS audio mode setup (_layout.tsx + app.json) + useAudiobook hook (AUDIO-07, AUDIO-02, AUDIO-06, AUDIO-08)
 - [ ] 06-02-PLAN.md — Full reader integration in [id].tsx: auto-play, auto-turn, manual-stop, toggle-off, unmount cleanup (AUDIO-02, AUDIO-03, AUDIO-06, AUDIO-08)
 
 ### Phase 7: Language Switching
