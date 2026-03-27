@@ -148,6 +148,30 @@ export default defineSchema({
         text_en: v.string(),
         text_ro: v.string(),
         text_it: v.string(),
+        // Audio storage — EN
+        audioUrl_en: v.optional(v.string()),
+        audioStorageId_en: v.optional(v.id("_storage")),
+        audioStatus_en: v.optional(
+          v.union(
+            v.literal("pending"),
+            v.literal("generating"),
+            v.literal("done"),
+            v.literal("failed")
+          )
+        ),
+        audioGeneratedAt_en: v.optional(v.number()),
+        // Audio storage — RO
+        audioUrl_ro: v.optional(v.string()),
+        audioStorageId_ro: v.optional(v.id("_storage")),
+        audioStatus_ro: v.optional(
+          v.union(
+            v.literal("pending"),
+            v.literal("generating"),
+            v.literal("done"),
+            v.literal("failed")
+          )
+        ),
+        audioGeneratedAt_ro: v.optional(v.number()),
       })
     ),
 
@@ -219,6 +243,30 @@ export default defineSchema({
           text_en: v.string(),
           text_ro: v.string(),
           text_it: v.string(),
+          // Audio storage — EN (snapshot mirror)
+          audioUrl_en: v.optional(v.string()),
+          audioStorageId_en: v.optional(v.id("_storage")),
+          audioStatus_en: v.optional(
+            v.union(
+              v.literal("pending"),
+              v.literal("generating"),
+              v.literal("done"),
+              v.literal("failed")
+            )
+          ),
+          audioGeneratedAt_en: v.optional(v.number()),
+          // Audio storage — RO (snapshot mirror)
+          audioUrl_ro: v.optional(v.string()),
+          audioStorageId_ro: v.optional(v.id("_storage")),
+          audioStatus_ro: v.optional(
+            v.union(
+              v.literal("pending"),
+              v.literal("generating"),
+              v.literal("done"),
+              v.literal("failed")
+            )
+          ),
+          audioGeneratedAt_ro: v.optional(v.number()),
         })
       ),
       tags_en: v.array(v.string()),
