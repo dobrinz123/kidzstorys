@@ -26,9 +26,9 @@
 
 ### Language Switching
 
-- [ ] **LANG-01**: Audio language follows the user's selected app language (`i18n.language`)
-- [ ] **LANG-02**: If user switches app language while a book is open, audiobook reloads in new language
-- [ ] **LANG-03**: If audio for the selected language is unavailable, audiobook toggle is hidden for that book
+- [x] **LANG-01**: Audio language follows the user's selected app language (`i18n.language`)
+- [x] **LANG-02**: If user switches app language while a book is open, audiobook reloads in new language
+- [x] **LANG-03**: If audio for the selected language is unavailable, audiobook toggle is hidden for that book
 
 ### Access Control
 

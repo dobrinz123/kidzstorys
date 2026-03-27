@@ -136,7 +136,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 07-01-PLAN.md — Fix auto-play useEffect dep array (add currentAudioUrl) + verify toggle-hide behavior
+- [x] 07-01-PLAN.md — Fix auto-play useEffect dep array (add currentAudioUrl) + verify toggle-hide behavior
 
 ### Phase 8: Seeding & QA
 **Goal**: All published books have EN and RO audio. Feature is live for all PREMIUM users.
