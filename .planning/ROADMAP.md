@@ -66,7 +66,7 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md — Create startAudioBatch mutation, getGenerationProgress query, startBulkAudioGeneration mutation
-- [ ] 03-02-PLAN.md — Create processAudioQueue internalAction + 4 DB helpers + cron entry (30s interval)
+- [x] 03-02-PLAN.md — Create processAudioQueue internalAction + 4 DB helpers + cron entry (30s interval)
 
 ### Phase 4: Admin Dashboard UI
 **Goal**: Admin can view generation status, trigger generation per-book or bulk, and retry failures.

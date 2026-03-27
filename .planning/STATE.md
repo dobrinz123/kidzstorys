@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: 03-02
-status: in_progress
-stopped_at: Completed 03-generation-pipeline 03-01-PLAN.md
-last_updated: "2026-03-27T19:35:00Z"
+current_plan: 1
+status: phase_complete
+stopped_at: Completed 03-generation-pipeline 03-02-PLAN.md
+last_updated: "2026-03-27T19:40:21Z"
 progress:
   total_phases: 8
-  completed_phases: 2
-  total_plans: 7
-  completed_plans: 7
+  completed_phases: 3
+  total_plans: 8
+  completed_plans: 8
 ---
 
 # STATE.md — Project Memory
@@ -20,17 +20,17 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-27)
 
 **Core value:** Every child can hear their book read aloud in their native language, hands-free, with the same page-turn feel they love.
-**Current focus:** Phase 03 — generation-pipeline (in progress)
+**Current focus:** Phase 03 — generation-pipeline (COMPLETE)
 
 ---
 
 ## Current Status
 
-**Phase:** 03 — generation-pipeline (IN PROGRESS)
+**Phase:** 03 — generation-pipeline (COMPLETE)
 **Milestone:** v2.0 Audiobook
-**Phases complete:** 2 / 8
-**Plans complete:** 1 / 2 (phase 03) | 7 total
-**Current Plan:** 03-02 — processAudioQueue + cron
+**Phases complete:** 3 / 8
+**Plans complete:** 2 / 2 (phase 03) | 8 total
+**Current Plan:** Next phase
 
 ---
 
@@ -57,6 +57,8 @@ See: .planning/PROJECT.md (updated 2026-03-27)
 | anyApi works with convex-test (02-02) | Generated api.js uses anyApi so internal.audio.generatePageAudio resolves at test runtime via glob — no dev server needed |
 | Empty batch skip (03-01) | startAudioBatch returns { batchId: null, totalJobs: 0 } when all pages already done — no empty audioGenBatches records |
 | Bulk batchId uniqueness (03-01) | startBulkAudioGeneration uses batch_{timestamp}_{bookId} format to avoid collisions in same transaction |
+| Batch partial failure status (03-02) | Batch "completed" if any job succeeded, "failed" only if ALL jobs permanently failed |
+| Retry ceiling guard locations (03-02) | retryCount >= 3 checked in both requeueJob (no-op) and processAudioQueue (batch counter trigger) |
 
 ---
 
@@ -96,9 +98,9 @@ Set in Convex dashboard environment variables (not .env — these run server-sid
 
 ## Session Continuity
 
-Last session: 2026-03-27 — Phase 03 plan 01 complete (startAudioBatch, getGenerationProgress, startBulkAudioGeneration)
-Stopped at: Completed 03-generation-pipeline 03-01-PLAN.md
-Next action: Execute Phase 03 plan 02 — processAudioQueue internalAction + cron
+Last session: 2026-03-27 — Phase 03 complete (queue processor + cron added)
+Stopped at: Completed 03-generation-pipeline 03-02-PLAN.md
+Next action: Execute Phase 04 — admin UI for audio generation
 
 ---
-*Last updated: 2026-03-27 — Phase 03 plan 01 complete*
+*Last updated: 2026-03-27 — Phase 03 complete*
