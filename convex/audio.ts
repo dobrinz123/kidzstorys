@@ -352,6 +352,64 @@ export const startBulkAudioGeneration = mutation({
 });
 
 // ---------------------------------------------------------------------------
+// getQueuedJobs — public query for admin to see and manage the queue
+// ---------------------------------------------------------------------------
+export const getQueuedJobs = query({
+  args: {},
+  handler: async (ctx) => {
+    const jobs = await ctx.db
+      .query("audioJobs")
+      .withIndex("by_status", (q) => q.eq("status", "pending"))
+      .collect();
+
+    // Enrich with book titles
+    const bookCache = new Map<string, string>();
+    const enriched = [];
+    for (const job of jobs) {
+      let bookTitle = bookCache.get(job.bookId);
+      if (!bookTitle) {
+        const book = await ctx.db.get(job.bookId);
+        bookTitle = book?.cover?.title_en ?? "Unknown";
+        bookCache.set(job.bookId, bookTitle);
+      }
+      enriched.push({ ...job, bookTitle });
+    }
+    return enriched;
+  },
+});
+
+// ---------------------------------------------------------------------------
+// removeFromQueue — delete a pending job from the queue
+// ---------------------------------------------------------------------------
+export const removeFromQueue = mutation({
+  args: { jobId: v.id("audioJobs") },
+  handler: async (ctx, args) => {
+    const job = await ctx.db.get(args.jobId);
+    if (!job) throw new Error("Job not found");
+    if (job.status !== "pending") throw new Error("Can only remove pending jobs");
+    await ctx.db.delete(args.jobId);
+    return { success: true };
+  },
+});
+
+// ---------------------------------------------------------------------------
+// clearQueue — remove ALL pending jobs from the queue
+// ---------------------------------------------------------------------------
+export const clearQueue = mutation({
+  args: {},
+  handler: async (ctx) => {
+    const jobs = await ctx.db
+      .query("audioJobs")
+      .withIndex("by_status", (q) => q.eq("status", "pending"))
+      .collect();
+    for (const job of jobs) {
+      await ctx.db.delete(job._id);
+    }
+    return { removed: jobs.length };
+  },
+});
+
+// ---------------------------------------------------------------------------
 // Export 9 — getPendingJobs (internalQuery, per D-02)
 // Actions cannot call ctx.db, so this query is the bridge.
 // Returns up to 5 pending audioJobs using the by_status index.

@@ -13,7 +13,7 @@ import { ConfirmDialog } from '../../../components/ui/Modal';
 import { PageLoading } from '../../../components/ui/Loading';
 import { EmptyState } from '../../../components/ui/EmptyState';
 import { useToast } from '../../../components/ui/Toast';
-import { Play, Pause, Square, RefreshCw, AlertTriangle, Volume2, BookOpen } from 'lucide-react';
+import { Play, Pause, Square, RefreshCw, AlertTriangle, Volume2, BookOpen, Trash2, X } from 'lucide-react';
 
 type BookAudioStatus = 'none' | 'partial' | 'complete' | 'failed';
 
@@ -66,8 +66,12 @@ export default function AudioPage() {
     setPlayingId(id);
   }, [playingId]);
 
+  const [removingJobId, setRemovingJobId] = useState<string | null>(null);
+  const [isClearingQueue, setIsClearingQueue] = useState(false);
+
   const overview = useQuery(api.audio.getAudioOverview);
   const failedJobs = useQuery(api.audio.getFailedJobs);
+  const queuedJobs = useQuery(api.audio.getQueuedJobs);
   const booksResult = useQuery(api.books.listBooks, { limit: 500 });
   const isPaused = useQuery(api.audio.getGenerationPaused);
 
@@ -75,6 +79,8 @@ export default function AudioPage() {
   const retryJob = useMutation(api.audio.retryFailedJob);
   const startBatch = useMutation(api.audio.startAudioBatch);
   const togglePause = useMutation(api.audio.toggleGenerationPause);
+  const removeFromQueue = useMutation(api.audio.removeFromQueue);
+  const clearQueue = useMutation(api.audio.clearQueue);
 
   // Wait for all queries before rendering
   if (overview === undefined || failedJobs === undefined || booksResult === undefined) {
@@ -254,7 +260,99 @@ export default function AudioPage() {
         )}
       </Card>
 
-      {/* Section 2: Failed Jobs */}
+      {/* Section 2: Queue */}
+      <div>
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-lg font-semibold text-gray-900">
+            Queue
+            {queuedJobs && queuedJobs.length > 0 && (
+              <Badge variant="info" className="ml-2">{queuedJobs.length}</Badge>
+            )}
+          </h2>
+          {queuedJobs && queuedJobs.length > 0 && (
+            <Button
+              variant="outline"
+              size="sm"
+              leftIcon={<Trash2 size={16} />}
+              isLoading={isClearingQueue}
+              onClick={async () => {
+                if (!confirm(`Remove all ${queuedJobs.length} pending jobs from the queue?`)) return;
+                setIsClearingQueue(true);
+                try {
+                  const result = await clearQueue({});
+                  success(`Cleared ${result.removed} jobs from queue`);
+                } catch {
+                  showError('Failed to clear queue');
+                } finally {
+                  setIsClearingQueue(false);
+                }
+              }}
+            >
+              Clear Queue
+            </Button>
+          )}
+        </div>
+
+        {!queuedJobs || queuedJobs.length === 0 ? (
+          <EmptyState
+            icon={<Volume2 size={32} className="text-gray-400" />}
+            title="Queue is empty"
+            description="No pending audio generation jobs. Use 'Generate All Missing' or per-book buttons to queue jobs."
+          />
+        ) : (
+          <Card padding="none">
+            <div className="max-h-96 overflow-y-auto">
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Book</th>
+                    <th>Page</th>
+                    <th>Locale</th>
+                    <th>Retries</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {queuedJobs.map((job) => (
+                    <tr key={job._id}>
+                      <td>
+                        <span className="font-medium text-gray-900 line-clamp-1">{job.bookTitle}</span>
+                      </td>
+                      <td>Page {job.pageIndex + 1}</td>
+                      <td><Badge variant="gray">{job.locale.toUpperCase()}</Badge></td>
+                      <td><span className="text-gray-500">{job.retryCount}</span></td>
+                      <td>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-error-500 hover:text-error-700"
+                          isLoading={removingJobId === job._id}
+                          onClick={async () => {
+                            setRemovingJobId(job._id);
+                            try {
+                              await removeFromQueue({ jobId: job._id });
+                              success('Removed from queue');
+                            } catch {
+                              showError('Failed to remove job');
+                            } finally {
+                              setRemovingJobId(null);
+                            }
+                          }}
+                          title="Remove from queue"
+                        >
+                          <X size={14} />
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Card>
+        )}
+      </div>
+
+      {/* Section 3: Failed Jobs */}
       <div>
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-lg font-semibold text-gray-900">
