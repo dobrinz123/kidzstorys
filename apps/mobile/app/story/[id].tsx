@@ -332,33 +332,33 @@ export default function StoryReader() {
     }, [preloadedPages]);
 
     // Auto-play narration when audiobook is ON and page changes.
-    // Uses a cancelled flag to prevent race conditions between cleanup and new playback.
+    // Flow: wait 1s (page-turn animation) → playPage → onFinish → animateToPage(next)
     useEffect(() => {
         if (!isAudiobookEnabled || !currentAudioUrl) return;
 
-        let cancelled = false;
+        let playbackCancelled = false;
 
+        // onFinish is called by expo-av when audio naturally ends (didJustFinish).
+        // It ALWAYS triggers the next page — even if the effect cleanup has started,
+        // because the audio finishing is the legitimate trigger for auto page-turn.
         const onFinish = () => {
-            if (cancelled) return;
             // Force-clear flipping state before triggering next page
             setIsFlipping(false);
             isFlippingRef.current = false;
             // Delay to let animation state reset, then turn page
             setTimeout(() => {
-                if (!cancelled) {
-                    animateToPage(currentPageRef.current + 1);
-                }
+                animateToPage(currentPageRef.current + 1);
             }, 300);
         };
 
         // Wait for page-turn animation to complete, then play audio
         const timer = setTimeout(async () => {
-            if (cancelled) return;
+            if (playbackCancelled) return;
             await playPage(currentAudioUrl, onFinish);
-        }, 1000); // 1s delay = page-turn animation (~550ms) + buffer
+        }, 1000);
 
         return () => {
-            cancelled = true;
+            playbackCancelled = true;
             clearTimeout(timer);
             stop();
         };
