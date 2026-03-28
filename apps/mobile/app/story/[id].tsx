@@ -155,7 +155,7 @@ export default function StoryReader() {
     }, []);
 
     const { isAudiobookEnabled, toggleAudiobook, resetAudiobook } = useAudiobookStore();
-    const { playPage, stop, preloadNext, playPreloaded, cleanup } = useAudiobook();
+    const { playPage, stop, cleanup } = useAudiobook();
 
     // Reset audiobook toggle when leaving reader — ensures next book opens with toggle OFF.
     // Per AUDIO-04: state persists within a session; reset only on unmount (exit).
@@ -212,17 +212,6 @@ export default function StoryReader() {
     }, [convexBook, currentPage, currentLang]);
 
     // Audio URL for the NEXT page. Used for preloading (AUDIO-08).
-    // Same guards as currentAudioUrl.
-    const nextAudioUrl = useMemo(() => {
-        if (!convexBook) return undefined;
-        const page = convexBook.pages[currentPage + 1];
-        if (!page) return undefined;
-        const statusKey = `audioStatus_${currentLang}` as "audioStatus_en" | "audioStatus_ro";
-        if (page[statusKey] !== "done") return undefined;
-        const urlKey = `audioUrl_${currentLang}` as "audioUrl_en" | "audioUrl_ro";
-        return page[urlKey];
-    }, [convexBook, currentPage, currentLang]);
-
     const isLoading = isAuthLoading || isSubLoading || isBookLoading;
 
     // Fallback to static story data if Convex book not found
@@ -343,64 +332,44 @@ export default function StoryReader() {
     }, [preloadedPages]);
 
     // Auto-play narration when audiobook is ON and page changes.
-    // Effect cleanup (return) calls stop(), which fires before the next page's effect runs.
-    // This is the primary mechanism for "manual turn stops audio" — React runs the cleanup
-    // of the previous effect before running the new effect on page change.
-    // AUDIO-03: onFinish calls animateToPage(currentPageRef.current + 1) to trigger the
-    // existing page-turn animation. currentPageRef (not currentPage closure) is used so
-    // the callback always has the latest page index, even if called after re-renders.
+    // Uses a cancelled flag to prevent race conditions between cleanup and new playback.
     useEffect(() => {
-        if (!isAudiobookEnabled) return;
+        if (!isAudiobookEnabled || !currentAudioUrl) return;
 
         let cancelled = false;
 
         const onFinish = () => {
             if (cancelled) return;
-            // Force-clear flipping state in case animation callback didn't fire
+            // Force-clear flipping state before triggering next page
             setIsFlipping(false);
             isFlippingRef.current = false;
-            // Delay to let React settle before triggering next page animation
+            // Delay to let animation state reset, then turn page
             setTimeout(() => {
                 if (!cancelled) {
                     animateToPage(currentPageRef.current + 1);
                 }
-            }, 200);
+            }, 300);
         };
 
-        const run = async () => {
-            if (cancelled) return;
-            if (!currentAudioUrl) return;
-            // Wait for page-turn animation to finish before starting narration
-            // Prevents audio from starting while the page is still flipping
-            await new Promise(resolve => setTimeout(resolve, 800));
+        // Wait for page-turn animation to complete, then play audio
+        const timer = setTimeout(async () => {
             if (cancelled) return;
             await playPage(currentAudioUrl, onFinish);
-            if (!cancelled) {
-                preloadNext(nextAudioUrl);
-            }
-        };
-
-        run();
+        }, 1000); // 1s delay = page-turn animation (~550ms) + buffer
 
         return () => {
             cancelled = true;
+            clearTimeout(timer);
             stop();
         };
     }, [currentPage, isAudiobookEnabled, currentAudioUrl]);
 
-    // Handles two cases:
-    // 1. User toggles audiobook OFF while audio is playing → stop immediately.
-    // 2. Component unmounts (user leaves reader) → cleanup both soundRef and preloadRef.
+    // Stop audio when audiobook is toggled OFF or component unmounts.
     useEffect(() => {
         if (!isAudiobookEnabled) {
-            // Toggle OFF: stop current audio. cleanup() unloads both current and preload sounds.
             cleanup();
         }
-        return () => {
-            // Unmount: always cleanup to prevent memory leak (AUDIO requirement: no leak after 20 pages).
-            cleanup();
-        };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        return () => { cleanup(); };
     }, [isAudiobookEnabled]);
 
     // Helper to ensure next page image is loaded before transition
@@ -879,7 +848,6 @@ export default function StoryReader() {
                     {title}
                 </Text>
 
-                {/* Audiobook toggle — only for Convex books that have audio for current language */}
                 {/* Audiobook toggle button */}
                 {convexBook && bookHasAudio && hasAccess && (
                     <TouchableOpacity

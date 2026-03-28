@@ -46,7 +46,7 @@ export function useAudiobook() {
   /**
    * playPage — loads and plays audio for a page URL.
    * AUDIO-06: If audioUrl is undefined/null/empty, silently no-ops (no crash, no toast).
-   * Awaits stop() before creating the new Sound to prevent overlapping audio.
+   * Does NOT call stop() internally — caller must handle cleanup via effect returns.
    */
   const playPage = useCallback(async (
     audioUrl: string | undefined,
@@ -54,7 +54,12 @@ export function useAudiobook() {
   ) => {
     if (!audioUrl) return; // AUDIO-06: silent no-op for missing URL
 
-    await stop(); // Unload previous sound before loading new one
+    // Unload any existing sound first (defensive, in case cleanup didn't finish)
+    const prev = soundRef.current;
+    soundRef.current = null;
+    if (prev) {
+      try { await prev.unloadAsync(); } catch { /* ignore */ }
+    }
 
     try {
       isStoppingRef.current = false; // Ensure guard is clear before new playback
@@ -62,8 +67,6 @@ export function useAudiobook() {
         { uri: audioUrl },
         { shouldPlay: true },
         (status: AVPlaybackStatus) => {
-          // CRITICAL: check isStoppingRef before calling onFinish.
-          // Without this, manual stop triggers didJustFinish=true → spurious auto-turn.
           if (
             status.isLoaded &&
             status.didJustFinish &&
@@ -75,10 +78,9 @@ export function useAudiobook() {
       );
       soundRef.current = sound;
     } catch (e) {
-      // AUDIO-06: silent fallback — log for debugging, do not throw or show toast
       console.warn('[useAudiobook] Failed to load/play audio:', e);
     }
-  }, [stop]);
+  }, []);
 
   /**
    * preloadNext — loads the next page's audio without playing it (AUDIO-08).
