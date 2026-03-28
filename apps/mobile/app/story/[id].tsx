@@ -331,96 +331,41 @@ export default function StoryReader() {
         preloadedPagesRef.current = preloadedPages;
     }, [preloadedPages]);
 
-    // Ref to track if auto-play chain is active (prevents stale closures)
-    const audioChainActiveRef = useRef(false);
+    // Auto-play: when audiobook ON and page changes, play audio then auto-turn.
+    // Uses refs for the onFinish callback to avoid stale closures.
+    const audiobookEnabledRef = useRef(isAudiobookEnabled);
+    useEffect(() => { audiobookEnabledRef.current = isAudiobookEnabled; }, [isAudiobookEnabled]);
 
-    // Start the audiobook chain when toggled ON
     useEffect(() => {
-        if (isAudiobookEnabled && currentAudioUrl) {
-            audioChainActiveRef.current = true;
-            // Start playing current page after a short delay (let page render)
-            const timer = setTimeout(() => {
-                if (audioChainActiveRef.current) {
-                    playPageWithAutoTurn(currentPageRef.current);
-                }
-            }, 500);
-            return () => {
-                clearTimeout(timer);
-            };
-        } else {
-            audioChainActiveRef.current = false;
-        }
-    }, [isAudiobookEnabled]); // Only re-trigger when toggle changes, NOT on every page
+        if (!isAudiobookEnabled || !currentAudioUrl) return;
 
-    // Core function: play audio for a page, then auto-turn when done
-    const playPageWithAutoTurn = useCallback(async (pageIndex: number) => {
-        if (!audioChainActiveRef.current) return;
-        if (!convexBook) return;
-
-        const page = convexBook.pages[pageIndex];
-        if (!page) return; // Past last page — stop
-
-        const statusKey = `audioStatus_${currentLang}` as "audioStatus_en" | "audioStatus_ro";
-        const urlKey = `audioUrl_${currentLang}` as "audioUrl_en" | "audioUrl_ro";
-        const audioUrl = page[statusKey] === "done" ? page[urlKey] : undefined;
-
-        if (!audioUrl) {
-            // No audio for this page — skip to next
-            if (pageIndex < (convexBook.pages.length - 1)) {
-                setIsFlipping(false);
-                isFlippingRef.current = false;
-                setTimeout(() => {
-                    if (audioChainActiveRef.current) {
-                        animateToPage(pageIndex + 1);
-                        // Continue chain after page turn animation
-                        setTimeout(() => playPageWithAutoTurn(pageIndex + 1), 1200);
-                    }
-                }, 300);
-            }
-            return;
-        }
-
-        await playPage(audioUrl, () => {
-            // Audio finished — turn page and play next
-            if (!audioChainActiveRef.current) return;
+        const onFinish = () => {
+            // Check ref (not closure) so we always have fresh value
+            if (!audiobookEnabledRef.current) return;
             setIsFlipping(false);
             isFlippingRef.current = false;
+            // Turn page after short delay
             setTimeout(() => {
-                if (!audioChainActiveRef.current) return;
-                animateToPage(currentPageRef.current + 1);
-                // Wait for page turn animation, then play next page
-                setTimeout(() => {
-                    if (audioChainActiveRef.current) {
-                        playPageWithAutoTurn(currentPageRef.current + 1);
-                    }
-                }, 1200); // Wait for page turn animation
+                if (audiobookEnabledRef.current) {
+                    animateToPage(currentPageRef.current + 1);
+                }
             }, 300);
-        });
-    }, [convexBook, currentLang, playPage, animateToPage]);
+        };
 
-    // When user manually changes page while audiobook is ON, play that page
-    useEffect(() => {
-        if (!isAudiobookEnabled) return;
-        if (!currentAudioUrl) return;
-
-        // Small delay to let page settle, then play
-        const timer = setTimeout(() => {
-            if (audioChainActiveRef.current) {
-                playPageWithAutoTurn(currentPage);
-            }
+        // Wait for page-turn animation, then play
+        const timer = setTimeout(async () => {
+            await playPage(currentAudioUrl, onFinish);
         }, 1000);
 
         return () => {
             clearTimeout(timer);
             stop();
         };
-    }, [currentPage]);
+    }, [currentPage, isAudiobookEnabled, currentAudioUrl]);
 
-    // Stop audio when audiobook is toggled OFF or component unmounts.
+    // Stop audio when toggled OFF or unmount
     useEffect(() => {
-        if (!isAudiobookEnabled) {
-            cleanup();
-        }
+        if (!isAudiobookEnabled) { cleanup(); }
         return () => { cleanup(); };
     }, [isAudiobookEnabled]);
 
