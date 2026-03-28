@@ -75,8 +75,9 @@ export function useSubscription(userId: Id<"users"> | null) {
     }
   }, [convexEntitlement, userId]);
 
-  // In MOCK_MODE, use mockAccess; otherwise use Convex
-  const hasAccess = MOCK_MODE ? (mockAccess ?? false) : (convexEntitlement?.hasAccess || false);
+  // Use Convex DB as source of truth — if Convex says access, grant it regardless of RevenueCat
+  // This allows admin-granted premium (via grantPremium) to work without RevenueCat subscription
+  const hasAccess = convexEntitlement?.hasAccess || (MOCK_MODE ? (mockAccess ?? false) : false);
 
   const result = {
     hasAccess,
