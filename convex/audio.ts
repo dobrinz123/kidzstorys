@@ -161,7 +161,20 @@ export const generatePageAudio = internalAction({
         locale: args.locale,
       });
 
-      // 4. Send text as-is — no preprocessing (ElevenLabs interprets "..." as filler words)
+      // 4. Voice settings tuned per locale — Romanian needs slower pace
+      const voiceSettings = args.locale === "ro"
+        ? {
+            stability: 0.97,          // max calm — Romanian tends to be spoken fast
+            similarity_boost: 0.35,    // very low — softer, slower delivery
+            style: 0.03,              // almost no expressiveness — steady, slow bedtime pace
+            use_speaker_boost: false,
+          }
+        : {
+            stability: 0.92,          // very calm for English
+            similarity_boost: 0.5,
+            style: 0.08,
+            use_speaker_boost: false,
+          };
 
       // 5. Call ElevenLabs (per D-03, GEN-03, VOICE-01, VOICE-02, VOICE-03)
       const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`;
@@ -175,12 +188,7 @@ export const generatePageAudio = internalAction({
           text,
           model_id: "eleven_multilingual_v2",
           language_code: args.locale,
-          voice_settings: {
-            stability: 0.92,          // very high = very calm, slow, steady (bedtime story whisper)
-            similarity_boost: 0.5,     // lower = softer, more gentle
-            style: 0.08,              // minimal expressiveness — soothing, not dramatic
-            use_speaker_boost: false,  // no amplification — soft, warm tone
-          },
+          voice_settings: voiceSettings,
         }),
       });
 

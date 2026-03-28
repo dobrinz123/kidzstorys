@@ -367,6 +367,10 @@ export default function StoryReader() {
         const run = async () => {
             if (cancelled) return;
             if (!currentAudioUrl) return;
+            // Wait for page-turn animation to finish before starting narration
+            // Prevents audio from starting while the page is still flipping
+            await new Promise(resolve => setTimeout(resolve, 800));
+            if (cancelled) return;
             await playPage(currentAudioUrl, onFinish);
             if (!cancelled) {
                 preloadNext(nextAudioUrl);
@@ -867,6 +871,7 @@ export default function StoryReader() {
                 </Text>
 
                 {/* Audiobook toggle — only for Convex books that have audio for current language */}
+                {/* Audiobook toggle button */}
                 {convexBook && bookHasAudio && hasAccess && (
                     <TouchableOpacity
                         style={[styles.audiobookToggle, isAudiobookEnabled && styles.audiobookToggleActive]}
@@ -874,11 +879,13 @@ export default function StoryReader() {
                         accessibilityLabel={isAudiobookEnabled ? "Turn off audiobook" : "Turn on audiobook"}
                         accessibilityRole="button"
                     >
-                        <Text style={{ fontSize: 22 }}>{isAudiobookEnabled ? "🎧" : "🎧"}</Text>
+                        <Text style={[styles.audiobookIcon, isAudiobookEnabled && styles.audiobookIconActive]}>
+                            {isAudiobookEnabled ? "🔊" : "🔈"}
+                        </Text>
                     </TouchableOpacity>
                 )}
 
-                {/* Lock icon for non-PREMIUM users when book has audio — taps to paywall */}
+                {/* Lock icon for non-PREMIUM users */}
                 {convexBook && bookHasAudio && !hasAccess && (
                     <TouchableOpacity
                         style={styles.audiobookToggle}
@@ -886,7 +893,7 @@ export default function StoryReader() {
                         accessibilityLabel="Unlock audiobook"
                         accessibilityRole="button"
                     >
-                        <Text style={{ fontSize: 18 }}>🔒</Text>
+                        <Text style={styles.audiobookIcon}>🔒</Text>
                     </TouchableOpacity>
                 )}
 
@@ -1197,13 +1204,22 @@ const styles = StyleSheet.create({
         fontFamily: "ComicNeue_400Regular",
     },
     audiobookToggle: {
-        padding: 8,
-        opacity: 0.5,
+        paddingHorizontal: 12,
+        paddingVertical: 6,
+        borderRadius: 20,
+        borderWidth: 1.5,
+        borderColor: 'rgba(0,0,0,0.15)',
+        backgroundColor: 'rgba(0,0,0,0.04)',
     },
     audiobookToggleActive: {
-        opacity: 1,
-        backgroundColor: 'rgba(0,0,0,0.08)',
-        borderRadius: 20,
+        backgroundColor: BOOK_COLORS.buttonBg || '#8B5E3C',
+        borderColor: BOOK_COLORS.buttonBg || '#8B5E3C',
+    },
+    audiobookIcon: {
+        fontSize: 20,
+    },
+    audiobookIconActive: {
+        fontSize: 22,
     },
 
     // Book content area
