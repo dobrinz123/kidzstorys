@@ -879,9 +879,7 @@ export default function StoryReader() {
                         accessibilityLabel={isAudiobookEnabled ? "Turn off audiobook" : "Turn on audiobook"}
                         accessibilityRole="button"
                     >
-                        <Text style={[styles.audiobookIcon, isAudiobookEnabled && styles.audiobookIconActive]}>
-                            {isAudiobookEnabled ? "🔊" : "🔈"}
-                        </Text>
+                        <Text style={styles.audiobookIcon}>🎧</Text>
                     </TouchableOpacity>
                 )}
 
@@ -1204,12 +1202,15 @@ const styles = StyleSheet.create({
         fontFamily: "ComicNeue_400Regular",
     },
     audiobookToggle: {
-        paddingHorizontal: 12,
-        paddingVertical: 6,
+        width: 40,
+        height: 40,
         borderRadius: 20,
         borderWidth: 1.5,
-        borderColor: 'rgba(0,0,0,0.15)',
-        backgroundColor: 'rgba(0,0,0,0.04)',
+        borderColor: 'rgba(0,0,0,0.2)',
+        backgroundColor: 'rgba(255,255,255,0.9)',
+        alignItems: 'center' as const,
+        justifyContent: 'center' as const,
+        marginRight: 8,
     },
     audiobookToggleActive: {
         backgroundColor: BOOK_COLORS.buttonBg || '#8B5E3C',
@@ -1217,9 +1218,7 @@ const styles = StyleSheet.create({
     },
     audiobookIcon: {
         fontSize: 20,
-    },
-    audiobookIconActive: {
-        fontSize: 22,
+        lineHeight: 24,
     },
 
     // Book content area
