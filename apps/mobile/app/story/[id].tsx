@@ -196,6 +196,7 @@ export default function StoryReader() {
         return convexBook.pages.some((page) => page[statusKey] === "done");
     }, [convexBook, currentLang]);
 
+
     // Audio URL for the currently displayed page, in the user's selected language.
     // Returns undefined if: no convexBook, page out of bounds, audioStatus !== 'done', or URL missing.
     // AUDIO-02: language selection via currentLang.
@@ -351,26 +352,31 @@ export default function StoryReader() {
     useEffect(() => {
         if (!isAudiobookEnabled) return;
 
+        let cancelled = false;
+
         const onFinish = () => {
-            // Use currentPageRef for fresh value — this callback fires from expo-av's async context
-            animateToPage(currentPageRef.current + 1);
+            if (cancelled) return; // Effect was cleaned up — don't trigger page turn
+            // Small delay to let React process state before triggering next page
+            setTimeout(() => {
+                if (!cancelled) {
+                    animateToPage(currentPageRef.current + 1);
+                }
+            }, 100);
         };
 
         const run = async () => {
-            // Try to play preloaded sound first (AUDIO-08). Falls back to fresh load if unavailable.
-            const usedPreload = await playPreloaded(onFinish);
-            if (!usedPreload) {
-                await playPage(currentAudioUrl, onFinish);
+            if (cancelled) return;
+            if (!currentAudioUrl) return;
+            await playPage(currentAudioUrl, onFinish);
+            if (!cancelled) {
+                preloadNext(nextAudioUrl);
             }
-            // Preload the next page's audio after current starts (AUDIO-08).
-            preloadNext(nextAudioUrl);
         };
 
         run();
 
-        // Cleanup: stop current audio when page changes or audiobook is toggled.
-        // React calls this before running the effect again (on next page change).
         return () => {
+            cancelled = true;
             stop();
         };
     }, [currentPage, isAudiobookEnabled, currentAudioUrl]);
@@ -863,16 +869,12 @@ export default function StoryReader() {
                 {/* Audiobook toggle — only for Convex books that have audio for current language */}
                 {convexBook && bookHasAudio && hasAccess && (
                     <TouchableOpacity
-                        style={styles.audiobookToggle}
+                        style={[styles.audiobookToggle, isAudiobookEnabled && styles.audiobookToggleActive]}
                         onPress={toggleAudiobook}
                         accessibilityLabel={isAudiobookEnabled ? "Turn off audiobook" : "Turn on audiobook"}
                         accessibilityRole="button"
                     >
-                        <Ionicons
-                            name={isAudiobookEnabled ? "headset" : "headset-outline"}
-                            size={24}
-                            color={isAudiobookEnabled ? BOOK_COLORS.buttonBg : BOOK_COLORS.textSecondary}
-                        />
+                        <Text style={{ fontSize: 22 }}>{isAudiobookEnabled ? "🎧" : "🎧"}</Text>
                     </TouchableOpacity>
                 )}
 
@@ -884,11 +886,7 @@ export default function StoryReader() {
                         accessibilityLabel="Unlock audiobook"
                         accessibilityRole="button"
                     >
-                        <Ionicons
-                            name="lock-closed-outline"
-                            size={20}
-                            color={BOOK_COLORS.textSecondary}
-                        />
+                        <Text style={{ fontSize: 18 }}>🔒</Text>
                     </TouchableOpacity>
                 )}
 
@@ -1200,6 +1198,12 @@ const styles = StyleSheet.create({
     },
     audiobookToggle: {
         padding: 8,
+        opacity: 0.5,
+    },
+    audiobookToggleActive: {
+        opacity: 1,
+        backgroundColor: 'rgba(0,0,0,0.08)',
+        borderRadius: 20,
     },
 
     // Book content area
