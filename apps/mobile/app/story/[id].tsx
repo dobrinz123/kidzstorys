@@ -355,13 +355,16 @@ export default function StoryReader() {
         let cancelled = false;
 
         const onFinish = () => {
-            if (cancelled) return; // Effect was cleaned up — don't trigger page turn
-            // Small delay to let React process state before triggering next page
+            if (cancelled) return;
+            // Force-clear flipping state in case animation callback didn't fire
+            setIsFlipping(false);
+            isFlippingRef.current = false;
+            // Delay to let React settle before triggering next page animation
             setTimeout(() => {
                 if (!cancelled) {
                     animateToPage(currentPageRef.current + 1);
                 }
-            }, 100);
+            }, 200);
         };
 
         const run = async () => {
@@ -435,6 +438,12 @@ export default function StoryReader() {
 
             setIsFlipping(true);
             isFlippingRef.current = true;
+
+            // Safety: force-reset isFlipping after 1.5s in case Reanimated callback doesn't fire
+            setTimeout(() => {
+                setIsFlipping(false);
+                isFlippingRef.current = false;
+            }, 1500);
 
             // Ensure target page image is loaded before animating
             await ensurePagePreloaded(targetPage);
